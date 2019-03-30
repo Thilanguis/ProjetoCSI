@@ -9,17 +9,12 @@
     <?php include_once 'head.php'; ?>
 
     <?php
-
- 
 if(!$_SESSION["login"])
 {
  header("Location:index.php");;
     exit();
 }
-    echo 'Logado: ' . $_SESSION["login"];
-
 ?>
-
 </head>
 
 <body>
@@ -73,6 +68,8 @@ if(!$_SESSION["login"])
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span> <i class="fas fa-carrot animated rubberBand" style="font-size: 30px; color: #c78713"></i> &nbsp; <i class="fas fa-apple-alt animated rubberBand" style="font-size: 30px; color: #d83838"></i> &nbsp; <i class="fas fa-cheese animated rubberBand" style="font-size: 30px; color: #ccc624"></i> </span>
             </button>
+        <div> <img src="img/icons8-checked-user-male-26.png" alt=""> <?php  echo 'Bem vindo, ' . $_SESSION["login"];?> <a href="logout.php"><i style="color:white;" class="fas fa-power-off"></i></a> 
+        </div>
         </nav>
 
         <div id="listNutri" class="list-group">
