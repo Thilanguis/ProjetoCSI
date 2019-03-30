@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -6,9 +7,6 @@
     <meta charset="UTF-8">
     <title>Dietpro</title>
     <?php include_once 'head.php';?>
-    
-
-
 
 </head>
 
@@ -25,7 +23,6 @@
                     <a class="btn btn-secondary dropdown-toggle navbar-brand" href="#" role="button" id="<dropdownMenuL></dropdownMenuL>ink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         LOGIN
                     </a>
-
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                         <a class="dropdown-item" href="#">
                             <div class="">
