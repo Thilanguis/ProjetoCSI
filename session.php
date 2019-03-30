@@ -1,4 +1,7 @@
 <?php
+    
+    include_once 'head.php';
+
     session_start();
 
     $login = $_POST["login"];
@@ -17,6 +20,15 @@ if ($row > 0)
  }
 else
 {
-    header("Location:index.php");
+    ?>
+    <div class="alert alert-danger animated zoomIn container" role="alert" style="width: 300px; margin-top: 100px;">
+            E-mail ou senha digitados errado!
+        </div>
+
+        <div id="btnConfirmacao">
+            <a href="index.php"><button id="btnVoltar1" type="button" class="btn btn-warning animated zoomIn" style="margin-left:48%;">OK</button></a>
+        </div>
+    
+    <?php
 }
 ?>

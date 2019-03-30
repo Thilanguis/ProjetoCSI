@@ -10,6 +10,16 @@
 
 </head>
 
+<script>
+    
+$(document).ready(function() {
+    $('.addTel1').hide();
+    $('#whatsapp').click(function () {
+        $('.addTel1').toggle();
+    });
+});
+    </script>
+
 <body id="body">
 
     <div class="container">
@@ -29,7 +39,7 @@
                                 <form action="session.php" method="post" class="px-4 py-3">
                                     <div class="form-group">
                                         <label for="exampleDropdownFormEmail1"><i class="fab fa-nutritionix" style="font-size: 30px; color:#3b884d; "></i> &nbsp; Endereço E-mail</label>
-                                        <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@email.com" name="login">
+                                        <input type="text" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@email.com" name="login" re>
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleDropdownFormPassword1">Senha</label>

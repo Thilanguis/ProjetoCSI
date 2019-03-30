@@ -3,4 +3,3 @@ function excluir(id) {
         location.href = 'excluirCliente.php?id_cliente=' + id;
     }
 }
-
