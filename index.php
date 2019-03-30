@@ -36,10 +36,6 @@
                                         <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Senha" name="senha">
                                     </div>
                                     <div class="form-check">
-                                        <input type="checkbox" class="form-check-input" id="dropdownCheck">
-                                        <label class="form-check-label" for="dropdownCheck">
-                                            Lembre-me
-                                        </label>
                                     </div>
                                     <button id="btnentrar" type="submit" class="btn btn-primary">Entrar</button>
                                 </form>
