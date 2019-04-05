@@ -20,8 +20,8 @@
     $nome            = trataNome($_POST["nome"]);
     $telefone        = trataTelefone($_POST["telefone"]);
     $endereco        = $_POST["endereco"];
-    $cidade          = $_POST["cidade"];
-    $estadoCivil     = $_POST["estadoCivil"];
+    $cidade          = trataNome($_POST["cidade"]);
+    $estadoCivil     = trataNome($_POST["estadoCivil"]);
     $dataNascimento  = $_POST["dataNascimento"];
     $sexo            = $_POST["sexo"];
     $senha           = $_POST["senha"];

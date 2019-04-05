@@ -33,18 +33,18 @@
     bottom: 0;
 }
 
-#whatsapp{
+#whatsapp {
     display: inline-block;
 }
 
-#whatsapp1{
+#whatsapp1 {
     width: 25px;
     height: 25px;
     margin-bottom: 2px;
     display: inline-block;
 }
 
-#facebook{
+#facebook {
     width: 25px;
     height: 25px;
     margin-bottom: 2px;
@@ -407,6 +407,16 @@ h3 {
     font-style: oblique;
 }
 
+#msgErro1 {
+    width: auto;
+    display: inline-block;
+    margin-left: 31%;
+    margin-top: 50px;
+    font-style: oblique;
+}
+
+
+
 #btnConfirmacao {
     margin-top: 10px;
 }
@@ -426,7 +436,22 @@ h3 {
     margin-top: 30px;
 }
 
-#logout{
+#logout {
     width: 33px;
     height: 33px;
+}
+
+#campos {
+    color: rgba(195, 39, 70, 0.73);
+    font-style: italic;
+}
+
+#novaConsulta {
+    position: fixed;
+    top: 68%;
+    left: 70%;
+    padding: 10px;
+    z-index: 10000000;
+    background-image: linear-gradient(to bottom, white, rgba(107, 191, 138, 0.63));
+    border-radius: 1000px;
 }

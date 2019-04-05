@@ -3,7 +3,7 @@
 
 <head>
 
-   <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <title>Dietpro</title>
     <?php include_once 'head.php';
     include_once 'verificaLogin.php';
@@ -21,8 +21,9 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span> <i class="fas fa-carrot animated rubberBand" style="font-size: 30px; color: #c78713"></i> &nbsp; <i class="fas fa-apple-alt animated rubberBand" style="font-size: 30px; color: #d83838"></i> &nbsp; <i class="fas fa-cheese animated rubberBand" style="font-size: 30px; color: #ccc624"></i> </span>
             </button>
-        <div> <img src="img/icons8-checked-user-male-26.png" alt=""> <b> Bem vindo(a):</b> <?php echo "<i>"  .$_SESSION["login"] . "</i>" ; ?> <a style="text-decoration: none;" href="logout.php">&nbsp;<img id="logout" src="img/icons8-exit-48.png" alt=""></a> 
-        </div>
+            <div> <img src="img/icons8-checked-user-male-26.png" alt=""> <b> Bem vindo(a):</b>
+                <?php echo "<i>"  .$_SESSION["login"] . "</i>" ; ?> <a style="text-decoration: none;" href="logout.php">&nbsp;<img id="logout" src="img/icons8-exit-48.png" alt=""></a>
+            </div>
         </nav>
 
         <div id="listNutri" class="list-group">
@@ -71,60 +72,60 @@
             </div>
         </div>
 
-       <!--  <form action="" method="post"> -->
+        <!--  <form action="" method="post"> -->
 
-            <div id="inclusaoAlimentos">
-                <h5 style="text-align: center; padding-bottom: 20px;"><b><i>Montagem da dieta</i></b></h5>
-                <div class="form-group row">
-                    <label for="inputEmail3" class="col-sm-2 col-form-label">Horário</label>
-                    <div class="col-sm-4">
-                        <input type="time" class="form-control" id="inputEmail3" placeholder="Email" name="horario" >
-                    </div>
+        <div id="inclusaoAlimentos">
+            <h5 style="text-align: center; padding-bottom: 20px;"><b><i>Montagem da dieta</i></b></h5>
+            <div class="form-group row">
+                <label for="inputEmail3" class="col-sm-2 col-form-label">Horário</label>
+                <div class="col-sm-4">
+                    <input type="time" class="form-control" id="inputEmail3" placeholder="Email" name="horario">
                 </div>
-                <div class="form-group row">
-                    <label for="inputPassword3" class="col-sm-2 col-form-label">Refeição</label>
-                    <div class="col-sm-4">
-                        <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref" name="refeicao">
-                            <option selected></option>
-                            <option value="1">Desjejum</option>
-                            <option value="2">Colação</option>
-                            <option value="3">Almoço</option>
-                            <option value="4">Lanche</option>
-                            <option value="5">Jantar</option>
-                            <option value="6">Ceia</option>
-                        </select>
-                    </div>
+            </div>
+            <div class="form-group row">
+                <label for="inputPassword3" class="col-sm-2 col-form-label">Refeição</label>
+                <div class="col-sm-4">
+                    <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref" name="refeicao">
+                        <option selected></option>
+                        <option value="1">Desjejum</option>
+                        <option value="2">Colação</option>
+                        <option value="3">Almoço</option>
+                        <option value="4">Lanche</option>
+                        <option value="5">Jantar</option>
+                        <option value="6">Ceia</option>
+                    </select>
                 </div>
-
-                <div class="form-group row">
-                    <label for="inputEmail3" class="col-sm-2 col-form-label">Quant.</label>
-                    <div class="col-sm-4">
-                        <input type="number" class="form-control" id="inputEmail3" name="quantidade" placeholder="">
-                    </div>
-                </div>
-
             </div>
 
+            <div class="form-group row">
+                <label for="inputEmail3" class="col-sm-2 col-form-label">Quant.</label>
+                <div class="col-sm-4">
+                    <input type="number" class="form-control" id="inputEmail3" name="quantidade" placeholder="">
+                </div>
+            </div>
 
-            <div style="width: 800px; margin-left: 250px; margin-top: 20px;">
-                <form action="form-Dietoterapia.php" method="get">
+        </div>
 
-                    <div class="form-group row">
-                        <label for="inputEmail3" class="col-sm-2 col-form-label">Alimento</label>
-                        <div class="col-sm-8">
-                            <div class="form-group input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
-                                <input type="text" id="txt_consulta" placeholder="Pesquise um Alimento" class="form-control" name="alimento" required>
-                                <button class="btn-success" type=""><i class="fas fa-search"></i></button>
-                            </div>
+
+        <div style="width: 800px; margin-left: 250px; margin-top: 20px;">
+            <form action="form-Dietoterapia.php" method="get">
+
+                <div class="form-group row">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Alimento</label>
+                    <div class="col-sm-8">
+                        <div class="form-group input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+                            <input type="text" id="txt_consulta" placeholder="Pesquise um Alimento" class="form-control" name="alimento" required>
+                            <button class="btn-success" type=""><i class="fas fa-search"></i></button>
                         </div>
-                        
                     </div>
 
-                    <div class="form-row">
-                        <div class="form-group row">
-                            <div class="col-sm-12">
-                                <?php
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group row">
+                        <div class="col-sm-12">
+                            <?php
             
             if(isset($_GET["alimento"]))
             {
@@ -143,19 +144,19 @@
                 if($totalRegistros > 0)
                 { ?>
 
-                                <div class="table-overflow1">
-                                    <table class="table table-striped container animated zoomIn">
-                                        <tr>
-                                            <th style="color: #E8850C">Alimento</th>
-                                            <th style="color: #E8850C">M.C.</th>
-                                            <th style="color: #E8850C">Grama</th>
-                                            <th style="color: #E8850C">CHO</th>
-                                            <th style="color: #E8850C">PTN</th>
-                                            <th style="color: #E8850C">LIP</th>
-                                            <th style="color: #E8850C">Kcal</th>
-                                        </tr>
+                            <div class="table-overflow1">
+                                <table class="table table-striped container animated zoomIn">
+                                    <tr>
+                                        <th style="color: #E8850C">Alimento</th>
+                                        <th style="color: #E8850C">M.C.</th>
+                                        <th style="color: #E8850C">Grama</th>
+                                        <th style="color: #E8850C">CHO</th>
+                                        <th style="color: #E8850C">PTN</th>
+                                        <th style="color: #E8850C">LIP</th>
+                                        <th style="color: #E8850C">Kcal</th>
+                                    </tr>
 
-                                        <?php
+                                    <?php
                     while($row = mysqli_fetch_array($result))
                     {  
                                 echo "<tr>";
@@ -168,30 +169,30 @@
                                 echo "<td>".$row["col 9"]."</td>";
                                 echo "</tr>";
                                 } ?>
-                                    </table>
-                                </div>
-                                <?php } 
+                                </table>
+                            </div>
+                            <?php } 
                 else
                 {
                     ?>
-                                <div id="msgErro" class="alert alert-danger" role="alert">
-                                    Nenhum registro encontrado
-                                </div>
-                                <?php  
+                            <div id="msgErro" class="alert alert-danger" role="alert">
+                                Nenhum registro encontrado
+                            </div>
+                            <?php  
                 }
             }
         ?>
-                            </div>
                         </div>
                     </div>
+                </div>
 
-                </form>
+            </form>
 
-            </div>
+        </div>
         <!-- </form> -->
 
         <footer class="container" id="rodape">
-             <?php include_once 'rodape.php'; ?>
+            <?php include_once 'rodape.php'; ?>
         </footer>
     </div>
 

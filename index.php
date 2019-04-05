@@ -8,17 +8,20 @@
     <title>Dietpro</title>
     <?php include_once 'head.php';?>
 
+
+
 </head>
 
 <script>
-    
-$(document).ready(function() {
+
+    $(document).ready(function() {
     $('.addTel1').hide();
     $('#whatsapp').click(function () {
         $('.addTel1').toggle();
     });
 });
     </script>
+
 
 <body id="body">
 
@@ -212,11 +215,15 @@ $(document).ready(function() {
                                 </div>
                                 <div class="form-group col-md-4">
                                     <label style="margin-left: 35px;" for="dataNascimento">Data de Nascimento</label> &nbsp; <i class="fas fa-calendar-day" style="font-size: 25px; color: #314bd8"></i>
-                                    <input style="text-align: center;" type="date" class="form-control" id="dataNascimento" placeholder="Data de Nascimento" name="dataNascimento">
+                                    <input style="text-align: center; padding-left: 15%;" type="date" class="form-control" id="dataNascimento" placeholder="Data de Nascimento" name="dataNascimento">
                                 </div>
                                 <div class="form-group col-md-4">
                                     <label style="margin-left: 90px;" for="sexo">Sexo</label> &nbsp; <i class="fas fa-male" style="font-size: 25px; color: #314bd8"></i> <i class="fas fa-female" style="font-size: 25px; color: #be31d8"></i>
-                                    <input style="text-align: center;" type="text" class="form-control" id="sexo" placeholder="Sexo" name="sexo">
+                                    <select type="text" class="form-control" id="sexo" name="sexo">
+                                        <option disabled selected>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...</option>
+                                        <option value="Masculino">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Masculino</option>
+                                        <option value="Feminino">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Feminino</option>
+                                    </select>
                                 </div>
 
                             </div>
@@ -246,9 +253,12 @@ $(document).ready(function() {
                                 </div>
                                 <div class="form-group col-md-4">
                                     <label style="margin-left: 90px;" for="cpf">Cpf</label> &nbsp; <i class="far fa-id-card" style="font-size: 25px; color: #d11818"></i>
-                                    <input style="text-align: center;" type="cpf" class="form-control" id="email1" placeholder="gertrudes@bol.com.br" name="cpf">
+                                    <input style="text-align: center;" type="cpf" class="form-control" id="email1" placeholder="024.024.024-24" name="cpf">
                                 </div>
 
+                            </div>
+                            <div id="campos">
+                                <p>* Preencher todos os campos</p>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
