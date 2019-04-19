@@ -73,38 +73,40 @@
                 <input class="col-4" type="text" style="border-radius: 4px;" disabled="disabled">
             </div>
         </div>
-
-        <div id="inclusaoAlimentos">
-            <h5 style="text-align: center; padding-bottom: 20px;"><b><i>Montagem da dieta</i></b></h5>
-            <div class="form-group row">
-                <label for="inputEmail3" class="col-sm-2 col-form-label">Horário</label>
-                <div class="col-sm-4">
-                    <input type="time" class="form-control" id="inputEmail3" placeholder="Email" name="horario">
+        <form action="cadastroAlimentos.php" method="post">
+            <div id="inclusaoAlimentos">
+                <h5 style="text-align: center; padding-bottom: 20px;"><b><i>Montagem da dieta</i></b></h5>
+                <div class="form-group row">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Horário</label>
+                    <div class="col-sm-4">
+                        <input type="time" class="form-control" id="inputEmail3" placeholder="Email" name="horario">
+                    </div>
                 </div>
-            </div>
-            <div class="form-group row">
-                <label for="inputPassword3" class="col-sm-2 col-form-label">Refeição</label>
-                <div class="col-sm-4">
-                    <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref" name="refeicao">
-                        <option selected></option>
-                        <option value="1">Desjejum</option>
-                        <option value="2">Colação</option>
-                        <option value="3">Almoço</option>
-                        <option value="4">Lanche</option>
-                        <option value="5">Jantar</option>
-                        <option value="6">Ceia</option>
-                    </select>
+                <div class="form-group row">
+                    <label for="inputPassword3" class="col-sm-2 col-form-label">Refeição</label>
+                    <div class="col-sm-4">
+                        <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref" name="refeicao">
+                            <option selected></option>
+                            <option value="1">Desjejum</option>
+                            <option value="2">Colação</option>
+                            <option value="3">Almoço</option>
+                            <option value="4">Lanche</option>
+                            <option value="5">Jantar</option>
+                            <option value="6">Ceia</option>
+                        </select>
+                    </div>
                 </div>
+
+                <div class="form-group row">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Quant.</label>
+                    <div class="col-sm-4">
+                        <input type="number" class="form-control" id="inputEmail3" name="quantidade" placeholder="">
+                    </div>
+                </div>
+
             </div>
 
-            <div class="form-group row">
-                <label for="inputEmail3" class="col-sm-2 col-form-label">Quant.</label>
-                <div class="col-sm-4">
-                    <input type="number" class="form-control" id="inputEmail3" name="quantidade" placeholder="">
-                </div>
-            </div>
-
-        </div>
+        </form>
 
 
         <div style="width: 800px; margin-left: 250px; margin-top: 20px;">

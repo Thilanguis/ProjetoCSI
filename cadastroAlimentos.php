@@ -23,7 +23,7 @@
        
        $sqlTabelaAlimentos = "select * from tabelaalimentos where `COL 1`=".$_GET["COL 1"];
        
-       $result = mysqli_query($con, $sql);
+       $result = mysqli_query($con, $sqlTabelaAlimentos);
        
        $totalResgistros = mysqli_num_rows($result);
        
@@ -32,18 +32,25 @@
     $horario         = $_POST["horario"];
     $refeicao        = $_POST["refeicao"];
     $quantidade      = $_POST["quantidade"];
+    $col2            = $row($_POST["col 2"]);
+    $col3            = $row($_POST["col 3"]);
+    $col5            = $row($_POST["col 5"]);
+    $col6            = $row($_POST["col 6"]);
+    $col7            = $row($_POST["col 7"]);
+    $col8            = $row($_POST["col 8"]);
+    $col9            = $row($_POST["col 9"]);
 
     
     include_once 'conexao.php';
         
     
     
-    $sqlDadosDaRefeicao = "insert into alimentos values ('".$refeicao."','".$quantidade."','".$horario."','".$row['col 2']."','".$row['col 3']."','".$row['col 5']."','".$row['col 6']."','".$row['col 7']."','".$row['col 8']."','".$row['col 9']."')";
+    $sqlDadosDaRefeicao = "insert into alimentos values ('".$refeicao."','".$quantidade."','".$horario."','".$col2."','".$col3."','".$col5."','".$col6."','".$col7."','".$col8."','".$col9."')";
     
         
    
 
-            if(mysqli_query($con,$sqlTabelaAlimentos,$sqlDadosDaRefeicao))  
+            if(mysqli_query($con,$sqlDadosDaRefeicao))  
     {
          ?>
         <div class="alert alert-success animated zoomIn container" role="alert" style="width: 300px; margin-top: 100px;">
