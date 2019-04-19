@@ -6,22 +6,11 @@
 
     <meta charset="UTF-8">
     <title>Dietpro</title>
-    <?php include_once 'head.php';?>
+    <?php include_once 'head.php'; ?>
 
 
 
 </head>
-
-<script>
-
-    $(document).ready(function() {
-    $('.addTel1').hide();
-    $('#whatsapp').click(function () {
-        $('.addTel1').toggle();
-    });
-});
-    </script>
-
 
 <body id="body">
 

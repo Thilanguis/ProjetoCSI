@@ -4,6 +4,7 @@
 <head>
 
     <meta charset="UTF-8">
+    <script type="text/javascript" src="js/ajax.js"></script>
     <title>Dietpro</title>
     <?php include_once 'head.php';
     include_once 'verificaLogin.php';
@@ -21,7 +22,8 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span> <i class="fas fa-carrot animated rubberBand" style="font-size: 30px; color: #c78713"></i> &nbsp; <i class="fas fa-apple-alt animated rubberBand" style="font-size: 30px; color: #d83838"></i> &nbsp; <i class="fas fa-cheese animated rubberBand" style="font-size: 30px; color: #ccc624"></i> </span>
             </button>
-            <div> <img src="img/icons8-checked-user-male-26.png" alt=""> <b> Bem vindo(a):</b>
+            <div>
+                <img src="img/icons8-checked-user-male-26.png" alt=""> <b> Bem vindo(a):</b>
                 <?php echo "<i>"  .$_SESSION["login"] . "</i>" ; ?> <a style="text-decoration: none;" href="logout.php">&nbsp;<img id="logout" src="img/icons8-exit-48.png" alt=""></a>
             </div>
         </nav>
@@ -72,8 +74,6 @@
             </div>
         </div>
 
-        <!--  <form action="" method="post"> -->
-
         <div id="inclusaoAlimentos">
             <h5 style="text-align: center; padding-bottom: 20px;"><b><i>Montagem da dieta</i></b></h5>
             <div class="form-group row">
@@ -108,94 +108,32 @@
 
 
         <div style="width: 800px; margin-left: 250px; margin-top: 20px;">
-            <form action="form-Dietoterapia.php" method="get">
 
+            <div class="form-group row">
+                <label for="inputEmail3" class="col-sm-2 col-form-label">Alimento</label>
+                <div class="col-sm-8">
+                    <div class="form-group input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+                        <input type="text" id="txtnome" placeholder="Pesquise um Alimento" class="form-control" name="alimento" required>
+                        <button class="btn-success" type="" onclick="getDados();"><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
                 <div class="form-group row">
-                    <label for="inputEmail3" class="col-sm-2 col-form-label">Alimento</label>
-                    <div class="col-sm-8">
-                        <div class="form-group input-group">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
-                            <input type="text" id="txt_consulta" placeholder="Pesquise um Alimento" class="form-control" name="alimento" required>
-                            <button class="btn-success" type=""><i class="fas fa-search"></i></button>
-                        </div>
-                    </div>
+                    <div class="col-sm-12" id="Resultado">
 
-                </div>
 
-                <div class="form-row">
-                    <div class="form-group row">
-                        <div class="col-sm-12">
-                            <?php
-            
-            if(isset($_GET["alimento"]))
-            {
-                $alimento = $_GET["alimento"]; 
-                
-                include_once 'conexao.php';
-                
-                include_once 'funcoesProjeto.php';
-                
-                $sql = "SELECT `col 2`, `col 3`, `col 5`, `col 6`, `col 7`, `col 8`, `col 9` from tabelaalimentos WHERE `col 2` like '%".$alimento."%'";
-                
-                $result = mysqli_query($con, $sql);
-                
-                $totalRegistros = mysqli_num_rows($result);
-                
-                if($totalRegistros > 0)
-                { ?>
-
-                            <div class="table-overflow1">
-                                <table class="table table-striped container animated zoomIn">
-                                    <tr>
-                                        <th style="color: #E8850C">Alimento</th>
-                                        <th style="color: #E8850C">M.C.</th>
-                                        <th style="color: #E8850C">Grama</th>
-                                        <th style="color: #E8850C">CHO</th>
-                                        <th style="color: #E8850C">PTN</th>
-                                        <th style="color: #E8850C">LIP</th>
-                                        <th style="color: #E8850C">Kcal</th>
-                                    </tr>
-
-                                    <?php
-                    while($row = mysqli_fetch_array($result))
-                    {  
-                                echo "<tr>";
-                         echo "<td><a href='cadastroDietoterapia.php?`col 2`>".$row["col 2"]."</a></td>";
-                                echo "<td>".$row["col 3"]."</td>";
-                                echo "<td>".$row["col 5"]."</td>";
-                                echo "<td>".$row["col 6"]."</td>";
-                                echo "<td>".$row["col 7"]."</td>";
-                                echo "<td>".$row["col 8"]."</td>";
-                                echo "<td>".$row["col 9"]."</td>";
-                                echo "</tr>";
-                                } ?>
-                                </table>
-                            </div>
-                            <?php } 
-                else
-                {
-                    ?>
-                            <div id="msgErro" class="alert alert-danger" role="alert">
-                                Nenhum registro encontrado
-                            </div>
-                            <?php  
-                }
-            }
-        ?>
-                        </div>
                     </div>
                 </div>
-
-            </form>
-
+            </div>
         </div>
-        <!-- </form> -->
 
         <footer class="container" id="rodape">
             <?php include_once 'rodape.php'; ?>
         </footer>
     </div>
-
 </body>
 
 </html>

@@ -448,10 +448,16 @@ h3 {
 
 #novaConsulta {
     position: fixed;
-    top: 68%;
-    left: 70%;
+    top: 75%;
+    left: 75%;
     padding: 10px;
     z-index: 10000000;
     background-image: linear-gradient(to bottom, white, rgba(107, 191, 138, 0.63));
     border-radius: 1000px;
+}
+
+#alimentoAdicionado {
+    height: 35px;
+    width: 35px;
+    margin-left: 15px;
 }

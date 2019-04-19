@@ -23,4 +23,3 @@
 
 
 <script src="js/action.js"></script>
-<script src="js/script-contato.js"></script>

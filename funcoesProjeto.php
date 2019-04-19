@@ -30,3 +30,5 @@ function trataTelefone($telefone)
     return $telefone; 
 }
 ?>
+
+
