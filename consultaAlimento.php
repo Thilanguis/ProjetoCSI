@@ -47,20 +47,19 @@
                          ?>
         <td>
             <div>
-                <a href="cadastroAlimentos.php"><img id="alimentoAdicionado" src="img/icons8-mais-48.png" alt=""></a>
+                <a href="cadastroAlimentos.php?`col 1`=" .$row[col 1].><img id="alimentoAdicionado" src="img/icons8-mais-48.png" alt=""></a>
             </div>
         </td>
         <?php
-                        
-                        
-                                echo "</tr>";
-                    } ?>
+      
+                               echo "</tr>";
+      } ?>
     </table>
 </div>
 <?php } 
                 else
                 {
-                    ?>
+         ?>
 <div id="msgErro" class="alert alert-danger" role="alert">
     Nenhum registro encontrado
 </div>
