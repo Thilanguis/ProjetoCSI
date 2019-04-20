@@ -22,6 +22,9 @@
        include_once 'conexao.php';
        
        $sqlTabelaAlimentos = "select * from tabelaalimentos where `COL 1`=".$_GET["COL 1"];
+         
+       $sqlDadosDaRefeicao = "insert into alimentos values ('".$refeicao."','".$quantidade."','".$horario."','".$col2."','".$col3."','".$col5."','".$col6."','".$col7."','".$col8."','".$col9."')";
+    
        
        $result = mysqli_query($con, $sqlTabelaAlimentos);
        
@@ -32,20 +35,19 @@
     $horario         = $_POST["horario"];
     $refeicao        = $_POST["refeicao"];
     $quantidade      = $_POST["quantidade"];
-    $col2            = $row($_POST["col 2"]);
-    $col3            = $row($_POST["col 3"]);
-    $col5            = $row($_POST["col 5"]);
-    $col6            = $row($_POST["col 6"]);
-    $col7            = $row($_POST["col 7"]);
-    $col8            = $row($_POST["col 8"]);
-    $col9            = $row($_POST["col 9"]);
+    $col2            = $_POST["col 2"];
+    $col3            = $_POST["col 3"];
+    $col5            = $_POST["col 5"];
+    $col6            = $_POST["col 6"];
+    $col7            = $_POST["col 7"];
+    $col8            = $_POST["col 8"];
+    $col9            = $_POST["col 9"];
 
     
     include_once 'conexao.php';
         
     
     
-    $sqlDadosDaRefeicao = "insert into alimentos values ('".$refeicao."','".$quantidade."','".$horario."','".$col2."','".$col3."','".$col5."','".$col6."','".$col7."','".$col8."','".$col9."')";
     
         
    
