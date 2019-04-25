@@ -48,7 +48,7 @@
         <td>
             <div>
                 <a href="cadastroAlimentos.php?`col 1`=" .$row[col 1].><img id="alimentoAdicionado" src="img/icons8-mais-48.png" alt=""></a>
-            </div>
+            </div>    
         </td>
         <?php
       

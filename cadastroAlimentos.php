@@ -21,9 +21,7 @@
    {
        include_once 'conexao.php';
        
-       $sqlTabelaAlimentos = "select * from tabelaalimentos where `COL 1`=".$_GET["COL 1"];
-         
-       $sqlDadosDaRefeicao = "insert into alimentos values ('".$refeicao."','".$quantidade."','".$horario."','".$col2."','".$col3."','".$col5."','".$col6."','".$col7."','".$col8."','".$col9."')";
+       $sqlTabelaAlimentos = "select * from tabelaalimentos where `col 1`=".$_GET["col 1"];
     
        
        $result = mysqli_query($con, $sqlTabelaAlimentos);
@@ -42,14 +40,9 @@
     $col7            = $_POST["col 7"];
     $col8            = $_POST["col 8"];
     $col9            = $_POST["col 9"];
-
-    
-    include_once 'conexao.php';
-        
-    
-    
-    
-        
+         
+    $sqlDadosDaRefeicao = "insert into alimentos values ('".$refeicao."','".$quantidade."','".$horario."','".$col2."','".$col3."','".$col5."','".$col6."','".$col7."','".$col8."','".$col9."')";
+  
    
 
             if(mysqli_query($con,$sqlDadosDaRefeicao))  

@@ -126,7 +126,6 @@
                 <div class="form-group row">
                     <div class="col-sm-12" id="Resultado">
 
-
                     </div>
                 </div>
             </div>
