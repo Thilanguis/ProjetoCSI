@@ -74,7 +74,7 @@
             </div>
         </div>
 
-
+        <form action="consultaAlimento.php" method="get"></form>
         <div id="inclusaoAlimentos">
             <h5 style="text-align: center; padding-bottom: 20px;"><b><i>Montagem da dieta</i></b></h5>
             <div class="form-group row">
@@ -129,9 +129,95 @@
             </div>
         </div>
 
+        <div id="limpandoTelaParaDieta">
+            <p></p>
+        </div>
+
+        <div id="tabelasAlimentosAdicionadas" class="form-row">
+            <div style="margin-top: %;" class="form-group">
+                <label for="">
+                    <h6>horário</h6>
+                </label>
+                <input class="form-control" type="time" disabled>
+            </div>
+
+            <div class="form-group table-overflow2">
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Alimento</th>
+                            <th scope="col">Nº</th>
+                            <th scope="col">M.C.</th>
+                            <th scope="col">CHO</th>
+                            <th scope="col">PTN</th>
+                            <th scope="col">LIP</th>
+                            <th scope="col">Kcal</th>
+                            <th scope="col">Excluir</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                            <td>@mdo</td>
+                            <td>@mdo</td>
+                            <td>@mdo</td>
+                            <td>X</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>Thornton</td>
+                            <td>Thornton</td>
+                            <td>Thornton</td>
+                            <td>Thornton</td>
+                            <td>X</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                            <td>@twitter</td>
+                            <td>@twitter</td>
+                            <td>@twitter</td>
+                            <td>X</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="vetKcalRefeicao" class="form-group">
+                <label for="">
+                    <h6>VET / Kcal</h6>
+                </label>
+                <input class="form-control col-md-4" type="text" disabled>
+            </div>
+        </div>
+
+        <div id="form-VET1">
+            <div class="form-row">
+                <label for="inputPassword" class="col-4 col-form-label">
+                    <h6><i>Total :</i></h6>
+                </label>
+                <div class="form-group col-sm-2">CHO
+                    <input style="text-align: center;" type="text" class="form-control" id="bracoEsq" placeholder="" name="bracoEsq" disabled>
+                </div>
+                <div class="form-group col-sm-2">PTN
+                    <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="bracoDir" disabled>
+                </div>
+                <div class="form-group col-sm-2">LIP
+                    <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="bracoDir" disabled>
+                </div>
+            </div>
+        </div>
+
         <footer class="container" id="rodape">
             <?php include_once 'rodape.php'; ?>
         </footer>
+
     </div>
 </body>
 

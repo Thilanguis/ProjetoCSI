@@ -340,6 +340,15 @@ h3 {
     width: 300px;
 }
 
+#form-VET1 {
+    margin-top: 40px;
+    margin-left: 80px;
+    margin-bottom: 20px;
+    float: left;
+    display: inline-block;
+    width: px;
+}
+
 #form-Clinico {
     margin-top: 60px;
     margin-left: 250px;
@@ -394,9 +403,31 @@ h3 {
 
 .table-overflow1 {
     margin-top: 5%;
-    max-height: 400px;
+    max-height: 250px;
     overflow-y: auto;
     background-image: linear-gradient(to bottom, white, rgba(208, 235, 218, 0.63));
+}
+
+#limpandoTelaParaDieta {
+    clear: both;
+}
+
+.table-overflow2 {
+    margin-top: 5%;
+    margin-left: 15%;
+    max-height: auto;
+    max-width: 50%;
+}
+
+#tabelasAlimentosAdicionadas {
+    max-width: 60%;
+    margin-left: 2%;
+}
+
+#vetKcalRefeicao {
+    position: absolute;
+    margin-left: 50%;
+    margin-top: 7%;
 }
 
 #msgErro {
@@ -414,8 +445,6 @@ h3 {
     margin-top: 50px;
     font-style: oblique;
 }
-
-
 
 #btnConfirmacao {
     margin-top: 10px;
@@ -460,5 +489,4 @@ h3 {
     height: 30px;
     width: 30px;
     margin-left: 10px;
-    padding-right:
 }
