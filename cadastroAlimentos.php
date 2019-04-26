@@ -15,8 +15,7 @@
     <div class="">
 
         <?php
-        
-        
+     
     include_once 'funcoesProjeto.php';
         
      if(isset($_GET["idAlimento"]))
@@ -54,12 +53,13 @@
         </div>
 
         <div id="btnConfirmacao">
-            <a href="index.php"><button id="btnVoltar1" type="button" class="btn btn-warning animated zoomIn" style="margin-left:48%;">OK</button> </a>
+            <a href="form-Dietoterapia.php"><button id="btnVoltar1" type="button" class="btn btn-warning animated zoomIn" style="margin-left:48%;">OK</button> </a>
         </div>
         <?php
         }
+         
         else
-        {    
+        {   
          ?>
         <div class="alert alert-warning animated zoomIn container" role="alert" style="width: 300px; margin-top: 100px;">
             Erro ao cadastrar contato!

@@ -4,6 +4,7 @@
             
             if(isset($_GET["alimento"]))
             {
+       
                 $alimento = $_GET["alimento"]; 
                 
                 include_once 'conexao.php';
