@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <title>Dietpro</title>
     <?php include_once 'head.php'; 
+    include_once 'conexao.php';
     ?>
 
 </head>
@@ -15,33 +16,33 @@
 
         <?php
         
+        
     include_once 'funcoesProjeto.php';
         
-     if(isset($_GET["col 1"]))
+     if(isset($_GET["idAlimento"]))
    {
-       include_once 'conexao.php';
        
-       $sqlTabelaAlimentos = "select * from tabelaalimentos where `col 1`=".$_GET["col 1"];
+       
+       $sqlTabelaAlimentos = "select  `col 1`, `col 2`, `col 3`, `col 5`, `col 6`, `col 7`, `col 8`, `col 9` from tabelaalimentos where `col 1`=".$_GET["idAlimento"];
     
        
        $result = mysqli_query($con, $sqlTabelaAlimentos);
        
-       $totalResgistros = mysqli_num_rows($result);
        
        $row = mysqli_fetch_array($result); 
         
-    $horario         = $_POST["horario"];
-    $refeicao        = $_POST["refeicao"];
-    $quantidade      = $_POST["quantidade"];
-    $col2            = $_POST["col 2"];
-    $col3            = $_POST["col 3"];
-    $col5            = $_POST["col 5"];
-    $col6            = $_POST["col 6"];
-    $col7            = $_POST["col 7"];
-    $col8            = $_POST["col 8"];
-    $col9            = $_POST["col 9"];
+  // $horario         = $_POST["horario"];
+  //  $refeicao        = $_POST["refeicao"];
+  // $quantidade      = $_POST["quantidade"];
+    $col2            = $row["col 2"]; 
+    $col3            = $row["col 3"];
+    $col5            = $row["col 5"];
+    $col6            = $row["col 6"];
+    $col7            = $row["col 7"];
+    $col8            = $row["col 8"];
+    $col9            = $row["col 9"];
          
-    $sqlDadosDaRefeicao = "insert into alimentos values ('".$refeicao."','".$quantidade."','".$horario."','".$col2."','".$col3."','".$col5."','".$col6."','".$col7."','".$col8."','".$col9."')";
+    $sqlDadosDaRefeicao = "insert into alimentos (NOME_ALIMENTO, MEDIDA_CASEIRA, GRAMA, CHO, PTN, LIP, KCAL) values ('".$col2."','".$col3."','".$col5."','".$col6."','".$col7."','".$col8."','".$col9."')";
   
    
 
@@ -58,8 +59,7 @@
         <?php
         }
         else
-        {
-                
+        {    
          ?>
         <div class="alert alert-warning animated zoomIn container" role="alert" style="width: 300px; margin-top: 100px;">
             Erro ao cadastrar contato!
@@ -71,9 +71,8 @@
         <?php
         }
        
-            
-            
-    mysqli_close($con);
+     }
+         mysqli_close($con);
 ?>
 
     </div>
