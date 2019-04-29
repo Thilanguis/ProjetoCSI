@@ -341,12 +341,9 @@ h3 {
 }
 
 #form-VET1 {
-    margin-top: 40px;
-    margin-left: 80px;
-    margin-bottom: 20px;
-    float: left;
+    margin-top: 1%;
+    margin-left: 32%;
     display: inline-block;
-    width: px;
 }
 
 #form-Clinico {
@@ -413,21 +410,12 @@ h3 {
 }
 
 .table-overflow2 {
-    margin-top: 5%;
-    margin-left: 15%;
-    max-height: auto;
-    max-width: 50%;
+    margin-top: 1%;
 }
 
 #tabelasAlimentosAdicionadas {
     max-width: 60%;
     margin-left: 2%;
-}
-
-#vetKcalRefeicao {
-    position: absolute;
-    margin-left: 50%;
-    margin-top: 7%;
 }
 
 #msgErro {

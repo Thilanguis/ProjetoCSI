@@ -132,16 +132,18 @@
         <div id="limpandoTelaParaDieta">
             <p></p>
         </div>
+        <hr>
 
-        <div id="tabelasAlimentosAdicionadas" class="form-row">
-            <div style="margin-top: %;" class="form-group">
-                <label for="">
+        <div style="margin-top: 1%;" class="row">
+            <div style="margin-left: 2%; margin-top: 2%;" class="col-sm">
+                <input type="text" class="form-control col-9" disabled>
+                <label>
                     <h6>horário</h6>
                 </label>
-                <input class="form-control" type="time" disabled>
+                <input class="form-control col-6" type="time" disabled>
             </div>
 
-            <div class="form-group table-overflow2">
+            <div class="col-sm table-overflow2">
                 <table class="table">
                     <thead class="thead-dark">
                         <tr>
@@ -189,19 +191,21 @@
                     </tbody>
                 </table>
             </div>
-            <div id="vetKcalRefeicao" class="form-group">
-                <label for="">
-                    <h6>VET / Kcal</h6>
+            <div style="margin-right: 1%; margin-top: 4%;" class="col-sm">
+                <label>
+                    <h6>VET / Kcal "refeição"</h6>
                 </label>
-                <input class="form-control col-md-4" type="text" disabled>
+                <input class="form-control col-10" type="text" disabled>
             </div>
         </div>
 
         <div id="form-VET1">
             <div class="form-row">
-                <label for="inputPassword" class="col-4 col-form-label">
-                    <h6><i>Total :</i></h6>
-                </label>
+                <div style="margin-top: 15px;" class="col-2">
+                    <label for="inputPassword" class="">
+                        <h6><i>Total :</i></h6>
+                    </label>
+                </div>
                 <div class="form-group col-sm-2">CHO
                     <input style="text-align: center;" type="text" class="form-control" id="bracoEsq" placeholder="" name="bracoEsq" disabled>
                 </div>
