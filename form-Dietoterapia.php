@@ -134,33 +134,58 @@
         </div>
 
         <hr>
+        
+        
+        
+        <!-- Início resultado da dieta -->
+        
         <div style="display: inline-block; margin-left: 23%;">
             <img id="brasaoNutricao" src="img/simbolo%20de%20nutri%C3%A7%C3%A3o-800x800.png" alt="">
         </div>
         <div id="tituloConduta">
             <h2><i>Conduta Dietoterápica</i></h2>
         </div>
+        
+        <!-- Primeira tabela -->
         <div style="display: inline-block; margin-left: 3%;">
             <img id="brasaoNutricao" src="img/simbolo%20de%20nutri%C3%A7%C3%A3o-800x800.png" alt="">
         </div>
         <hr>
+        
+        <?php
+        
+        include_once 'conexao.php';
+        
+        $sql = "select * from alimentos where NOME_REFEICAO = 'Desjejum'";
+        
+        $result = mysqli_query($con, $sql);
+        
+        $totalRegistros = mysqli_num_rows($result);
+        
+        $row = mysqli_fetch_array($result);
+        
+         ?>
 
         <div style="margin-top: 1%;" class="row">
-            <div style="margin-left: 2%; margin-top: 3px;" class="col-sm">
+            <div style="margin-left: 2%; margin-top: 3px; display; inline-block;" class="col-2">
                 <div>
                     <img id="brasaoNutricao2" src="img/nutricao-falculdade-universidade-plotter-recorte-logo-1F9AF53657-seeklogo.com.png">
                 </div>
                 <label>
                     <h6>Refeição</h6>
                 </label>
-                <input type="text" class="form-control col-9" disabled>
+                <input type="text" class="form-control col-7" disabled value=" <?php
+      echo $row["NOME_REFEICAO"];  
+     ?>">
                 <label>
                     <h6>horário</h6>
                 </label>
-                <input class="form-control col-6" type="time" disabled>
+                <input class="form-control col-7" type="text" disabled value=" <?php 
+      echo $row["HORA"];  
+    ?>">
             </div>
 
-            <div class="col-sm table-overflow2">
+            <div class="col-9 table-overflow2">
                 <table class="table table-striped">
                     <thead class="thead-dark">
                         <tr>
@@ -175,44 +200,24 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                            <td>@mdo</td>
-                            <td>@mdo</td>
-                            <td>@mdo</td>
-                            <td>X</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>Thornton</td>
-                            <td>Thornton</td>
-                            <td>Thornton</td>
-                            <td>Thornton</td>
-                            <td>X</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                            <td>@twitter</td>
-                            <td>@twitter</td>
-                            <td>@twitter</td>
-                            <td>X</td>
-                        </tr>
+                       
+                       <?php
+                        if($totalRegistros > 0){
+                            while($row = mysqli_fetch_array($result)){
+                        echo "<tr>";   
+                        echo "<th scope='row'>".$row["NOME_ALIMENTO"]."</th>";
+                        echo "<td>".$row["NUM_MC"]."</td>";
+                        echo "<td>".$row["MEDIDA_CASEIRA"]."</td>";
+                        echo "<td>".$row["CHO"]."</td>";
+                        echo "<td>".$row["PTN"]."</td>";
+                        echo "<td>".$row["LIP"]."</td>";
+                        echo "<td>".$row["KCAL"]."</td>";
+                        echo "</tr>";
+                         }
+                        }
+                           ?>
                     </tbody>
                 </table>
-            </div>
-            <div style="margin-right: 1%; margin-top: 11%;" class="col-sm">
-                <label>
-                    <h6><i><b>VET / Kcal "refeição"</b></i></h6>
-                </label>
-                <input class="form-control col-10" type="text" disabled>
             </div>
         </div>
 
@@ -224,13 +229,17 @@
                     </label>
                 </div>
                 <div class="form-group col-sm-2"><i style="margin-left: 35%;">cho</i>
-                    <input style="text-align: center;" type="text" class="form-control" id="bracoEsq" placeholder="" name="bracoEsq" disabled>
+                    <input style="text-align: center;" type="text" class="form-control" id="bracoEsq" placeholder="" name="" disabled>
                 </div>
                 <div class="form-group col-sm-2"><i style="margin-left: 34%;">ptn</i>
-                    <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="bracoDir" disabled>
+                    <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled>
                 </div>
                 <div class="form-group col-sm-2"><i style="margin-left: 36%;">lip</i>
-                    <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="bracoDir" disabled>
+                    <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled>
+                </div>
+                
+                <div class="form-group col-sm-2"><i style="margin-left: 20%;"><i>VET / Kcal</i></i>
+                    <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled>
                 </div>
             </div>
         </div>
