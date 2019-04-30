@@ -132,22 +132,27 @@
         <div id="limpandoTelaParaDieta">
             <p></p>
         </div>
-        
+
         <hr>
-        <div style="display: inline-block; margin-left: 26%;">
-        <img src="img/icons8-restaurante-64.png" alt="">
+        <div style="display: inline-block; margin-left: 23%;">
+            <img id="brasaoNutricao" src="img/simbolo%20de%20nutri%C3%A7%C3%A3o-800x800.png" alt="">
         </div>
-        <div style="display: inline-block; margin-left: 6%;">
-        <h3>Conduta Dietoterápica</h3>
+        <div id="tituloConduta">
+            <h2><i>Conduta Dietoterápica</i></h2>
         </div>
-        <div style="display: inline-block; margin-left: 6%;">
-        <img src="img/icons8-energia-cal%C3%B3rica-filled-40.png" alt="">
+        <div style="display: inline-block; margin-left: 3%;">
+            <img id="brasaoNutricao" src="img/simbolo%20de%20nutri%C3%A7%C3%A3o-800x800.png" alt="">
         </div>
         <hr>
 
         <div style="margin-top: 1%;" class="row">
             <div style="margin-left: 2%; margin-top: 3px;" class="col-sm">
-               <label><h6>Refeição</h6></label>
+                <div>
+                    <img id="brasaoNutricao2" src="img/nutricao-falculdade-universidade-plotter-recorte-logo-1F9AF53657-seeklogo.com.png">
+                </div>
+                <label>
+                    <h6>Refeição</h6>
+                </label>
                 <input type="text" class="form-control col-9" disabled>
                 <label>
                     <h6>horário</h6>
@@ -214,17 +219,17 @@
         <div id="form-VET1">
             <div class="form-row">
                 <div style="margin-top: 20px;" class="col-2">
-                    <label for="inputPassword" class="">
-                        <h6><b>Total :</b></h6>
+                    <label for="inputPassword" class="col-sm-10">
+                        <h6>Total :</h6>
                     </label>
                 </div>
                 <div class="form-group col-sm-2"><i style="margin-left: 35%;">cho</i>
                     <input style="text-align: center;" type="text" class="form-control" id="bracoEsq" placeholder="" name="bracoEsq" disabled>
                 </div>
-                <div class="form-group col-sm-2"><i style="margin-left: 33%;">ptn</i>
+                <div class="form-group col-sm-2"><i style="margin-left: 34%;">ptn</i>
                     <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="bracoDir" disabled>
                 </div>
-                <div class="form-group col-sm-2"><i style="margin-left: 35%;">lip</i>
+                <div class="form-group col-sm-2"><i style="margin-left: 36%;">lip</i>
                     <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="bracoDir" disabled>
                 </div>
             </div>

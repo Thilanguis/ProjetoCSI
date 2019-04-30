@@ -123,6 +123,20 @@ h3 {
 #menuNutricionista {
     text-align: center;
     padding-top: 15px;
+    font-size: 35px;
+    color: #4d4952;
+    text-shadow: 0 1px 0 #272caf,
+        0 2px 0 #c9c9c9,
+        0 3px 0 #bbb,
+        0 4px 0 #b9b9b9,
+        0 5px 0 #aaa,
+        0 6px 1px rgba(0, 0, 0, .1),
+        0 0 5px rgba(0, 0, 0, .1),
+        0 1px 3px rgba(0, 0, 0, .3),
+        0 3px 5px rgba(0, 0, 0, .2),
+        0 5px 10px rgba(0, 0, 0, .25),
+        0 10px 10px rgba(0, 0, 0, .2),
+        0 20px 20px rgba(0, 0, 0, .15);
 }
 
 #menuNutricionista1 {
@@ -342,7 +356,7 @@ h3 {
 
 #form-VET1 {
     margin-top: 2px;
-    margin-left: 32%;
+    margin-left: 25%;
     display: inline-block;
 }
 
@@ -467,7 +481,7 @@ h3 {
     position: fixed;
     top: 75%;
     left: 75%;
-    padding: 10px;
+    v padding: 10px;
     z-index: 10000000;
     background-image: linear-gradient(to bottom, white, rgba(107, 191, 138, 0.63));
     border-radius: 1000px;
@@ -477,4 +491,35 @@ h3 {
     height: 30px;
     width: 30px;
     margin-left: 10px;
+}
+
+#brasaoNutricao {
+    width: 67px;
+    height: 70px;
+    display: inline-block;
+    margin-left: 24%;
+}
+
+#brasaoNutricao2 {
+    width: 70px;
+    height: 70px;
+    display: inline-block;
+    margin-left: 24%;
+}
+
+#tituloConduta {
+    display: inline-block;
+    margin-left: 6%;
+    text-shadow: 0 1px 0 #272caf,
+        0 2px 0 #c9c9c9,
+        0 3px 0 #bbb,
+        0 4px 0 #b9b9b9,
+        0 5px 0 #aaa,
+        0 6px 1px rgba(0, 0, 0, .1),
+        0 0 5px rgba(0, 0, 0, .1),
+        0 1px 3px rgba(0, 0, 0, .3),
+        0 3px 5px rgba(0, 0, 0, .2),
+        0 5px 10px rgba(0, 0, 0, .25),
+        0 10px 10px rgba(0, 0, 0, .2),
+        0 20px 20px rgba(0, 0, 0, .15);
 }
