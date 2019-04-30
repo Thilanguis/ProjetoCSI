@@ -132,10 +132,22 @@
         <div id="limpandoTelaParaDieta">
             <p></p>
         </div>
+        
+        <hr>
+        <div style="display: inline-block; margin-left: 26%;">
+        <img src="img/icons8-restaurante-64.png" alt="">
+        </div>
+        <div style="display: inline-block; margin-left: 6%;">
+        <h3>Conduta Dietoterápica</h3>
+        </div>
+        <div style="display: inline-block; margin-left: 6%;">
+        <img src="img/icons8-energia-cal%C3%B3rica-filled-40.png" alt="">
+        </div>
         <hr>
 
         <div style="margin-top: 1%;" class="row">
-            <div style="margin-left: 2%; margin-top: 2%;" class="col-sm">
+            <div style="margin-left: 2%; margin-top: 3px;" class="col-sm">
+               <label><h6>Refeição</h6></label>
                 <input type="text" class="form-control col-9" disabled>
                 <label>
                     <h6>horário</h6>
@@ -144,7 +156,7 @@
             </div>
 
             <div class="col-sm table-overflow2">
-                <table class="table">
+                <table class="table table-striped">
                     <thead class="thead-dark">
                         <tr>
                             <th scope="col">Alimento</th>
@@ -191,9 +203,9 @@
                     </tbody>
                 </table>
             </div>
-            <div style="margin-right: 1%; margin-top: 4%;" class="col-sm">
+            <div style="margin-right: 1%; margin-top: 11%;" class="col-sm">
                 <label>
-                    <h6>VET / Kcal "refeição"</h6>
+                    <h6><i><b>VET / Kcal "refeição"</b></i></h6>
                 </label>
                 <input class="form-control col-10" type="text" disabled>
             </div>
@@ -201,18 +213,18 @@
 
         <div id="form-VET1">
             <div class="form-row">
-                <div style="margin-top: 15px;" class="col-2">
+                <div style="margin-top: 20px;" class="col-2">
                     <label for="inputPassword" class="">
-                        <h6><i>Total :</i></h6>
+                        <h6><b>Total :</b></h6>
                     </label>
                 </div>
-                <div class="form-group col-sm-2">CHO
+                <div class="form-group col-sm-2"><i style="margin-left: 35%;">cho</i>
                     <input style="text-align: center;" type="text" class="form-control" id="bracoEsq" placeholder="" name="bracoEsq" disabled>
                 </div>
-                <div class="form-group col-sm-2">PTN
+                <div class="form-group col-sm-2"><i style="margin-left: 33%;">ptn</i>
                     <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="bracoDir" disabled>
                 </div>
-                <div class="form-group col-sm-2">LIP
+                <div class="form-group col-sm-2"><i style="margin-left: 35%;">lip</i>
                     <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="bracoDir" disabled>
                 </div>
             </div>
