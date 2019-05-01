@@ -88,12 +88,14 @@
                 <div class="col-sm-4">
                     <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref" name="refeicao">
                         <option selected></option>
-                        <option value="1">Desjejum</option>
-                        <option value="2">Colação</option>
-                        <option value="3">Almoço</option>
-                        <option value="4">Lanche</option>
-                        <option value="5">Jantar</option>
-                        <option value="6">Ceia</option>
+                        <option value="Desjejum">Desjejum</option>
+                        <option value="Colação">Colação</option>
+                        <option value="Almoço">Almoço</option>
+                        <option value="Lanche">Lanche</option>
+                        <option value="2ºLanche">2º Lanche</option>
+                        <option value="3ºLanche">3º Lanche</option>
+                        <option value="Jantar">Jantar</option>
+                        <option value="Ceia">Ceia</option>
                     </select>
                 </div>
             </div>
@@ -134,24 +136,27 @@
         </div>
 
         <hr>
-        
-        
-        
+
+
+
         <!-- Início resultado da dieta -->
-        
+
         <div style="display: inline-block; margin-left: 23%;">
             <img id="brasaoNutricao" src="img/simbolo%20de%20nutri%C3%A7%C3%A3o-800x800.png" alt="">
         </div>
         <div id="tituloConduta">
             <h2><i>Conduta Dietoterápica</i></h2>
         </div>
-        
+
         <!-- Primeira tabela -->
         <div style="display: inline-block; margin-left: 3%;">
             <img id="brasaoNutricao" src="img/simbolo%20de%20nutri%C3%A7%C3%A3o-800x800.png" alt="">
         </div>
         <hr>
-        
+
+
+        <!-- Tabela Desjejum -->
+
         <?php
         
         include_once 'conexao.php';
@@ -163,8 +168,8 @@
         $totalRegistros = mysqli_num_rows($result);
         
         $row = mysqli_fetch_array($result);
-        
-         ?>
+   
+        if($totalRegistros > 0)  { ?>
 
         <div style="margin-top: 1%;" class="row">
             <div style="margin-left: 2%; margin-top: 3px; display; inline-block;" class="col-2">
@@ -175,14 +180,12 @@
                     <h6>Refeição</h6>
                 </label>
                 <input type="text" class="form-control col-7" disabled value=" <?php
-      echo $row["NOME_REFEICAO"];  
-     ?>">
+      echo $row["NOME_REFEICAO"]; ?> ">
                 <label>
                     <h6>horário</h6>
                 </label>
                 <input class="form-control col-7" type="text" disabled value=" <?php 
-      echo $row["HORA"];  
-    ?>">
+      echo $row["HORA"]; ?> ">
             </div>
 
             <div class="col-9 table-overflow2">
@@ -200,9 +203,8 @@
                         </tr>
                     </thead>
                     <tbody>
-                       
-                       <?php
-                        if($totalRegistros > 0){
+
+                        <?php
                             while($row = mysqli_fetch_array($result)){
                         echo "<tr>";   
                         echo "<th scope='row'>".$row["NOME_ALIMENTO"]."</th>";
@@ -214,7 +216,6 @@
                         echo "<td>".$row["KCAL"]."</td>";
                         echo "</tr>";
                          }
-                        }
                            ?>
                     </tbody>
                 </table>
@@ -237,12 +238,666 @@
                 <div class="form-group col-sm-2"><i style="margin-left: 36%;">lip</i>
                     <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled>
                 </div>
-                
+
                 <div class="form-group col-sm-2"><i style="margin-left: 20%;"><i>VET / Kcal</i></i>
                     <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled>
                 </div>
             </div>
         </div>
+        <hr>
+        <?php } ?>
+
+
+        <!-- Tabela Colação -->
+
+        <?php
+        
+        include_once 'conexao.php';
+        
+        $sql = "select * from alimentos where NOME_REFEICAO = 'Colação'";
+        
+        $result = mysqli_query($con, $sql);
+        
+        $totalRegistros = mysqli_num_rows($result);
+        
+        $row = mysqli_fetch_array($result);
+     
+        if($totalRegistros > 0)  { ?>
+
+        <div style="margin-top: 1%;" class="row">
+            <div style="margin-left: 2%; margin-top: 3px; display; inline-block;" class="col-2">
+                <div>
+                    <img id="brasaoNutricao2" src="img/nutricao-falculdade-universidade-plotter-recorte-logo-1F9AF53657-seeklogo.com.png">
+                </div>
+                <label>
+                    <h6>Refeição</h6>
+                </label>
+                <input type="text" class="form-control col-7" disabled value=" <?php
+      echo $row["NOME_REFEICAO"]; ?> ">
+                <label>
+                    <h6>horário</h6>
+                </label>
+                <input class="form-control col-7" type="text" disabled value=" <?php 
+      echo $row["HORA"]; ?> ">
+            </div>
+
+            <div class="col-9 table-overflow2">
+                <table class="table table-striped">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Alimento</th>
+                            <th scope="col">Nº</th>
+                            <th scope="col">M.C.</th>
+                            <th scope="col">CHO</th>
+                            <th scope="col">PTN</th>
+                            <th scope="col">LIP</th>
+                            <th scope="col">Kcal</th>
+                            <th scope="col">Excluir</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <?php 
+                            while($row = mysqli_fetch_array($result)){
+                        echo "<tr>";   
+                        echo "<th scope='row'>".$row["NOME_ALIMENTO"]."</th>";
+                        echo "<td>".$row["NUM_MC"]."</td>";
+                        echo "<td>".$row["MEDIDA_CASEIRA"]."</td>";
+                        echo "<td>".$row["CHO"]."</td>";
+                        echo "<td>".$row["PTN"]."</td>";
+                        echo "<td>".$row["LIP"]."</td>";
+                        echo "<td>".$row["KCAL"]."</td>";
+                        echo "</tr>";
+                         }
+                           ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="form-VET1">
+            <div class="form-row">
+                <div style="margin-top: 20px;" class="col-2">
+                    <label for="inputPassword" class="col-sm-10">
+                        <h6>Total :</h6>
+                    </label>
+                </div>
+                <div class="form-group col-sm-2"><i style="margin-left: 35%;">cho</i>
+                    <input style="text-align: center;" type="text" class="form-control" id="bracoEsq" placeholder="" name="" disabled>
+                </div>
+                <div class="form-group col-sm-2"><i style="margin-left: 34%;">ptn</i>
+                    <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled>
+                </div>
+                <div class="form-group col-sm-2"><i style="margin-left: 36%;">lip</i>
+                    <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled>
+                </div>
+
+                <div class="form-group col-sm-2"><i style="margin-left: 20%;"><i>VET / Kcal</i></i>
+                    <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <?php } ?>
+
+
+        <!-- Tabela Almoço -->
+
+        <?php
+        
+        include_once 'conexao.php';
+        
+        $sql = "select * from alimentos where NOME_REFEICAO = 'Almoço'";
+        
+        $result = mysqli_query($con, $sql);
+        
+        $totalRegistros = mysqli_num_rows($result);
+        
+        $row = mysqli_fetch_array($result);
+     
+        if($totalRegistros > 0)  { ?>
+
+        <div style="margin-top: 1%;" class="row">
+            <div style="margin-left: 2%; margin-top: 3px; display; inline-block;" class="col-2">
+                <div>
+                    <img id="brasaoNutricao2" src="img/nutricao-falculdade-universidade-plotter-recorte-logo-1F9AF53657-seeklogo.com.png">
+                </div>
+                <label>
+                    <h6>Refeição</h6>
+                </label>
+                <input type="text" class="form-control col-7" disabled value=" <?php
+      echo $row["NOME_REFEICAO"]; ?> ">
+                <label>
+                    <h6>horário</h6>
+                </label>
+                <input class="form-control col-7" type="text" disabled value=" <?php 
+      echo $row["HORA"]; ?> ">
+            </div>
+
+            <div class="col-9 table-overflow2">
+                <table class="table table-striped">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Alimento</th>
+                            <th scope="col">Nº</th>
+                            <th scope="col">M.C.</th>
+                            <th scope="col">CHO</th>
+                            <th scope="col">PTN</th>
+                            <th scope="col">LIP</th>
+                            <th scope="col">Kcal</th>
+                            <th scope="col">Excluir</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <?php 
+                            while($row = mysqli_fetch_array($result)){
+                        echo "<tr>";   
+                        echo "<th scope='row'>".$row["NOME_ALIMENTO"]."</th>";
+                        echo "<td>".$row["NUM_MC"]."</td>";
+                        echo "<td>".$row["MEDIDA_CASEIRA"]."</td>";
+                        echo "<td>".$row["CHO"]."</td>";
+                        echo "<td>".$row["PTN"]."</td>";
+                        echo "<td>".$row["LIP"]."</td>";
+                        echo "<td>".$row["KCAL"]."</td>";
+                        echo "</tr>";
+                         }
+                           ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="form-VET1">
+            <div class="form-row">
+                <div style="margin-top: 20px;" class="col-2">
+                    <label for="inputPassword" class="col-sm-10">
+                        <h6>Total :</h6>
+                    </label>
+                </div>
+                <div class="form-group col-sm-2"><i style="margin-left: 35%;">cho</i>
+                    <input style="text-align: center;" type="text" class="form-control" id="bracoEsq" placeholder="" name="" disabled>
+                </div>
+                <div class="form-group col-sm-2"><i style="margin-left: 34%;">ptn</i>
+                    <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled>
+                </div>
+                <div class="form-group col-sm-2"><i style="margin-left: 36%;">lip</i>
+                    <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled>
+                </div>
+
+                <div class="form-group col-sm-2"><i style="margin-left: 20%;"><i>VET / Kcal</i></i>
+                    <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <?php } ?>
+
+
+        <!-- Tabela lanche -->
+
+        <?php
+        
+        include_once 'conexao.php';
+        
+        $sql = "select * from alimentos where NOME_REFEICAO = 'Lanche'";
+        
+        $result = mysqli_query($con, $sql);
+        
+        $totalRegistros = mysqli_num_rows($result);
+        
+        $row = mysqli_fetch_array($result);
+     
+        if($totalRegistros > 0)  { ?>
+
+        <div style="margin-top: 1%;" class="row">
+            <div style="margin-left: 2%; margin-top: 3px; display; inline-block;" class="col-2">
+                <div>
+                    <img id="brasaoNutricao2" src="img/nutricao-falculdade-universidade-plotter-recorte-logo-1F9AF53657-seeklogo.com.png">
+                </div>
+                <label>
+                    <h6>Refeição</h6>
+                </label>
+                <input type="text" class="form-control col-7" disabled value=" <?php
+      echo $row["NOME_REFEICAO"]; ?> ">
+                <label>
+                    <h6>horário</h6>
+                </label>
+                <input class="form-control col-7" type="text" disabled value=" <?php 
+      echo $row["HORA"]; ?> ">
+            </div>
+
+            <div class="col-9 table-overflow2">
+                <table class="table table-striped">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Alimento</th>
+                            <th scope="col">Nº</th>
+                            <th scope="col">M.C.</th>
+                            <th scope="col">CHO</th>
+                            <th scope="col">PTN</th>
+                            <th scope="col">LIP</th>
+                            <th scope="col">Kcal</th>
+                            <th scope="col">Excluir</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <?php 
+                            while($row = mysqli_fetch_array($result)){
+                        echo "<tr>";   
+                        echo "<th scope='row'>".$row["NOME_ALIMENTO"]."</th>";
+                        echo "<td>".$row["NUM_MC"]."</td>";
+                        echo "<td>".$row["MEDIDA_CASEIRA"]."</td>";
+                        echo "<td>".$row["CHO"]."</td>";
+                        echo "<td>".$row["PTN"]."</td>";
+                        echo "<td>".$row["LIP"]."</td>";
+                        echo "<td>".$row["KCAL"]."</td>";
+                        echo "</tr>";
+                         }
+                           ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="form-VET1">
+            <div class="form-row">
+                <div style="margin-top: 20px;" class="col-2">
+                    <label for="inputPassword" class="col-sm-10">
+                        <h6>Total :</h6>
+                    </label>
+                </div>
+                <div class="form-group col-sm-2"><i style="margin-left: 35%;">cho</i>
+                    <input style="text-align: center;" type="text" class="form-control" id="bracoEsq" placeholder="" name="" disabled>
+                </div>
+                <div class="form-group col-sm-2"><i style="margin-left: 34%;">ptn</i>
+                    <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled>
+                </div>
+                <div class="form-group col-sm-2"><i style="margin-left: 36%;">lip</i>
+                    <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled>
+                </div>
+
+                <div class="form-group col-sm-2"><i style="margin-left: 20%;"><i>VET / Kcal</i></i>
+                    <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <?php } ?>
+
+
+        <!-- Tabela 1ºLanche -->
+
+        <?php
+        
+        include_once 'conexao.php';
+        
+        $sql = "select * from alimentos where NOME_REFEICAO = '1ºLanche'";
+        
+        $result = mysqli_query($con, $sql);
+        
+        $totalRegistros = mysqli_num_rows($result);
+        
+        $row = mysqli_fetch_array($result);
+     
+        if($totalRegistros > 0)  { ?>
+
+        <div style="margin-top: 1%;" class="row">
+            <div style="margin-left: 2%; margin-top: 3px; display; inline-block;" class="col-2">
+                <div>
+                    <img id="brasaoNutricao2" src="img/nutricao-falculdade-universidade-plotter-recorte-logo-1F9AF53657-seeklogo.com.png">
+                </div>
+                <label>
+                    <h6>Refeição</h6>
+                </label>
+                <input type="text" class="form-control col-7" disabled value=" <?php
+      echo $row["NOME_REFEICAO"]; ?> ">
+                <label>
+                    <h6>horário</h6>
+                </label>
+                <input class="form-control col-7" type="text" disabled value=" <?php 
+      echo $row["HORA"]; ?> ">
+            </div>
+
+            <div class="col-9 table-overflow2">
+                <table class="table table-striped">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Alimento</th>
+                            <th scope="col">Nº</th>
+                            <th scope="col">M.C.</th>
+                            <th scope="col">CHO</th>
+                            <th scope="col">PTN</th>
+                            <th scope="col">LIP</th>
+                            <th scope="col">Kcal</th>
+                            <th scope="col">Excluir</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <?php 
+                            while($row = mysqli_fetch_array($result)){
+                        echo "<tr>";   
+                        echo "<th scope='row'>".$row["NOME_ALIMENTO"]."</th>";
+                        echo "<td>".$row["NUM_MC"]."</td>";
+                        echo "<td>".$row["MEDIDA_CASEIRA"]."</td>";
+                        echo "<td>".$row["CHO"]."</td>";
+                        echo "<td>".$row["PTN"]."</td>";
+                        echo "<td>".$row["LIP"]."</td>";
+                        echo "<td>".$row["KCAL"]."</td>";
+                        echo "</tr>";
+                         }
+                           ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="form-VET1">
+            <div class="form-row">
+                <div style="margin-top: 20px;" class="col-2">
+                    <label for="inputPassword" class="col-sm-10">
+                        <h6>Total :</h6>
+                    </label>
+                </div>
+                <div class="form-group col-sm-2"><i style="margin-left: 35%;">cho</i>
+                    <input style="text-align: center;" type="text" class="form-control" id="bracoEsq" placeholder="" name="" disabled>
+                </div>
+                <div class="form-group col-sm-2"><i style="margin-left: 34%;">ptn</i>
+                    <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled>
+                </div>
+                <div class="form-group col-sm-2"><i style="margin-left: 36%;">lip</i>
+                    <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled>
+                </div>
+
+                <div class="form-group col-sm-2"><i style="margin-left: 20%;"><i>VET / Kcal</i></i>
+                    <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <?php } ?>
+
+
+        <!-- Tabela 2ºLanche -->
+
+        <?php
+        
+        include_once 'conexao.php';
+        
+        $sql = "select * from alimentos where NOME_REFEICAO = '2ºLanche'";
+        
+        $result = mysqli_query($con, $sql);
+        
+        $totalRegistros = mysqli_num_rows($result);
+        
+        $row = mysqli_fetch_array($result);
+     
+        if($totalRegistros > 0)  { ?>
+
+        <div style="margin-top: 1%;" class="row">
+            <div style="margin-left: 2%; margin-top: 3px; display; inline-block;" class="col-2">
+                <div>
+                    <img id="brasaoNutricao2" src="img/nutricao-falculdade-universidade-plotter-recorte-logo-1F9AF53657-seeklogo.com.png">
+                </div>
+                <label>
+                    <h6>Refeição</h6>
+                </label>
+                <input type="text" class="form-control col-7" disabled value=" <?php
+      echo $row["NOME_REFEICAO"]; ?> ">
+                <label>
+                    <h6>horário</h6>
+                </label>
+                <input class="form-control col-7" type="text" disabled value=" <?php 
+      echo $row["HORA"]; ?> ">
+            </div>
+
+            <div class="col-9 table-overflow2">
+                <table class="table table-striped">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Alimento</th>
+                            <th scope="col">Nº</th>
+                            <th scope="col">M.C.</th>
+                            <th scope="col">CHO</th>
+                            <th scope="col">PTN</th>
+                            <th scope="col">LIP</th>
+                            <th scope="col">Kcal</th>
+                            <th scope="col">Excluir</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <?php 
+                            while($row = mysqli_fetch_array($result)){
+                        echo "<tr>";   
+                        echo "<th scope='row'>".$row["NOME_ALIMENTO"]."</th>";
+                        echo "<td>".$row["NUM_MC"]."</td>";
+                        echo "<td>".$row["MEDIDA_CASEIRA"]."</td>";
+                        echo "<td>".$row["CHO"]."</td>";
+                        echo "<td>".$row["PTN"]."</td>";
+                        echo "<td>".$row["LIP"]."</td>";
+                        echo "<td>".$row["KCAL"]."</td>";
+                        echo "</tr>";
+                         }
+                           ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="form-VET1">
+            <div class="form-row">
+                <div style="margin-top: 20px;" class="col-2">
+                    <label for="inputPassword" class="col-sm-10">
+                        <h6>Total :</h6>
+                    </label>
+                </div>
+                <div class="form-group col-sm-2"><i style="margin-left: 35%;">cho</i>
+                    <input style="text-align: center;" type="text" class="form-control" id="bracoEsq" placeholder="" name="" disabled>
+                </div>
+                <div class="form-group col-sm-2"><i style="margin-left: 34%;">ptn</i>
+                    <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled>
+                </div>
+                <div class="form-group col-sm-2"><i style="margin-left: 36%;">lip</i>
+                    <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled>
+                </div>
+
+                <div class="form-group col-sm-2"><i style="margin-left: 20%;"><i>VET / Kcal</i></i>
+                    <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <?php } ?>
+
+
+        <!-- Tabela Jantar -->
+
+        <?php
+        
+        include_once 'conexao.php';
+        
+        $sql = "select * from alimentos where NOME_REFEICAO = 'Jantar'";
+        
+        $result = mysqli_query($con, $sql);
+        
+        $totalRegistros = mysqli_num_rows($result);
+        
+        $row = mysqli_fetch_array($result);
+     
+        if($totalRegistros > 0)  { ?>
+
+        <div style="margin-top: 1%;" class="row">
+            <div style="margin-left: 2%; margin-top: 3px; display; inline-block;" class="col-2">
+                <div>
+                    <img id="brasaoNutricao2" src="img/nutricao-falculdade-universidade-plotter-recorte-logo-1F9AF53657-seeklogo.com.png">
+                </div>
+                <label>
+                    <h6>Refeição</h6>
+                </label>
+                <input type="text" class="form-control col-7" disabled value=" <?php
+      echo $row["NOME_REFEICAO"]; ?> ">
+                <label>
+                    <h6>horário</h6>
+                </label>
+                <input class="form-control col-7" type="text" disabled value=" <?php 
+      echo $row["HORA"]; ?> ">
+            </div>
+
+            <div class="col-9 table-overflow2">
+                <table class="table table-striped">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Alimento</th>
+                            <th scope="col">Nº</th>
+                            <th scope="col">M.C.</th>
+                            <th scope="col">CHO</th>
+                            <th scope="col">PTN</th>
+                            <th scope="col">LIP</th>
+                            <th scope="col">Kcal</th>
+                            <th scope="col">Excluir</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <?php 
+                            while($row = mysqli_fetch_array($result)){
+                        echo "<tr>";   
+                        echo "<th scope='row'>".$row["NOME_ALIMENTO"]."</th>";
+                        echo "<td>".$row["NUM_MC"]."</td>";
+                        echo "<td>".$row["MEDIDA_CASEIRA"]."</td>";
+                        echo "<td>".$row["CHO"]."</td>";
+                        echo "<td>".$row["PTN"]."</td>";
+                        echo "<td>".$row["LIP"]."</td>";
+                        echo "<td>".$row["KCAL"]."</td>";
+                        echo "</tr>";
+                         }
+                           ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="form-VET1">
+            <div class="form-row">
+                <div style="margin-top: 20px;" class="col-2">
+                    <label for="inputPassword" class="col-sm-10">
+                        <h6>Total :</h6>
+                    </label>
+                </div>
+                <div class="form-group col-sm-2"><i style="margin-left: 35%;">cho</i>
+                    <input style="text-align: center;" type="text" class="form-control" id="bracoEsq" placeholder="" name="" disabled>
+                </div>
+                <div class="form-group col-sm-2"><i style="margin-left: 34%;">ptn</i>
+                    <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled>
+                </div>
+                <div class="form-group col-sm-2"><i style="margin-left: 36%;">lip</i>
+                    <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled>
+                </div>
+
+                <div class="form-group col-sm-2"><i style="margin-left: 20%;"><i>VET / Kcal</i></i>
+                    <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <?php } ?>
+
+        <!-- Tabela Ceia -->
+
+        <?php
+        
+        include_once 'conexao.php';
+        
+        $sql = "select * from alimentos where NOME_REFEICAO = 'Ceia'";
+        
+        $result = mysqli_query($con, $sql);
+        
+        $totalRegistros = mysqli_num_rows($result);
+        
+        $row = mysqli_fetch_array($result);
+     
+        if($totalRegistros > 0)  { ?>
+
+        <div style="margin-top: 1%;" class="row">
+            <div style="margin-left: 2%; margin-top: 3px; display; inline-block;" class="col-2">
+                <div>
+                    <img id="brasaoNutricao2" src="img/nutricao-falculdade-universidade-plotter-recorte-logo-1F9AF53657-seeklogo.com.png">
+                </div>
+                <label>
+                    <h6>Refeição</h6>
+                </label>
+                <input type="text" class="form-control col-7" disabled value=" <?php
+      echo $row["NOME_REFEICAO"]; ?> ">
+                <label>
+                    <h6>horário</h6>
+                </label>
+                <input class="form-control col-7" type="text" disabled value=" <?php 
+      echo $row["HORA"]; ?> ">
+            </div>
+
+            <div class="col-9 table-overflow2">
+                <table class="table table-striped">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Alimento</th>
+                            <th scope="col">Nº</th>
+                            <th scope="col">M.C.</th>
+                            <th scope="col">CHO</th>
+                            <th scope="col">PTN</th>
+                            <th scope="col">LIP</th>
+                            <th scope="col">Kcal</th>
+                            <th scope="col">Excluir</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <?php 
+                            while($row = mysqli_fetch_array($result)){
+                        echo "<tr>";   
+                        echo "<th scope='row'>".$row["NOME_ALIMENTO"]."</th>";
+                        echo "<td>".$row["NUM_MC"]."</td>";
+                        echo "<td>".$row["MEDIDA_CASEIRA"]."</td>";
+                        echo "<td>".$row["CHO"]."</td>";
+                        echo "<td>".$row["PTN"]."</td>";
+                        echo "<td>".$row["LIP"]."</td>";
+                        echo "<td>".$row["KCAL"]."</td>";
+                        echo "</tr>";
+                         }
+                           ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="form-VET1">
+            <div class="form-row">
+                <div style="margin-top: 20px;" class="col-2">
+                    <label for="inputPassword" class="col-sm-10">
+                        <h6>Total :</h6>
+                    </label>
+                </div>
+                <div class="form-group col-sm-2"><i style="margin-left: 35%;">cho</i>
+                    <input style="text-align: center;" type="text" class="form-control" id="bracoEsq" placeholder="" name="" disabled>
+                </div>
+                <div class="form-group col-sm-2"><i style="margin-left: 34%;">ptn</i>
+                    <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled>
+                </div>
+                <div class="form-group col-sm-2"><i style="margin-left: 36%;">lip</i>
+                    <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled>
+                </div>
+
+                <div class="form-group col-sm-2"><i style="margin-left: 20%;"><i>VET / Kcal</i></i>
+                    <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <?php } ?>
+
+
 
         <footer class="container" id="rodape">
             <?php include_once 'rodape.php'; ?>
