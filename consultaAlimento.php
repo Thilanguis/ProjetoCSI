@@ -1,7 +1,7 @@
 <?php
     
             include_once 'head.php';
-            
+    
             if(isset($_GET["alimento"]))
             {
        
@@ -16,6 +16,8 @@
                 $result = mysqli_query($con, $sql);
                 
                 $totalRegistros = mysqli_num_rows($result);
+                
+                $quantidade = "<script>document.getElementByName('quantidade').value</script>";
                 
                 if($totalRegistros > 0)
                 { ?>
@@ -45,7 +47,8 @@
                         echo "<td>".$row["col 7"]."</td>";
                         echo "<td>".$row["col 8"]."</td>";
                         echo "<td>".$row["col 9"]."</td>";
-                        echo "<td><a href='cadastroAlimentos.php?idAlimento=".$row["col 1"]."'><img id='alimentoadicionado' src='img/icons8-mais-48.png' alt=''></a></td>";
+                        ?> <?php
+                        echo "<td><a href='cadastroAlimentos.php?idAlimento=".$row["col 1"]."&quantidade={$quantidade}'><img id='alimentoadicionado' src='img/icons8-mais-48.png' alt=''></a></td>";
                         echo "</tr>";
              } 
         ?>
@@ -53,9 +56,9 @@
 </div>
 
 <?php } 
-else
-    {
-     ?>
+                else
+                {
+                ?>
 <div id="msgErro" class="alert alert-danger" role="alert">
     Nenhum registro encontrado
 </div>

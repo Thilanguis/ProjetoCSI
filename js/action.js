@@ -10,3 +10,9 @@ $(document).ready(function () {
         $('.addTel1').toggle();
     });
 });
+
+
+function getIdTelaFormDietoterapia() {
+    // Declaração de Variáveis
+    var nome = document.getElementByName("quantidade").value;
+}

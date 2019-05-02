@@ -38,8 +38,8 @@
             <a href="tabelaAlimentos.php" class="list-group-item list-group-item-action">Lista de alimentos</a>
             <a href="#" class="list-group-item list-group-item-action">Recordatório 24h</a>
             <a href="form-Dietoterapia.php" class="list-group-item list-group-item-action">Dietoterapia</a>
-            <a href="#" class="list-group-item list-group-item-action">Lista de substituições</a>
-            <a href="#" class="list-group-item list-group-item-action">Impressão de dieta</a>
+            <a href="listaSubstituicao.php" class="list-group-item list-group-item-action">Lista de subs.</a>
+            <a href="impressaoDieta.php" class="list-group-item list-group-item-action">Impressão de dieta</a>
         </div>
 
         <h4 id="menuNutricionista">Avaliação Clínica Nutricional &nbsp; <i class="fas fa-book-medical" style="font-size: 40px; color: #d83838; text-shadow: none;"></i></h4>
