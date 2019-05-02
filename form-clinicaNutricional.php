@@ -105,10 +105,10 @@
 
                     <div class="form-row">
                         <div id="form-Bio1" class="form-group col-md-3">
-                            <h6><i>Observações <br> adicionais :</i></h6>
+                            <h6><i>Recomendações <br> e orientações :</i></h6>
                         </div>
                         <div id="form-Bio2" class="form-group col-md-5">
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="10" placeholder="" name="observacoesAdicionais"></textarea>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="10" placeholder="" name="recomendacoesOrientacoes"></textarea>
                         </div>
                     </div>
 

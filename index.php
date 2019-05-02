@@ -85,7 +85,7 @@
         </div>
 
         <div id="cardsIndex" class="card-deck">
-            <div class="card container" style="width: 18rem;">
+            <div id="cardsDivulgacaoPacientes" class="card container" style="width: 18rem;">
                 <img class="card-img-top" src="img/10818780_745065035576255_818146252_n.jpg" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">- 54Kg</h5>
@@ -95,7 +95,7 @@
                     <small class="text-muted">Paciente: Victor Scavarda Valentim</small>
                 </div>
             </div>
-            <div class="card container" style="width: 18rem;">
+            <div id="cardsDivulgacaoPacientes" class="card container" style="width: 18rem;">
                 <img class="card-img-top" src="img/evolu%C3%A7%C3%A3o.jpg" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">- 26Kg</h5>
@@ -105,7 +105,7 @@
                     <small class="text-muted">Paciente: Yasmin Zouphi</small>
                 </div>
             </div>
-            <div class="card container" style="width: 18rem;">
+            <div id="cardsDivulgacaoPacientes" class="card container" style="width: 18rem;">
                 <img class="card-img-top" src="img/11695955_1034079559960031_707333758800032261_n.jpg" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">- 9Kg</h5>

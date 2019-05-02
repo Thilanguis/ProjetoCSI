@@ -19,14 +19,14 @@
     $sinalClinico           = $_POST["sinalClinico"];
     $medicamentos           = $_POST["medicamentos"];
     $Hsocial                = $_POST["Hsocial"];
-    $observacoesAdicionais  = $_POST["observacoesAdicionais"];
+    $recomendacoesOrientacoes  = $_POST["recomendacoesOrientacoes"];
    
     
     include_once 'conexao.php';
         
-     $ok = $HpatologiaPregressa != "" || $Hfamiliar != "" || $Halimentar != "" || $sinalClinico != "" || $medicamentos != "" || $Hsocial != "" || $observacoesAdicionais != ""; 
+     $ok = $HpatologiaPregressa != "" || $Hfamiliar != "" || $Halimentar != "" || $sinalClinico != "" || $medicamentos != "" || $Hsocial != "" || $recomendacoesOrientacoes != ""; 
     
-    $sql = "insert into a_clinica_nutricional values(null, '".$HpatologiaPregressa."','".$Hfamiliar."','".$Halimentar."','".$Hsocial."','".$medicamentos."','".$sinalClinico."','".$observacoesAdicionais."')";
+    $sql = "insert into a_clinica_nutricional values(null, '".$HpatologiaPregressa."','".$Hfamiliar."','".$Halimentar."','".$Hsocial."','".$medicamentos."','".$sinalClinico."','".$recomendacoesOrientacoes."')";
     
    
         if($ok)

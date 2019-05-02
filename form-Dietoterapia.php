@@ -193,6 +193,7 @@
                             <th scope="col">Alimento</th>
                             <th scope="col">Nº</th>
                             <th scope="col">M.C.</th>
+                            <th scope="col">Grama</th>
                             <th scope="col">CHO</th>
                             <th scope="col">PTN</th>
                             <th scope="col">LIP</th>
@@ -208,6 +209,7 @@
                         echo "<th scope='row'>".$row["NOME_ALIMENTO"]."</th>";
                         echo "<td>".$row["NUM_MC"]."</td>";
                         echo "<td>".$row["MEDIDA_CASEIRA"]."</td>";
+                        echo "<td>".$row["GRAMA"]."</td>";
                         echo "<td>".$row["CHO"]."</td>";
                         echo "<td>".$row["PTN"]."</td>";
                         echo "<td>".$row["LIP"]."</td>";
@@ -286,6 +288,7 @@
                             <th scope="col">Alimento</th>
                             <th scope="col">Nº</th>
                             <th scope="col">M.C.</th>
+                            <th scope="col">Grama</th>
                             <th scope="col">CHO</th>
                             <th scope="col">PTN</th>
                             <th scope="col">LIP</th>
@@ -301,6 +304,7 @@
                         echo "<th scope='row'>".$row["NOME_ALIMENTO"]."</th>";
                         echo "<td>".$row["NUM_MC"]."</td>";
                         echo "<td>".$row["MEDIDA_CASEIRA"]."</td>";
+                        echo "<td>".$row["GRAMA"]."</td>";
                         echo "<td>".$row["CHO"]."</td>";
                         echo "<td>".$row["PTN"]."</td>";
                         echo "<td>".$row["LIP"]."</td>";
@@ -379,6 +383,7 @@
                             <th scope="col">Alimento</th>
                             <th scope="col">Nº</th>
                             <th scope="col">M.C.</th>
+                            <th scope="col">Grama</th>
                             <th scope="col">CHO</th>
                             <th scope="col">PTN</th>
                             <th scope="col">LIP</th>
@@ -394,6 +399,7 @@
                         echo "<th scope='row'>".$row["NOME_ALIMENTO"]."</th>";
                         echo "<td>".$row["NUM_MC"]."</td>";
                         echo "<td>".$row["MEDIDA_CASEIRA"]."</td>";
+                        echo "<td>".$row["GRAMA"]."</td>";
                         echo "<td>".$row["CHO"]."</td>";
                         echo "<td>".$row["PTN"]."</td>";
                         echo "<td>".$row["LIP"]."</td>";
@@ -472,6 +478,7 @@
                             <th scope="col">Alimento</th>
                             <th scope="col">Nº</th>
                             <th scope="col">M.C.</th>
+                            <th scope="col">Grama</th>
                             <th scope="col">CHO</th>
                             <th scope="col">PTN</th>
                             <th scope="col">LIP</th>
@@ -487,6 +494,7 @@
                         echo "<th scope='row'>".$row["NOME_ALIMENTO"]."</th>";
                         echo "<td>".$row["NUM_MC"]."</td>";
                         echo "<td>".$row["MEDIDA_CASEIRA"]."</td>";
+                        echo "<td>".$row["GRAMA"]."</td>";
                         echo "<td>".$row["CHO"]."</td>";
                         echo "<td>".$row["PTN"]."</td>";
                         echo "<td>".$row["LIP"]."</td>";
@@ -565,6 +573,7 @@
                             <th scope="col">Alimento</th>
                             <th scope="col">Nº</th>
                             <th scope="col">M.C.</th>
+                            <th scope="col">Grama</th>
                             <th scope="col">CHO</th>
                             <th scope="col">PTN</th>
                             <th scope="col">LIP</th>
@@ -580,6 +589,7 @@
                         echo "<th scope='row'>".$row["NOME_ALIMENTO"]."</th>";
                         echo "<td>".$row["NUM_MC"]."</td>";
                         echo "<td>".$row["MEDIDA_CASEIRA"]."</td>";
+                        echo "<td>".$row["GRAMA"]."</td>";
                         echo "<td>".$row["CHO"]."</td>";
                         echo "<td>".$row["PTN"]."</td>";
                         echo "<td>".$row["LIP"]."</td>";
@@ -658,6 +668,7 @@
                             <th scope="col">Alimento</th>
                             <th scope="col">Nº</th>
                             <th scope="col">M.C.</th>
+                            <th scope="col">Grama</th>
                             <th scope="col">CHO</th>
                             <th scope="col">PTN</th>
                             <th scope="col">LIP</th>
@@ -673,6 +684,7 @@
                         echo "<th scope='row'>".$row["NOME_ALIMENTO"]."</th>";
                         echo "<td>".$row["NUM_MC"]."</td>";
                         echo "<td>".$row["MEDIDA_CASEIRA"]."</td>";
+                        echo "<td>".$row["GRAMA"]."</td>";
                         echo "<td>".$row["CHO"]."</td>";
                         echo "<td>".$row["PTN"]."</td>";
                         echo "<td>".$row["LIP"]."</td>";
@@ -751,6 +763,7 @@
                             <th scope="col">Alimento</th>
                             <th scope="col">Nº</th>
                             <th scope="col">M.C.</th>
+                            <th scope="col">Grama</th>
                             <th scope="col">CHO</th>
                             <th scope="col">PTN</th>
                             <th scope="col">LIP</th>
@@ -766,6 +779,7 @@
                         echo "<th scope='row'>".$row["NOME_ALIMENTO"]."</th>";
                         echo "<td>".$row["NUM_MC"]."</td>";
                         echo "<td>".$row["MEDIDA_CASEIRA"]."</td>";
+                        echo "<td>".$row["GRAMA"]."</td>";
                         echo "<td>".$row["CHO"]."</td>";
                         echo "<td>".$row["PTN"]."</td>";
                         echo "<td>".$row["LIP"]."</td>";
@@ -843,6 +857,7 @@
                             <th scope="col">Alimento</th>
                             <th scope="col">Nº</th>
                             <th scope="col">M.C.</th>
+                            <th scope="col">Grama</th>
                             <th scope="col">CHO</th>
                             <th scope="col">PTN</th>
                             <th scope="col">LIP</th>
@@ -858,6 +873,7 @@
                         echo "<th scope='row'>".$row["NOME_ALIMENTO"]."</th>";
                         echo "<td>".$row["NUM_MC"]."</td>";
                         echo "<td>".$row["MEDIDA_CASEIRA"]."</td>";
+                        echo "<td>".$row["GRAMA"]."</td>";
                         echo "<td>".$row["CHO"]."</td>";
                         echo "<td>".$row["PTN"]."</td>";
                         echo "<td>".$row["LIP"]."</td>";

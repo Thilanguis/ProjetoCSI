@@ -124,11 +124,11 @@
                             <th scope="col">Alimento</th>
                             <th scope="col">Nº</th>
                             <th scope="col">M.C.</th>
+                            <th scope="col">Grama</th>
                             <th scope="col">CHO</th>
                             <th scope="col">PTN</th>
                             <th scope="col">LIP</th>
                             <th scope="col">Kcal</th>
-                            <th scope="col">Excluir</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -139,6 +139,7 @@
                         echo "<th scope='row'>".$row["NOME_ALIMENTO"]."</th>";
                         echo "<td>".$row["NUM_MC"]."</td>";
                         echo "<td>".$row["MEDIDA_CASEIRA"]."</td>";
+                        echo "<td>".$row["GRAMA"]."</td>";
                         echo "<td>".$row["CHO"]."</td>";
                         echo "<td>".$row["PTN"]."</td>";
                         echo "<td>".$row["LIP"]."</td>";
@@ -148,29 +149,6 @@
                            ?>
                     </tbody>
                 </table>
-            </div>
-        </div>
-
-        <div id="form-VET1">
-            <div class="form-row">
-                <div style="margin-top: 20px;" class="col-2">
-                    <label for="inputPassword" class="col-sm-10">
-                        <h6>Total :</h6>
-                    </label>
-                </div>
-                <div class="form-group col-sm-2"><i style="margin-left: 35%;">cho</i>
-                    <input style="text-align: center;" type="text" class="form-control" id="bracoEsq" placeholder="" name="" disabled>
-                </div>
-                <div class="form-group col-sm-2"><i style="margin-left: 34%;">ptn</i>
-                    <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled>
-                </div>
-                <div class="form-group col-sm-2"><i style="margin-left: 36%;">lip</i>
-                    <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled>
-                </div>
-
-                <div class="form-group col-sm-2"><i style="margin-left: 20%;"><i>VET / Kcal</i></i>
-                    <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled>
-                </div>
             </div>
         </div>
         <hr>
@@ -217,11 +195,11 @@
                             <th scope="col">Alimento</th>
                             <th scope="col">Nº</th>
                             <th scope="col">M.C.</th>
+                            <th scope="col">Grama</th>
                             <th scope="col">CHO</th>
                             <th scope="col">PTN</th>
                             <th scope="col">LIP</th>
                             <th scope="col">Kcal</th>
-                            <th scope="col">Excluir</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -232,6 +210,7 @@
                         echo "<th scope='row'>".$row["NOME_ALIMENTO"]."</th>";
                         echo "<td>".$row["NUM_MC"]."</td>";
                         echo "<td>".$row["MEDIDA_CASEIRA"]."</td>";
+                        echo "<td>".$row["GRAMA"]."</td>";
                         echo "<td>".$row["CHO"]."</td>";
                         echo "<td>".$row["PTN"]."</td>";
                         echo "<td>".$row["LIP"]."</td>";
@@ -244,28 +223,6 @@
             </div>
         </div>
 
-        <div id="form-VET1">
-            <div class="form-row">
-                <div style="margin-top: 20px;" class="col-2">
-                    <label for="inputPassword" class="col-sm-10">
-                        <h6>Total :</h6>
-                    </label>
-                </div>
-                <div class="form-group col-sm-2"><i style="margin-left: 35%;">cho</i>
-                    <input style="text-align: center;" type="text" class="form-control" id="bracoEsq" placeholder="" name="" disabled>
-                </div>
-                <div class="form-group col-sm-2"><i style="margin-left: 34%;">ptn</i>
-                    <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled>
-                </div>
-                <div class="form-group col-sm-2"><i style="margin-left: 36%;">lip</i>
-                    <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled>
-                </div>
-
-                <div class="form-group col-sm-2"><i style="margin-left: 20%;"><i>VET / Kcal</i></i>
-                    <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled>
-                </div>
-            </div>
-        </div>
         <hr>
         <?php } ?>
 
@@ -310,11 +267,11 @@
                             <th scope="col">Alimento</th>
                             <th scope="col">Nº</th>
                             <th scope="col">M.C.</th>
+                            <th scope="col">Grama</th>
                             <th scope="col">CHO</th>
                             <th scope="col">PTN</th>
                             <th scope="col">LIP</th>
                             <th scope="col">Kcal</th>
-                            <th scope="col">Excluir</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -325,6 +282,7 @@
                         echo "<th scope='row'>".$row["NOME_ALIMENTO"]."</th>";
                         echo "<td>".$row["NUM_MC"]."</td>";
                         echo "<td>".$row["MEDIDA_CASEIRA"]."</td>";
+                        echo "<td>".$row["GRAMA"]."</td>";
                         echo "<td>".$row["CHO"]."</td>";
                         echo "<td>".$row["PTN"]."</td>";
                         echo "<td>".$row["LIP"]."</td>";
@@ -337,28 +295,6 @@
             </div>
         </div>
 
-        <div id="form-VET1">
-            <div class="form-row">
-                <div style="margin-top: 20px;" class="col-2">
-                    <label for="inputPassword" class="col-sm-10">
-                        <h6>Total :</h6>
-                    </label>
-                </div>
-                <div class="form-group col-sm-2"><i style="margin-left: 35%;">cho</i>
-                    <input style="text-align: center;" type="text" class="form-control" id="bracoEsq" placeholder="" name="" disabled>
-                </div>
-                <div class="form-group col-sm-2"><i style="margin-left: 34%;">ptn</i>
-                    <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled>
-                </div>
-                <div class="form-group col-sm-2"><i style="margin-left: 36%;">lip</i>
-                    <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled>
-                </div>
-
-                <div class="form-group col-sm-2"><i style="margin-left: 20%;"><i>VET / Kcal</i></i>
-                    <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled>
-                </div>
-            </div>
-        </div>
         <hr>
         <?php } ?>
 
@@ -403,11 +339,11 @@
                             <th scope="col">Alimento</th>
                             <th scope="col">Nº</th>
                             <th scope="col">M.C.</th>
+                            <th scope="col">Grama</th>
                             <th scope="col">CHO</th>
                             <th scope="col">PTN</th>
                             <th scope="col">LIP</th>
                             <th scope="col">Kcal</th>
-                            <th scope="col">Excluir</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -418,6 +354,7 @@
                         echo "<th scope='row'>".$row["NOME_ALIMENTO"]."</th>";
                         echo "<td>".$row["NUM_MC"]."</td>";
                         echo "<td>".$row["MEDIDA_CASEIRA"]."</td>";
+                        echo "<td>".$row["GRAMA"]."</td>";
                         echo "<td>".$row["CHO"]."</td>";
                         echo "<td>".$row["PTN"]."</td>";
                         echo "<td>".$row["LIP"]."</td>";
@@ -496,11 +433,11 @@
                             <th scope="col">Alimento</th>
                             <th scope="col">Nº</th>
                             <th scope="col">M.C.</th>
+                            <th scope="col">Grama</th>
                             <th scope="col">CHO</th>
                             <th scope="col">PTN</th>
                             <th scope="col">LIP</th>
                             <th scope="col">Kcal</th>
-                            <th scope="col">Excluir</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -511,6 +448,7 @@
                         echo "<th scope='row'>".$row["NOME_ALIMENTO"]."</th>";
                         echo "<td>".$row["NUM_MC"]."</td>";
                         echo "<td>".$row["MEDIDA_CASEIRA"]."</td>";
+                        echo "<td>".$row["GRAMA"]."</td>";
                         echo "<td>".$row["CHO"]."</td>";
                         echo "<td>".$row["PTN"]."</td>";
                         echo "<td>".$row["LIP"]."</td>";
@@ -589,11 +527,11 @@
                             <th scope="col">Alimento</th>
                             <th scope="col">Nº</th>
                             <th scope="col">M.C.</th>
+                            <th scope="col">Grama</th>
                             <th scope="col">CHO</th>
                             <th scope="col">PTN</th>
                             <th scope="col">LIP</th>
                             <th scope="col">Kcal</th>
-                            <th scope="col">Excluir</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -604,6 +542,7 @@
                         echo "<th scope='row'>".$row["NOME_ALIMENTO"]."</th>";
                         echo "<td>".$row["NUM_MC"]."</td>";
                         echo "<td>".$row["MEDIDA_CASEIRA"]."</td>";
+                        echo "<td>".$row["GRAMA"]."</td>";
                         echo "<td>".$row["CHO"]."</td>";
                         echo "<td>".$row["PTN"]."</td>";
                         echo "<td>".$row["LIP"]."</td>";
@@ -682,11 +621,11 @@
                             <th scope="col">Alimento</th>
                             <th scope="col">Nº</th>
                             <th scope="col">M.C.</th>
+                            <th scope="col">Grama</th>
                             <th scope="col">CHO</th>
                             <th scope="col">PTN</th>
                             <th scope="col">LIP</th>
                             <th scope="col">Kcal</th>
-                            <th scope="col">Excluir</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -697,6 +636,7 @@
                         echo "<th scope='row'>".$row["NOME_ALIMENTO"]."</th>";
                         echo "<td>".$row["NUM_MC"]."</td>";
                         echo "<td>".$row["MEDIDA_CASEIRA"]."</td>";
+                        echo "<td>".$row["GRAMA"]."</td>";
                         echo "<td>".$row["CHO"]."</td>";
                         echo "<td>".$row["PTN"]."</td>";
                         echo "<td>".$row["LIP"]."</td>";
@@ -774,11 +714,11 @@
                             <th scope="col">Alimento</th>
                             <th scope="col">Nº</th>
                             <th scope="col">M.C.</th>
+                            <th scope="col">Grama</th>
                             <th scope="col">CHO</th>
                             <th scope="col">PTN</th>
                             <th scope="col">LIP</th>
                             <th scope="col">Kcal</th>
-                            <th scope="col">Excluir</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -789,6 +729,7 @@
                         echo "<th scope='row'>".$row["NOME_ALIMENTO"]."</th>";
                         echo "<td>".$row["NUM_MC"]."</td>";
                         echo "<td>".$row["MEDIDA_CASEIRA"]."</td>";
+                        echo "<td>".$row["GRAMA"]."</td>";
                         echo "<td>".$row["CHO"]."</td>";
                         echo "<td>".$row["PTN"]."</td>";
                         echo "<td>".$row["LIP"]."</td>";
@@ -826,6 +767,48 @@
         <hr>
         <?php } ?>
 
+
+        <!-- Título Recomendação e Orientação -->
+        <div id="totalRecomendacao">
+            <div style="display: inline-block; margin-left: 21%;">
+                <img id="brasaoNutricao" src="img/simbolo%20de%20nutri%C3%A7%C3%A3o-800x800.png" alt="">
+            </div>
+            <div id="tituloRecomendacoes">
+                <h2><i>Recomendações e Orientações</i></h2>
+            </div>
+            <div style="display: inline-block; margin-left: 2%;">
+                <img id="brasaoNutricao" src="img/simbolo%20de%20nutri%C3%A7%C3%A3o-800x800.png" alt="">
+            </div>
+
+            <!-- card de recomendações e orientacoes -->
+            <div id="cardRecomendacoesOrientacoes">
+                <div class="card bg-light mb-3" style="max-width: 50rem;">
+                    <div class="card-header">
+                        <h4 id="avisoRecomendacao"><img src="img/icons8-aviso-de-aviso-48.png" alt="">Atenção <img src="img/icons8-aviso-de-aviso-48.png" alt=""></h4>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">- Prescrição Nutricional</h5>
+                        <p class="card-text"> <?php
+                            
+                    include_once 'conexao.php';
+
+                    $sql = "select OBSERVACOES_ADICIONAIS from  a_clinica_nutricional";
+
+                    $result = mysqli_query($con, $sql);
+
+                    $totalRegistros = mysqli_num_rows($result);
+
+                    $row = mysqli_fetch_array($result);
+
+                    if($totalRegistros > 0)  { 
+                        echo $row["OBSERVACOES_ADICIONAIS"];
+                    }
+
+                            ?></p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
         <footer class="container" id="rodape">
