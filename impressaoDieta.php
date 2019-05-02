@@ -17,8 +17,8 @@
 
     <div id="fundoSistemaInterno" class="container">
 
-        <nav id="teste" class="navbar navbar-dark" style="background-color:#3b884d;">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+        <nav class="navbar navbar-dark container" style="background-color:#3b884d;">
+            <button id="teste" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span> <i class="fas fa-carrot animated rubberBand" style="font-size: 30px; color: #c78713"></i> &nbsp; <i class="fas fa-apple-alt animated rubberBand" style="font-size: 30px; color: #d83838"></i> &nbsp; <i class="fas fa-cheese animated rubberBand" style="font-size: 30px; color: #ccc624"></i> </span>
             </button>
             <div>
@@ -43,7 +43,29 @@
             <a href="#" class="list-group-item list-group-item-action">Impressão de dieta<i class="fas fa-check" style="font-size: 10px; color: #3b884d"></i></a>
         </div>
 
-        <h4 id="menuNutricionista">Clique para Imprimir&nbsp;<img class="animar animated pulse" onclick="print()" src="img/icons8-impress%C3%A3o-48.png" alt=""></h4>
+        <h4 id="menuNutricionista">Impressão da dieta <img src="img/icons8-impress%C3%A3o-48.png" alt=""></h4>
+
+        <!-- card de impressao para imprimir -->
+
+        <div id="tabelaImpressao">
+            <div class="accordion">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0" id="textoImprimir">Imprimir</h5>
+                    </div>
+                    <div id="divDoBotao">
+                        <button class="btn btn-light">
+                            <img class="impressoraImagem animated pulse" onclick="print()" src="img/icons8-m%C3%A1quina-de-escrever-com-tablet-48.png" alt="">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="limpandoTelaParaDieta">
+            <p></p>
+        </div>
 
         <hr>
         <!-- Título resultado da dieta -->
