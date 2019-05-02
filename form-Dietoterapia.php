@@ -159,6 +159,8 @@
         
         include_once 'conexao.php';
         
+        include_once 'excluirAlimento.php';
+        
         $sql = "select * from alimentos where NOME_REFEICAO = 'Desjejum'";
         
         $result = mysqli_query($con, $sql);
@@ -214,6 +216,7 @@
                         echo "<td>".$row["PTN"]."</td>";
                         echo "<td>".$row["LIP"]."</td>";
                         echo "<td>".$row["KCAL"]."</td>";
+                        echo "<td><a href='#' onclick='excluirAlimento(".$row["NOME_ALIMENTO"]."')'><i class='far fa-trash-alt' style='padding-left: 22px' id='delet'></i></td>";
                         echo "</tr>";
                          }
                            ?>
