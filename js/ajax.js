@@ -29,7 +29,7 @@ function CriaRequest() {
  */
 function getDados() {
     // Declaração de Variáveis
-    var nome = document.getElementById("txtnome").value;
+    var nome = document.getElementById("pesquisaDeAlimentos").value;
     var result = document.getElementById("Resultado");
     var xmlreq = CriaRequest();
 

@@ -101,7 +101,7 @@
             <div class="form-group row">
                 <label for="inputEmail3" class="col-sm-2 col-form-label">Quant.</label>
                 <div class="col-sm-4">
-                    <input type="number" class="form-control" id="inputEmail3" name="quantidade" placeholder="">
+                    <input type="number" class="form-control" id="idQuantidade" name="quantidade" placeholder="">
                 </div>
             </div>
 
@@ -114,7 +114,7 @@
                 <div class="col-sm-8">
                     <div class="form-group input-group">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
-                        <input type="text" id="txtnome" placeholder="Pesquise um Alimento" class="form-control" name="alimento" required>
+                        <input type="text" id="pesquisaDeAlimentos" placeholder="Pesquise um Alimento" class="form-control" name="alimento" required>
                         <button class="btn-success" type="" onclick="getDados();"><i class="fas fa-search"></i></button>
                     </div>
                 </div>
@@ -123,6 +123,8 @@
             <div class="form-row">
                 <div class="form-group row">
                     <div class="col-sm-12" id="Resultado">
+
+                        <!-- entra a tela consultaAlimentos.php -->
 
                     </div>
                 </div>
@@ -219,17 +221,17 @@
                         echo "<td>".$row["LIP"]."</td>";
                         echo "<td>".$row["KCAL"]."</td>";
                         echo "<td><a href='#' onclick='excluirAlimento(".$row["ID"].")'><i class='far fa-trash-alt' style='padding-left: 22px' id='delet'></i></td>";
-                         ?> 
-                         <!-- <td><a href="excluirAlimento.php?excluirAlimento=<?php //echo $row['ID'];?>"><i class="far fa-trash-alt"></i></a></td> -->
-                          <?php
+                         ?>
+                        <!-- <td><a href="excluirAlimento.php?excluirAlimento=<?php //echo $row['ID'];?>"><i class="far fa-trash-alt"></i></a></td> -->
+                        <?php
                         echo "</tr>";
                          }
                            ?>
                     </tbody>
-   
-                  
-                    
-                    
+
+
+
+
                 </table>
             </div>
         </div>
@@ -308,7 +310,7 @@
                             <th scope="col">Excluir</th>
                         </tr>
                     </thead>
-                    
+
                     <tbody>
 
                         <?php 
