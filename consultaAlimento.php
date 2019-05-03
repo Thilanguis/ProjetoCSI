@@ -17,15 +17,12 @@
                 
                 $totalRegistros = mysqli_num_rows($result);
                 
-                $quantidade = "<script>document.getElementByName('quantidade').value;</script>";
+                $quantidade = "<script>document.getElementByName(quantidade).value</script>";
                 
                 
                 
                 if($totalRegistros > 0)
-                { ?>
-
-
-<div class="table-overflow1">
+                { ?> <div class="table-overflow1">
     <table class="table table-striped container animated zoomIn">
         <tr>
             <th style="color: #E8850C">Alimento</th>
