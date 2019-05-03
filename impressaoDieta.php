@@ -54,9 +54,7 @@
                         <h5 class="mb-0" id="textoImprimir">Imprimir</h5>
                     </div>
                     <div id="divDoBotao">
-                        <button class="btn btn-light">
-                            <img class="impressoraImagem animated pulse" onclick="print()" src="img/icons8-m%C3%A1quina-de-escrever-com-tablet-48.png" alt="">
-                        </button>
+                        <img class="impressoraImagem animated pulse" onclick="print()" src="img/icons8-m%C3%A1quina-de-escrever-com-tablet-48.png" alt="">
                     </div>
                 </div>
             </div>
