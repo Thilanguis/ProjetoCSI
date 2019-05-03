@@ -15,13 +15,11 @@
 
         <?php 
         
-            if(isset($_GET["excluirAlimento"]))
+            if(isset($_GET["id_alimento"]))
             {
                 include_once 'conexao.php';
                 
-                $idAlimento = ["excluirAlimento"];
-                
-                $sql = "delete from alimentos where ID=".$_GET["excluirAlimento"];
+                $sql = "delete from alimentos where ID=".$_GET["id_alimento"];
                 
                 if(mysqli_query($con, $sql))
                 {

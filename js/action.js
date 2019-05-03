@@ -13,6 +13,6 @@ $(document).ready(function () {
 
 function excluirAlimento(ID) {
     if (confirm('Deseja realmente excluir este alimento?')) {
-        location.href = 'excluirAlimento.php?ID=' + id;
+        location.href = 'excluirAlimento.php?id_alimento=' + ID;
     }
 }

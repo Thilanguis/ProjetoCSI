@@ -220,7 +220,7 @@
                         echo "<td>".$row["KCAL"]."</td>";
                         echo "<td><a href='#' onclick='excluirAlimento(".$row["ID"].")'><i class='far fa-trash-alt' style='padding-left: 22px' id='delet'></i></td>";
                          ?> 
-                         <td><a href="excluirAlimento.php?excluirAlimento=<?php echo $row['ID'];?>"><i class="far fa-trash-alt"></i></a></td>
+                         <!-- <td><a href="excluirAlimento.php?excluirAlimento=<?php //echo $row['ID'];?>"><i class="far fa-trash-alt"></i></a></td> -->
                           <?php
                         echo "</tr>";
                          }

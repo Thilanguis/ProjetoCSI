@@ -19,6 +19,8 @@
                 
                 $quantidade = "<script>document.getElementByName('quantidade').value</script>";
                 
+                
+                
                 if($totalRegistros > 0)
                 { ?>
 

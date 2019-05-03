@@ -22,7 +22,7 @@
    {
        
        
-       $sqlTabelaAlimentos = "select  `col 1`, `col 2`, `col 3`, `col 5`, `col 6`, `col 7`, `col 8`, `col 9` from tabelaalimentos where `col 1`=".$_GET["idAlimento"];
+       $sqlTabelaAlimentos = "select  `ID`, `col 2`, `col 3`, `col 5`, `col 6`, `col 7`, `col 8`, `col 9` from tabelaalimentos where `ID`=".$_GET["idAlimento"];
     
        
        $result = mysqli_query($con, $sqlTabelaAlimentos);
