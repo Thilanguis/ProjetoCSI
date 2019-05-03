@@ -365,28 +365,6 @@
             </div>
         </div>
 
-        <div id="form-VET1">
-            <div class="form-row">
-                <div style="margin-top: 20px;" class="col-2">
-                    <label for="inputPassword" class="col-sm-10">
-                        <h6>Total :</h6>
-                    </label>
-                </div>
-                <div class="form-group col-sm-2"><i style="margin-left: 35%;">cho</i>
-                    <input style="text-align: center;" type="text" class="form-control" id="bracoEsq" placeholder="" name="" disabled>
-                </div>
-                <div class="form-group col-sm-2"><i style="margin-left: 34%;">ptn</i>
-                    <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled>
-                </div>
-                <div class="form-group col-sm-2"><i style="margin-left: 36%;">lip</i>
-                    <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled>
-                </div>
-
-                <div class="form-group col-sm-2"><i style="margin-left: 20%;"><i>VET / Kcal</i></i>
-                    <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled>
-                </div>
-            </div>
-        </div>
         <hr>
         <?php } ?>
 
@@ -458,29 +436,7 @@
                 </table>
             </div>
         </div>
-
-        <div id="form-VET1">
-            <div class="form-row">
-                <div style="margin-top: 20px;" class="col-2">
-                    <label for="inputPassword" class="col-sm-10">
-                        <h6>Total :</h6>
-                    </label>
-                </div>
-                <div class="form-group col-sm-2"><i style="margin-left: 35%;">cho</i>
-                    <input style="text-align: center;" type="text" class="form-control" id="bracoEsq" placeholder="" name="" disabled>
-                </div>
-                <div class="form-group col-sm-2"><i style="margin-left: 34%;">ptn</i>
-                    <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled>
-                </div>
-                <div class="form-group col-sm-2"><i style="margin-left: 36%;">lip</i>
-                    <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled>
-                </div>
-
-                <div class="form-group col-sm-2"><i style="margin-left: 20%;"><i>VET / Kcal</i></i>
-                    <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled>
-                </div>
-            </div>
-        </div>
+        
         <hr>
         <?php } ?>
 
@@ -553,28 +509,6 @@
             </div>
         </div>
 
-        <div id="form-VET1">
-            <div class="form-row">
-                <div style="margin-top: 20px;" class="col-2">
-                    <label for="inputPassword" class="col-sm-10">
-                        <h6>Total :</h6>
-                    </label>
-                </div>
-                <div class="form-group col-sm-2"><i style="margin-left: 35%;">cho</i>
-                    <input style="text-align: center;" type="text" class="form-control" id="bracoEsq" placeholder="" name="" disabled>
-                </div>
-                <div class="form-group col-sm-2"><i style="margin-left: 34%;">ptn</i>
-                    <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled>
-                </div>
-                <div class="form-group col-sm-2"><i style="margin-left: 36%;">lip</i>
-                    <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled>
-                </div>
-
-                <div class="form-group col-sm-2"><i style="margin-left: 20%;"><i>VET / Kcal</i></i>
-                    <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled>
-                </div>
-            </div>
-        </div>
         <hr>
         <?php } ?>
 
@@ -647,28 +581,6 @@
             </div>
         </div>
 
-        <div id="form-VET1">
-            <div class="form-row">
-                <div style="margin-top: 20px;" class="col-2">
-                    <label for="inputPassword" class="col-sm-10">
-                        <h6>Total :</h6>
-                    </label>
-                </div>
-                <div class="form-group col-sm-2"><i style="margin-left: 35%;">cho</i>
-                    <input style="text-align: center;" type="text" class="form-control" id="bracoEsq" placeholder="" name="" disabled>
-                </div>
-                <div class="form-group col-sm-2"><i style="margin-left: 34%;">ptn</i>
-                    <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled>
-                </div>
-                <div class="form-group col-sm-2"><i style="margin-left: 36%;">lip</i>
-                    <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled>
-                </div>
-
-                <div class="form-group col-sm-2"><i style="margin-left: 20%;"><i>VET / Kcal</i></i>
-                    <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled>
-                </div>
-            </div>
-        </div>
         <hr>
         <?php } ?>
 
@@ -740,28 +652,6 @@
             </div>
         </div>
 
-        <div id="form-VET1">
-            <div class="form-row">
-                <div style="margin-top: 20px;" class="col-2">
-                    <label for="inputPassword" class="col-sm-10">
-                        <h6>Total :</h6>
-                    </label>
-                </div>
-                <div class="form-group col-sm-2"><i style="margin-left: 35%;">cho</i>
-                    <input style="text-align: center;" type="text" class="form-control" id="bracoEsq" placeholder="" name="" disabled>
-                </div>
-                <div class="form-group col-sm-2"><i style="margin-left: 34%;">ptn</i>
-                    <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled>
-                </div>
-                <div class="form-group col-sm-2"><i style="margin-left: 36%;">lip</i>
-                    <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled>
-                </div>
-
-                <div class="form-group col-sm-2"><i style="margin-left: 20%;"><i>VET / Kcal</i></i>
-                    <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled>
-                </div>
-            </div>
-        </div>
         <hr>
         <?php } ?>
 

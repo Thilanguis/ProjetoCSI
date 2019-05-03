@@ -18,7 +18,11 @@
             if(isset($_GET["excluirAlimento"]))
             {
                 include_once 'conexao.php';
-                $sql = "delete from alimentos where NOME_Alimento=".$_GET["excluirAlimento"];
+                
+                $idAlimento = ["excluirAlimento"];
+                
+                $sql = "delete from alimentos where ID=".$_GET["excluirAlimento"];
+                
                 if(mysqli_query($con, $sql))
                 {
                     ?>
@@ -28,7 +32,7 @@
         </div>
 
         <div id="btnConfirmacao">
-            <a href="nutricionistaMenu.php"><button id="btnVoltar1" type="button" class="btn btn-warning animated zoomIn" style="margin-left:48%;">OK</button> </a>
+            <a href="form-Dietoterapia.php"><button id="btnVoltar1" type="button" class="btn btn-warning animated zoomIn" style="margin-left:48%;">OK</button> </a>
         </div>
         <?php
         }

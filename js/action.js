@@ -11,14 +11,8 @@ $(document).ready(function () {
     });
 });
 
-
-function getIdTelaFormDietoterapia() {
-    // Declaração de Variáveis
-    var nome = document.getElementByName("quantidade").value;
-}
-
-function excluirAlimento(id) {
+function excluirAlimento(ID) {
     if (confirm('Deseja realmente excluir este alimento?')) {
-        location.href = 'excluirAlimento.php?excluirAlimento=' + id;
+        location.href = 'excluirAlimento.php?ID=' + id;
     }
 }

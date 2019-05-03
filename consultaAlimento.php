@@ -11,7 +11,7 @@
                 
                 include_once 'funcoesProjeto.php';
                 
-                $sql = "SELECT `col 1`, `col 2`, `col 3`, `col 5`, `col 6`, `col 7`, `col 8`, `col 9` from tabelaalimentos WHERE `col 2` like '%".$alimento."%'";
+                $sql = "SELECT `ID`, `col 2`, `col 3`, `col 5`, `col 6`, `col 7`, `col 8`, `col 9` from tabelaalimentos WHERE `col 2` like '%".$alimento."%'";
                 
                 $result = mysqli_query($con, $sql);
                 
@@ -48,7 +48,7 @@
                         echo "<td>".$row["col 8"]."</td>";
                         echo "<td>".$row["col 9"]."</td>";
                         ?> <?php
-                        echo "<td><a href='cadastroAlimentos.php?idAlimento=".$row["col 1"]."&quantidade={$quantidade}'><img id='alimentoadicionado' src='img/icons8-mais-48.png' alt=''></a></td>";
+                        echo "<td><a href='cadastroAlimentos.php?idAlimento=".$row["ID"]."'><img id='alimentoadicionado' src='img/icons8-mais-48.png' alt=''></a></td>";
                         echo "</tr>";
              } 
         ?>

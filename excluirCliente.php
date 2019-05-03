@@ -18,7 +18,9 @@
             if(isset($_GET["id_cliente"]))
             {
                 include_once 'conexao.php';
+                
                 $sql = "delete from cliente where id_cliente=".$_GET["id_cliente"];
+                
                 if(mysqli_query($con, $sql))
                 {
                     ?>

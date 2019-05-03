@@ -65,7 +65,7 @@
                 
                 include_once 'funcoesProjeto.php';
                 
-                $sql = "SELECT `col 2`, `col 3`, `col 5`,`col 6`, `col 7`, `col 8`, `col 9` from tabelaalimentos WHERE (`col 1` >= 1 AND `col 1` <= 20)";
+                $sql = "SELECT `col 2`, `col 3`, `col 5`,`col 6`, `col 7`, `col 8`, `col 9` from tabelaalimentos WHERE (`ID` >= 2 AND `ID` <= 25 )";
                 
                 $result = mysqli_query($con, $sql);
                 
@@ -134,7 +134,7 @@
                 
                 include_once 'funcoesProjeto.php';
                 
-                $sql = "SELECT `col 2`, `col 3`, `col 5`,`col 6`, `col 7`, `col 8`, `col 9` from tabelaalimentos WHERE (`col 1` >= 21 AND `col 1` <= 38)";
+                $sql = "SELECT `col 2`, `col 3`, `col 5`,`col 6`, `col 7`, `col 8`, `col 9` from tabelaalimentos WHERE (`ID` >= 27 AND `ID` <= 46)";
                 
                 $result = mysqli_query($con, $sql);
                 
@@ -204,7 +204,7 @@
                 
                 include_once 'funcoesProjeto.php';
                 
-                $sql = "SELECT `col 2`, `col 3`, `col 5`,`col 6`, `col 7`, `col 8`, `col 9` from tabelaalimentos WHERE (`col 1` >= 39 AND `col 1` <= 82)";
+                $sql = "SELECT `col 2`, `col 3`, `col 5`,`col 6`, `col 7`, `col 8`, `col 9` from tabelaalimentos WHERE (`ID` >= 48 AND `ID` <= 92)";
                 
                 $result = mysqli_query($con, $sql);
                 
@@ -274,7 +274,7 @@
                 
                 include_once 'funcoesProjeto.php';
                 
-                $sql = "SELECT `col 2`, `col 3`, `col 5`,`col 6`, `col 7`, `col 8`, `col 9` from tabelaalimentos WHERE (`col 1` >= 83 AND `col 1` <= 125)";
+                $sql = "SELECT `col 2`, `col 3`, `col 5`,`col 6`, `col 7`, `col 8`, `col 9` from tabelaalimentos WHERE (`ID` >= 94 AND `ID` <= 136)";
                 
                 $result = mysqli_query($con, $sql);
                 
@@ -344,7 +344,7 @@
                 
                 include_once 'funcoesProjeto.php';
                 
-                $sql = "SELECT `col 2`, `col 3`, `col 5`,`col 6`, `col 7`, `col 8`, `col 9` from tabelaalimentos WHERE (`col 1` >= 126 AND `col 1` <= 130)";
+                $sql = "SELECT `col 2`, `col 3`, `col 5`,`col 6`, `col 7`, `col 8`, `col 9` from tabelaalimentos WHERE (`ID` >= 138 AND `ID` <= 142)";
                 
                 $result = mysqli_query($con, $sql);
                 
@@ -414,7 +414,7 @@
                 
                 include_once 'funcoesProjeto.php';
                 
-                $sql = "SELECT `col 2`, `col 3`, `col 5`,`col 6`, `col 7`, `col 8`, `col 9` from tabelaalimentos WHERE (`col 1` >= 131 AND `col 1` <= 143)";
+                $sql = "SELECT `col 2`, `col 3`, `col 5`,`col 6`, `col 7`, `col 8`, `col 9` from tabelaalimentos WHERE (`ID` >= 144 AND `ID` <= 156)";
                 
                 $result = mysqli_query($con, $sql);
                 
@@ -484,7 +484,7 @@
                 
                 include_once 'funcoesProjeto.php';
                 
-                $sql = "SELECT `col 2`, `col 3`, `col 5`,`col 6`, `col 7`, `col 8`, `col 9` from tabelaalimentos WHERE (`col 1` >= 144 AND `col 1` <= 164)";
+                $sql = "SELECT `col 2`, `col 3`, `col 5`,`col 6`, `col 7`, `col 8`, `col 9` from tabelaalimentos WHERE (`ID` >= 158 AND `ID` <= 178)";
                 
                 $result = mysqli_query($con, $sql);
                 
@@ -554,7 +554,7 @@
                 
                 include_once 'funcoesProjeto.php';
                 
-                $sql = "SELECT `col 2`, `col 3`, `col 5`,`col 6`, `col 7`, `col 8`, `col 9` from tabelaalimentos WHERE (`col 1` >= 165 AND `col 1` <= 178)";
+                $sql = "SELECT `col 2`, `col 3`, `col 5`,`col 6`, `col 7`, `col 8`, `col 9` from tabelaalimentos WHERE (`ID` >= 180 AND `ID` <= 198)";
                 
                 $result = mysqli_query($con, $sql);
                 
@@ -624,7 +624,7 @@
                 
                 include_once 'funcoesProjeto.php';
                 
-                $sql = "SELECT `col 2`, `col 3`, `col 5`,`col 6`, `col 7`, `col 8`, `col 9` from tabelaalimentos WHERE (`col 1` >= 179 AND `col 1` <= 187)";
+                $sql = "SELECT `col 2`, `col 3`, `col 5`,`col 6`, `col 7`, `col 8`, `col 9` from tabelaalimentos WHERE (`ID` >= 200 AND `ID` <= 208)";
                 
                 $result = mysqli_query($con, $sql);
                 
@@ -694,7 +694,7 @@
                 
                 include_once 'funcoesProjeto.php';
                 
-                $sql = "SELECT `col 2`, `col 3`, `col 5`,`col 6`, `col 7`, `col 8`, `col 9` from tabelaalimentos WHERE (`col 1` >= 188 AND `col 1` <= 191)";
+                $sql = "SELECT `col 2`, `col 3`, `col 5`,`col 6`, `col 7`, `col 8`, `col 9` from tabelaalimentos WHERE (`ID` >= 210 AND `ID` <= 213)";
                 
                 $result = mysqli_query($con, $sql);
                 
@@ -764,7 +764,7 @@
                 
                 include_once 'funcoesProjeto.php';
                 
-                $sql = "SELECT `col 2`, `col 3`, `col 5`,`col 6`, `col 7`, `col 8`, `col 9` from tabelaalimentos WHERE (`col 1` >= 192 AND `col 1` <= 201)";
+                $sql = "SELECT `col 2`, `col 3`, `col 5`,`col 6`, `col 7`, `col 8`, `col 9` from tabelaalimentos WHERE (`ID` >= 215 AND `ID` <= 224)";
                 
                 $result = mysqli_query($con, $sql);
                 
@@ -834,7 +834,7 @@
                 
                 include_once 'funcoesProjeto.php';
                 
-                $sql = "SELECT `col 2`, `col 3`, `col 5`,`col 6`, `col 7`, `col 8`, `col 9` from tabelaalimentos WHERE (`col 1` >= 202 AND `col 1` <= 207)";
+                $sql = "SELECT `col 2`, `col 3`, `col 5`,`col 6`, `col 7`, `col 8`, `col 9` from tabelaalimentos WHERE (`ID` >= 226 AND `ID` <= 231)";
                 
                 $result = mysqli_query($con, $sql);
                 
@@ -904,7 +904,7 @@
                 
                 include_once 'funcoesProjeto.php';
                 
-                $sql = "SELECT `col 2`, `col 3`, `col 5`,`col 6`, `col 7`, `col 8`, `col 9` from tabelaalimentos WHERE (`col 1` >= 208 AND `col 1` <= 215)";
+                $sql = "SELECT `col 2`, `col 3`, `col 5`,`col 6`, `col 7`, `col 8`, `col 9` from tabelaalimentos WHERE (`ID` >= 233 AND `ID` <= 237)";
                 
                 $result = mysqli_query($con, $sql);
                 
@@ -974,7 +974,7 @@
                 
                 include_once 'funcoesProjeto.php';
                 
-                $sql = "SELECT `col 2`, `col 3`, `col 5`,`col 6`, `col 7`, `col 8`, `col 9` from tabelaalimentos WHERE (`col 1` >= 213 AND `col 1` <= 215)";
+                $sql = "SELECT `col 2`, `col 3`, `col 5`,`col 6`, `col 7`, `col 8`, `col 9` from tabelaalimentos WHERE (`ID` >= 239 AND `ID` <= 241)";
                 
                 $result = mysqli_query($con, $sql);
                 
@@ -1044,7 +1044,7 @@
                 
                 include_once 'funcoesProjeto.php';
                 
-                $sql = "SELECT `col 2`, `col 3`, `col 5`,`col 6`, `col 7`, `col 8`, `col 9` from tabelaalimentos WHERE (`col 1` >= 217 AND `col 1` <= 222)";
+                $sql = "SELECT `col 2`, `col 3`, `col 5`,`col 6`, `col 7`, `col 8`, `col 9` from tabelaalimentos WHERE (`ID` >= 243 AND `ID` <= 248)";
                 
                 $result = mysqli_query($con, $sql);
                 
@@ -1114,7 +1114,7 @@
                 
                 include_once 'funcoesProjeto.php';
                 
-                $sql = "SELECT `col 2`, `col 3`, `col 5`,`col 6`, `col 7`, `col 8`, `col 9` from tabelaalimentos WHERE (`col 1` >= 223 AND `col 1` <= 228)";
+                $sql = "SELECT `col 2`, `col 3`, `col 5`,`col 6`, `col 7`, `col 8`, `col 9` from tabelaalimentos WHERE (`ID` >= 250 AND `ID` <= 255)";
                 
                 $result = mysqli_query($con, $sql);
                 
