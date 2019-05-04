@@ -42,30 +42,34 @@
 
         <h4 id="menuNutricionista">Avaliação Antropométrica &nbsp; <img id="balanca" src="img/icons8-balan%C3%A7a-industrial-48.png" alt=""></h4>
 
-        <img id="fitaMetrica" src="img/fita%20novinha.png" alt="">
-
         <form action="cadastroAntropometria.php" method="post">
 
             <div id="gerarIMC">
 
                 <div class="form-row">
 
-                    <div class="form-group col-md-3">
+                    <div class="col-8">
                         <h5 style="text-align: center;"><i>IMC</i></h5>
                         <label style="margin-left: 70px;" for="altura">Altura (m) :</label>
                         <input style="text-align: center;" type="number" class="form-control" id="altura" placeholder="" name="altura" min="0" max="3" step="0.01">
                     </div>
-                </div>
 
-                <div class="form-row">
-                    <div class="form-group col-md-3">
-                        <label style="margin-left: 53px;" for="pesoAtual">Peso Atual (kg)</label>
+                    <div class=" col-8">
+                        <label style="margin-left: 50px;" for="pesoAtual">Peso Atual (kg)</label>
                         <input style="text-align: center;" type="number" class="form-control" id="pesoAtual" placeholder="" name="pesoAtual" min="0" max="300" step="0.01">
                     </div>
                 </div>
-                <button style="margin-left: 52px;" id="btnentrar" class="btn btn-primary">Gerar IMC</button>
+
+                <button style="margin-left: 52px; margin-top: 10%;" id="btnentrar" class="btn btn-primary">Gerar IMC</button>
             </div>
 
+            <div id="graficoDinamico">
+                <p>olá</p>
+            </div>
+
+            <div id="limpandoTelaParaDieta">
+                <p></p>
+            </div>
 
             <div id="gerarMedidas">
                 <div id="h5Antro" class="form-row alturaAntro">
