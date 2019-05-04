@@ -69,7 +69,19 @@
             <br>
             <div>
                 <span id="TMB-Kcal" class="badge badge-pill badge-success">VET Dietoterápico:</span>
-                <input class="col-4" type="text" style="border-radius: 4px;" disabled="disabled">
+                <input class="col-4" type="text" style="border-radius: 4px;" disabled="disabled" value=" <?php 
+                            
+                            include_once 'conexao.php';
+                                                                                                        
+                            $sql = "select sum(KCAL) KCAL from alimentos";
+        
+                            $result = mysqli_query($con, $sql);
+            
+                            $row = mysqli_fetch_array($result);
+            
+                            echo $row[0];
+            
+                                     ?>">
             </div>
         </div>
 
@@ -298,7 +310,7 @@
             
                             $row = mysqli_fetch_array($result);
             
-                            echo $row["CHO"]+$row["PTN"]+$row["LIP"];
+                            echo $vetDesjejum =  $row["CHO"]+$row["PTN"]+$row["LIP"];
             
                                      ?>">
                 </div>
@@ -440,7 +452,7 @@
             
                             $row = mysqli_fetch_array($result);
             
-                            echo $row["CHO"]+$row["PTN"]+$row["LIP"];
+                            echo $vetColacao = $row["CHO"]+$row["PTN"]+$row["LIP"];
             
                                      ?>">
                 </div>
