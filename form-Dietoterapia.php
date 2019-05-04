@@ -73,13 +73,12 @@
                             
                             include_once 'conexao.php';
                                                                                                         
-                            $sql = "select sum(KCAL) KCAL from alimentos";
-        
+                            $sql = "select sum(cast(KCAL as decimal(15,2))) KCAL from alimentos";                                     
                             $result = mysqli_query($con, $sql);
             
                             $row = mysqli_fetch_array($result);
             
-                            echo $row[0];
+                            echo $row[0]. "  Kcal";
             
                                      ?>">
             </div>
@@ -270,7 +269,7 @@
             
                             $row = mysqli_fetch_array($result);
             
-                            echo $row["CHO"];
+                            echo $row["CHO"]."  g";
             
                                      ?>">
                 </div>
@@ -283,7 +282,7 @@
             
                             $row = mysqli_fetch_array($result);
             
-                            echo $row["PTN"];
+                            echo $row["PTN"]."  g";
             
                                      ?>">
                 </div>
@@ -296,12 +295,12 @@
             
                             $row = mysqli_fetch_array($result);
             
-                            echo $row["LIP"];
+                            echo $row["LIP"]."  g";
             
                                      ?>">
                 </div>
 
-                <div class="form-group col-sm-2"><i style="margin-left: 20%;"><i>VET / Kcal</i></i>
+                <div class="form-group col-sm-2"><i style="margin-left: 35%;"><i>VET</i></i>
                     <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled value=" <?php 
                             
             $sql = "select sum(cast(CHO as decimal(15,2)))*4 CHO, sum(cast(PTN as decimal(15,2)))*4 PTN, sum(cast(LIP as decimal(15,2)))*9 LIP from alimentos where NOME_REFEICAO = 'Desjejum'";
@@ -310,7 +309,7 @@
             
                             $row = mysqli_fetch_array($result);
             
-                            echo $vetDesjejum =  $row["CHO"]+$row["PTN"]+$row["LIP"];
+                            echo $vetDesjejum =  $row["CHO"]+$row["PTN"]+$row["LIP"]."  Kcal";
             
                                      ?>">
                 </div>
@@ -412,7 +411,7 @@
             
                             $row = mysqli_fetch_array($result);
             
-                            echo $row["CHO"];
+                            echo $row["CHO"]."  g";
             
                                      ?>">
                 </div>
@@ -425,7 +424,7 @@
             
                             $row = mysqli_fetch_array($result);
             
-                            echo $row["PTN"];
+                            echo $row["PTN"]."  g";
             
                                      ?>">
                 </div>
@@ -438,12 +437,12 @@
             
                             $row = mysqli_fetch_array($result);
             
-                            echo $row["LIP"];
+                            echo $row["LIP"]."  g";
             
                                      ?>">
                 </div>
 
-                <div class="form-group col-sm-2"><i style="margin-left: 20%;"><i>VET / Kcal</i></i>
+                <div class="form-group col-sm-2"><i style="margin-left: 35%;"><i>VET</i></i>
                     <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled value=" <?php 
                             
             $sql = "select sum(cast(CHO as decimal(15,2)))*4 CHO, sum(cast(PTN as decimal(15,2)))*4 PTN, sum(cast(LIP as decimal(15,2)))*9 LIP from alimentos where NOME_REFEICAO = 'Colação'";
@@ -452,7 +451,7 @@
             
                             $row = mysqli_fetch_array($result);
             
-                            echo $vetColacao = $row["CHO"]+$row["PTN"]+$row["LIP"];
+                            echo $vetColacao = $row["CHO"]+$row["PTN"]+$row["LIP"]."  Kcal";
             
                                      ?>">
                 </div>
@@ -553,7 +552,7 @@
             
                             $row = mysqli_fetch_array($result);
             
-                            echo $row["CHO"];
+                            echo $row["CHO"]."  g";
             
                                      ?>">
                 </div>
@@ -566,7 +565,7 @@
             
                             $row = mysqli_fetch_array($result);
             
-                            echo $row["PTN"];
+                            echo $row["PTN"]."  g";
             
                                      ?>">
                 </div>
@@ -579,12 +578,12 @@
             
                             $row = mysqli_fetch_array($result);
             
-                            echo $row["LIP"];
+                            echo $row["LIP"]."  g";
             
                                      ?>">
                 </div>
 
-                <div class="form-group col-sm-2"><i style="margin-left: 20%;"><i>VET / Kcal</i></i>
+                <div class="form-group col-sm-2"><i style="margin-left: 35%;"><i>VETl</i></i>
                     <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled value=" <?php 
                             
             $sql = "select sum(cast(CHO as decimal(15,2)))*4 CHO, sum(cast(PTN as decimal(15,2)))*4 PTN, sum(cast(LIP as decimal(15,2)))*9 LIP from alimentos where NOME_REFEICAO = 'Almoço'";
@@ -593,7 +592,7 @@
             
                             $row = mysqli_fetch_array($result);
             
-                            echo $row["CHO"]+$row["PTN"]+$row["LIP"];
+                            echo $row["CHO"]+$row["PTN"]+$row["LIP"]."  Kcal";
             
                                      ?>">
                 </div>
@@ -694,7 +693,7 @@
             
                             $row = mysqli_fetch_array($result);
             
-                            echo $row["CHO"];
+                            echo $row["CHO"]."  g";
             
                                      ?>">
                 </div>
@@ -707,7 +706,7 @@
             
                             $row = mysqli_fetch_array($result);
             
-                            echo $row["PTN"];
+                            echo $row["PTN"]."  g";
             
                                      ?>">
                 </div>
@@ -720,12 +719,12 @@
             
                             $row = mysqli_fetch_array($result);
             
-                            echo $row["LIP"];
+                            echo $row["LIP"]."  g";
             
                                      ?>">
                 </div>
 
-                <div class="form-group col-sm-2"><i style="margin-left: 20%;"><i>VET / Kcal</i></i>
+                <div class="form-group col-sm-2"><i style="margin-left: 35%;"><i>VET</i></i>
                     <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled value=" <?php 
                             
             $sql = "select sum(cast(CHO as decimal(15,2)))*4 CHO, sum(cast(PTN as decimal(15,2)))*4 PTN, sum(cast(LIP as decimal(15,2)))*9 LIP from alimentos where NOME_REFEICAO = 'Lanche'";
@@ -734,7 +733,7 @@
             
                             $row = mysqli_fetch_array($result);
             
-                            echo $row["CHO"]+$row["PTN"]+$row["LIP"];
+                            echo $row["CHO"]+$row["PTN"]+$row["LIP"]."  Kcal";
             
                                      ?>">
                 </div>
@@ -835,7 +834,7 @@
             
                             $row = mysqli_fetch_array($result);
             
-                            echo $row["CHO"];
+                            echo $row["CHO"]."  g";
             
                                      ?>">
                 </div>
@@ -848,7 +847,7 @@
             
                             $row = mysqli_fetch_array($result);
             
-                            echo $row["PTN"];
+                            echo $row["PTN"]."  g";
             
                                      ?>">
                 </div>
@@ -861,12 +860,12 @@
             
                             $row = mysqli_fetch_array($result);
             
-                            echo $row["LIP"];
+                            echo $row["LIP"]."  g";
             
                                      ?>">
                 </div>
 
-                <div class="form-group col-sm-2"><i style="margin-left: 20%;"><i>VET / Kcal</i></i>
+                <div class="form-group col-sm-2"><i style="margin-left: 35%;"><i>VET</i></i>
                     <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled value=" <?php 
                             
             $sql = "select sum(cast(CHO as decimal(15,2)))*4 CHO, sum(cast(PTN as decimal(15,2)))*4 PTN, sum(cast(LIP as decimal(15,2)))*9 LIP from alimentos where NOME_REFEICAO = '1ºLanche'";
@@ -875,7 +874,7 @@
             
                             $row = mysqli_fetch_array($result);
             
-                            echo $row["CHO"]+$row["PTN"]+$row["LIP"];
+                            echo $row["CHO"]+$row["PTN"]+$row["LIP"]."  Kcal";
             
                                      ?>">
                 </div>
@@ -976,7 +975,7 @@
             
                             $row = mysqli_fetch_array($result);
             
-                            echo $row["CHO"];
+                            echo $row["CHO"]."  g";
             
                                      ?>">
                 </div>
@@ -989,7 +988,7 @@
             
                             $row = mysqli_fetch_array($result);
             
-                            echo $row["PTN"];
+                            echo $row["PTN"]."  g";
             
                                      ?>">
                 </div>
@@ -1002,12 +1001,12 @@
             
                             $row = mysqli_fetch_array($result);
             
-                            echo $row["LIP"];
+                            echo $row["LIP"]."  g";
             
                                      ?>">
                 </div>
 
-                <div class="form-group col-sm-2"><i style="margin-left: 20%;"><i>VET / Kcal</i></i>
+                <div class="form-group col-sm-2"><i style="margin-left: 35%;"><i>VET</i></i>
                     <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled value=" <?php 
                             
             $sql = "select sum(cast(CHO as decimal(15,2)))*4 CHO, sum(cast(PTN as decimal(15,2)))*4 PTN, sum(cast(LIP as decimal(15,2)))*9 LIP from alimentos where NOME_REFEICAO = '2ºLanche'";
@@ -1016,7 +1015,7 @@
             
                             $row = mysqli_fetch_array($result);
             
-                            echo $row["CHO"]+$row["PTN"]+$row["LIP"];
+                            echo $row["CHO"]+$row["PTN"]+$row["LIP"]."  Kcal";
             
                                      ?>">
                 </div>
@@ -1117,7 +1116,7 @@
             
                             $row = mysqli_fetch_array($result);
             
-                            echo $row["CHO"];
+                            echo $row["CHO"]."  g";
             
                                      ?>">
                 </div>
@@ -1130,7 +1129,7 @@
             
                             $row = mysqli_fetch_array($result);
             
-                            echo $row["PTN"];
+                            echo $row["PTN"]."  g";
             
                                      ?>">
                 </div>
@@ -1143,12 +1142,12 @@
             
                             $row = mysqli_fetch_array($result);
             
-                            echo $row["LIP"];
+                            echo $row["LIP"]."  g";
             
                                      ?>">
                 </div>
 
-                <div class="form-group col-sm-2"><i style="margin-left: 20%;"><i>VET / Kcal</i></i>
+                <div class="form-group col-sm-2"><i style="margin-left: 35%;"><i>VET</i></i>
                     <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled value=" <?php 
                             
             $sql = "select sum(cast(CHO as decimal(15,2)))*4 CHO, sum(cast(PTN as decimal(15,2)))*4 PTN, sum(cast(LIP as decimal(15,2)))*9 LIP from alimentos where NOME_REFEICAO = 'Jantar'";
@@ -1157,7 +1156,7 @@
             
                             $row = mysqli_fetch_array($result);
             
-                            echo $row["CHO"]+$row["PTN"]+$row["LIP"];
+                            echo $row["CHO"]+$row["PTN"]+$row["LIP"]."  Kcal";
             
                                      ?>">
                 </div>
@@ -1257,7 +1256,7 @@
             
                             $row = mysqli_fetch_array($result);
             
-                            echo $row["CHO"];
+                            echo $row["CHO"]."  g";
             
                                      ?>">
                 </div>
@@ -1270,7 +1269,7 @@
             
                             $row = mysqli_fetch_array($result);
             
-                            echo $row["PTN"];
+                            echo $row["PTN"]."  g";
             
                                      ?>">
                 </div>
@@ -1283,12 +1282,12 @@
             
                             $row = mysqli_fetch_array($result);
             
-                            echo $row["LIP"];
+                            echo $row["LIP"]."  g";
             
                                      ?>">
                 </div>
 
-                <div class="form-group col-sm-2"><i style="margin-left: 20%;"><i>VET / Kcal</i></i>
+                <div class="form-group col-sm-2"><i style="margin-left: 35%;"><i>VET / Kcal</i></i>
                     <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled value=" <?php 
                             
             $sql = "select sum(cast(CHO as decimal(15,2)))*4 CHO, sum(cast(PTN as decimal(15,2)))*4 PTN, sum(cast(LIP as decimal(15,2)))*9 LIP from alimentos where NOME_REFEICAO = 'Ceia'";
@@ -1297,7 +1296,7 @@
             
                             $row = mysqli_fetch_array($result);
             
-                            echo $row["CHO"]+$row["PTN"]+$row["LIP"];
+                            echo $row["CHO"]+$row["PTN"]+$row["LIP"]."  Kcal";
             
                                      ?>">
                 </div>
