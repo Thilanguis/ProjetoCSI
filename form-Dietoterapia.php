@@ -210,6 +210,10 @@
                     <tbody>
 
                         <?php
+                            $result = mysqli_query($con, $sql);
+
+                            $totalRegistros = mysqli_num_rows($result);
+            
                             while($row = mysqli_fetch_array($result)){
                         echo "<tr>";   
                         echo "<th scope='row'>".$row["NOME_ALIMENTO"]."</th>";
@@ -222,6 +226,8 @@
                         echo "<td>".$row["KCAL"]."</td>";
                         echo "<td><a href='#' onclick='excluirAlimento(".$row["ID"].")'><i class='far fa-trash-alt' style='padding-left: 22px' id='delet'></i></td>";
                          ?>
+
+                        <!-- exemplo de escrever código acima em html inserindo php -->
                         <!-- <td><a href="excluirAlimento.php?excluirAlimento=<?php //echo $row['ID'];?>"><i class="far fa-trash-alt"></i></a></td> -->
                         <?php
                         echo "</tr>";
@@ -314,6 +320,11 @@
                     <tbody>
 
                         <?php 
+            
+                            $result = mysqli_query($con, $sql);
+
+                            $totalRegistros = mysqli_num_rows($result);
+            
                             while($row = mysqli_fetch_array($result)){
                         echo "<tr>";   
                         echo "<th scope='row'>".$row["NOME_ALIMENTO"]."</th>";
@@ -324,6 +335,7 @@
                         echo "<td>".$row["PTN"]."</td>";
                         echo "<td>".$row["LIP"]."</td>";
                         echo "<td>".$row["KCAL"]."</td>";
+                        echo "<td><a href='#' onclick='excluirAlimento(".$row["ID"].")'><i class='far fa-trash-alt' style='padding-left: 22px' id='delet'></i></td>";
                         echo "</tr>";
                          }
                            ?>
@@ -409,6 +421,11 @@
                     <tbody>
 
                         <?php 
+            
+                            $result = mysqli_query($con, $sql);
+
+                            $totalRegistros = mysqli_num_rows($result);
+            
                             while($row = mysqli_fetch_array($result)){
                         echo "<tr>";   
                         echo "<th scope='row'>".$row["NOME_ALIMENTO"]."</th>";
@@ -419,6 +436,7 @@
                         echo "<td>".$row["PTN"]."</td>";
                         echo "<td>".$row["LIP"]."</td>";
                         echo "<td>".$row["KCAL"]."</td>";
+                        echo "<td><a href='#' onclick='excluirAlimento(".$row["ID"].")'><i class='far fa-trash-alt' style='padding-left: 22px' id='delet'></i></td>";
                         echo "</tr>";
                          }
                            ?>
@@ -504,6 +522,11 @@
                     <tbody>
 
                         <?php 
+                            
+                            $result = mysqli_query($con, $sql);
+
+                            $totalRegistros = mysqli_num_rows($result);
+            
                             while($row = mysqli_fetch_array($result)){
                         echo "<tr>";   
                         echo "<th scope='row'>".$row["NOME_ALIMENTO"]."</th>";
@@ -514,6 +537,7 @@
                         echo "<td>".$row["PTN"]."</td>";
                         echo "<td>".$row["LIP"]."</td>";
                         echo "<td>".$row["KCAL"]."</td>";
+                        echo "<td><a href='#' onclick='excluirAlimento(".$row["ID"].")'><i class='far fa-trash-alt' style='padding-left: 22px' id='delet'></i></td>";
                         echo "</tr>";
                          }
                            ?>
@@ -599,6 +623,11 @@
                     <tbody>
 
                         <?php 
+            
+                            $result = mysqli_query($con, $sql);
+
+                            $totalRegistros = mysqli_num_rows($result);
+            
                             while($row = mysqli_fetch_array($result)){
                         echo "<tr>";   
                         echo "<th scope='row'>".$row["NOME_ALIMENTO"]."</th>";
@@ -609,6 +638,7 @@
                         echo "<td>".$row["PTN"]."</td>";
                         echo "<td>".$row["LIP"]."</td>";
                         echo "<td>".$row["KCAL"]."</td>";
+                        echo "<td><a href='#' onclick='excluirAlimento(".$row["ID"].")'><i class='far fa-trash-alt' style='padding-left: 22px' id='delet'></i></td>";
                         echo "</tr>";
                          }
                            ?>
@@ -694,6 +724,11 @@
                     <tbody>
 
                         <?php 
+            
+                            $result = mysqli_query($con, $sql);
+
+                            $totalRegistros = mysqli_num_rows($result);
+            
                             while($row = mysqli_fetch_array($result)){
                         echo "<tr>";   
                         echo "<th scope='row'>".$row["NOME_ALIMENTO"]."</th>";
@@ -704,6 +739,7 @@
                         echo "<td>".$row["PTN"]."</td>";
                         echo "<td>".$row["LIP"]."</td>";
                         echo "<td>".$row["KCAL"]."</td>";
+                        echo "<td><a href='#' onclick='excluirAlimento(".$row["ID"].")'><i class='far fa-trash-alt' style='padding-left: 22px' id='delet'></i></td>";
                         echo "</tr>";
                          }
                            ?>
@@ -789,6 +825,11 @@
                     <tbody>
 
                         <?php 
+            
+                            $result = mysqli_query($con, $sql);
+
+                            $totalRegistros = mysqli_num_rows($result);
+            
                             while($row = mysqli_fetch_array($result)){
                         echo "<tr>";   
                         echo "<th scope='row'>".$row["NOME_ALIMENTO"]."</th>";
@@ -799,6 +840,7 @@
                         echo "<td>".$row["PTN"]."</td>";
                         echo "<td>".$row["LIP"]."</td>";
                         echo "<td>".$row["KCAL"]."</td>";
+                        echo "<td><a href='#' onclick='excluirAlimento(".$row["ID"].")'><i class='far fa-trash-alt' style='padding-left: 22px' id='delet'></i></td>";
                         echo "</tr>";
                          }
                            ?>
@@ -883,6 +925,11 @@
                     <tbody>
 
                         <?php 
+            
+                            $result = mysqli_query($con, $sql);
+
+                            $totalRegistros = mysqli_num_rows($result);
+            
                             while($row = mysqli_fetch_array($result)){
                         echo "<tr>";   
                         echo "<th scope='row'>".$row["NOME_ALIMENTO"]."</th>";
@@ -893,6 +940,7 @@
                         echo "<td>".$row["PTN"]."</td>";
                         echo "<td>".$row["LIP"]."</td>";
                         echo "<td>".$row["KCAL"]."</td>";
+                        echo "<td><a href='#' onclick='excluirAlimento(".$row["ID"].")'><i class='far fa-trash-alt' style='padding-left: 22px' id='delet'></i></td>";
                         echo "</tr>";
                          }
                            ?>
@@ -909,9 +957,19 @@
                     </label>
                 </div>
                 <div class="form-group col-sm-2"><i style="margin-left: 35%;">cho</i>
-                    <input style="text-align: center;" type="text" class="form-control" id="bracoEsq" placeholder="" name="" disabled>
+                    <input style="text-align: center;" type="text" class="form-control" id="bracoEsq" placeholder="" name="" disabled value=" <?php 
+                            
+                            $sql = "select sum(cast(CHO as decimal(15,2)))*4 CHO from alimentos where NOME_REFEICAO = 'Ceia'";
+        
+                            ($result = mysqli_query($con, $sql));
+            
+                            $row = mysqli_fetch_array($result);
+            
+                            echo $row["CHO"];
+            
+                                     ?>">
                 </div>
-                <div class="form-group col-sm-2"><i style="margin-left: 34%;">ptn</i>
+                <div class=" form-group col-sm-2"><i style="margin-left: 34%;">ptn</i>
                     <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled>
                 </div>
                 <div class="form-group col-sm-2"><i style="margin-left: 36%;">lip</i>
