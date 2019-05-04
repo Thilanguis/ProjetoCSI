@@ -80,7 +80,7 @@
                 
                 include_once 'excluirCliente.php';
                 
-                $sql = "select nome,telefone,endereco,cidade,estado_civil,dt_nascimento,sexo,id_cliente from cliente where nome like '".$nome."%'";
+                $sql = "select ID_CLIENTE, nome,telefone,endereco,cidade,estado_civil,dt_nascimento,sexo,id_cliente from cliente where nome like '".$nome."%'";
                 
                 $result = mysqli_query($con, $sql);
                 
@@ -98,6 +98,7 @@
                     <th style="color: #E8850C">Cidade</th>
                     <th style="color: #E8850C">Estado civil</th>
                     <th style="color: #E8850C">Data de nascimento</th>
+                    <th style="color: #E8850C">Editar Dieta</th>
                     <th style="color: #E8850C">Excluir Paciente</th>
                 </tr>
 
@@ -114,7 +115,8 @@
                         echo "<td>".$row["endereco"]."</td>";
                         echo "<td>".$row["cidade"]."</td>";
                         echo "<td>".$row["estado_civil"]."</td>";
-                        echo "<td>".date('d-m-Y', strtotime($row["dt_nascimento"]))."</td>";  
+                        echo "<td>".date('d-m-Y', strtotime($row["dt_nascimento"]))."</td>"; 
+                        echo"<td><a href='form-antropometria.php?id=".$row[0]."' >   [Edit]   </a></td>";
                         echo "<td><a href='#' onclick='excluir(".$row["id_cliente"].")'><i class='far fa-trash-alt' style='padding-left: 25px' id='delet'></i></td>";
                         echo "</tr>";
                     } ?>

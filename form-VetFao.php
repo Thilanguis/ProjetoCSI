@@ -7,6 +7,8 @@
     <title>Dietpro</title>
     <?php include_once 'head.php';
     include_once 'verificaLogin.php';
+    include_once 'funcoesProjeto.php';
+    include_once 'transformandoFuncoesVariavel.php';
     ?>
 
 
@@ -43,9 +45,17 @@
 
         <h4 id="menuNutricionista">Valor Energético total &nbsp; <img id="calculadora" src="img/icons8-calculadora-48.png" alt=""></h4>
         <h6 id="menuNutricionista1"><i>Fonte: FAO,WHO,UNU,1985</i></h6>
+        
+       <?php     
+        ?>
 
         <div id="tmb">
-            <span id="TMB-Kcal" class="badge badge-pill badge-success">TMB/Kcal:</span> <input type="text" style="border-radius: 4px;" disabled>
+            <span id="TMB-Kcal" class="badge badge-pill badge-success">TMB/Kcal:</span> <input type="text" style="border-radius: 4px;" disabled value="<?php
+                
+                
+                echo $tmb;
+                
+                ?> ">
             <div id="vet">
                 <span id="TMB-Kcal" class="badge badge-pill badge-success">VET/Kcal:</span> <input type="text" style="border-radius: 4px;" disabled>
             </div>
