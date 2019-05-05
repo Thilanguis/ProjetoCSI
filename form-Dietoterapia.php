@@ -10,23 +10,9 @@
     include_once 'verificaLogin.php';
     ?>
     
-     <script>
-     function funcao(nome, email, telefone) {
-                alert("nome: " + nome +" email: "+ email +" telefone: "+ telefone);
-            }
-</script>
-
-
 </head>
 
 <body>
-    
-    <form>
-        <input id="nome" type="text" value="LocalHost"/>
-        <input id="email" type="email" value="email@email.com.br"/>
-        <input id="tel" type="tel"  value="(62)90000-0000"/>   
-        <input type="submit" onclick="funcao(nome.value, email.value, tel.value)">    
-    </form>
 
     <div id="fundoSistemaInterno" class="container">
        
@@ -90,7 +76,7 @@
             
                             $row = mysqli_fetch_array($result);
             
-                            echo $row[0]. "  Kcal";
+                            echo $row["KCAL"]. "  Kcal";
             
                                      ?>">
             </div>
@@ -101,13 +87,13 @@
             <div class="form-group row">
                 <label for="inputEmail3" class="col-sm-2 col-form-label">Horário</label>
                 <div class="col-sm-4">
-                    <input type="time" class="form-control" id="inputEmail3" placeholder="Email" name="horario">
+                    <input type="time" class="form-control" id="horario" placeholder="Email" name="horario">
                 </div>
             </div>
             <div class="form-group row">
                 <label for="inputPassword3" class="col-sm-2 col-form-label">Refeição</label>
                 <div class="col-sm-4">
-                    <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref" name="refeicao">
+                    <select class="custom-select my-1 mr-sm-2" id="refeicao" name="refeicao">
                         <option selected></option>
                         <option value="Desjejum">Desjejum</option>
                         <option value="Colação">Colação</option>
@@ -120,14 +106,17 @@
                     </select>
                 </div>
             </div>
-
+            
+            <form id="myform" action="consultaAlimento.php" method="get">
             <div class="form-group row">
                 <label for="inputEmail3" class="col-sm-2 col-form-label">Quant.</label>
                 <div class="col-sm-4">
-                    <input type="number" class="form-control" id="idQuantidade" name="quantidade" placeholder="">
+                    <input type="number" class="form-control" id="quantidade" name="quantidade" placeholder="">
+                    <input type="submit">
                 </div>
             </div>
-
+            </form>
+            
         </div>
 
         <div style="width: 800px; margin-left: 250px; margin-top: 20px;">

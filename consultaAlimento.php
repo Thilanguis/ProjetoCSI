@@ -1,10 +1,4 @@
-<script>
-     function funcao(nome, email, telefone) {
-                alert("nome: " + nome +" email: "+ email +" telefone: "+ telefone);
-            }
-</script>
-  
-   <?php
+<?php
     
             include_once 'head.php';
     
@@ -24,9 +18,7 @@
                 $totalRegistros = mysqli_num_rows($result);
                 
                 $quantidade = "<script>document.getElementByName(quantidade).value</script>";
-                
-                
-                
+        
                 if($totalRegistros > 0)
                 { ?> <div class="table-overflow1">
     <table class="table table-striped container animated zoomIn">
