@@ -1,4 +1,10 @@
-<?php
+<script>
+     function funcao(nome, email, telefone) {
+                alert("nome: " + nome +" email: "+ email +" telefone: "+ telefone);
+            }
+</script>
+  
+   <?php
     
             include_once 'head.php';
     

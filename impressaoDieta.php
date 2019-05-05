@@ -132,6 +132,8 @@
                     <tbody>
 
                         <?php
+                            $result = mysqli_query($con, $sql);
+
                             while($row = mysqli_fetch_array($result)){
                         echo "<tr>";   
                         echo "<th scope='row'>".$row["NOME_ALIMENTO"]."</th>";
@@ -203,6 +205,9 @@
                     <tbody>
 
                         <?php 
+            
+                            $result = mysqli_query($con, $sql);
+            
                             while($row = mysqli_fetch_array($result)){
                         echo "<tr>";   
                         echo "<th scope='row'>".$row["NOME_ALIMENTO"]."</th>";
@@ -275,6 +280,9 @@
                     <tbody>
 
                         <?php 
+            
+                            $result = mysqli_query($con, $sql);
+            
                             while($row = mysqli_fetch_array($result)){
                         echo "<tr>";   
                         echo "<th scope='row'>".$row["NOME_ALIMENTO"]."</th>";
@@ -347,6 +355,9 @@
                     <tbody>
 
                         <?php 
+            
+                            $result = mysqli_query($con, $sql);
+            
                             while($row = mysqli_fetch_array($result)){
                         echo "<tr>";   
                         echo "<th scope='row'>".$row["NOME_ALIMENTO"]."</th>";
@@ -419,6 +430,9 @@
                     <tbody>
 
                         <?php 
+            
+                            $result = mysqli_query($con, $sql);
+            
                             while($row = mysqli_fetch_array($result)){
                         echo "<tr>";   
                         echo "<th scope='row'>".$row["NOME_ALIMENTO"]."</th>";
@@ -563,6 +577,9 @@
                     <tbody>
 
                         <?php 
+            
+                            $result = mysqli_query($con, $sql);
+            
                             while($row = mysqli_fetch_array($result)){
                         echo "<tr>";   
                         echo "<th scope='row'>".$row["NOME_ALIMENTO"]."</th>";
@@ -634,6 +651,9 @@
                     <tbody>
 
                         <?php 
+            
+                            $result = mysqli_query($con, $sql);
+            
                             while($row = mysqli_fetch_array($result)){
                         echo "<tr>";   
                         echo "<th scope='row'>".$row["NOME_ALIMENTO"]."</th>";

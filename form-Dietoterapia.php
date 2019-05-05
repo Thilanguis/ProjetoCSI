@@ -9,15 +9,27 @@
     <?php include_once 'head.php';
     include_once 'verificaLogin.php';
     ?>
+    
+     <script>
+     function funcao(nome, email, telefone) {
+                alert("nome: " + nome +" email: "+ email +" telefone: "+ telefone);
+            }
+</script>
 
 
 </head>
 
 <body>
+    
+    <form>
+        <input id="nome" type="text" value="LocalHost"/>
+        <input id="email" type="email" value="email@email.com.br"/>
+        <input id="tel" type="tel"  value="(62)90000-0000"/>   
+        <input type="submit" onclick="funcao(nome.value, email.value, tel.value)">    
+    </form>
 
     <div id="fundoSistemaInterno" class="container">
-
-
+       
         <nav class="navbar navbar-dark container" style="background-color:#3b884d;">
             <button id="teste" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span> <i class="fas fa-carrot animated rubberBand" style="font-size: 30px; color: #c78713"></i> &nbsp; <i class="fas fa-apple-alt animated rubberBand" style="font-size: 30px; color: #d83838"></i> &nbsp; <i class="fas fa-cheese animated rubberBand" style="font-size: 30px; color: #ccc624"></i> </span>
@@ -222,8 +234,6 @@
 
                         <?php
                             $result = mysqli_query($con, $sql);
-
-                            $totalRegistros = mysqli_num_rows($result);
             
                             while($row = mysqli_fetch_array($result)){
                         echo "<tr>";   
@@ -373,8 +383,6 @@
                         <?php 
             
                             $result = mysqli_query($con, $sql);
-
-                            $totalRegistros = mysqli_num_rows($result);
             
                             while($row = mysqli_fetch_array($result)){
                         echo "<tr>";   
@@ -514,8 +522,6 @@
                         <?php 
             
                             $result = mysqli_query($con, $sql);
-
-                            $totalRegistros = mysqli_num_rows($result);
             
                             while($row = mysqli_fetch_array($result)){
                         echo "<tr>";   
@@ -655,8 +661,6 @@
                         <?php 
                             
                             $result = mysqli_query($con, $sql);
-
-                            $totalRegistros = mysqli_num_rows($result);
             
                             while($row = mysqli_fetch_array($result)){
                         echo "<tr>";   
@@ -796,8 +800,6 @@
                         <?php 
             
                             $result = mysqli_query($con, $sql);
-
-                            $totalRegistros = mysqli_num_rows($result);
             
                             while($row = mysqli_fetch_array($result)){
                         echo "<tr>";   
@@ -937,8 +939,6 @@
                         <?php 
             
                             $result = mysqli_query($con, $sql);
-
-                            $totalRegistros = mysqli_num_rows($result);
             
                             while($row = mysqli_fetch_array($result)){
                         echo "<tr>";   
@@ -1078,8 +1078,6 @@
                         <?php 
             
                             $result = mysqli_query($con, $sql);
-
-                            $totalRegistros = mysqli_num_rows($result);
             
                             while($row = mysqli_fetch_array($result)){
                         echo "<tr>";   
@@ -1218,8 +1216,6 @@
                         <?php 
             
                             $result = mysqli_query($con, $sql);
-
-                            $totalRegistros = mysqli_num_rows($result);
             
                             while($row = mysqli_fetch_array($result)){
                         echo "<tr>";   
