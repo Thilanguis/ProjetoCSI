@@ -32,7 +32,7 @@
         
   // $horario         = $_POST["horario"];
   //  $refeicao        = $_POST["refeicao"];
-    $quantidade      = $_POST["quantidade"];
+  //  $quantidade      = $_POST["quantidade"];
     $col2            = $row["col 2"]; 
     $col3            = $row["col 3"];
     $col5            = $row["col 5"];
@@ -49,7 +49,7 @@
     {
          ?>
         <div class="alert alert-success animated zoomIn container" role="alert" style="width: 300px; margin-top: 100px;">
-            Contato cadastrado com sucesso!
+            Alimento gravados com sucesso!
         </div>
 
         <div id="btnConfirmacao">

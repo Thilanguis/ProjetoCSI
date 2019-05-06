@@ -35,7 +35,7 @@
     {
          ?>
         <div class="alert alert-success animated zoomIn container" role="alert" style="width: 300px; margin-top: 100px;">
-            Contato cadastrado com sucesso!
+            Dados gravados com sucesso!
         </div>
 
         <div id="btnConfirmacao">
