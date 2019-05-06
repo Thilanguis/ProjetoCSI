@@ -13,13 +13,13 @@
     <div class="">
 
         <?php
-    $HpatologiaPregressa    = $_POST["HpatologiaPregressa"];
-    $Hfamiliar              = $_POST["Hfamiliar"];
-    $Halimentar             = $_POST["Halimentar"];
-    $sinalClinico           = $_POST["sinalClinico"];
-    $medicamentos           = $_POST["medicamentos"];
-    $Hsocial                = $_POST["Hsocial"];
-    $recomendacoesOrientacoes  = $_POST["recomendacoesOrientacoes"];
+    $HpatologiaPregressa      = $_POST["HpatologiaPregressa"];
+    $Hfamiliar                = $_POST["Hfamiliar"];
+    $Halimentar               = $_POST["Halimentar"];
+    $sinalClinico             = $_POST["sinalClinico"];
+    $medicamentos             = $_POST["medicamentos"];
+    $Hsocial                  = $_POST["Hsocial"];
+    $recomendacoesOrientacoes = $_POST["recomendacoesOrientacoes"];
    
     
     include_once 'conexao.php';

@@ -13,6 +13,9 @@
     <div class="">
 
         <?php
+        
+        include_once 'conexao.php';
+        
     $sono                   = $_POST["sono"];
     $NAF_sono               = $_POST["NAF_sono"];
     $trabalho               = $_POST["trabalho"];
@@ -26,16 +29,14 @@
     $ativFisica             = $_POST["ativFisica"];
     $NAF_ativFisica         = $_POST["NAF_ativFisica"];
    
-    
-    include_once 'conexao.php';
-        
     $verifTotal = $sono != "" || $trabalho != "" || $estudo != "" || $exerFisico != "" || $avontade != "" || $ativFisica != "" || $NAF_sono != "" || $NAF_trabalho != "" || $NAF_estudo != "" || $NAF_exerFisico != "" || $NAF_avontade != "" || $NAF_ativFisica != "";
         
      $verifHoras = $sono != "" || $trabalho != "" || $estudo != "" || $exerFisico != "" || $avontade != "" || $ativFisica != ""; 
         
     $verifNAF = $NAF_sono != "" || $NAF_trabalho != "" || $NAF_estudo != "" || $NAF_exerFisico != "" || $NAF_avontade != "" || $NAF_ativFisica != ""; 
     
-    $sql = "insert into a_clinica_nutricional (null, SONO, TRABALHO, ESTUDO, EXER_FISICO, A_VONTADE, ATIV_FISICA, Hora_Sono, Hora_Trabalho, Hora_Estudo, Hora_Exer_Fisico, Hora_A_vontade, Hora_Ativ_fisica) values(null, '".$sono."','".$trabalho."','".$estudo."','".$exerFisico."','".$avontade."','".$ativFisica."','".$NAF_sono."','".$NAF_trabalho."','".$NAF_estudo."','".$NAF_exerFisico."','".$NAF_avontade."','".$NAF_ativFisica."')";
+    $sql = "insert into vet_fao (ID_VET_FAO, SONO, TRABALHO, ESTUDO, EXER_FISICO, A_VONTADE, ATIV_FISICA, Hora_Sono, Hora_trabalho, Hora_Estudo, Hora_Exer_Fisico, Hora_A_vontade, Hora_Ativ_fisica) values (null, '".$sono."','".$trabalho."','".$estudo."','".$exerFisico."','".$avontade."','".$ativFisica."','".$NAF_sono."','".$NAF_trabalho."','".$NAF_estudo."','".$NAF_exerFisico."','".$NAF_avontade."','".$NAF_ativFisica."')";
+        
 if($verifTotal)
 {
 
@@ -61,6 +62,7 @@ if($verifTotal)
          ?>
         <div class="alert alert-warning animated zoomIn container" role="alert" style="width: 300px; margin-top: 100px;">
             Erro ao cadastrar contato!
+            <?php echo mysqli_error($con); ?>
         </div>
 
         <div id="btnConfirmacao">

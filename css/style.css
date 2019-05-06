@@ -322,6 +322,14 @@ h3 {
     box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.75);
 }
 
+#listNutri1 {
+    float: left;
+    width: 200px;
+    margin-top: 20px;
+    margin-left: 5px;
+    box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
 .input-group {
     padding-top: 10px;
 }

@@ -24,7 +24,7 @@
             </div>
         </nav>
 
-        <div id="listNutri" class="list-group">
+        <div id="listNutri1" class="list-group">
             <a href="#" class="list-group-item list-group-item-action active">
                 Menu
             </a>
@@ -68,7 +68,7 @@
             </div>
 
             <div id="limpandoTelaParaDieta">
-                <p></p>
+                <hr>
             </div>
 
             <div id="gerarMedidas">
