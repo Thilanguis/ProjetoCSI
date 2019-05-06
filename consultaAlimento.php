@@ -17,7 +17,7 @@
                 
                 $totalRegistros = mysqli_num_rows($result);
                 
-                $quantidade = "<script>document.getElementByName(quantidade).value</script>";
+                $quantidade = "<script>document.getElementByName('quantidade')</script>"; 
         
                 if($totalRegistros > 0)
                 { ?> <div class="table-overflow1">

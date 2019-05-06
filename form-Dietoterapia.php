@@ -106,16 +106,13 @@
                     </select>
                 </div>
             </div>
-            
-            <form id="myform" action="consultaAlimento.php" method="get">
+       
             <div class="form-group row">
                 <label for="inputEmail3" class="col-sm-2 col-form-label">Quant.</label>
                 <div class="col-sm-4">
-                    <input type="number" class="form-control" id="quantidade" name="quantidade" placeholder="">
-                    <input type="submit">
+                    <input type="number" class="form-control" id="quantidade" name="quantidade" placeholder="" value="2">
                 </div>
             </div>
-            </form>
             
         </div>
 
@@ -136,7 +133,7 @@
                 <div class="form-group row">
                     <div class="col-sm-12" id="Resultado">
 
-                        <!-- entra a tela consultaAlimentos.php -->
+                      
 
                     </div>
                 </div>

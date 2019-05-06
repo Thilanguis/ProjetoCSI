@@ -7,6 +7,7 @@
     <title>Dietpro</title>
     <?php include_once 'head.php';
     include_once 'verificaLogin.php';
+    include_once 'form-cadastroPacienteNovo.php';
     ?>
 
 </head>
@@ -43,6 +44,25 @@
         <h4 id="menuNutricionista">Menu Nutricionista &nbsp;<img src="img/icons8-plano-de-sa%C3%BAde-48.png" alt=""></h4>
 
         <a id="loopa" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="fas fa-address-book" style="font-size: 26px; color: #4c89e3; margin-top: 50px; margin-left: 340px; margin-bottom: 10px;">&nbsp; <i class="fas fa-mouse-pointer animated rubberBand" style="font-size: 20px; color: black;"></i> Busca de pacientes </i></a>
+        
+        <div id="pacientesCadastrados">
+            <button type="button" class="badge badge-success">
+  Pacientes cadastrados <span class="badge badge-light">
+      
+      <?php 
+        include_once 'conexao.php';
+        
+        $sql = "select NOME from cliente";
+            
+        $result = mysqli_query($con, $sql);
+                
+        $totalRegistros = mysqli_num_rows($result);
+        
+        echo $totalRegistros;
+        ?>
+  </span>
+</button>
+        </div>
 
         <form action="nutricionistaMenu.php" method="get">
             <div class="row">
@@ -133,15 +153,17 @@
         ?>
 
         <div>
-            <a id="novaConsulta" href="form-antropometria.php"><img src="img/icons8-adicionar-usu%C3%A1rio-grupo-homem-mulher-64.png" title="Nova Consulta" alt="Olá"></a>
+           <button type="button" class="btn btn-link" id="novaConsulta" data-toggle="modal" data-target="#exampleModalScrollable">
+            <img src="img/icons8-adicionar-usu%C3%A1rio-grupo-homem-mulher-64.png" title="Cadastrar novo paciente" alt="Olá">
+            </button>
         </div>
 
         <footer class="container" id="rodape">
             <?php include_once 'rodape.php'; ?>
         </footer>
-
+   
     </div>
-
+    
 </body>
 
 </html>

@@ -32,7 +32,7 @@
         
   // $horario         = $_POST["horario"];
   //  $refeicao        = $_POST["refeicao"];
-  // $quantidade      = $_POST["quantidade"];
+    $quantidade      = $_POST["quantidade"];
     $col2            = $row["col 2"]; 
     $col3            = $row["col 3"];
     $col5            = $row["col 5"];
@@ -41,7 +41,7 @@
     $col8            = $row["col 8"];
     $col9            = $row["col 9"];
          
-    $sqlDadosDaRefeicao = "insert into alimentos (ID, NOME_ALIMENTO, MEDIDA_CASEIRA, GRAMA, CHO, PTN, LIP, KCAL) values (null, '".$col2."','".$col3."','".$col5."','".$col6."','".$col7."','".$col8."','".$col9."')";
+    $sqlDadosDaRefeicao = "insert into alimentos (ID, NOME_ALIMENTO, MEDIDA_CASEIRA, GRAMA, CHO, PTN, LIP, KCAL, NUM_MC) values (null, '".$col2."','".$col3."','".$col5."','".$col6."','".$col7."','".$col8."','".$col9."', '".$quantidade."')";
   
    
 

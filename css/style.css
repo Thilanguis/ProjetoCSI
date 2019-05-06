@@ -531,10 +531,15 @@ h3 {
     font-style: italic;
 }
 
+#pacientesCadastrados{
+    position: absolute;
+    margin-left: 69%;
+}
+
 #novaConsulta {
     position: fixed;
     top: 75%;
-    left: 75%;
+    left: 85%;
     padding: 10px;
     z-index: 10000000;
     background-image: linear-gradient(to bottom, white, rgba(107, 191, 138, 0.63));

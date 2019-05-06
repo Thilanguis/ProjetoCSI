@@ -16,3 +16,4 @@ function excluirAlimento(ID) {
         location.href = 'excluirAlimento.php?id_alimento=' + ID;
     }
 }
+
