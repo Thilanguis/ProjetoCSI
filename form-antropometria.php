@@ -174,7 +174,7 @@
                     </div>
                 </div>
 
-                <button style="margin-left: 270px; margin-bottom: 20px; margin-top: 30px;" id="btnentrar" type="submit" class="btn btn-primary">Salvar Antropometria</button>
+                <button style="margin-left: 340px; margin-bottom: 20px; margin-top: 30px;" id="btnentrar" type="submit" class="btn btn-primary">Salvar Antropometria</button>
             </div>
         </form>
 

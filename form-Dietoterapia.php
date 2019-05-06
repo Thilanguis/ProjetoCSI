@@ -9,13 +9,13 @@
     <?php include_once 'head.php';
     include_once 'verificaLogin.php';
     ?>
-    
+
 </head>
 
 <body>
 
     <div id="fundoSistemaInterno" class="container">
-       
+
         <nav class="navbar navbar-dark container" style="background-color:#3b884d;">
             <button id="teste" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span> <i class="fas fa-carrot animated rubberBand" style="font-size: 30px; color: #c78713"></i> &nbsp; <i class="fas fa-apple-alt animated rubberBand" style="font-size: 30px; color: #d83838"></i> &nbsp; <i class="fas fa-cheese animated rubberBand" style="font-size: 30px; color: #ccc624"></i> </span>
@@ -106,14 +106,14 @@
                     </select>
                 </div>
             </div>
-       
+
             <div class="form-group row">
                 <label for="inputEmail3" class="col-sm-2 col-form-label">Quant.</label>
                 <div class="col-sm-4">
-                    <input type="number" class="form-control" id="quantidade" name="quantidade" placeholder="" value="2">
+                    <input type="number" class="form-control" id="quantidade" name="quantidade" placeholder="">
                 </div>
             </div>
-            
+
         </div>
 
         <div style="width: 800px; margin-left: 250px; margin-top: 20px;">
@@ -133,7 +133,7 @@
                 <div class="form-group row">
                     <div class="col-sm-12" id="Resultado">
 
-                      
+
 
                     </div>
                 </div>
