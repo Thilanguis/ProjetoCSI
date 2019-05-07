@@ -82,53 +82,53 @@
                 <div class="form-row alturaAntro">
                     <label for="bracoEsq">Braço Esq. :</label>
                     <div class="form-group col-md-1">
-                        <input type="number" class="form-control" id="bracoEsq" placeholder="" name="bracoEsq">
+                        <input type="number" step="0.01" class="form-control" id="bracoEsq" placeholder="" name="bracoEsq">
                     </div>
                     <label style="margin-left: 60px;" for="bracoDir">Braço Dir. :</label>
                     <div class="form-group col-md-1 ">
-                        <input type="number" class="form-control" id="bracoDir" placeholder="" name="bracoDir">
+                        <input type="number" step="0.01" class="form-control" id="bracoDir" placeholder="" name="bracoDir">
                     </div>
                     <label style="margin-left: 120px;" for="tricipital">Tricipital :</label>
                     <div class="form-group col-md-1">
-                        <input type="number" class="form-control" id="tricipital" placeholder="" name="tricipital">
+                        <input type="number" step="0.01" class="form-control" id="tricipital" placeholder="" name="tricipital">
                     </div>
                     <label style="margin-left: 60px;" for="subescapular">Subescapular :</label>
                     <div class="form-group col-md-1">
-                        <input type="number" class="form-control" id="subescapular" placeholder="" name="subescapular">
+                        <input type="number" step="0.01" class="form-control" id="subescapular" placeholder="" name="subescapular">
                     </div>
                 </div>
 
                 <div class="form-row alturaAntro">
                     <label style="margin-left: 20px;" for="cintura">Cintura :</label>
                     <div class="form-group col-md-1">
-                        <input type="number" class="form-control" id="cintura" placeholder="" name="cintura">
+                        <input type="number" step="0.01" class="form-control" id="cintura" placeholder="" name="cintura">
                     </div>
                     <label style="margin-left: 78px;" for="quadril">Quadril :</label>
                     <div class="form-group col-md-1">
-                        <input type="number" class="form-control" id="quadril" placeholder="" name="quadril">
+                        <input type="number" step="0.01" class="form-control" id="quadril" placeholder="" name="quadril">
                     </div>
                     <label style="margin-left: 105px;" for="suprailiaca">Suprailíaca :</label>
                     <div class="form-group col-md-1">
-                        <input type="number" class="form-control" id="suprailiaca" placeholder="" name="suprailiaca">
+                        <input type="number" step="0.01" class="form-control" id="suprailiaca" placeholder="" name="suprailiaca">
                     </div>
                     <label style="margin-left: 75px;" for="abdominal">Abdominal :</label>
                     <div class="form-group col-md-1">
-                        <input type="number" class="form-control" id="abdominal" placeholder="" name="abdominal">
+                        <input type="number" step="0.01" class="form-control" id="abdominal" placeholder="" name="abdominal">
                     </div>
                 </div>
 
                 <div class="form-row alturaAntro">
                     <label style="margin-left: 33px;" for="torax">Torax :</label>
                     <div class="form-group col-md-1">
-                        <input type="number" class="form-control" id="torax" placeholder="" name="torax">
+                        <input type="number" step="0.01" class="form-control" id="torax" placeholder="" name="torax">
                     </div>
                     <label style="margin-left: 53px;" for="abdominal">Abdominal :</label>
                     <div class="form-group col-md-1">
-                        <input type="number" class="form-control" id="abdominal" placeholder="" name="abdominalCir">
+                        <input type="number" step="0.01" class="form-control" id="abdominal" placeholder="" name="abdominalCir">
                     </div>
                     <label style="margin-left: 220px;" for="quadriceps">Quadríceps :</label>
                     <div class="form-group col-md-1">
-                        <input type="number" class="form-control" id="quadriceps" placeholder="" name="quadriceps">
+                        <input type="number" step="0.01" class="form-control" id="quadriceps" placeholder="" name="quadriceps">
                     </div>
 
 
@@ -137,11 +137,11 @@
                 <div class="form-row alturaAntro">
                     <label style="margin-left: 8px;" for="coxaEsq">Coxa Esq. :</label>
                     <div class="form-group col-md-1">
-                        <input type="number" class="form-control" id="coxaEsq" placeholder="" name="coxaEsq">
+                        <input type="number" step="0.01" class="form-control" id="coxaEsq" placeholder="" name="coxaEsq">
                     </div>
                     <label style="margin-left: 66px;" for="coxaDir">Coxa Dir. :</label>
                     <div class="form-group col-md-1">
-                        <input type="number" class="form-control" id="coxaDir" placeholder="" name="coxaDir">
+                        <input type="number" step="0.01" class="form-control" id="coxaDir" placeholder="" name="coxaDir">
                     </div>
 
                     <div class="form-group col-md-3 ">
@@ -152,11 +152,11 @@
                 <div class="form-row alturaAntro">
                     <label style="margin-left: 9px;" for="panturrilhaEsq">Pant. Esq. :</label>
                     <div class="form-group col-md-1">
-                        <input type="number" class="form-control" id="panturrilhaEsq" placeholder="" name="panturrilhaEsq">
+                        <input type="number" step="0.01" class="form-control" id="panturrilhaEsq" placeholder="" name="panturrilhaEsq">
                     </div>
                     <label style="margin-left: 66px;" for="panturrilhaDir">Pant. Dir. :</label>
                     <div class="form-group col-md-1 linha-vertical">
-                        <input type="number" class="form-control" id="panturrilhaDir" placeholder="" name="panturrilhaDir">
+                        <input type="number" step="0.01" class="form-control" id="panturrilhaDir" placeholder="" name="panturrilhaDir">
                     </div>
 
 
@@ -166,11 +166,11 @@
                 <div class="form-row ">
                     <label for="antebracoEsq">A.braço Esq.:</label>
                     <div class="form-group col-md-1">
-                        <input type="number" class="form-control" id="antebracoEsq" placeholder="" name="antebracoEsq">
+                        <input type="number" step="0.01" class="form-control" id="antebracoEsq" placeholder="" name="antebracoEsq">
                     </div>
                     <label style="margin-left: 50px;" for="antebracoDir">A.braço Dir.:</label>
                     <div class="form-group col-md-1">
-                        <input type="number" class="form-control" id="antebracoDir" placeholder="" name="antebracoDir">
+                        <input type="number" step="0.01" class="form-control" id="antebracoDir" placeholder="" name="antebracoDir">
                     </div>
                 </div>
 

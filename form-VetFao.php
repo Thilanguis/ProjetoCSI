@@ -62,10 +62,10 @@
                         <h6><i>Sono :</i></h6>
                     </label>
                     <div class="form-group col-sm-4">
-                        <input style="text-align: center;" type="number" class="form-control" id="sono" placeholder="" name="sono">
+                        <input style="text-align: center;" type="number" step="0.01" class="form-control" id="sono" placeholder="" name="sono">
                     </div>
                     <div class="form-group col-sm-4">
-                        <input style="text-align: center;" type="number" class="form-control" id="NAF_sono" placeholder="" name="NAF_sono">
+                        <input style="text-align: center;" type="number" step="0.01" class="form-control" id="NAF_sono" placeholder="" name="NAF_sono">
                     </div>
                 </div>
                 <div class="form-row">
@@ -73,10 +73,10 @@
                         <h6><i>Trabalho :</i></h6>
                     </label>
                     <div class="form-group col-sm-4">
-                        <input style="text-align: center;" type="number" class="form-control" id="bracoEsq" placeholder="" name="trabalho">
+                        <input style="text-align: center;" type="number" step="0.01" class="form-control" id="bracoEsq" placeholder="" name="trabalho">
                     </div>
                     <div class="form-group col-sm-4">
-                        <input style="text-align: center;" type="number" class="form-control" id="bracoDir" placeholder="" name="NAF_trabalho">
+                        <input style="text-align: center;" type="number" step="0.01" class="form-control" id="bracoDir" placeholder="" name="NAF_trabalho">
                     </div>
                 </div>
                 <div class="form-row">
@@ -84,10 +84,10 @@
                         <h6><i>Estudo :</i></h6>
                     </label>
                     <div class="form-group col-sm-4">
-                        <input style="text-align: center;" type="number" class="form-control" id="bracoEsq" placeholder="" name="estudo">
+                        <input style="text-align: center;" type="number" step="0.01" class="form-control" id="bracoEsq" placeholder="" name="estudo">
                     </div>
                     <div class="form-group col-sm-4">
-                        <input style="text-align: center;" type="number" class="form-control" id="bracoDir" placeholder="" name="NAF_estudo">
+                        <input style="text-align: center;" type="number" step="0.01" class="form-control" id="bracoDir" placeholder="" name="NAF_estudo">
                     </div>
                 </div>
                 <div class="form-row">
@@ -95,10 +95,10 @@
                         <h6><i>Exer. físico :</i></h6>
                     </label>
                     <div class="form-group col-sm-4">
-                        <input style="text-align: center;" type="number" class="form-control" id="bracoEsq" placeholder="" name="exerFisico">
+                        <input style="text-align: center;" type="number" step="0.01" class="form-control" id="bracoEsq" placeholder="" name="exerFisico">
                     </div>
                     <div class="form-group col-sm-4">
-                        <input style="text-align: center;" type="number" class="form-control" id="bracoDir" placeholder="" name="NAF_exerFisico">
+                        <input style="text-align: center;" type="number" step="0.01" class="form-control" id="bracoDir" placeholder="" name="NAF_exerFisico">
                     </div>
                 </div>
                 <div class="form-row">
@@ -106,10 +106,10 @@
                         <h6><i>À vontade :</i></h6>
                     </label>
                     <div class="form-group col-sm-4">
-                        <input style="text-align: center;" type="number" class="form-control" id="bracoEsq" placeholder="" name="avontade">
+                        <input style="text-align: center;" type="number" step="0.01" class="form-control" id="bracoEsq" placeholder="" name="avontade">
                     </div>
                     <div class="form-group col-sm-4">
-                        <input style="text-align: center;" type="number" class="form-control" id="bracoDir" placeholder="" name="NAF_avontade">
+                        <input style="text-align: center;" type="number" step="0.01" class="form-control" id="bracoDir" placeholder="" name="NAF_avontade">
                     </div>
                 </div>
                 <div class="form-row">
@@ -117,10 +117,10 @@
                         <h6><i>Ativ. Física :</i></h6>
                     </label>
                     <div class="form-group col-sm-4">
-                        <input style="text-align: center;" type="number" class="form-control" id="bracoEsq" placeholder="" name="ativFisica">
+                        <input style="text-align: center;" type="number" step="0.01" class="form-control" id="bracoEsq" placeholder="" name="ativFisica">
                     </div>
                     <div class="form-group col-sm-4">
-                        <input style="text-align: center;" type="number" class="form-control" id="bracoDir" placeholder="" name="NAF_ativFisica">
+                        <input style="text-align: center;" type="number" step="0.01" class="form-control" id="bracoDir" placeholder="" name="NAF_ativFisica">
                     </div>
                 </div>
                 <button style="margin-left: 280px; margin-bottom: 20px; margin-top:60px;" id="btnentrar" type="submit" class="btn btn-primary">Salvar/Gerar VET</button>

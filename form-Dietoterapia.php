@@ -110,7 +110,7 @@
             <div class="form-group row">
                 <label for="inputEmail3" class="col-sm-2 col-form-label">Quant.</label>
                 <div class="col-sm-4">
-                    <input type="number" class="form-control" id="quantidade" name="quantidade" placeholder="">
+                    <input type="number" step="0.05" class="form-control" id="quantidade" name="quantidade" placeholder="">
                 </div>
             </div>
 
