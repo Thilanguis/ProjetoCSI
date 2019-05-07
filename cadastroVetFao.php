@@ -16,6 +16,8 @@
         
         include_once 'conexao.php';
         
+        include_once 'funcoesProjeto.php';
+        
     $sono                   = $_POST["sono"];
     $NAF_sono               = $_POST["NAF_sono"];
     $trabalho               = $_POST["trabalho"];

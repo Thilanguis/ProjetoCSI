@@ -424,7 +424,12 @@ h3 {
 #vet {
     float: right;
     margin-bottom: 15px;
-    margin-right: 110px;
+    padding-right: 110px;
+}
+
+#resultadoConta {
+    margin-left: 47px;
+    font-weight: bold;
 }
 
 #tabelaAlimentos {

@@ -7,6 +7,7 @@
     <title>Dietpro</title>
     <?php include_once 'head.php';
     include_once 'verificaLogin.php';
+    
     ?>
 
 
@@ -62,10 +63,10 @@
                         <h6><i>Sono :</i></h6>
                     </label>
                     <div class="form-group col-sm-4">
-                        <input style="text-align: center;" type="number" step="0.01" class="form-control" id="sono" placeholder="" name="sono">
+                        <input style="text-align: center;" type="number" step="0.01" class="form-control" id="sono" onblur="calcular()" name="sono" value="0">
                     </div>
                     <div class="form-group col-sm-4">
-                        <input style="text-align: center;" type="number" step="0.01" class="form-control" id="NAF_sono" placeholder="" name="NAF_sono">
+                        <input style="text-align: center;" type="number" step="0.01" class="form-control" id="NAF_sono" name="NAF_sono">
                     </div>
                 </div>
                 <div class="form-row">
@@ -73,10 +74,10 @@
                         <h6><i>Trabalho :</i></h6>
                     </label>
                     <div class="form-group col-sm-4">
-                        <input style="text-align: center;" type="number" step="0.01" class="form-control" id="bracoEsq" placeholder="" name="trabalho">
+                        <input style="text-align: center;" type="number" step="0.01" class="form-control" id="trabalho" onblur="calcular()" name="trabalho" value="0">
                     </div>
                     <div class="form-group col-sm-4">
-                        <input style="text-align: center;" type="number" step="0.01" class="form-control" id="bracoDir" placeholder="" name="NAF_trabalho">
+                        <input style="text-align: center;" type="number" step="0.01" class="form-control" id="NAF_trabalho" name="NAF_trabalho">
                     </div>
                 </div>
                 <div class="form-row">
@@ -84,10 +85,10 @@
                         <h6><i>Estudo :</i></h6>
                     </label>
                     <div class="form-group col-sm-4">
-                        <input style="text-align: center;" type="number" step="0.01" class="form-control" id="bracoEsq" placeholder="" name="estudo">
+                        <input style="text-align: center;" type="number" step="0.01" class="form-control" id="estudo" onblur="calcular()" name="estudo" value="0">
                     </div>
                     <div class="form-group col-sm-4">
-                        <input style="text-align: center;" type="number" step="0.01" class="form-control" id="bracoDir" placeholder="" name="NAF_estudo">
+                        <input style="text-align: center;" type="number" step="0.01" class="form-control" id="NAF_estudo" placeholder="" name="NAF_estudo">
                     </div>
                 </div>
                 <div class="form-row">
@@ -95,10 +96,10 @@
                         <h6><i>Exer. físico :</i></h6>
                     </label>
                     <div class="form-group col-sm-4">
-                        <input style="text-align: center;" type="number" step="0.01" class="form-control" id="bracoEsq" placeholder="" name="exerFisico">
+                        <input style="text-align: center;" type="number" step="0.01" class="form-control" id="exerFisico" onblur="calcular()" name="exerFisico" value="0">
                     </div>
                     <div class="form-group col-sm-4">
-                        <input style="text-align: center;" type="number" step="0.01" class="form-control" id="bracoDir" placeholder="" name="NAF_exerFisico">
+                        <input style="text-align: center;" type="number" step="0.01" class="form-control" id="NAF_exerFisico" name="NAF_exerFisico">
                     </div>
                 </div>
                 <div class="form-row">
@@ -106,10 +107,10 @@
                         <h6><i>À vontade :</i></h6>
                     </label>
                     <div class="form-group col-sm-4">
-                        <input style="text-align: center;" type="number" step="0.01" class="form-control" id="bracoEsq" placeholder="" name="avontade">
+                        <input style="text-align: center;" type="number" step="0.01" class="form-control" id="avontade" onblur="calcular()" name="avontade" value="0">
                     </div>
                     <div class="form-group col-sm-4">
-                        <input style="text-align: center;" type="number" step="0.01" class="form-control" id="bracoDir" placeholder="" name="NAF_avontade">
+                        <input style="text-align: center;" type="number" step="0.01" class="form-control" id="NAF_avontade" name="NAF_avontade">
                     </div>
                 </div>
                 <div class="form-row">
@@ -117,12 +118,23 @@
                         <h6><i>Ativ. Física :</i></h6>
                     </label>
                     <div class="form-group col-sm-4">
-                        <input style="text-align: center;" type="number" step="0.01" class="form-control" id="bracoEsq" placeholder="" name="ativFisica">
+                        <input style="text-align: center;" type="number" step="0.01" class="form-control" id="ativFisica" onblur="calcular()" name="ativFisica" value="0">
                     </div>
                     <div class="form-group col-sm-4">
-                        <input style="text-align: center;" type="number" step="0.01" class="form-control" id="bracoDir" placeholder="" name="NAF_ativFisica">
+                        <input style="text-align: center;" type="number" step="0.01" class="form-control" id="NAF_ativFisica" name="NAF_ativFisica">
                     </div>
                 </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <h6><i>24 horas/dia:</i></h6>
+                    </div>
+                    <div class="form-group" id="resultadoConta">
+
+                    </div>
+                </div>
+
+
                 <button style="margin-left: 280px; margin-bottom: 20px; margin-top:60px;" id="btnentrar" type="submit" class="btn btn-primary">Salvar/Gerar VET</button>
             </form>
         </div>
@@ -172,6 +184,7 @@
                 </tbody>
             </table>
         </div>
+        <div id="resultadoConta">bilolinha</div>
 
 
         <footer class="container" id="rodape">
