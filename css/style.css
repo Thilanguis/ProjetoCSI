@@ -546,8 +546,8 @@ h3 {
 
 #novaConsulta {
     position: fixed;
-    top: 700px;
-    left: 1370px;
+    top: 85%;
+    left: 90%;
     padding: 10px;
     z-index: 10000000;
     background-image: linear-gradient(to bottom, white, rgba(107, 191, 138, 0.63));

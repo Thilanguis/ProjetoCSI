@@ -1,4 +1,6 @@
-<div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+<script src="js/ajaxCEP.js"></script>
+          
+           <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -9,6 +11,8 @@
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
+                    
+                    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
                     <div class="modal-body">
 
@@ -24,18 +28,32 @@
                                     <label style="margin-left: 60px;" for="telefone">Telefone Celular</label> &nbsp; <i class="fas fa-mobile-alt" style="font-size: 25px; color: #d11818"></i>
                                     <input style="text-align: center;" type="tel" class="form-control" id="telefone" placeholder="Ex.: 00 0000 0000" name="telefone">
                                 </div>
-
-
                             </div>
-
+                                
                             <div class="form-row">
+                               <div class="form-group col-md-4">
+                                    <label style="margin-left: 90px;" for="cep">CEP</label> &nbsp; <i class="fas fa-map" style="font-size: 26px; color: #d1ca18"></i>
+                                    <input type="text" class="form-control" id="cep" placeholder="12584-495" name="cep" style="text-align: center" value="" size="10" maxlength="9" >
+                                </div>
                                 <div class="form-group col-md-8">
                                     <label style="margin-left: 185px;" for="endereco">Endereço</label> &nbsp; <i class="fas fa-map-marked-alt" style="font-size: 25px; color: #27b75f"></i>
-                                    <input style="text-align: center;" type="text" class="form-control" id="endereco" placeholder="Rua das Borboletas Psicodélicas, nº12" name="endereco">
+                                    <input style="text-align: center;" type="text" class="form-control" id="rua" placeholder="Rua das Borboletas Psicodélicas, nº12" name="rua" disabled>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                
+                                <div class="form-group col-md-4">
+                                    <label style="margin-left: 85px;" for="bairro">Bairro</label> &nbsp; <i class="fas  fa-home" style="font-size: 25px; color: #d11818;"></i>
+                                    <input style="text-align: center;" type="text" class="form-control" id="bairro" placeholder="Bornheim" name="bairro" disabled>
                                 </div>
                                 <div class="form-group col-md-4">
                                     <label style="margin-left: 90px;" for="cidade">Cidade</label> &nbsp; <i class="fas fa-city" style="font-size: 25px; color: #be31d8"></i>
-                                    <input type="text" class="form-control" id="cidade" placeholder="Frankfurt am Main" name="cidade" style="text-align: center">
+                                    <input type="text" class="form-control" id="cidade" placeholder="Frankfurt am Main" name="cidade" style="text-align: center" disabled>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label style="margin-left: 90px;" for="uf">Estado</label> &nbsp; <i class="fas fa-map-marker-alt" style="font-size: 25px; color: #be31d8"></i>
+                                    <input style="text-align: center;" type="text" class="form-control" id="uf" placeholder="Hesse" name="uf" disabled>
                                 </div>
                             </div>
 
@@ -52,7 +70,7 @@
                                 <div class="form-group col-md-4">
                                     <label style="margin-left: 90px;" for="sexo">Sexo</label> &nbsp; <i class="fas fa-male" style="font-size: 25px; color: #314bd8"></i> <i class="fas fa-female" style="font-size: 25px; color: #be31d8"></i>
                                     <select type="text" class="form-control" id="sexo" name="sexo">
-                                        <option value="" selected>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...</option>
+                                        <option value="" selected>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...</option>
                                         <option value="Masculino">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Masculino</option>
                                         <option value="Feminino">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Feminino</option>
                                     </select>
