@@ -55,7 +55,7 @@ if($verificarE)
     {
          ?>
         <div class="alert alert-success animated zoomIn container" role="alert" style="width: 300px; margin-top: 100px;">
-            Contato cadastrado com sucesso!
+            Registro feito com sucesso!
         </div>
 
         <div id="btnConfirmacao">

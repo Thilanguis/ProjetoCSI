@@ -45,6 +45,11 @@
     margin-left: 1%;
 }
 
+#menuDropDown {
+    width: 300px;
+    height: auto;
+}
+
 #teste:hover {
     box-shadow: 1px 1px 5px 1px rgba(42, 45, 116, 0.75);
 }
