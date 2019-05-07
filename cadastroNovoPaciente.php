@@ -19,8 +19,11 @@
         
     $nome            = trataNome($_POST["nome"]);
     $telefone        = trataTelefone($_POST["telefone"]);
-    $endereco        = $_POST["endereco"];
+    $cep             = $_POST["cep"];
+    $endereco        = $_POST["rua"];
+    $bairro          = trataNome($_POST["bairro"]);
     $cidade          = trataNome($_POST["cidade"]);
+    $estado          = trataNome($_POST["uf"]);
     $estadoCivil     = trataNome($_POST["estadoCivil"]);
     $dataNascimento  = $_POST["dataNascimento"];
     $sexo            = $_POST["sexo"];
@@ -32,9 +35,9 @@
     
     include_once 'conexao.php';
         
-     $ok = $nome != "" && $telefone != "" && $endereco != "" && $cidade != "" && $estadoCivil != "" && $dataNascimento != "" && $sexo != "" && $senha != "" && $email != "" && $cpf != ""; 
+     $ok = $nome != "" && $telefone != "" && $cep && $endereco != "" && $bairro != "" && $cidade != "" && $estado != "" && $estadoCivil != "" && $dataNascimento != "" && $sexo != "" && $senha != "" && $email != "" && $cpf != ""; 
     
-    $sql = "insert into cliente values(null, '".$nome."','".$telefone."','".$endereco."','".$cidade."','".$estadoCivil."','".$dataNascimento."','".$sexo."','".$senha."','".$cpf."','".$email."')";
+    $sql = "insert into cliente values(null, '".$nome."','".$telefone."','".$cep."','".$endereco."','".$bairro."','".$cidade."','".$estado."','".$estadoCivil."','".$dataNascimento."','".$sexo."','".$senha."','".$cpf."','".$email."')";
     
         
     $verificarS = $senha == $confirmarSenha;
@@ -56,7 +59,7 @@ if($verificarE)
         </div>
 
         <div id="btnConfirmacao">
-            <a href="nutricionistaMenu.php"><button id="btnVoltar1" type="button" class="btn btn-warning animated zoomIn" style="margin-left:48%;">OK</button> </a>
+            <a href="index.php"><button id="btnVoltar1" type="button" class="btn btn-warning animated zoomIn" style="margin-left:48%;">OK</button> </a>
         </div>
         <?php
         }
@@ -83,7 +86,7 @@ if($verificarE)
         </div>
 
         <div id="btnConfirmacao">
-            <a href="nutricionistaMenu.php"><button id="btnVoltar1" type="button" class="btn btn-warning animated zoomIn" style="margin-left:48%;">OK</button></a>
+            <a href="index.php"><button id="btnVoltar1" type="button" class="btn btn-warning animated zoomIn" style="margin-left:48%;">OK</button></a>
         </div>
         <?php
         }
