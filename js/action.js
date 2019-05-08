@@ -17,7 +17,7 @@ function excluirAlimento(ID) {
     }
 }
 
-function calcular() {
+function calcularHorasNAF() {
     var n1 = parseInt(document.getElementById('sono').value, 10);
     var n2 = parseInt(document.getElementById('trabalho').value, 10);
     var n3 = parseInt(document.getElementById('estudo').value, 10);

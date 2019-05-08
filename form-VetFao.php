@@ -63,7 +63,7 @@
                         <h6><i>Sono :</i></h6>
                     </label>
                     <div class="form-group col-sm-4">
-                        <input style="text-align: center;" type="number" step="0.01" class="form-control" id="sono" onblur="calcular()" name="sono" value="0">
+                        <input style="text-align: center;" type="number" step="0.01" class="form-control" id="sono" onblur="calcularHorasNAF()" name="sono" value="0">
                     </div>
                     <div class="form-group col-sm-4">
                         <input style="text-align: center;" type="number" step="0.01" class="form-control" id="NAF_sono" name="NAF_sono">
@@ -74,7 +74,7 @@
                         <h6><i>Trabalho :</i></h6>
                     </label>
                     <div class="form-group col-sm-4">
-                        <input style="text-align: center;" type="number" step="0.01" class="form-control" id="trabalho" onblur="calcular()" name="trabalho" value="0">
+                        <input style="text-align: center;" type="number" step="0.01" class="form-control" id="trabalho" onblur="calcularHorasNAF()" name="trabalho" value="0">
                     </div>
                     <div class="form-group col-sm-4">
                         <input style="text-align: center;" type="number" step="0.01" class="form-control" id="NAF_trabalho" name="NAF_trabalho">
@@ -85,7 +85,7 @@
                         <h6><i>Estudo :</i></h6>
                     </label>
                     <div class="form-group col-sm-4">
-                        <input style="text-align: center;" type="number" step="0.01" class="form-control" id="estudo" onblur="calcular()" name="estudo" value="0">
+                        <input style="text-align: center;" type="number" step="0.01" class="form-control" id="estudo" onblur="calcularHorasNAF()" name="estudo" value="0">
                     </div>
                     <div class="form-group col-sm-4">
                         <input style="text-align: center;" type="number" step="0.01" class="form-control" id="NAF_estudo" placeholder="" name="NAF_estudo">
@@ -96,7 +96,7 @@
                         <h6><i>Exer. físico :</i></h6>
                     </label>
                     <div class="form-group col-sm-4">
-                        <input style="text-align: center;" type="number" step="0.01" class="form-control" id="exerFisico" onblur="calcular()" name="exerFisico" value="0">
+                        <input style="text-align: center;" type="number" step="0.01" class="form-control" id="exerFisico" onblur="calcularHorasNAF()" name="exerFisico" value="0">
                     </div>
                     <div class="form-group col-sm-4">
                         <input style="text-align: center;" type="number" step="0.01" class="form-control" id="NAF_exerFisico" name="NAF_exerFisico">
@@ -107,7 +107,7 @@
                         <h6><i>À vontade :</i></h6>
                     </label>
                     <div class="form-group col-sm-4">
-                        <input style="text-align: center;" type="number" step="0.01" class="form-control" id="avontade" onblur="calcular()" name="avontade" value="0">
+                        <input style="text-align: center;" type="number" step="0.01" class="form-control" id="avontade" onblur="calcularHorasNAF()" name="avontade" value="0">
                     </div>
                     <div class="form-group col-sm-4">
                         <input style="text-align: center;" type="number" step="0.01" class="form-control" id="NAF_avontade" name="NAF_avontade">
@@ -118,7 +118,7 @@
                         <h6><i>Ativ. Física :</i></h6>
                     </label>
                     <div class="form-group col-sm-4">
-                        <input style="text-align: center;" type="number" step="0.01" class="form-control" id="ativFisica" onblur="calcular()" name="ativFisica" value="0">
+                        <input style="text-align: center;" type="number" step="0.01" class="form-control" id="ativFisica" onblur="calcularHorasNAF()" name="ativFisica" value="0">
                     </div>
                     <div class="form-group col-sm-4">
                         <input style="text-align: center;" type="number" step="0.01" class="form-control" id="NAF_ativFisica" name="NAF_ativFisica">
@@ -184,8 +184,9 @@
                 </tbody>
             </table>
         </div>
-        <div id="resultadoConta">bilolinha</div>
-
+        <div id="resultadoConta">
+            
+        </div>
 
         <footer class="container" id="rodape">
             <?php include_once 'rodape.php'; ?>
