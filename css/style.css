@@ -441,9 +441,18 @@ h3 {
     font-size: 16px;
     text-shadow: 0 0 0.2em #87F, 0 0 0.2em #87F, 0 0 0.8em #87F;
     font-weight: bold;
+    margin-bottom: none !important;
 }
 
 #calculoDiferencaPercentualGordura {
+    margin-left: 590px;
+    text-align: center;
+    font-size: 16px;
+    text-shadow: 0 0 0.2em #87F, 0 0 0.2em #87F, 0 0 0.8em #87F;
+    font-weight: bold;
+}
+
+#calculoPercentualGorduraEmKg {
     margin-left: 590px;
     text-align: center;
     font-size: 16px;

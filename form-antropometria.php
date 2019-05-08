@@ -149,7 +149,10 @@
                     <div id="resultadoPercentualGordura" class="form-group col-md-3 ">
 
                     </div>
-                    <div id="calculoDiferencaPercentualGordura" class="form-group col-md-3 ">
+                    <div id="calculoDiferencaPercentualGordura" class="form-group col-md-3">
+
+                    </div>
+                    <div id="calculoPercentualGorduraEmKg" class="form-group col-md-3 ">
 
                     </div>
                 </div>
