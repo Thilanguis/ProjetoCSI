@@ -18,11 +18,61 @@ function excluirAlimento(ID) {
 }
 
 function calcularHorasNAF() {
-    var n1 = parseInt(document.getElementById('sono').value, 10);
+    var n1 = parseFloat(document.getElementById('sono').value, 10);
     var n2 = parseInt(document.getElementById('trabalho').value, 10);
-    var n3 = parseInt(document.getElementById('estudo').value, 10);
-    var n4 = parseInt(document.getElementById('exerFisico').value, 10);
-    var n5 = parseInt(document.getElementById('avontade').value, 10);
-    var n6 = parseInt(document.getElementById('ativFisica').value, 10);
+    var n3 = parseFloat(document.getElementById('estudo').value, 10);
+    var n4 = parseFloat(document.getElementById('exerFisico').value, 10);
+    var n5 = parseFloat(document.getElementById('avontade').value, 10);
+    var n6 = parseFloat(document.getElementById('ativFisica').value, 10);
     document.getElementById('resultadoConta').innerHTML = n1 + n2 + n3 + n4 + n5 + n6;
+}
+
+function calculoIMC() {
+    var altura = parseFloat(document.getElementById('altura').value,10);
+    
+    var pesoAtual = parseFloat(document.getElementById('pesoAtual').value,10);
+    
+    var resultado = pesoAtual / (altura*altura);
+              
+       if(resultado < 16.00){
+		document.getElementById('resultadoIMC').innerHTML = "Magreza Grau 3";
+		}
+		else if(resultado >= 16.00 && resultado < 17.00){
+		document.getElementById('resultadoIMC').innerHTML = "Magreza Grau 2";
+		}
+		else if(resultado >= 17.00 && resultado < 18.50){
+		document.getElementById('resultadoIMC').innerHTML = "Magreza Grau 1";
+		}
+		else if(resultado >= 18.50 && resultado < 25.00){
+		document.getElementById('resultadoIMC').innerHTML = "Eutrofia";
+		}
+		else if(resultado >= 25.00 && resultado < 30.00){
+		document.getElementById('resultadoIMC').innerHTML = "Pre-Obesidade";
+		}
+		else if(resultado >= 30.00 && resultado < 35.00){
+		document.getElementById('resultadoIMC').innerHTML = "Obesidade Grau 1";
+		}
+		else if(resultado >= 35.00 && resultado < 40.00){
+		document.getElementById('resultadoIMC').innerHTML = "Obesidade Grau 2";
+		}
+		else if(resultado > 40.00){
+		document.getElementById('resultadoIMC').innerHTML = "Obesidade Grau 3";
+		}
+}
+
+function calculoPercentualGordura() {
+    
+    var tricipital = parseFloat(document.getElementById('tricipital').value, 10);
+    var subescapular = parseFloat(document.getElementById('subescapular').value, 10);
+    var suprailiaca = parseFloat(document.getElementById('suprailiaca').value, 10);
+    var abdominal = parseFloat(document.getElementById('abdominal').value, 10);
+    var quadriceps = parseFloat(document.getElementById('quadriceps').value, 10);
+    
+    var resultado1 = (tricipital + subescapular + suprailiaca + abdominal)*0.153+5.783;
+    
+     parseFloat(document.getElementById('resultadoPercentualGordura').innerHTML = resultado1);
+	
+	//else if(){
+		//$gordura = ($tricipital+$subescapular+$suprailiaca+$abdominal+$quadriceps)*0.8*0.153+5.783/100;
+	//}
 }

@@ -349,10 +349,6 @@ h3 {
     float: right;
 }
 
-#h5Antro {
-    margin-top: px;
-}
-
 #gerarMedidas {
     margin-left: 150px;
     width: auto;
@@ -429,6 +425,15 @@ h3 {
 
 #resultadoConta {
     margin-left: 47px;
+    font-weight: bold;
+}
+
+#resultadoIMC{
+    text-align: center;
+    font-size: 20px;
+    text-shadow: 0 0 0.2em #87F, 0 0 0.2em #87F,
+
+        0 0 0.8em #87F;
     font-weight: bold;
 }
 

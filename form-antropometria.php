@@ -49,14 +49,19 @@
                 <div class="form-row">
 
                     <div class="col-8">
-                        <h5 style="text-align: center;"><i>IMC</i></h5>
+                        <h5 style="text-align: center;"><i>IMC</i></h5>                         
+                            <div id="resultadoIMC">
+                            
+                            </div>
+                        
                         <label style="margin-left: 70px;" for="altura">Altura (m) :</label>
-                        <input style="text-align: center;" type="number" class="form-control" id="altura" placeholder="" name="altura" min="0" max="3" step="0.01">
+                        <input style="text-align: center;" type="number" class="form-control" id="altura" placeholder="" name="altura" min="0" max="3" step="0.01" onchange="calculoIMC()" value="0">
                     </div>
 
                     <div class=" col-8">
                         <label style="margin-left: 50px;" for="pesoAtual">Peso Atual (kg)</label>
-                        <input style="text-align: center;" type="number" class="form-control" id="pesoAtual" placeholder="" name="pesoAtual" min="0" max="300" step="0.01">
+                        <input style="text-align: center;" type="number" class="form-control" id="pesoAtual" placeholder="" name="pesoAtual" min="0" max="300" step="0.01" onchange="calculoIMC()" value="0">
+                        
                     </div>
                 </div>
 
@@ -72,9 +77,9 @@
             </div>
 
             <div id="gerarMedidas">
-                <div id="h5Antro" class="form-row alturaAntro">
+                <div class="form-row alturaAntro">
                     <h5 class="col-md-5" style="text-align: center;"><i>Circunferências</i></h5>
-                    <h5 class="col-md-5" style="text-align: right; margin-right: 10px;"><i>Dobras Cutâneas</i></h5>
+                    <h5 class="col-md-5" style="text-align: center; margin-left: 80px;"><i>Dobras Cutâneas</i></h5>
                 </div>
 
 
@@ -90,11 +95,11 @@
                     </div>
                     <label style="margin-left: 120px;" for="tricipital">Tricipital :</label>
                     <div class="form-group col-md-1">
-                        <input type="number" step="0.01" class="form-control" id="tricipital" placeholder="" name="tricipital">
+                        <input type="number" step="0.01" class="form-control" id="tricipital" placeholder="" name="tricipital" onchange="calculoPercentualGordura()">
                     </div>
                     <label style="margin-left: 60px;" for="subescapular">Subescapular :</label>
                     <div class="form-group col-md-1">
-                        <input type="number" step="0.01" class="form-control" id="subescapular" placeholder="" name="subescapular">
+                        <input type="number" step="0.01" class="form-control" id="subescapular" placeholder="" name="subescapular" onchange="calculoPercentualGordura()">
                     </div>
                 </div>
 
@@ -109,11 +114,11 @@
                     </div>
                     <label style="margin-left: 105px;" for="suprailiaca">Suprailíaca :</label>
                     <div class="form-group col-md-1">
-                        <input type="number" step="0.01" class="form-control" id="suprailiaca" placeholder="" name="suprailiaca">
+                        <input type="number" step="0.01" class="form-control" id="suprailiaca" placeholder="" name="suprailiaca" onchange="calculoPercentualGordura()">
                     </div>
                     <label style="margin-left: 75px;" for="abdominal">Abdominal :</label>
                     <div class="form-group col-md-1">
-                        <input type="number" step="0.01" class="form-control" id="abdominal" placeholder="" name="abdominal">
+                        <input type="number" step="0.01" class="form-control" id="abdominal" placeholder="" name="abdominal" onchange="calculoPercentualGordura()">
                     </div>
                 </div>
 
@@ -128,7 +133,7 @@
                     </div>
                     <label style="margin-left: 220px;" for="quadriceps">Quadríceps :</label>
                     <div class="form-group col-md-1">
-                        <input type="number" step="0.01" class="form-control" id="quadriceps" placeholder="" name="quadriceps">
+                        <input type="number" step="0.01" class="form-control" id="quadriceps" placeholder="" name="quadriceps" onchange="calculoPercentualGordura()">
                     </div>
 
 
@@ -150,7 +155,7 @@
                 </div>
 
                 <div class="form-row alturaAntro">
-                    <label style="margin-left: 9px;" for="panturrilhaEsq">Pant. Esq. :</label>
+                    <label style="margin-left: 8px;" for="panturrilhaEsq">Pant. Esq. :</label>
                     <div class="form-group col-md-1">
                         <input type="number" step="0.01" class="form-control" id="panturrilhaEsq" placeholder="" name="panturrilhaEsq">
                     </div>
@@ -172,6 +177,10 @@
                     <div class="form-group col-md-1">
                         <input type="number" step="0.01" class="form-control" id="antebracoDir" placeholder="" name="antebracoDir">
                     </div>
+                </div>
+                
+                <div id="resultadoPercentualGordura">
+                            
                 </div>
 
                 <button style="margin-left: 340px; margin-bottom: 20px; margin-top: 30px;" id="btnentrar" type="submit" class="btn btn-primary">Salvar Antropometria</button>
