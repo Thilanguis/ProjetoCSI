@@ -119,5 +119,5 @@ function calculoPercentualGorduraEmKg() {
 function processar() {
     calculoPercentualGordura();
     calculoDiferencaPercentualGordura();
-    calculoPercentualGorduraEmKg()
+    calculoPercentualGorduraEmKg();
 }
