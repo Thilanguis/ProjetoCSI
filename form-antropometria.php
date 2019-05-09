@@ -142,7 +142,20 @@
                         <input type="number" step="0.01" class="form-control" id="quadriceps" placeholder="" name="quadriceps" onchange="processar()" value="0" min="0">
                     </div>
                     
-                    <div class="form-group" id="resultadoPercentualGordura">
+                    
+                    
+                    
+                    
+                    <div id="cardPercentualDeGordura">
+                <div class="card bg-light mb-3" style="max-width: 50rem;">
+                    <div class="card-header">
+                        <h4 id="avisoPercentual"><img src="img/icons8-aviso-de-aviso-48.png" alt="">de gordura</h4>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">- Detalhado</h5>
+                        <p class="card-text"> 
+                        
+                        <div class="form-group" id="resultadoPercentualGordura">
                     </div >
                     <div class="form-group" id="calculoDiferencaPercentualGordura">
                     </div>
@@ -150,7 +163,12 @@
                     </div>
                     <div class="form-group" id="calculoPercentualLivreGorduraEmKg">
                     </div>
+                        
+                    </div>
                 </div>
+            </div>    
+                    </div>
+                
                 
                 <div class=" form-row alturaAntro">
                     <label style="margin-left: 8px;" for="coxaEsq">Coxa Esq. :</label>

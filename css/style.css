@@ -437,8 +437,7 @@ h3 {
 }
 
 #resultadoPercentualGordura {
-    margin-left: 610px;
-    text-align: center;
+    margin-left: 60px;
     font-size: 16px;
     text-shadow: 0 0 0.2em #87F, 0 0 0.2em #87F, 0 0 0.8em #87F;
     font-weight: bold;
@@ -447,8 +446,7 @@ h3 {
 }
 
 #calculoDiferencaPercentualGordura {
-    margin-left: 610px;
-    text-align: center;
+    margin-left: 60px;
     font-size: 16px;
     text-shadow: 0 0 0.2em #87F, 0 0 0.2em #87F, 0 0 0.8em #87F;
     font-weight: bold;
@@ -456,8 +454,7 @@ h3 {
 }
 
 #calculoPercentualGorduraEmKg {
-    margin-left: 610px;
-    text-align: center;
+    margin-left: 60px;
     font-size: 16px;
     text-shadow: 0 0 0.2em #87F, 0 0 0.2em #87F, 0 0 0.8em #87F;
     font-weight: bold;
@@ -465,12 +462,21 @@ h3 {
 }
 
 #calculoPercentualLivreGorduraEmKg{
-    margin-left: 610px;
-    text-align: center;
+    margin-left: 60px;
     font-size: 16px;
     text-shadow: 0 0 0.2em #87F, 0 0 0.2em #87F, 0 0 0.8em #87F;
     font-weight: bold;
     display: inline-block;
+}
+
+#cardPercentualDeGordura {
+    margin-top: 2%;
+    margin-left: 550px;
+    margin-right: 3%;
+}
+
+#avisoPercentual {
+    text-align: center;
 }
 
 #tabelaAlimentos {
