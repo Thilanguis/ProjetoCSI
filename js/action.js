@@ -129,11 +129,11 @@ function calculoPercentualLivreGorduraEmKg() {
     var resultado2 = (tricipital + subescapular + suprailiaca + abdominal + quadriceps) * 0.8 * 0.153 + 5.783;
 
     if (quadriceps != 0 || quadriceps != ' ') {
-        document.getElementById('calculoPercentualLivreGorduraEmKg').innerHTML = ((pesoAtual - resultado2)).toFixed(2) +
-            " Kg peso de gordura";
+        document.getElementById('calculoPercentualLivreGorduraEmKg').innerHTML = (pesoAtual - resultado2).toFixed(2) +
+            " Kg peso livre de gordura";
     } else {
-        document.getElementById('calculoPercentualLivreGorduraEmKg').innerHTML = ((pesoAtual - resultado1)).toFixed(2) +
-            " Kg peso de gordura";
+        document.getElementById('calculoPercentualLivreGorduraEmKg').innerHTML = (pesoAtual - resultado1).toFixed(2) +
+            " Kg peso livre de gordura";
     }
 }
 

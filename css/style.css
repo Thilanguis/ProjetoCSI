@@ -436,12 +436,8 @@ h3 {
     font-weight: bold;
 }
 
-#resultadoTotalpercentual{
-    
-}
-
 #resultadoPercentualGordura {
-    margin-left: 30px;
+    margin-left: 610px;
     text-align: center;
     font-size: 16px;
     text-shadow: 0 0 0.2em #87F, 0 0 0.2em #87F, 0 0 0.8em #87F;
@@ -451,7 +447,7 @@ h3 {
 }
 
 #calculoDiferencaPercentualGordura {
-    margin-left: 30px;
+    margin-left: 610px;
     text-align: center;
     font-size: 16px;
     text-shadow: 0 0 0.2em #87F, 0 0 0.2em #87F, 0 0 0.8em #87F;
@@ -460,7 +456,7 @@ h3 {
 }
 
 #calculoPercentualGorduraEmKg {
-    margin-left: 30px;
+    margin-left: 610px;
     text-align: center;
     font-size: 16px;
     text-shadow: 0 0 0.2em #87F, 0 0 0.2em #87F, 0 0 0.8em #87F;
@@ -469,7 +465,7 @@ h3 {
 }
 
 #calculoPercentualLivreGorduraEmKg{
-    margin-left: 30px;
+    margin-left: 610px;
     text-align: center;
     font-size: 16px;
     text-shadow: 0 0 0.2em #87F, 0 0 0.2em #87F, 0 0 0.8em #87F;
