@@ -8,7 +8,8 @@
     <?php include_once 'head.php';
     include_once 'verificaLogin.php';
     ?>
-
+    <script src="js/graficoGoogle.js"></script>
+    
 </head>
 
 <body>
@@ -69,8 +70,28 @@
             </div>
 
             <div id="graficoDinamico">
-                <p>olá</p>
+                
+                   <!--Div that will hold the pie chart-->
+    <div id="chart_div">
+        <!-- gráfico do google -->
+    </div>
+               <button id="btnentrar" style="margin-left: 112px; margin-top: 5%;" type="button" class="btn btn-primary" onclick="drawChart()">Gráfico</button>
             </div>
+            
+                   <div class="form-row" id="resultadoTotalpercentual">
+                    <div class="col-4">
+
+                    </div>
+                    <div id="calculoDiferencaPercentualGordura" class="col-4">
+
+                    </div>
+                    <div id="calculoPercentualGorduraEmKg" class="col-4">
+
+                    </div>
+                    <div id="calculoPercentualLivreGorduraEmKg" class="col-4">
+
+                    </div>
+                    </div>
 
             <div id="limpandoTelaParaDieta">
                 <hr>
@@ -145,15 +166,6 @@
                     <label style="margin-left: 66px;" for="coxaDir">Coxa Dir. :</label>
                     <div class="form-group col-md-1">
                         <input type="number" step="0.01" class="form-control" id="coxaDir" placeholder="" name="coxaDir">
-                    </div>
-                    <div id="resultadoPercentualGordura" class="form-group col-md-3 ">
-
-                    </div>
-                    <div id="calculoDiferencaPercentualGordura" class="form-group col-md-3">
-
-                    </div>
-                    <div id="calculoPercentualGorduraEmKg" class="form-group col-md-3 ">
-
                     </div>
                 </div>
 

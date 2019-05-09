@@ -23,3 +23,6 @@
 
 
 <script src="js/action.js"></script>
+
+<!-- gráfico do google -->
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>

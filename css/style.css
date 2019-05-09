@@ -346,7 +346,8 @@ h3 {
 }
 
 #graficoDinamico {
-    float: right;
+    margin-left: 620px;
+    padding-right: 100px !important;
 }
 
 #gerarMedidas {
@@ -356,7 +357,7 @@ h3 {
 }
 
 .alturaAntro {
-    height: 75px;
+    height: 100px;
 }
 
 .alert {
@@ -435,29 +436,45 @@ h3 {
     font-weight: bold;
 }
 
+#resultadoTotalpercentual{
+    
+}
+
 #resultadoPercentualGordura {
-    margin-left: 210px;
+    margin-left: 30px;
     text-align: center;
     font-size: 16px;
     text-shadow: 0 0 0.2em #87F, 0 0 0.2em #87F, 0 0 0.8em #87F;
     font-weight: bold;
     margin-bottom: none !important;
+    display: inline-block;
 }
 
 #calculoDiferencaPercentualGordura {
-    margin-left: 590px;
+    margin-left: 30px;
     text-align: center;
     font-size: 16px;
     text-shadow: 0 0 0.2em #87F, 0 0 0.2em #87F, 0 0 0.8em #87F;
     font-weight: bold;
+    display: inline-block;
 }
 
 #calculoPercentualGorduraEmKg {
-    margin-left: 590px;
+    margin-left: 30px;
     text-align: center;
     font-size: 16px;
     text-shadow: 0 0 0.2em #87F, 0 0 0.2em #87F, 0 0 0.8em #87F;
     font-weight: bold;
+    display: inline-block;
+}
+
+#calculoPercentualLivreGorduraEmKg{
+    margin-left: 30px;
+    text-align: center;
+    font-size: 16px;
+    text-shadow: 0 0 0.2em #87F, 0 0 0.2em #87F, 0 0 0.8em #87F;
+    font-weight: bold;
+    display: inline-block;
 }
 
 #tabelaAlimentos {

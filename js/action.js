@@ -116,8 +116,30 @@ function calculoPercentualGorduraEmKg() {
     }
 }
 
+function calculoPercentualLivreGorduraEmKg() {
+    var tricipital = parseFloat(document.getElementById('tricipital').value, 10);
+    var subescapular = parseFloat(document.getElementById('subescapular').value, 10);
+    var suprailiaca = parseFloat(document.getElementById('suprailiaca').value, 10);
+    var abdominal = parseFloat(document.getElementById('abdominal').value, 10);
+    var quadriceps = parseFloat(document.getElementById('quadriceps').value, 10);
+    var pesoAtual = parseFloat(document.getElementById('pesoAtual').value, 10);
+
+    var resultado1 = (tricipital + subescapular + suprailiaca + abdominal) * 0.153 + 5.783;
+
+    var resultado2 = (tricipital + subescapular + suprailiaca + abdominal + quadriceps) * 0.8 * 0.153 + 5.783;
+
+    if (quadriceps != 0 || quadriceps != ' ') {
+        document.getElementById('calculoPercentualLivreGorduraEmKg').innerHTML = ((pesoAtual - resultado2)).toFixed(2) +
+            " Kg peso de gordura";
+    } else {
+        document.getElementById('calculoPercentualLivreGorduraEmKg').innerHTML = ((pesoAtual - resultado1)).toFixed(2) +
+            " Kg peso de gordura";
+    }
+}
+
 function processar() {
     calculoPercentualGordura();
     calculoDiferencaPercentualGordura();
     calculoPercentualGorduraEmKg();
+    calculoPercentualLivreGorduraEmKg();
 }
