@@ -37,7 +37,7 @@
                         </div>
                         <div class="form-group col-md-8">
                             <label style="margin-left: 185px;" for="endereco">Endereço</label> &nbsp; <i class="fas fa-map-marked-alt" style="font-size: 25px; color: #27b75f"></i>
-                            <input style="text-align: center;" type="text" class="form-control" id="rua" name="rua">
+                            <input style="text-align: center;" type="text" class="form-control" id="rua" name="rua" readonly>
                         </div>
                     </div>
 
@@ -45,15 +45,15 @@
 
                         <div class="form-group col-md-4">
                             <label style="margin-left: 85px;" for="bairro">Bairro</label> &nbsp; <i class="fas  fa-home" style="font-size: 25px; color: #d11818;"></i>
-                            <input style="text-align: center;" type="text" class="form-control" id="bairro" name="bairro">
+                            <input style="text-align: center;" type="text" class="form-control" id="bairro" name="bairro" readonly>
                         </div>
                         <div class="form-group col-md-4">
                             <label style="margin-left: 90px;" for="cidade">Cidade</label> &nbsp; <i class="fas fa-city" style="font-size: 25px; color: #be31d8"></i>
-                            <input type="text" class="form-control" id="cidade" name="cidade" style="text-align: center">
+                            <input type="text" class="form-control" id="cidade" name="cidade" style="text-align: center" readonly>
                         </div>
                         <div class="form-group col-md-4">
                             <label style="margin-left: 90px;" for="uf">Estado</label> &nbsp; <i class="fas fa-map-marker-alt" style="font-size: 25px; color: #be31d8"></i>
-                            <input style="text-align: center;" type="text" class="form-control" id="uf" name="uf">
+                            <input style="text-align: center;" type="text" class="form-control" id="uf" name="uf" readonly>
                         </div>
                     </div>
 
