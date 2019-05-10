@@ -59,7 +59,7 @@ if($verificarE)
         </div>
 
         <div id="btnConfirmacao">
-            <a href="index.php"><button id="btnVoltar1" type="button" class="btn btn-warning animated zoomIn" style="margin-left:48%;">OK</button> </a>
+            <a href="nutricionistaMenu.php"><button id="btnVoltar1" type="button" class="btn btn-warning animated zoomIn" style="margin-left:48%;">OK</button> </a>
         </div>
         <?php
         }

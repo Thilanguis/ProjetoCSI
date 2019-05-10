@@ -20,7 +20,7 @@
             <button id="teste" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span> <i class="fas fa-carrot animated rubberBand" style="font-size: 30px; color: #c78713"></i> &nbsp; <i class="fas fa-apple-alt animated rubberBand" style="font-size: 30px; color: #d83838"></i> &nbsp; <i class="fas fa-cheese animated rubberBand" style="font-size: 30px; color: #ccc624"></i> </span>
             </button>
-            <div> <img src="img/icons8-checked-user-male-26.png" alt=""> <b> Bem vindo(a):</b>
+            <div> <img src="img/icons8-checked-user-male-26.png" alt=""> <b>Bem-vindo nutricionista:</b>
                 <?php echo "<i>"  .$_SESSION["login"] . "</i>" ; ?> <a style="text-decoration: none;" href="logout.php">&nbsp;<img id="logout" src="img/icons8-exit-48.png" alt=""></a>
             </div>
         </nav>
@@ -44,12 +44,12 @@
         <h4 id="menuNutricionista">Menu Nutricionista &nbsp;<img src="img/icons8-plano-de-sa%C3%BAde-48.png" alt=""></h4>
 
         <a id="loopa" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="fas fa-address-book" style="font-size: 26px; color: #4c89e3; margin-top: 50px; margin-left: 340px; margin-bottom: 10px;">&nbsp; <i class="fas fa-mouse-pointer animated rubberBand" style="font-size: 20px; color: black;"></i> Busca de pacientes </i></a>
-        
+
         <div id="pacientesCadastrados">
             <button type="button" class="badge badge-success">
-  Pacientes cadastrados <span class="badge badge-light">
-      
-      <?php 
+                Pacientes cadastrados <span class="badge badge-light">
+
+                    <?php 
         include_once 'conexao.php';
         
         $sql = "select NOME from cliente";
@@ -60,8 +60,8 @@
         
         echo $totalRegistros;
         ?>
-  </span>
-</button>
+                </span>
+            </button>
         </div>
 
         <form action="nutricionistaMenu.php" method="get">
@@ -153,17 +153,17 @@
         ?>
 
         <div>
-           <button type="button" class="btn btn-link" id="novaConsulta" data-toggle="modal" data-target="#exampleModalScrollable">
-            <img src="img/icons8-adicionar-usu%C3%A1rio-grupo-homem-mulher-64.png" title="Cadastrar novo paciente" alt="Olá">
+            <button type="button" class="btn btn-link" id="novaConsulta" data-toggle="modal" data-target="#exampleModalScrollable">
+                <img src="img/icons8-adicionar-usu%C3%A1rio-grupo-homem-mulher-64.png" title="Cadastrar novo paciente" alt="Olá">
             </button>
         </div>
 
         <footer class="container" id="rodape">
             <?php include_once 'rodape.php'; ?>
         </footer>
-   
+
     </div>
-    
+
 </body>
 
 </html>

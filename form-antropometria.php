@@ -9,7 +9,7 @@
     include_once 'verificaLogin.php';
     ?>
     <script src="js/graficoGoogle.js"></script>
-    
+
 </head>
 
 <body>
@@ -20,7 +20,7 @@
             <button id="teste" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span> <i class="fas fa-carrot animated rubberBand" style="font-size: 30px; color: #c78713"></i> &nbsp; <i class="fas fa-apple-alt animated rubberBand" style="font-size: 30px; color: #d83838"></i> &nbsp; <i class="fas fa-cheese animated rubberBand" style="font-size: 30px; color: #ccc624"></i> </span>
             </button>
-            <div> <img src="img/icons8-checked-user-male-26.png" alt=""> <b> Bem vindo(a):</b>
+            <div> <img src="img/icons8-checked-user-male-26.png" alt=""> <b>Bem-vindo nutricionista:</b>
                 <?php echo "<i>"  .$_SESSION["login"] . "</i>" ; ?> <a style="text-decoration: none;" href="logout.php">&nbsp;<img id="logout" src="img/icons8-exit-48.png" alt=""></a>
             </div>
         </nav>
@@ -70,12 +70,12 @@
             </div>
 
             <div id="graficoDinamico">
-                
-                   <!--Div that will hold the pie chart-->
-    <div id="chart_div">
-        <!-- gráfico do google -->
-    </div>
-               <button id="btnentrar" style="margin-left: 112px; margin-top: 5%;" type="button" class="btn btn-primary" onclick="drawChart()">Gráfico</button>
+
+                <!--Div that will hold the pie chart-->
+                <div id="chart_div">
+                    <!-- gráfico do google -->
+                </div>
+                <button id="btnentrar" style="margin-left: 112px; margin-top: 5%;" type="button" class="btn btn-primary" onclick="drawChart()">Gráfico</button>
             </div>
 
             <div id="limpandoTelaParaDieta">
@@ -141,35 +141,35 @@
                     <div class="form-group col-md-1">
                         <input type="number" step="0.01" class="form-control" id="quadriceps" placeholder="" name="quadriceps" onchange="processar()" value="0" min="0">
                     </div>
-                    
-                    
-                    
-                    
-                    
+
+
+
+
+
                     <div id="cardPercentualDeGordura">
-                <div class="card bg-light mb-3" style="max-width: 50rem;">
-                    <div class="card-header">
-                        <h4 id="avisoPercentual"><img src="img/icons8-aviso-de-aviso-48.png" alt="">de gordura</h4>
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">- Detalhado</h5>
-                        <p class="card-text"> 
-                        
-                        <div class="form-group" id="resultadoPercentualGordura">
-                    </div >
-                    <div class="form-group" id="calculoDiferencaPercentualGordura">
-                    </div>
-                    <div class="form-group" id="calculoPercentualGorduraEmKg">
-                    </div>
-                    <div class="form-group" id="calculoPercentualLivreGorduraEmKg">
-                    </div>
-                        
+                        <div class="card bg-light mb-3" style="max-width: 50rem;">
+                            <div class="card-header">
+                                <h4 id="avisoPercentual"><img src="img/icons8-aviso-de-aviso-48.png" alt="">de gordura</h4>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">- Detalhado</h5>
+                                <p class="card-text">
+
+                                    <div class="form-group" id="resultadoPercentualGordura">
+                                    </div>
+                                    <div class="form-group" id="calculoDiferencaPercentualGordura">
+                                    </div>
+                                    <div class="form-group" id="calculoPercentualGorduraEmKg">
+                                    </div>
+                                    <div class="form-group" id="calculoPercentualLivreGorduraEmKg">
+                                    </div>
+
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>    
-                    </div>
-                
-                
+
+
                 <div class=" form-row alturaAntro">
                     <label style="margin-left: 8px;" for="coxaEsq">Coxa Esq. :</label>
                     <div class="form-group col-md-1">

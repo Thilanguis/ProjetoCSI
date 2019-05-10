@@ -32,12 +32,12 @@
                         <div id="menuDropDown">
                             <form action="session.php" method="post" class="px-4 py-3">
                                 <div class="form-group">
-                                    <label for="exampleDropdownFormEmail1"><i class="fab fa-nutritionix" style="font-size: 30px; color:#3b884d; "></i> &nbsp; Endereço E-mail</label>
-                                    <input type="text" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@email.com" name="login" re>
+                                    <label for="exampleDropdownFormEmail1"><i class="fab fa-nutritionix" style="font-size: 30px; color:#3b884d; "></i> &nbsp; Login</label>
+                                    <input type="text" class="form-control" id="exampleDropdownFormEmail1" placeholder="digite seu CRN" name="login" re>
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleDropdownFormPassword1">Senha</label>
-                                    <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Senha" name="senha">
+                                    <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="******" name="senha">
                                 </div>
                                 <div class="form-check">
                                 </div>
