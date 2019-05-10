@@ -46,7 +46,7 @@
         <h6 id="menuNutricionista1"><i>Fonte: FAO,WHO,UNU,1985</i></h6>
 
         <div id="tmb">
-            <span id="TMB-Kcal" class="badge badge-pill badge-success">TMB/Kcal:</span> <input type="text" style="border-radius: 4px;" disabled>
+            <span id="TMB-Kcal" class="badge badge-pill badge-success">TMB/Kcal:</span> <input type="text" style="border-radius: 4px;" disabled value="">
             <div id="vet">
                 <span id="TMB-Kcal" class="badge badge-pill badge-success">VET/Kcal:</span> <input type="text" style="border-radius: 4px;" disabled>
             </div>
@@ -56,17 +56,17 @@
             <form action="cadastroVetFao.php" method="post">
                 <h5 style="display: inline-block;">Atividade</h5>
                 <h5 style="display: inline-block; margin-left: 12px; margin-bottom: 30px;">Horas/Dia</h5>
-                <h5 style="display: inline-block; margin-left: 33px;">NAF</h5>
+                <h5 style="display: inline-block; margin-left: 33px;" title="Nível atividade física">NAF</h5>
 
                 <div class="form-row">
                     <label for="inputPassword" class="col-4 col-form-label">
                         <h6><i>Sono :</i></h6>
                     </label>
                     <div class="form-group col-sm-4">
-                        <input style="text-align: center;" type="number" step="0.01" class="form-control" id="sono" onblur="calcularHorasNAF()" name="sono" value="0">
+                        <input style="text-align: center;" type="number" step="0.01" class="form-control" id="sono" onchange="calcularNafTotal()" name="sono" value="0">
                     </div>
                     <div class="form-group col-sm-4">
-                        <input style="text-align: center;" type="number" step="0.01" class="form-control" id="NAF_sono" name="NAF_sono">
+                        <input style="text-align: center;" type="number" step="0.01" class="form-control" id="NAF_sono" onchange="calcularNafTotal()" name="NAF_sono" value="0">
                     </div>
                 </div>
                 <div class="form-row">
@@ -74,10 +74,10 @@
                         <h6><i>Trabalho :</i></h6>
                     </label>
                     <div class="form-group col-sm-4">
-                        <input style="text-align: center;" type="number" step="0.01" class="form-control" id="trabalho" onblur="calcularHorasNAF()" name="trabalho" value="0">
+                        <input style="text-align: center;" type="number" step="0.01" class="form-control" id="trabalho" onchange="calcularNafTotal()" name="trabalho" value="0">
                     </div>
                     <div class="form-group col-sm-4">
-                        <input style="text-align: center;" type="number" step="0.01" class="form-control" id="NAF_trabalho" name="NAF_trabalho">
+                        <input style="text-align: center;" type="number" step="0.01" class="form-control" id="NAF_trabalho" onchange="calcularNafTotal()" name="NAF_trabalho" value="0">
                     </div>
                 </div>
                 <div class="form-row">
@@ -85,10 +85,10 @@
                         <h6><i>Estudo :</i></h6>
                     </label>
                     <div class="form-group col-sm-4">
-                        <input style="text-align: center;" type="number" step="0.01" class="form-control" id="estudo" onblur="calcularHorasNAF()" name="estudo" value="0">
+                        <input style="text-align: center;" type="number" step="0.01" class="form-control" id="estudo" onchange="calcularNafTotal()" name="estudo" value="0">
                     </div>
                     <div class="form-group col-sm-4">
-                        <input style="text-align: center;" type="number" step="0.01" class="form-control" id="NAF_estudo" placeholder="" name="NAF_estudo">
+                        <input style="text-align: center;" type="number" step="0.01" class="form-control" id="NAF_estudo" onchange="calcularNafTotal()" placeholder="" name="NAF_estudo" value="0">
                     </div>
                 </div>
                 <div class="form-row">
@@ -96,10 +96,10 @@
                         <h6><i>Exer. físico :</i></h6>
                     </label>
                     <div class="form-group col-sm-4">
-                        <input style="text-align: center;" type="number" step="0.01" class="form-control" id="exerFisico" onblur="calcularHorasNAF()" name="exerFisico" value="0">
+                        <input style="text-align: center;" type="number" step="0.01" class="form-control" id="exerFisico" onchange="calcularNafTotal()" onchange="calcularNafTotal()" name="exerFisico" value="0">
                     </div>
                     <div class="form-group col-sm-4">
-                        <input style="text-align: center;" type="number" step="0.01" class="form-control" id="NAF_exerFisico" name="NAF_exerFisico">
+                        <input style="text-align: center;" type="number" step="0.01" class="form-control" id="NAF_exerFisico" onchange="calcularNafTotal()" name="NAF_exerFisico" value="0">
                     </div>
                 </div>
                 <div class="form-row">
@@ -107,10 +107,10 @@
                         <h6><i>À vontade :</i></h6>
                     </label>
                     <div class="form-group col-sm-4">
-                        <input style="text-align: center;" type="number" step="0.01" class="form-control" id="avontade" onblur="calcularHorasNAF()" name="avontade" value="0">
+                        <input style="text-align: center;" type="number" step="0.01" class="form-control" id="avontade" onchange="calcularNafTotal()" name="avontade" value="0">
                     </div>
                     <div class="form-group col-sm-4">
-                        <input style="text-align: center;" type="number" step="0.01" class="form-control" id="NAF_avontade" name="NAF_avontade">
+                        <input style="text-align: center;" type="number" step="0.01" class="form-control" id="NAF_avontade" onchange="calcularNafTotal()" name="NAF_avontade" value="0">
                     </div>
                 </div>
                 <div class="form-row">
@@ -118,10 +118,10 @@
                         <h6><i>Ativ. Física :</i></h6>
                     </label>
                     <div class="form-group col-sm-4">
-                        <input style="text-align: center;" type="number" step="0.01" class="form-control" id="ativFisica" onblur="calcularHorasNAF()" name="ativFisica" value="0">
+                        <input style="text-align: center;" type="number" step="0.01" class="form-control" id="ativFisica" onchange="calcularNafTotal()" onchange="calcularNafTotal()" name="ativFisica" value="0">
                     </div>
                     <div class="form-group col-sm-4">
-                        <input style="text-align: center;" type="number" step="0.01" class="form-control" id="NAF_ativFisica" name="NAF_ativFisica">
+                        <input style="text-align: center;" type="number" step="0.01" class="form-control" id="NAF_ativFisica" onchange="calcularNafTotal()" name="NAF_ativFisica" value="0">
                     </div>
                 </div>
 
@@ -130,6 +130,15 @@
                         <h6><i>24 horas/dia:</i></h6>
                     </div>
                     <div class="form-group" id="resultadoConta">
+
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <h6><i>NAF total:</i></h6>
+                    </div>
+                    <div class="form-group" id="resultadoNAF">
 
                     </div>
                 </div>
@@ -143,6 +152,13 @@
             <table class="table table-striped">
 
                 <thead>
+                    <tr>
+                        <th></th>
+                        <th scope="col">
+                            Nível de atividade física
+                        </th>
+                        <th></th>
+                    </tr>
                     <tr>
                         <th scope="col"><img src="img/icons8-barbell-48.png" alt=""></th>
                         <th scope="col">Masculino</th>
@@ -183,9 +199,6 @@
                     </tr>
                 </tbody>
             </table>
-        </div>
-        <div id="resultadoConta">
-            
         </div>
 
         <footer class="container" id="rodape">
