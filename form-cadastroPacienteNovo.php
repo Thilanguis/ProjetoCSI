@@ -26,7 +26,7 @@
                         </div>
                         <div class="form-group col-md-4">
                             <label style="margin-left: 60px;" for="telefone">Telefone Celular</label> &nbsp; <i class="fas fa-mobile-alt" style="font-size: 25px; color: #d11818"></i>
-                            <input style="text-align: center;" type="tel" class="form-control" id="telefone" name="telefone">
+                            <input style="text-align: center;" type="tel" class="form-control" id="telefone" name="telefone" maxlength="11" pattern="([0-9]{11})" title="Digitar telefone com DDD e não usar caracteres especiais">
                         </div>
                     </div>
 
