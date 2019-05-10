@@ -31,9 +31,9 @@
     $ativFisica             = $_POST["ativFisica"];
     $NAF_ativFisica         = $_POST["NAF_ativFisica"];
    
-    $verifTotal = $sono != "" || $trabalho != "" || $estudo != "" || $exerFisico != "" || $avontade != "" || $ativFisica != "" || $NAF_sono != "" || $NAF_trabalho != "" || $NAF_estudo != "" || $NAF_exerFisico != "" || $NAF_avontade != "" || $NAF_ativFisica != "";
+    $verifTotal = $sono != "0" || $trabalho != "0" || $estudo != "0" || $exerFisico != "0" || $avontade != "0" || $ativFisica != "0" || $NAF_sono != "" || $NAF_trabalho != "" || $NAF_estudo != "" || $NAF_exerFisico != "" || $NAF_avontade != "" || $NAF_ativFisica != "";
         
-     $verifHoras = $sono != "" || $trabalho != "" || $estudo != "" || $exerFisico != "" || $avontade != "" || $ativFisica != ""; 
+     $verifHoras = $sono != "0" || $trabalho != "0" || $estudo != "0" || $exerFisico != "0" || $avontade != "0" || $ativFisica != "0"; 
         
     $verifNAF = $NAF_sono != "" || $NAF_trabalho != "" || $NAF_estudo != "" || $NAF_exerFisico != "" || $NAF_avontade != "" || $NAF_ativFisica != ""; 
     

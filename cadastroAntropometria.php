@@ -35,7 +35,7 @@
     
     include_once 'conexao.php';
         
-     $ok = $altura != "" && $pesoAtual != ""; 
+     $ok = $altura != "" && $altura != "0" && $pesoAtual != "" && $pesoAtual != "0"; 
     
     $sql = "insert into a_antropometrica values(null, '".$bracoDir."','".$altura."','".$torax."','".$subescapular."','".$coxaEsq."','".$coxaDir."','".$panturrilhaEsq."','".$panturrilhaDir."','".$cintura."','".$quadril."','".$abdominalCir."','".$quadriceps."','".$pesoAtual."','".$suprailiaca."','".$tricipital."','".$abdominal."','".$antebracoEsq."','".$antebracoDir."','".$bracoEsq."')";
     
