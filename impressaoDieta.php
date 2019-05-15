@@ -44,6 +44,101 @@
         </div>
 
         <h4 id="menuNutricionista">Impressão da dieta <img src="img/icons8-impress%C3%A3o-48.png" alt=""></h4>
+        
+        <div id="secaoImpressao">
+            <div>
+                <span id="TMB-Kcal" class="badge badge-pill badge-success" style="margin-right: 130px;">Nome:</span>
+                <input class="col-5" type="text" style="border-radius: 4px;" disabled="disabled" value=" <?php
+                include_once 'conexao.php';               
+               
+               $sql = "select nome from cliente where ID_CLIENTE = 15";
+               
+               $result = mysqli_query($con, $sql);
+               
+               $row = mysqli_fetch_array($result);
+
+               echo $row["nome"];
+               
+               ?> ">
+               
+            </div>
+            <br>
+            <div>
+                <span id="TMB-Kcal" class="badge badge-pill badge-success" style="margin-right: 28px;">Data da consulta:</span>
+                <input class="col-5" type="text" style="border-radius: 4px;" disabled="disabled" value=" <?php              date_default_timezone_set('America/Sao_Paulo');           
+              echo $data = date('d/m/Y');               
+
+            ?> ">
+            </div>
+            <br>
+            <div>
+                <span id="TMB-Kcal" class="badge badge-pill badge-success" style="margin-right: 87px;">Altura (m):</span>
+                <input class="col-5" type="text" style="border-radius: 4px;" disabled="disabled" value=" <?php
+                
+                include_once 'conexao.php';
+                                
+                $sql = "select ALTURA from a_antropometrica";                                     
+                $result = mysqli_query($con, $sql);
+            
+                $row = mysqli_fetch_array($result);
+                                              
+                echo $row["ALTURA"] . " m";          
+
+                ?> ">
+            </div>
+            <br>
+            <div>
+                <span id="TMB-Kcal" class="badge badge-pill badge-success" style="margin-right: 40px;">Peso Atual (kg):</span>
+                <input class="col-5" type="text" style="border-radius: 4px;" disabled="disabled"value=" <?php
+                
+                include_once 'conexao.php';
+                                
+                $sql = "select PESO from a_antropometrica";                                     
+                $result = mysqli_query($con, $sql);
+            
+                $row = mysqli_fetch_array($result);
+                                              
+                echo $row["PESO"] . " Kg";          
+
+                ?> ">
+            </div>
+            <br>
+            <div>
+                <span id="TMB-Kcal" class="badge badge-pill badge-success" style="margin-right: 143px;">IMC:</span>
+                <input class="col-5" type="text" style="border-radius: 4px;" disabled="disabled" value=" <?php
+                
+                include_once 'conexao.php';
+                                
+                $sql = "select ALTURA, PESO from a_antropometrica";                                     
+                $result = mysqli_query($con, $sql);
+            
+                $row = mysqli_fetch_array($result);            
+
+                $altura = $row["ALTURA"];          
+                $peso = $row["PESO"];                                                    
+                $resultadoIMC = $peso / ($altura * $altura);
+            
+            if ($resultadoIMC < 16.00) {
+                echo "Magreza Grau 3";
+            } else if ($resultadoIMC >= 16.00 && $resultadoIMC < 17.00) {
+               echo "Magreza Grau 2";
+            } else if ($resultadoIMC >= 17.00 && $resultadoIMC < 18.50) {
+                echo "Magreza Grau 1";
+            } else if ($resultadoIMC >= 18.50 && $resultadoIMC < 25.00) {
+               echo "Eutrofia";
+            } else if ($resultadoIMC >= 25.00 && $resultadoIMC < 30.00) {
+               echo "Pre-Obesidade";
+            } else if ($resultadoIMC >= 30.00 && $resultadoIMC < 35.00) {
+                echo "Obesidade Grau 1";
+            } else if ($resultadoIMC >= 35.00 && $resultadoIMC < 40.00) {
+                echo "Obesidade Grau 2";
+            } else if ($resultadoIMC > 40.00) {
+                echo "Obesidade Grau 3";
+            }
+
+                ?> ">
+            </div>
+        </div>
 
         <!-- card de impressao para imprimir -->
 

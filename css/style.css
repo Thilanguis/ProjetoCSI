@@ -583,6 +583,13 @@ h3 {
     float: left;
 }
 
+#secaoImpressao {
+    margin-left: 12px;
+    margin-top: 100px;
+    display: inline-block;
+    float: ;
+}
+
 .fa-trash-alt {
     color: #c35050;
 }
