@@ -50,17 +50,91 @@
             
             include_once 'conexao.php';
                 
-            $sql = "select DT_NASCIMENTO, PESO, ALTURA from cliente  inner join a_antropometrica where ID_CLIENTE = 15";
+            $sql = "select DT_NASCIMENTO, PESO, ALTURA, SEXO from cliente  inner join a_antropometrica where ID_CLIENTE = 15";
                 
             $result = mysqli_query($con, $sql);
                 
             $row = mysqli_fetch_array($result);
                 
-            echo $data = date('d/m/Y');
+                $data = $row["DT_NASCIMENTO"];
+                
+                // separando yyyy, mm, ddd
+            list($ano, $mes, $dia) = explode('-', $data);
+
+            // data atual
+            $hoje = mktime(0, 0, 0, date('m'), date('d'), date('Y'));
+            // Descobre a unix timestamp da data de nascimento do fulano
+            $nascimento = mktime( 0, 0, 0, $mes, $dia, $ano);
+
+            // cálculo
+            $idade = floor((((($hoje - $nascimento) / 60) / 60) / 24) / 365.25);
+                
+            //declarando variáveis
+            $peso = $row[1];   
+            $altura = $row[2];   
+            $sexo = $row[3];
+                
+            //calculando TMB
+    if($sexo == "Masculino"){
+		if($idade >= 10 && $idade < 18){
+		echo number_format($resultadoTMB = (17.5 * $peso)+651,2);
+		}
+		if($idade >= 18 && $idade < 30){
+		echo number_format($resultadoTMB = (15.3 * $peso) + 679,2);
+		}
+		if($idade >= 30 && $idade < 60){
+		echo number_format($resultadoTMB = (11.6 * $peso) + 879,2);
+		}
+		if($idade >= 60){
+		echo number_format($resultadoTMB = (13.5 * $peso) + 487,2);
+		}
+	}
+	if($sexo == "Feminino"){
+		if($idade >= 10 && $idade < 18){
+		echo number_format($resultadoTMB = (12.2 * $peso)+ 746,2);
+		}
+		if($idade >= 18 && $idade < 30){
+		echo number_format($resultadoTMB = (14.7 * $peso) + 496,2);
+		}
+		if($idade >= 30 && $idade < 60){
+		echo number_format($resultadoTMB = (8.5 * $peso) + 829,2);
+		}
+		if($idade >= 60){
+		echo number_format($resultadoTMB = (10.5 * $peso) + 596,2);
+		}
+	
+	}
                 
             ?> ">
             <div id="vet">
-                <span id="TMB-Kcal" class="badge badge-pill badge-success">VET/Kcal:</span> <input type="text" style="border-radius: 4px;" disabled>
+                <span id="TMB-Kcal" class="badge badge-pill badge-success">VET/Kcal:</span> <input type="text" style="border-radius: 4px;" disabled value="<?php $resultadoTMB;
+                    
+                $sqlVET = "select * from vet_fao";
+                    
+                $resultVET = mysqli_query($con, $sqlVET);
+                    
+                $rowVET = mysqli_fetch_array($resultVET);
+                
+                //declarando variáveis
+                $sono = $rowVET[1];
+                $aVontade = $rowVET[2];
+                $estudo = $rowVET[3];
+                $exercicioFisico = $rowVET[4];
+                $atividadeFisica = $rowVET[5];
+                $trabalho = $rowVET[6];
+                $sonoHora = $rowVET[7];
+                $aVontadeHora = $rowVET[11];
+                $estudoHora = $rowVET[9];
+                $exercicioFisicoHora = $rowVET[10];
+                $atividadeFisicaHora = $rowVET[12];
+                $trabalhoHora = $rowVET[8];
+                
+                
+                //calculando o VEt final    
+                    
+                echo   number_format($resultadoTMB * ((($sono * $sonoHora) + ($aVontade * $aVontadeHora) + ($estudo * $estudoHora) + ($exercicioFisico * $exercicioFisicoHora) + ($atividadeFisica * $atividadeFisicaHora) + ($trabalho * $trabalhoHora)) / 24),2);
+                    
+                    ?>">
             </div>
         </div>
 
