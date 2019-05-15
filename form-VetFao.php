@@ -50,7 +50,13 @@
             
             include_once 'conexao.php';
                 
-            
+            $sql = "select DT_NASCIMENTO, PESO, ALTURA from cliente  inner join a_antropometrica where ID_CLIENTE = 15";
+                
+            $result = mysqli_query($con, $sql);
+                
+            $row = mysqli_fetch_array($result);
+                
+            echo $data = date('d/m/Y');
                 
             ?> ">
             <div id="vet">
@@ -209,7 +215,7 @@
 
         <footer class="container" id="rodape">
             <?php include_once 'rodape.php'; ?>
-        </footer>
+        </footer> 
     </div>
 
 </body>
