@@ -118,6 +118,7 @@
                     <th style="color: #E8850C">Cidade</th>
                     <th style="color: #E8850C">Estado civil</th>
                     <th style="color: #E8850C">Data de nascimento</th>
+                    <th style="color: #E8850C">Editar Paciente</th>
                     <th style="color: #E8850C">Excluir Paciente</th>
                 </tr>
 
@@ -134,8 +135,8 @@
                         echo "<td>".$row["endereco"]."</td>";
                         echo "<td>".$row["cidade"]."</td>";
                         echo "<td>".$row["estado_civil"]."</td>";
-                        echo "<td>".date('d-m-Y', strtotime($row["dt_nascimento"]))."</td>";  
-                        echo "<td><a href='#' onclick='excluir(".$row["id_cliente"].")'><i class='far fa-trash-alt' style='padding-left: 25px' id='delet'></i></td>";
+                        echo "<td>".date('d-m-Y', strtotime($row["dt_nascimento"]))."</td>"; echo "<td><a href='#' onclick='excluir(".$row["id_cliente"].")'><img src='img/icons8-editar-v%C3%A1rios-48.png' style='padding-left: 17px; width; 30px; height: 30px;' alt=''></td>";
+                        echo "<td><a href='#' onclick='excluir(".$row["id_cliente"].")'><img src='img/icons8-lixo-48.png' style='padding-left: 17px; width; 30px; height: 30px;' alt=''></td>";
                         echo "</tr>";
                     } ?>
             </table>
