@@ -46,7 +46,13 @@
         <h6 id="menuNutricionista1"><i>Fonte: FAO,WHO,UNU,1985</i></h6>
 
         <div id="tmb">
-            <span id="TMB-Kcal" class="badge badge-pill badge-success">TMB/Kcal:</span> <input type="text" style="border-radius: 4px;" disabled value="">
+            <span id="TMB-Kcal" class="badge badge-pill badge-success">TMB/Kcal:</span> <input type="text" style="border-radius: 4px;" disabled value=" <?php
+            
+            include_once 'conexao.php';
+                
+            
+                
+            ?> ">
             <div id="vet">
                 <span id="TMB-Kcal" class="badge badge-pill badge-success">VET/Kcal:</span> <input type="text" style="border-radius: 4px;" disabled>
             </div>
