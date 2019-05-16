@@ -47,6 +47,10 @@
 
         <div id="form-Clinico">
             <form action="cadastroClinicaNutricional.php" method="post">
+
+                <!-- passando id do paciente -->
+                <input type="hidden" name="id_cliente" value="<?php echo $_GET["id_cliente"] ?>">
+
                 <div class="form-group row">
                     <label for="inputPassword" class="col-sm-3 col-form-label">
                         <h6><i>H. Patológica pregressa :</i></h6>

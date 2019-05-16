@@ -13,6 +13,7 @@
     <div class="">
 
         <?php
+    $id                       = $_POST["id_cliente"];
     $HpatologiaPregressa      = $_POST["HpatologiaPregressa"];
     $Hfamiliar                = $_POST["Hfamiliar"];
     $Halimentar               = $_POST["Halimentar"];
@@ -39,7 +40,7 @@
         </div>
 
         <div id="btnConfirmacao">
-            <a href="form-clinicaNutricional.php"><button id="btnVoltar1" type="button" class="btn btn-warning animated zoomIn" style="margin-left:48%;">OK</button> </a>
+            <?php echo "<a href='form-VetFao.php?id_cliente=".$id."'><button id='btnVoltar1' type='button' class='btn btn-warning animated zoomIn' style='margin-left:48%;'>OK</button></a>" ?>
         </div>
         <?php
         }
@@ -52,7 +53,7 @@
         </div>
 
         <div id="btnConfirmacao">
-            <a href="form-clinicaNutricional.php"><button id="btnVoltar1" type="button" class="btn btn-warning animated zoomIn" style="margin-left:48%;">OK</button></a>
+            <?php echo "<a href='form-clinicaNutricional.php?id_cliente=".$id."'><button id='btnVoltar1' type='button' class='btn btn-warning animated zoomIn' style='margin-left:48%;'>OK</button></a>" ?>
         </div>
         <?php
         }
@@ -66,7 +67,7 @@
         </div>
 
         <div id="btnConfirmacao">
-            <a href="form-clinicaNutricional.php"><button id="btnVoltar1" type="button" class="btn btn-warning animated zoomIn" style="margin-left:48%;">OK</button></a>
+            <?php echo "<a href='form-clinicaNutricional.php?id_cliente=".$id."'><button id='btnVoltar1' type='button' class='btn btn-warning animated zoomIn' style='margin-left:48%;'>OK</button></a>" ?>
         </div>
         <?php
         }

@@ -13,6 +13,7 @@
     <div class="">
 
         <?php
+    $id               = $_POST["id_cliente"];
     $altura           = $_POST["altura"];
     $pesoAtual        = $_POST["pesoAtual"];
     $bracoEsq         = $_POST["bracoEsq"];
@@ -52,7 +53,7 @@
         </div>
 
         <div id="btnConfirmacao">
-            <a href="form-antropometria.php"><button id="btnVoltar1" type="button" class="btn btn-warning animated zoomIn" style="margin-left:48%;">OK</button> </a>
+            <?php echo "<a href='form-bioquiomica.php?id_cliente=".$id."'><button id='btnVoltar1' type='button' class='btn btn-warning animated zoomIn' style='margin-left:48%;'>OK</button></a>" ?>
         </div>
         <?php
         }
@@ -65,7 +66,7 @@
         </div>
 
         <div id="btnConfirmacao">
-            <a href="form-antropometria.php"><button id="btnVoltar1" type="button" class="btn btn-warning animated zoomIn" style="margin-left:48%;">OK</button></a>
+            <?php echo "<a href='form-antropometria.php?id_cliente=".$id."'><button id='btnVoltar1' type='button' class='btn btn-warning animated zoomIn' style='margin-left:48%;'>OK</button></a>" ?>
         </div>
         <?php
         }
@@ -79,15 +80,15 @@
         </div>
 
         <div id="btnConfirmacao">
-            <a href="form-antropometria.php"><button id="btnVoltar1" type="button" class="btn btn-warning animated zoomIn" style="margin-left:48%;">OK</button></a>
+            <?php echo "<a href='form-antropometria.php?id_cliente=".$id."'><button id='btnVoltar1' type='button' class='btn btn-warning animated zoomIn' style='margin-left:48%;'>OK</button></a>" ?>
         </div>
         <?php
         }
        
             
-            
-    mysqli_close($con);
-?>
+
+        mysqli_close($con);
+        ?>
 
     </div>
 </body>

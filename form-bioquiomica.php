@@ -46,6 +46,10 @@
 
         <div id="form-Bio">
             <form method="post" action="cadastroBioquimica.php">
+
+                <!-- passando id do paciente -->
+                <input type="hidden" name="id_cliente" value="<?php echo $_GET["id_cliente"] ?>">
+
                 <div class="form-row">
                     <div id="form-Bio1" class="form-group col-md-3">
                         <h5>Dados &nbsp; <img id="serginga" src="img/icons8-seringa-96.png" alt=""> <br> Bioquímicos : <img id="gotaDeSangue" src="img/icons8-gota-de-sangue-96.png" alt=""></h5> <img id="tuboDeEnsaio" src="img/icons8-tubo-de-ensaio-96.png" alt="">

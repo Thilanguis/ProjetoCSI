@@ -13,7 +13,7 @@
     <div class="">
 
         <?php
-        
+    $id            = $_POST["id_cliente"];    
     $bioquimica    = $_POST["bioquimica"];
 
     
@@ -34,7 +34,7 @@
         </div>
 
         <div id="btnConfirmacao">
-            <a href="form-bioquiomica.php"><button id="btnVoltar1" type="button" class="btn btn-warning animated zoomIn" style="margin-left:48%;">OK</button> </a>
+            <?php echo "<a href='form-clinicaNutricional.php?id_cliente=".$id."'><button id='btnVoltar1' type='button' class='btn btn-warning animated zoomIn' style='margin-left:48%;'>OK</button></a>" ?>
         </div>
         <?php
         }
@@ -47,7 +47,7 @@
         </div>
 
         <div id="btnConfirmacao">
-            <a href="form-bioquiomica.php"><button id="btnVoltar1" type="button" class="btn btn-warning animated zoomIn" style="margin-left:48%;">OK</button></a>
+            <?php echo "<a href='form-bioquiomica.php?id_cliente=".$id."'><button id='btnVoltar1' type='button' class='btn btn-warning animated zoomIn' style='margin-left:48%;'>OK</button></a>" ?>
         </div>
         <?php
         }
@@ -61,7 +61,7 @@
         </div>
 
         <div id="btnConfirmacao">
-            <a href="form-bioquiomica.php"><button id="btnVoltar1" type="button" class="btn btn-warning animated zoomIn" style="margin-left:48%;">OK</button></a>
+            <?php echo "<a href='form-bioquiomica.php?id_cliente=".$id."'><button id='btnVoltar1' type='button' class='btn btn-warning animated zoomIn' style='margin-left:48%;'>OK</button></a>" ?>
         </div>
         <?php
         }

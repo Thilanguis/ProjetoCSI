@@ -45,6 +45,9 @@
 
         <form action="cadastroAntropometria.php" method="post">
 
+            <!-- passando id do paciente -->
+            <input type="hidden" name="id_cliente" value="<?php echo $_GET["id_cliente"] ?>">
+
             <div id="gerarIMC">
 
                 <div class="form-row">
@@ -66,7 +69,6 @@
                     </div>
                 </div>
 
-                <button style="margin-left: 52px; margin-top: 10%;" id="btnentrar" class="btn btn-primary">Gerar IMC</button>
             </div>
 
             <div id="graficoDinamico">

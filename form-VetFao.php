@@ -140,6 +140,10 @@
 
         <div id="form-VET">
             <form action="cadastroVetFao.php" method="post">
+
+                <!-- passando id do paciente -->
+                <input type="hidden" name="id_cliente" value="<?php echo $_GET["id_cliente"] ?>">
+
                 <h5 style="display: inline-block;">Atividade</h5>
                 <h5 style="display: inline-block; margin-left: 12px; margin-bottom: 30px;">Horas/Dia</h5>
                 <h5 style="display: inline-block; margin-left: 33px;" title="Nível atividade física">NAF</h5>
@@ -289,7 +293,7 @@
 
         <footer class="container" id="rodape">
             <?php include_once 'rodape.php'; ?>
-        </footer> 
+        </footer>
     </div>
 
 </body>

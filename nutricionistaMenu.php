@@ -127,13 +127,13 @@
                     while($row = mysqli_fetch_array($result))
                     { 
                         echo "<tr>";
-                        echo "<td><a href='#' onclick='iniciarDieta(".$row["id_cliente"].")'> <i class='fas fa-book-open' style='color: #E8850C'></i></td>";
+                        echo "<td><a href='#' onclick='iniciarDieta(".$row["id_cliente"].")'> <i class='fas fa-book-open' title='Iniciar consulta' style='color: #E8850C'></i></td>";
                         echo "<td>".$row["nome"]."</td>";
                         echo "<td>".$row["telefone"]."</td>";
                         echo "<td>".$row["endereco"]."</td>";
                         echo "<td>".$row["cidade"]."</td>";
                         echo "<td>".date('d-m-Y', strtotime($row["dt_nascimento"]))."</td>"; 
-                        echo "<td><a href='form-editarPacienteNovo.php?id_paciente=".$row["id_cliente"]."'><img src='img/icons8-editar-v%C3%A1rios-48.png' alt='' style='padding-left: 17px; width; 30px; height: 30px;'></td>";
+                        echo "<td><a href='form-editarPacienteNovo.php?id_paciente=".$row["id_cliente"]."'><img src='img/icons8-editar-v%C3%A1rios-48.png' alt='' style='padding-left: 15px; width; 30px; height: 30px;'></td>";
                         echo "<td><a href='#' onclick='excluir(".$row["id_cliente"].")'><img src='img/icons8-lixo-48.png' style='padding-left: 17px; width; 30px; height: 30px;' alt=''></td>";
                         echo "</tr>";
                     } ?>
