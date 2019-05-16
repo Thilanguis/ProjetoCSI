@@ -31,8 +31,8 @@
                 Menu
             </a>
             <a href="nutricionistaMenu.php" class="list-group-item list-group-item-action">Dados do paciente</a>
-            <a href="form-antropometria.php" class="list-group-item list-group-item-action">Av. Antropométrica</a>
-            <a href="form-bioquiomica.php" class="list-group-item list-group-item-action">Av. Bioquímica</a>
+            <a href="#" class="list-group-item list-group-item-action list-group-item-success">Av. Antropométrica</a>
+            <a href="#" class="list-group-item list-group-item-action list-group-item-success">Av. Bioquímica</a>
             <a href="#" class="list-group-item list-group-item-action">Av. Clínica nutri. <i class="fas fa-check" style="font-size: 10px; color: #3b884d"></i> </a>
             <a href="form-VetFao.php" class="list-group-item list-group-item-action">Vet FAO</a>
             <a href="tabelaAlimentos.php" class="list-group-item list-group-item-action">Lista de alimentos</a>
