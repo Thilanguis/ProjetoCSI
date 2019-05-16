@@ -17,6 +17,12 @@ function excluirAlimento(ID) {
     }
 }
 
+function iniciarDieta(ID) {
+    if (confirm('Deseja iniciar dieta do paciente?')) {
+        location.href = 'form-antropometria.php?id_cliente=' + id;
+    }
+}
+
 function calcularHorasNAF() {
     var n1 = parseFloat(document.getElementById('sono').value, 10);
     var n2 = parseFloat(document.getElementById('trabalho').value, 10);
