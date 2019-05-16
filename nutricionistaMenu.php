@@ -116,7 +116,6 @@
                     <th style="color: #E8850C">Telefone</th>
                     <th style="color: #E8850C">Endereço</th>
                     <th style="color: #E8850C">Cidade</th>
-                    <th style="color: #E8850C">Estado civil</th>
                     <th style="color: #E8850C">Data de nascimento</th>
                     <th style="color: #E8850C">Editar Paciente</th>
                     <th style="color: #E8850C">Excluir Paciente</th>
@@ -126,7 +125,7 @@
 
                 <?php
                     while($row = mysqli_fetch_array($result))
-                    {  
+                    { 
                         echo "<tr>"; ?>
                 <td><i class="fas fa-book-open" style="color: #E8850C"></i></td>
                 <?php
@@ -134,12 +133,12 @@
                         echo "<td>".$row["telefone"]."</td>";
                         echo "<td>".$row["endereco"]."</td>";
                         echo "<td>".$row["cidade"]."</td>";
-                        echo "<td>".$row["estado_civil"]."</td>";
-                        echo "<td>".date('d-m-Y', strtotime($row["dt_nascimento"]))."</td>"; echo "<td><a href='#' onclick='excluir(".$row["id_cliente"].")'><img src='img/icons8-editar-v%C3%A1rios-48.png' style='padding-left: 17px; width; 30px; height: 30px;' alt=''></td>";
+                        echo "<td>".date('d-m-Y', strtotime($row["dt_nascimento"]))."</td>"; 
+                        echo "<td><a href='form-editarPacienteNovo.php?id_paciente=".$row["id_cliente"]."'><img src='img/icons8-editar-v%C3%A1rios-48.png' alt='' style='padding-left: 17px; width; 30px; height: 30px;'></button></td>";
                         echo "<td><a href='#' onclick='excluir(".$row["id_cliente"].")'><img src='img/icons8-lixo-48.png' style='padding-left: 17px; width; 30px; height: 30px;' alt=''></td>";
                         echo "</tr>";
                     } ?>
-            </table>
+            </table> 
         </div>
         <?php } 
                 else
