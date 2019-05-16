@@ -71,7 +71,7 @@
                 </div>
                 <div class="col-md-6 ">
                     <div class="collapse multi-collapse" id="multiCollapseExample1">
-                        <div class="card card-body" style="background-color: #4c89e3">
+                        <div class="card card-body" style="background-color: #6c7481">
                             <div class="form-group input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
                                 <input type="text" id="txt_consulta" placeholder="Pesquise um Paciente" class="form-control" name="nome">
@@ -113,7 +113,7 @@
                 <tr>
                     <th><i class="fas fa-address-card" style="color: #E8850C"></i></th>
                     <th style="color: #E8850C">Nome</th>
-                    <th style="color: #E8850C">Telefone</th>
+                    <th style="color: #E8850C">Telefone&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
                     <th style="color: #E8850C">Endereço</th>
                     <th style="color: #E8850C">Cidade</th>
                     <th style="color: #E8850C">Data de nascimento</th>
@@ -133,11 +133,11 @@
                         echo "<td>".$row["endereco"]."</td>";
                         echo "<td>".$row["cidade"]."</td>";
                         echo "<td>".date('d-m-Y', strtotime($row["dt_nascimento"]))."</td>"; 
-                        echo "<td><a href='form-editarPacienteNovo.php?id_paciente=".$row["id_cliente"]."'><img src='img/icons8-editar-v%C3%A1rios-48.png' alt='' style='padding-left: 15px; width; 30px; height: 30px;'></td>";
-                        echo "<td><a href='#' onclick='excluir(".$row["id_cliente"].")'><img src='img/icons8-lixo-48.png' style='padding-left: 17px; width; 30px; height: 30px;' alt=''></td>";
+                        echo "<td><a href='form-editarPacienteNovo.php?id_paciente=".$row["id_cliente"]."'><img src='img/icons8-editar-vários-128.png' alt='' style='padding-left: 15px; padding-top: 12px; width; 45px; height: 45px;'></td>";
+                        echo "<td><a href='#' onclick='excluir(".$row["id_cliente"].")'><img src='img/icons8-lixo-30.png' style='padding-left: 17px; padding-top: 12px;' alt=''></td>";
                         echo "</tr>";
                     } ?>
-            </table>
+            </table> <img src="img/icons8-lixo-30.png" alt="">
         </div>
         <?php } 
                 else
