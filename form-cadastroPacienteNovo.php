@@ -1,3 +1,5 @@
+<?php include_once 'verificaLogin.php';?>
+
 <script src="js/ajaxCEP.js"></script>
 
 <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
