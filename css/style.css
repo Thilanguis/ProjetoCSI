@@ -559,6 +559,10 @@ h3 {
     margin-left: 2%;
 }
 
+.fa-book-open:hover{
+    color: #d83838 !important;
+}
+
 #msgErro {
     width: auto;
     display: inline-block;
