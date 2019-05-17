@@ -30,16 +30,16 @@
             <a href="#" class="list-group-item list-group-item-action active">
                 Menu
             </a>
-            <a href="nutricionistaMenu.php" class="list-group-item list-group-item-action">Dados do paciente</a>
+            <a id="menuAlerta" href="#" class="list-group-item list-group-item-action" onclick="terminarDieta()">Encerrar dieta <img id="cancelarDieta" src="img/icons8-cancelar-48.png" alt=""></a>
             <a href="#" class="list-group-item list-group-item-action" style="background-color: rgba(134, 214, 143, 0.72);">Av. Antropométrica</a>
             <a href="#" class="list-group-item list-group-item-action" style="background-color: rgba(134, 214, 143, 0.72);">Av. Bioquímica</a>
             <a href="#" class="list-group-item list-group-item-action">Av. Clínica nutri. <i class="fas fa-check" style="font-size: 10px; color: #3b884d"></i> </a>
-            <a href="form-VetFao.php" class="list-group-item list-group-item-action">Vet FAO</a>
-            <a href="tabelaAlimentos.php" class="list-group-item list-group-item-action">Lista de alimentos</a>
-            <a href="#" class="list-group-item list-group-item-action">Recordatório 24h</a>
-            <a href="form-Dietoterapia.php" class="list-group-item list-group-item-action">Dietoterapia</a>
-            <a href="listaSubstituicao.php" class="list-group-item list-group-item-action">Lista de subs.</a>
-            <a href="impressaoDieta.php" class="list-group-item list-group-item-action">Impressão de dieta</a>
+            <a id="menuAberto" href="#" class="list-group-item list-group-item-action" onclick="avisoAvancar()">>Vet FAO<i class="fas fa-lock-open" id="cadeadoAberto"></i></a>
+            <a id="menuFechado" href="#" class="list-group-item list-group-item-action" onclick="avisoNaoPodeAcessar()">Lista de alimentos<i class="fas fa-lock" id="cadeadoFechado"></i></a>
+            <a id="menuAberto" href="#" class="list-group-item list-group-item-action" onclick="avisoAvancar()">Recordatório 24h</a>
+            <a id="menuAberto" href="#" class="list-group-item list-group-item-action" onclick="avisoAvancar()">Dietoterapia<i class="fas fa-lock-open" id="cadeadoAberto"></i></a>
+            <a id="menuFechado" href="#" class="list-group-item list-group-item-action" onclick="avisoNaoPodeAcessar()">Lista de subs.<i class="fas fa-lock" id="cadeadoFechado"></i></a>
+            <a id="menuAberto" href="#" class="list-group-item list-group-item-action" onclick="avisoAvancar()">Impressão de dieta<i class="fas fa-lock-open" id="cadeadoAberto"></i></a>
         </div>
 
         <h4 id="menuNutricionista">Avaliação Clínica Nutricional &nbsp; <i class="fas fa-book-medical" style="font-size: 40px; color: #d83838; text-shadow: none;"></i></h4>

@@ -17,7 +17,8 @@
         include_once 'conexao.php';
         
         include_once 'funcoesProjeto.php';
-        
+    
+    $id                     = $_POST["id_cliente"];
     $sono                   = $_POST["sono"];
     $NAF_sono               = $_POST["NAF_sono"];
     $trabalho               = $_POST["trabalho"];
@@ -54,7 +55,7 @@ if($verifTotal)
         </div>
 
         <div id="btnConfirmacao">
-            <a href="form-VetFao.php"><button id="btnVoltar1" type="button" class="btn btn-warning animated zoomIn" style="margin-left:48%;">OK</button> </a>
+            <?php echo "<a href='form-Dietoterapia.php?id_cliente=".$id."'><button id='btnVoltar1' type='button' class='btn btn-warning animated zoomIn' style='margin-left:48%;'>OK</button></a>" ?>
         </div>
         <?php
         }
@@ -68,7 +69,7 @@ if($verifTotal)
         </div>
 
         <div id="btnConfirmacao">
-            <a href="form-VetFao.php"><button id="btnVoltar1" type="button" class="btn btn-warning animated zoomIn" style="margin-left:48%;">OK</button></a>
+            <?php echo "<a href='form-VetFao.php?id_cliente=".$id."'><button id='btnVoltar1' type='button' class='btn btn-warning animated zoomIn' style='margin-left:48%;'>OK</button></a>" ?>
         </div>
         <?php
         }
@@ -82,7 +83,7 @@ if($verifTotal)
         </div>
 
         <div id="btnConfirmacao">
-            <a href="form-VetFao.php"><button id="btnVoltar1" type="button" class="btn btn-warning animated zoomIn" style="margin-left:48%;">OK</button></a>
+            <?php echo "<a href='form-VetFao.php?id_cliente=".$id."'><button id='btnVoltar1' type='button' class='btn btn-warning animated zoomIn' style='margin-left:48%;'>OK</button></a>" ?>
         </div>
         <?php
                 }
@@ -95,7 +96,7 @@ if($verifTotal)
         </div>
 
         <div id="btnConfirmacao">
-            <a href="form-VetFao.php"><button id="btnVoltar1" type="button" class="btn btn-warning animated zoomIn" style="margin-left:48%;">OK</button></a>
+            <?php echo "<a href='form-VetFao.php?id_cliente=".$id."'><button id='btnVoltar1' type='button' class='btn btn-warning animated zoomIn' style='margin-left:48%;'>OK</button></a>" ?>
         </div>
         <?php  
         }
@@ -108,7 +109,7 @@ if($verifTotal)
         </div>
 
         <div id="btnConfirmacao">
-            <a href="form-VetFao.php"><button id="btnVoltar1" type="button" class="btn btn-warning animated zoomIn" style="margin-left:48%;">OK</button></a>
+            <?php echo "<a href='form-VetFao.php?id_cliente=".$id."'><button id='btnVoltar1' type='button' class='btn btn-warning animated zoomIn' style='margin-left:48%;'>OK</button></a>" ?>
         </div>
         <?php 
         

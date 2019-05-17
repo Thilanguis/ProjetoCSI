@@ -137,7 +137,7 @@
                         echo "<td><a href='#' onclick='excluir(".$row["id_cliente"].")'><img src='img/icons8-lixo-30.png' style='padding-left: 17px; padding-top: 12px;' alt=''></td>";
                         echo "</tr>";
                     } ?>
-            </table> <img src="img/icons8-lixo-30.png" alt="">
+            </table>
         </div>
         <?php } 
                 else
