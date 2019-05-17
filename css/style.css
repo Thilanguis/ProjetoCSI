@@ -133,6 +133,32 @@ h3 {
     border-color: rgb(44, 197, 77);
 }
 
+#menuFechado:hover {
+    background-color: rgba(214, 134, 134, 0.72);
+}
+
+#menuAberto:hover {
+    background-color: rgba(134, 214, 143, 0.72);
+}
+
+#menuAlerta:hover {
+    background-color: rgba(214, 214, 134, 0.72);
+}
+
+#cadeadoAberto {
+    margin-left: 5px;
+    color: #018901;
+}
+
+#cadeadoFechado {
+    margin-left: 5px;
+    color: #9f0404;
+}
+
+#cancelarDieta {
+    width: 25px;
+    height: 25px;
+}
 
 .dropdown {
     margin-right: 50px;
@@ -559,7 +585,7 @@ h3 {
     margin-left: 2%;
 }
 
-.fa-book-open:hover{
+.fa-book-open:hover {
     color: #d83838 !important;
 }
 
@@ -760,7 +786,7 @@ h3 {
     #menuNutricionista {
         display: none;
     }
-    
+
     #menuNutricionista2 {
         display: block;
     }

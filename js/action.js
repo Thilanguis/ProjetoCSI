@@ -23,6 +23,20 @@ function iniciarDieta(id) {
     }
 }
 
+function terminarDieta() {
+    if (confirm('Realmente deseja encerrar a dieta do Paciente atual?')) {
+        location.href = 'nutricionistaMenu.php';
+    }
+}
+
+function avisoAvancar() {
+    alert("Salve os dados para avançar na consulta!");
+}
+
+function avisoNaoPodeAcessar() {
+    alert("Não pode ser acessado durante a consulta");
+}
+
 function calcularHorasNAF() {
     var n1 = parseFloat(document.getElementById('sono').value, 10);
     var n2 = parseFloat(document.getElementById('trabalho').value, 10);

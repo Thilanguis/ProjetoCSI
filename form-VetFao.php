@@ -31,9 +31,9 @@
                 Menu
             </a>
             <a href="nutricionistaMenu.php" class="list-group-item list-group-item-action">Dados do paciente</a>
-            <a href="#" class="list-group-item list-group-item-action list-group-item-success">Av. Antropométrica</a>
-            <a href="#" class="list-group-item list-group-item-action list-group-item-success">Av. Bioquímica</a>
-            <a href="#" class="list-group-item list-group-item-action list-group-item-success">Av. Clínica nutri.</a>
+            <a href="#" class="list-group-item list-group-item-action" style="background-color: rgba(134, 214, 143, 0.72);">Av. Antropométrica</a>
+            <a href="#" class="list-group-item list-group-item-action" style="background-color: rgba(134, 214, 143, 0.72);">Av. Bioquímica</a>
+            <a href="#" class="list-group-item list-group-item-action" style="background-color: rgba(134, 214, 143, 0.72);">Av. Clínica nutri.</a>
             <a href="#" class="list-group-item list-group-item-action">Vet FAO <i class="fas fa-check" style="font-size: 10px; color: #3b884d"></i> </a>
             <a href="tabelaAlimentos.php" class="list-group-item list-group-item-action">Lista de alimentos</a>
             <a href="#" class="list-group-item list-group-item-action">Recordatório 24h</a>
