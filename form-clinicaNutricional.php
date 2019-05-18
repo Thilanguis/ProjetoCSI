@@ -21,6 +21,39 @@
             <button id="teste" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span> <i class="fas fa-carrot animated rubberBand" style="font-size: 30px; color: #c78713"></i> &nbsp; <i class="fas fa-apple-alt animated rubberBand" style="font-size: 30px; color: #d83838"></i> &nbsp; <i class="fas fa-cheese animated rubberBand" style="font-size: 30px; color: #ccc624"></i> </span>
             </button>
+            
+            <!-- Nome do paciente em consulta! -->
+            <div>
+                <?php
+                
+                include_once 'conexao.php';
+                
+                $sql = "select nome from cliente where id_cliente =".$_GET["id_cliente"];
+                
+                $result = mysqli_query ($con, $sql);
+                
+                $row = mysqli_fetch_array($result);
+                
+                echo "<h6 id='divTotalPaciente'><b><img id='hipertensao' src='img/icons8-hipertens%C3%A3o-64.png' alt=''>Paciente em consulta:</b></h6>"; echo "<div id='paciente'>" .$row[0]."</div>";
+                ?>
+
+                <!-- script terminar dieta do paciente  -->
+                <script>
+                    function terminarDieta() {
+
+                        var nomePaciente = "<?php echo $row[0]; ?>"
+
+                        alert(nomePaciente);
+
+                        if (confirm('Realmente deseja encerrar a dieta do Paciente ' + nomePaciente + "?")) {
+                            location.href = 'nutricionistaMenu.php';
+                        }
+                    }
+
+                </script>
+            </div>
+
+            
             <div> <img src="img/icons8-checked-user-male-26.png" alt=""> <b>Bem-vindo nutricionista:</b>
                 <?php echo "<i>"  .$_SESSION["login"] . "</i>" ; ?> <a style="text-decoration: none;" href="logout.php">&nbsp;<img id="logout" src="img/icons8-exit-48.png" alt=""></a>
             </div>

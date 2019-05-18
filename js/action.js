@@ -23,12 +23,6 @@ function iniciarDieta(id) {
     }
 }
 
-function terminarDieta() {
-    if (confirm('Realmente deseja encerrar a dieta do Paciente atual?')) {
-        location.href = 'nutricionistaMenu.php';
-    }
-}
-
 function avisoAvancar() {
     alert("Salve os dados para avançar na consulta!");
 }

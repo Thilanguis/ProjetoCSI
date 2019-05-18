@@ -90,6 +90,28 @@ section {
     margin: 3px 0 !important;
 }
 
+#divTotalPaciente {
+    display: inline-block;
+    padding-top: 5px;
+}
+
+#hipertensao {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+    display: inline-block;
+}
+
+#nutricionistaNomeLogado {
+    color: rgba(216, 204, 204, 0.89);
+}
+
+#paciente {
+    color: rgba(216, 204, 204, 0.89);
+    display: inline-block;
+    padding: 5px;
+}
+
 #nomeNutricionista {
     text-align: center;
 }

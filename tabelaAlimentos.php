@@ -29,16 +29,16 @@
             <a href="#" class="list-group-item list-group-item-action active">
                 Menu
             </a>
-            <a href="nutricionistaMenu.php" class="list-group-item list-group-item-action">Dados do paciente</a>
-            <a href="form-antropometria.php" class="list-group-item list-group-item-action">Av. Antropométrica</a>
-            <a href="form-bioquiomica.php" class="list-group-item list-group-item-action">Av. Bioquímica</a>
-            <a href="form-clinicaNutricional.php" class="list-group-item list-group-item-action">Av. Clínica nutri.</a>
-            <a href="form-VetFao.php" class="list-group-item list-group-item-action">Vet FAO</a>
+            <a id="menuAberto" href="nutricionistaMenu.php" class="list-group-item list-group-item-action">Dados do paciente<i class="fas fa-lock-open" id="cadeadoAberto"></i></a>
+            <a id="menuFechado" href="#" class="list-group-item list-group-item-action" title="Inicie uma consulta para acessar os formulários com cadeado">Av. Antropométrica<i class="fas fa-lock" id="cadeadoFechado"></i></a>
+            <a id="menuFechado" href="#" class="list-group-item list-group-item-action" title="Inicie uma consulta para acessar os formulários com cadeado">Av. Bioquímica<i class="fas fa-lock" id="cadeadoFechado"></i></a>
+            <a id="menuFechado" href="#" class="list-group-item list-group-item-action" title="Inicie uma consulta para acessar os formulários com cadeado">Av. Clínica nutri.<i class="fas fa-lock" id="cadeadoFechado"></i></a>
+            <a id="menuFechado" href="#" class="list-group-item list-group-item-action" title="Inicie uma consulta para acessar os formulários com cadeado">Vet FAO<i class="fas fa-lock" id="cadeadoFechado"></i></a>
             <a href="#" class="list-group-item list-group-item-action">Lista de alimentos <i class="fas fa-check" style="font-size: 10px; color: #3b884d"></i> </a>
-            <a href="#" class="list-group-item list-group-item-action">Recordatório 24h</a>
-            <a href="form-Dietoterapia.php" class="list-group-item list-group-item-action">Dietoterapia</a>
-            <a href="listaSubstituicao.php" class="list-group-item list-group-item-action">Lista de subs.</a>
-            <a href="impressaoDieta.php" class="list-group-item list-group-item-action">Impressão de dieta</a>
+            <a id="menuFechado" href="#" class="list-group-item list-group-item-action">Recordatório 24h</a>
+            <a id="menuFechado" href="#" class="list-group-item list-group-item-action" title="Inicie uma consulta para acessar os formulários com cadeado">Dietoterapia<i class="fas fa-lock" id="cadeadoFechado"></i></a>
+            <a id="menuAberto" href="listaSubstituicao.php" class="list-group-item list-group-item-action">Lista de subs.<i class="fas fa-lock-open" id="cadeadoAberto"></i></a>
+            <a id="menuFechado" href="#" class="list-group-item list-group-item-action" title="Inicie uma consulta para acessar os formulários com cadeado">Impressão de dieta<i class="fas fa-lock" id="cadeadoFechado"></i></a>
         </div>
 
         <h4 id="menuNutricionista">Tabela de Alimentos&nbsp; <img id="sacolaDeCompras" src="img/icons8-ingredientes-48.png" alt=""></h4>
