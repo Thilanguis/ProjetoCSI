@@ -45,7 +45,7 @@
                         echo "<td>".$row["col 8"]."</td>";
                         echo "<td>".$row["col 9"]."</td>";
                         ?> <?php
-                        echo "<td><a href='cadastroAlimentos.php?idAlimento=".$row["ID"]."&quantidade=".$_GET["quantidade"]."&refeicao=".$_GET["refeicao"]."'><img id='alimentoadicionado' src='img/icons8-mais-48.png' alt=''></a></td>";
+                        echo "<td><a href='cadastroAlimentos.php?idAlimento=".$row["ID"]."&quantidade=".$_GET["quantidade"]."&refeicao=".$_GET["refeicao"]."&horario=".$_GET["horario"]."'><img id='alimentoadicionado' src='img/icons8-mais-48.png' alt=''></a></td>";
                         echo "</tr>";
              } 
         ?>
