@@ -31,6 +31,12 @@ function avisoNaoPodeAcessar() {
     alert("Não pode ser acessado durante a consulta");
 }
 
+function deslogar() {
+    if (confirm('Deseja delogar?')) {
+        location.href = 'logout.php';
+    }
+}
+
 function calcularHorasNAF() {
     var n1 = parseFloat(document.getElementById('sono').value, 10);
     var n2 = parseFloat(document.getElementById('trabalho').value, 10);
