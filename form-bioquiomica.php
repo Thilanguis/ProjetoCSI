@@ -43,8 +43,6 @@
 
                         var nomePaciente = "<?php echo $row[0]; ?>"
 
-                        alert(nomePaciente);
-
                         if (confirm('Realmente deseja encerrar a dieta do Paciente ' + nomePaciente + "?")) {
                             location.href = 'nutricionistaMenu.php';
                         }
@@ -52,7 +50,7 @@
 
                 </script>
             </div>
-            <div> <img src="img/icons8-checked-user-male-26.png" alt=""> <b>Bem-vindo nutricionista:</b> <?php echo "<i>"  .$_SESSION["login"] . "</i>" ; ?> <a style="text-decoration: none;" href="logout.php">&nbsp;<img id="logout" src="img/icons8-exit-48.png" alt=""></a>
+            <div> <img src="img/icons8-checked-user-male-26.png" alt=""> <b>Bem-vindo nutricionista:</b> <?php echo "<i id='paciente'>"  .$_SESSION["login"] . "</i>" ; ?> <a style="text-decoration: none;" href="logout.php">&nbsp;<img id="logout" src="img/icons8-exit-48.png" alt=""></a>
             </div>
         </nav>
 

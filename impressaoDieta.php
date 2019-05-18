@@ -43,8 +43,6 @@
 
                         var nomePaciente = "<?php echo $row[0]; ?>"
 
-                        alert(nomePaciente);
-
                         if (confirm('Realmente deseja encerrar a dieta do Paciente ' + nomePaciente + "?")) {
                             location.href = 'nutricionistaMenu.php';
                         }
@@ -56,7 +54,7 @@
 
             <div>
                 <img src="img/icons8-checked-user-male-26.png" alt=""> <b>Bem-vindo nutricionista:</b>
-                <?php echo "<i>"  .$_SESSION["login"] . "</i>" ; ?> <a style="text-decoration: none;" href="logout.php">&nbsp;<img id="logout" src="img/icons8-exit-48.png" alt=""></a>
+                <?php echo "<i id='paciente'>"  .$_SESSION["login"] . "</i>" ; ?> <a style="text-decoration: none;" href="logout.php">&nbsp;<img id="logout" src="img/icons8-exit-48.png" alt=""></a>
             </div>
         </nav>
 
@@ -64,15 +62,15 @@
             <a href="#" class="list-group-item list-group-item-action active">
                 Menu
             </a>
-            <a href="nutricionistaMenu.php" class="list-group-item list-group-item-action">Dados do paciente</a>
-            <a href="form-antropometria.php" class="list-group-item list-group-item-action">Av. Antropométrica</a>
-            <a href="form-bioquiomica.php" class="list-group-item list-group-item-action">Av. Bioquímica</a>
-            <a href="form-clinicaNutricional.php" class="list-group-item list-group-item-action">Av. Clínica nutri.</a>
-            <a href="form-VetFao.php" class="list-group-item list-group-item-action">Vet FAO</a>
-            <a href="tabelaAlimentos.php" class="list-group-item list-group-item-action">Lista de alimentos</a>
-            <a href="#" class="list-group-item list-group-item-action">Recordatório 24h</a>
-            <a href="form-Dietoterapia.php" class="list-group-item list-group-item-action">Dietoterapia</a>
-            <a href="listaSubstituicao.php" class="list-group-item list-group-item-action">Lista de subs.</a>
+            <a id="menuAlerta" href="#" class="list-group-item list-group-item-action" onclick="terminarDieta()">Encerrar dieta <img id="cancelarDieta" src="img/icons8-cancelar-48.png" alt=""></a>
+            <a href="#" class="list-group-item list-group-item-action" style="background-color: rgba(134, 214, 143, 0.72);">Av. Antropométrica</a>
+            <a href="#" class="list-group-item list-group-item-action" style="background-color: rgba(134, 214, 143, 0.72);">Av. Bioquímica</a>
+            <a href="#" class="list-group-item list-group-item-action" style="background-color: rgba(134, 214, 143, 0.72);">Av. Clínica nutri.</a>
+            <a href="#" class="list-group-item list-group-item-action" style="background-color: rgba(134, 214, 143, 0.72);">Vet FAO</a>
+            <a id="menuFechado" href="#" class="list-group-item list-group-item-action" onclick="avisoNaoPodeAcessar()">Lista de alimentos<i class="fas fa-lock" id="cadeadoFechado"></i></a>
+            <a href="#" class="list-group-item list-group-item-action" style="background-color: rgba(134, 214, 143, 0.72);">Recordatório 24h</a>
+            <a href="#" class="list-group-item list-group-item-action" style="background-color: rgba(134, 214, 143, 0.72);">Dietotarapia</a>
+            <a id="menuFechado" href="#" class="list-group-item list-group-item-action" onclick="avisoNaoPodeAcessar()">Lista de subs.<i class="fas fa-lock" id="cadeadoFechado"></i></a>
             <a href="#" class="list-group-item list-group-item-action">Impressão de dieta<i class="fas fa-check" style="font-size: 10px; color: #3b884d"></i></a>
         </div>
 
@@ -85,7 +83,7 @@
                 <input class="col-5" type="text" style="border-radius: 4px;" disabled="disabled" value=" <?php
                 include_once 'conexao.php';               
                
-               $sql = "select nome from cliente where ID_CLIENTE = 15";
+               $sql = "select nome from cliente where ID_CLIENTE=".$_GET["id_cliente"];
                
                $result = mysqli_query($con, $sql);
                
@@ -99,7 +97,7 @@
             <br>
             <div>
                 <span id="TMB-Kcal" class="badge badge-pill badge-success" style="margin-right: 28px;">Data da consulta:</span>
-                <input class="col-5" type="text" style="border-radius: 4px;" disabled="disabled" value=" <?php              date_default_timezone_set('America/Sao_Paulo');           
+                <input class="col-5" type="text" style="border-radius: 4px;" disabled="disabled" value=" <?php date_default_timezone_set('America/Sao_Paulo');           
               echo $data = date('d/m/Y');               
 
             ?> ">

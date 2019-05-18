@@ -102,10 +102,6 @@ section {
     display: inline-block;
 }
 
-#nutricionistaNomeLogado {
-    color: rgba(216, 204, 204, 0.89);
-}
-
 #paciente {
     color: rgba(216, 204, 204, 0.89);
     display: inline-block;
@@ -789,6 +785,12 @@ h3 {
 
 #divDoBotao {
     margin-left: 31%;
+}
+
+#botaoIndoParaImpressao {
+    float: right;
+    display: inline-block;
+    padding-left: 150px;
 }
 
 @media print {
