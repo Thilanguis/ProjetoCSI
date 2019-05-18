@@ -17,7 +17,7 @@
                 
                 $totalRegistros = mysqli_num_rows($result);
                 
-                $quantidade = "<script>document.getElementByName('quantidade').value;</script>"; 
+                //$quantidade = "<script>document.getElementByName('quantidade').value;</script>"; 
         
                 if($totalRegistros > 0)
                 { ?> <div class="table-overflow1">
@@ -45,7 +45,7 @@
                         echo "<td>".$row["col 8"]."</td>";
                         echo "<td>".$row["col 9"]."</td>";
                         ?> <?php
-                        echo "<td><a href='cadastroAlimentos.php?idAlimento=".$row["ID"]."&quantidade={$quantidade}'><img id='alimentoadicionado' src='img/icons8-mais-48.png' alt=''></a></td>";
+                        echo "<td><a href='cadastroAlimentos.php?idAlimento=".$row["ID"]."&quantidade=".$_GET["quantidade"]."&refeicao=".$_GET["refeicao"]."'><img id='alimentoadicionado' src='img/icons8-mais-48.png' alt=''></a></td>";
                         echo "</tr>";
              } 
         ?>

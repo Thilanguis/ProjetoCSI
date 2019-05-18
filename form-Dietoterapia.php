@@ -113,7 +113,6 @@
                     <input type="number" step="0.05" class="form-control" id="quantidade" name="quantidade" placeholder="">
                 </div>
             </div>
-
         </div>
 
         <div style="width: 800px; margin-left: 250px; margin-top: 20px;">
