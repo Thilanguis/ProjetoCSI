@@ -41,10 +41,33 @@
             <a id="menuFechado" href="#" class="list-group-item list-group-item-action" title="Inicie uma consulta para acessar os formulários com cadeado">Impressão de dieta<i class="fas fa-lock" id="cadeadoFechado"></i></a>
         </div>
 
-        <h4 id="menuNutricionista">Lista de Substituição&nbsp; <img id="sacolaDeCompras" src="img/icons8-setas-esquerda-e-direita-48.png" alt=""></h4>
 
 
-        <div id="tabelaAlimentos0">
+
+
+
+        <h4 id="menuNutricionista3">Lista de Substituição&nbsp; <img id="sacolaDeCompras" src="img/icons8-setas-esquerda-e-direita-48.png" alt="">
+
+            <!-- card de impressao para imprimir -->
+            <div id="substituicaoImpressao">
+                <div class="accordion">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="mb-0" id="textoImprimir">Imprimir</h5>
+                        </div>
+                        <div id="divDoBotao1">
+                            <img class="impressoraImagem animated pulse" onclick="print()" src="img/icons8-m%C3%A1quina-de-escrever-com-tablet-48.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </h4>
+
+
+        <br><br><br><br>
+
+        <div id="tabelaAlimentos2">
 
             <div class="accordion" id="accordionExample">
                 <div class="card">
@@ -986,9 +1009,7 @@
                     </div>
                 </div>
             </div>
-
         </div>
-
 
         <footer class="container" id="rodape">
             <?php include_once 'rodape.php'; ?>
