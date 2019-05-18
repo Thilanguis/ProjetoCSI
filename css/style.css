@@ -112,6 +112,21 @@ section {
     text-align: center;
 }
 
+#usuarioLogado {
+    color: #00eb1b;
+    font-size: 22px;
+}
+
+#divMenuDeslogado {
+    padding-right: 157px;
+    padding-bottom: 5px;
+}
+
+#usuarioDeslogado {
+    color: #961b1b;
+    font-size: 22px;
+}
+
 #cardsIndex {
     margin: 30px 0px;
 }
