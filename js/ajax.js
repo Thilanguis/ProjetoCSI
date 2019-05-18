@@ -31,14 +31,16 @@ function getDados() {
     // Declaração de Variáveis
     var nome = document.getElementById("pesquisaDeAlimentos").value;
     var result = document.getElementById("Resultado");
+    var id_cliente = document.getElementById("id_cliente").value;
     var quantidade = document.getElementById("quantidade").value;
     var refeicao = document.getElementById("refeicao").value;
     var horario = document.getElementById("horario").value;
+    //alert(quantidade + refeicao + horario);
     var xmlreq = CriaRequest();
 
 
     // Iniciar uma requisição
-    xmlreq.open("GET", "consultaAlimento.php?alimento=" + nome + "&quantidade=" +quantidade + "&refeicao=" +refeicao+ "&horario=" +horario, true);
+    xmlreq.open("GET", "consultaAlimento.php?alimento=" + nome + "&id_cliente=" + id_cliente + "&quantidade=" + quantidade + "&refeicao=" + refeicao + "&horario=" + horario, true);
 
     // Atribui uma função para ser executada sempre que houver uma mudança de ado
     xmlreq.onreadystatechange = function () {

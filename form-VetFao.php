@@ -77,7 +77,7 @@
             //calculando TMB
     if($sexo == "Masculino"){
 		if($idade >= 10 && $idade < 18){
-		echo number_format($resultadoTMB = (17.5 * $peso)+651,2);
+		echo number_format($resultadoTMB = (17.5 * $peso) + 651,2);
 		}
 		if($idade >= 18 && $idade < 30){
 		echo number_format($resultadoTMB = (15.3 * $peso) + 679,2);

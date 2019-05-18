@@ -14,6 +14,9 @@
 
 <body>
 
+    <!-- passando id do paciente -->
+    <input type="hidden" id="id_cliente" name="id_cliente" value="<?php echo $_GET["id_cliente"] ?>">
+
     <div id="fundoSistemaInterno" class="container">
 
         <nav class="navbar navbar-dark container" style="background-color:#3b884d;">
