@@ -160,7 +160,7 @@
                     <div class="form-group input-group">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
                         <input type="text" id="pesquisaDeAlimentos" placeholder="Pesquise um Alimento" class="form-control" name="alimento" required>
-                        <button class="btn-success" type="" onclick="getDados();"><i class="fas fa-search"></i></button>
+                        <button id="btnBuscaPaciente" class="btn btn-success" type="" onclick="getDados();"><i class="fas fa-search"></i></button>
                     </div>
                 </div>
             </div>

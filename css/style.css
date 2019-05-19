@@ -197,6 +197,11 @@ h3 {
     margin-right: 50px;
 }
 
+#btnBuscaPaciente {
+    height: 38px;
+    margin-left: 3px;
+}
+
 #menuNutricionista {
     text-align: center;
     padding-top: 15px;

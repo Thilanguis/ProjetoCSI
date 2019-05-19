@@ -19,15 +19,17 @@
             {
                 include_once 'conexao.php';
                 
+                $id = $_POST["id_cliente"];
+                
                 $sql = "delete from alimentos where ID=".$_GET["id_alimento"];
                 
                 if(mysqli_query($con, $sql))
-                {
+        { header('Location:form-Dietoterapia.php?id_cliente='.$id);
                     ?>
 
-        <div class="alert alert-success animated zoomIn container" role="alert" style="width: 300px; margin-top: 100px;">
+        <!-- <div class="alert alert-success animated zoomIn container" role="alert" style="width: 300px; margin-top: 100px;">
             Alimento excluido com sucesso!
-        </div>
+        </div> -->
 
         <div id="btnConfirmacao">
             <a href="form-Dietoterapia.php"><button id="btnVoltar1" type="button" class="btn btn-warning animated zoomIn" style="margin-left:48%;">OK</button> </a>

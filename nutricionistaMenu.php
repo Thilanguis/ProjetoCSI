@@ -71,21 +71,15 @@
                 </div>
                 <div class="col-md-6 ">
                     <div class="collapse multi-collapse" id="multiCollapseExample1">
-                        <div class="card card-body" style="background-color: #6c7481">
                             <div class="form-group input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
                                 <input type="text" id="txt_consulta" placeholder="Pesquise um Paciente" class="form-control" name="nome">
-                                <button class="btn-success" type="submit"><i class="fas fa-search"></i></button>
-                            </div>
+                                <button id="btnBuscaPaciente" class="btn btn-info" type="submit"><i class="fas fa-search"></i></button>
                         </div>
                     </div>
                 </div>
             </div>
-
         </form>
-
-
-
 
 
         <?php

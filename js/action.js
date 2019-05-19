@@ -32,7 +32,7 @@ function avisoNaoPodeAcessar() {
 }
 
 function deslogar() {
-    if (confirm('Deseja delogar?')) {
+    if (confirm('Deseja deslogar de sua conta?')) {
         location.href = 'logout.php';
     }
 }
