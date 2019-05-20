@@ -19,7 +19,7 @@ function excluirAlimento(ID) {
 }
 
 function iniciarDieta(id) {
-    if (confirm('Deseja iniciar dieta do paciente?')) {
+    if (confirm('Deseja iniciar a dieta do paciente com livro vermelho escolhido?')) {
         location.href = 'form-antropometria.php?id_cliente=' + id;
     }
 }
