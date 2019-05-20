@@ -19,7 +19,7 @@
             {
                 include_once 'conexao.php';
                 
-                $id = $_POST["id_cliente"];
+                $id = $_GET["id_cliente"];
                 
                 $sql = "delete from alimentos where ID=".$_GET["id_alimento"];
                 
