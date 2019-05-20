@@ -33,7 +33,8 @@ function avisoNaoPodeAcessar() {
 }
 
 function deslogar() {
-    if (confirm('Deseja deslogar de sua conta?')) {
+    var nomePaciente = document.getElementById("nutricionistaLogado").value;
+    if (confirm('Deseja deslogar do sistema Nutricionista ' + nomePaciente + ' ?')) {
         location.href = 'logout.php';
     }
 }
