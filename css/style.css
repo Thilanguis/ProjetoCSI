@@ -614,7 +614,14 @@ h3 {
 .table-overflow1 {
     margin-top: 5%;
     max-height: 250px;
+    display: inline-block;
+    background-image: linear-gradient(to bottom, white, rgba(208, 235, 218, 0.63));
+}
+
+.table-overflow3 {
+    height: 250px;
     overflow-y: auto;
+    display: inline-block;
     background-image: linear-gradient(to bottom, white, rgba(208, 235, 218, 0.63));
 }
 

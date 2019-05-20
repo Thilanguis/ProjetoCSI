@@ -146,7 +146,7 @@
             <div class="form-group row">
                 <label for="inputEmail3" class="col-sm-2 col-form-label">Quant.</label>
                 <div class="col-sm-4">
-                    <input type="number" step="0.05" class="form-control" id="quantidade" name="quantidade" placeholder="">
+                    <input type="number" step="0.05" class="form-control" id="quantidade" name="quantidade" placeholder="" value="1">
                 </div>
             </div>
         </div>
@@ -182,8 +182,6 @@
 
         <hr>
 
-
-
         <!-- Título resultado da dieta -->
 
         <div style="display: inline-block; margin-left: 23%;">
@@ -198,7 +196,6 @@
             <img id="brasaoNutricao" src="img/simbolo%20de%20nutri%C3%A7%C3%A3o-800x800.png" alt="">
         </div>
         <hr>
-
 
         <!-- Tabela Desjejum -->
 
