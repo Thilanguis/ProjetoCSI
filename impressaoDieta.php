@@ -88,7 +88,7 @@
         <div id="secaoImpressao">
             <div>
                 <span id="TMB-Kcal" class="badge badge-pill badge-success" style="margin-right: 108px;">Paciente:</span>
-                <input class="col-5" type="text" style="border-radius: 4px;" disabled="disabled" value=" <?php
+                <input class="col-5" type="text" style="border-style: none;" disabled="disabled" value=" <?php
                 include_once 'conexao.php';               
                
                $sql = "select nome from cliente where ID_CLIENTE=".$_GET["id_cliente"];
@@ -105,7 +105,7 @@
             <br>
             <div>
                 <span id="TMB-Kcal" class="badge badge-pill badge-success" style="margin-right: 28px;">Data da consulta:</span>
-                <input class="col-5" type="text" style="border-radius: 4px;" disabled="disabled" value=" <?php date_default_timezone_set('America/Sao_Paulo');           
+                <input class="col-5" type="text" style="border-style: none;" disabled="disabled" value=" <?php date_default_timezone_set('America/Sao_Paulo');           
               echo $data = date('d/m/Y');               
 
             ?> ">
@@ -113,7 +113,7 @@
             <br>
             <div>
                 <span id="TMB-Kcal" class="badge badge-pill badge-success" style="margin-right: 87px;">Altura (m):</span>
-                <input class="col-5" type="text" style="border-radius: 4px;" disabled="disabled" value=" <?php
+                <input class="col-5" type="text" style="border-style: none;" disabled="disabled" value=" <?php
                 
                 include_once 'conexao.php';
                                 
@@ -129,7 +129,7 @@
             <br>
             <div>
                 <span id="TMB-Kcal" class="badge badge-pill badge-success" style="margin-right: 40px;">Peso Atual (kg):</span>
-                <input class="col-5" type="text" style="border-radius: 4px;" disabled="disabled" value=" <?php
+                <input class="col-5" type="text" style="border-style: none;" disabled="disabled" value=" <?php
                 
                 include_once 'conexao.php';
                                 
@@ -145,7 +145,7 @@
             <br>
             <div>
                 <span id="TMB-Kcal" class="badge badge-pill badge-success" style="margin-right: 143px;">IMC:</span>
-                <input class="col-5" type="text" style="border-radius: 4px;" disabled="disabled" value=" <?php
+                <input class="col-5" type="text" style="border-style: none;" disabled="disabled" value=" <?php
                 
                 include_once 'conexao.php';
                                 
