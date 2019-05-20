@@ -13,7 +13,7 @@
 </head>
 
 <body>
-   
+
     <!-- input para pegar nome do nutricionista logado -->
     <input id="nutricionistaLogado" type="hidden" value="<?php echo $_SESSION["login"];  ?>">
 
@@ -87,9 +87,6 @@
 
                     <div class="col-8">
                         <h5 style="text-align: center;"><i>IMC</i></h5>
-                        <div id="resultadoIMC">
-
-                        </div>
 
                         <label style="margin-left: 70px;" for="altura">Altura (m) :</label>
                         <input style="text-align: center;" type="number" class="form-control" id="altura" placeholder="" name="altura" min="0" max="3" step="0.01" onchange="calculoIMC()" value="0">
@@ -98,10 +95,16 @@
                     <div class=" col-8">
                         <label style="margin-left: 50px;" for="pesoAtual">Peso Atual (kg)</label>
                         <input style="text-align: center;" type="number" class="form-control" id="pesoAtual" placeholder="" name="pesoAtual" min="0" max="300" step="0.01" onchange="calculoIMC()" value="0">
-
+                        <br><br><br><br>
+                        <div class="form-row">
+                            <p class="col-1" id="imcJavascript">IMC:</p>
+                            <!-- resultado IMC do javascript -->
+                            <div class="col" id="resultadoIMC">
+                                Classificação do IMC
+                            </div>
+                        </div>
                     </div>
                 </div>
-
             </div>
 
             <div id="graficoDinamico">
@@ -184,7 +187,7 @@
                     <div id="cardPercentualDeGordura">
                         <div class="card bg-light mb-3" style="max-width: 50rem;">
                             <div class="card-header">
-                                <h4 id="avisoPercentual"><img src="img/icons8-aviso-de-aviso-48.png" alt="">de gordura</h4>
+                                <h4 id="avisoPercentual"><img id="tamanhoPercentual" src="img/icons8-percentagem-64.png" alt="">de gordura</h4>
                             </div>
                             <div class="card-body">
                                 <h5 class="card-title">- Detalhado</h5>
@@ -244,8 +247,6 @@
                 <button style="margin-left: 340px; margin-bottom: 20px; margin-top: 30px;" id="btnentrar" type="submit" class="btn btn-primary">Salvar Antropometria</button>
             </div>
         </form>
-
-
 
         <footer class="container" id="rodape">
             <?php include_once 'rodape.php'; ?>

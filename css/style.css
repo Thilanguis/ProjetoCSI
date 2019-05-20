@@ -427,7 +427,7 @@ h3 {
 }
 
 #gerarIMC {
-    margin-left: 9%;
+    margin-left: 8%;
     margin-top: 50px;
     float: left;
 }
@@ -449,6 +449,12 @@ h3 {
 
 .alert {
     width: 300px;
+}
+
+#imcJavascript {
+    display: inline-block;
+    font-weight: bold;
+    padding-top: 4px;
 }
 
 #form-Bio {
@@ -569,6 +575,12 @@ h3 {
 
 #avisoPercentual {
     text-align: center;
+}
+
+#tamanhoPercentual {
+    width: 37px;
+    height: 37px;
+    padding-right: 5px;
 }
 
 #tabelaAlimentos {
