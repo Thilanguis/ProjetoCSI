@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    
+
     <!-- input para pegar nome do nutricionista logado -->
     <input id="nutricionistaLogado" type="hidden" value="<?php echo $_SESSION["login"];  ?>">
 
@@ -56,7 +56,7 @@
             </div>
 
 
-           <div> <i id="usuarioLogado" class="fas fa-user-check"></i> <b>Bem-vindo Nutricionista:</b>
+            <div> <i id="usuarioLogado" class="fas fa-user-check"></i> <b>Bem-vindo Nutricionista:</b>
                 <?php echo "<i id='paciente'>"  .$_SESSION["login"] . "</i>" ; ?> <a style="text-decoration: none;" href="#" onclick="deslogar();">&nbsp;<img id="logout" src="img/icons8-exit-48.png" alt=""></a>
             </div>
         </nav>
@@ -81,7 +81,8 @@
         <h6 id="menuNutricionista1"><i>Fonte: FAO,WHO,UNU,1985</i></h6>
 
         <div id="tmb">
-            <span id="TMB-Kcal" class="badge badge-pill badge-success">TMB/Kcal:</span> <input type="text" style="border-radius: 4px;" disabled value=" <?php
+            <span id="TMB-Kcal" class="badge badge-pill badge-success">TMB/Kcal:</span>
+            <input type="text" style="border-radius: 4px;" disabled value=" <?php
             
             include_once 'conexao.php';
                 
