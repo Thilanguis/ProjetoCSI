@@ -168,7 +168,7 @@
                 
                 //calculando o VEt final    
                     
-                echo   number_format($resultadoTMB * ((($sono * $sonoHora) + ($aVontade * $aVontadeHora) + ($estudo * $estudoHora) + ($exercicioFisico * $exercicioFisicoHora) + ($atividadeFisica * $atividadeFisicaHora) + ($trabalho * $trabalhoHora)) / 24),2);
+                echo number_format($resultadoTMB * ((($sono * $sonoHora) + ($aVontade * $aVontadeHora) + ($estudo * $estudoHora) + ($exercicioFisico * $exercicioFisicoHora) + ($atividadeFisica * $atividadeFisicaHora) + ($trabalho * $trabalhoHora)) / 24),2);
                     
                     ?>">
             </div>
