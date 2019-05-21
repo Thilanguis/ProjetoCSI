@@ -391,10 +391,10 @@
                         echo "<td>".$row["NUM_MC"]."</td>";
                         echo "<td>".$row["MEDIDA_CASEIRA"]."</td>";
                         echo "<td>".$row["GRAMA"]."</td>";
-                        echo "<td>".$row["CHO"]."</td>";
-                        echo "<td>".$row["PTN"]."</td>";
-                        echo "<td>".$row["LIP"]."</td>";
-                        echo "<td>".$row["KCAL"]."</td>";
+                        echo "<td>".number_format($row["CHO"],2)."</td>";
+                        echo "<td>".number_format($row["PTN"],2)."</td>";
+                        echo "<td>".number_format($row["LIP"],2)."</td>";
+                        echo "<td>".number_format($row["KCAL"],2)."</td>";
                         echo "<td><a href='#' onclick='excluirAlimento(".$row["ID"].")'><i class='far fa-trash-alt' style='padding-left: 22px' id='delet'></i></td>";
                          ?>
 
@@ -540,10 +540,10 @@
                         echo "<td>".$row["NUM_MC"]."</td>";
                         echo "<td>".$row["MEDIDA_CASEIRA"]."</td>";
                         echo "<td>".$row["GRAMA"]."</td>";
-                        echo "<td>".$row["CHO"]."</td>";
-                        echo "<td>".$row["PTN"]."</td>";
-                        echo "<td>".$row["LIP"]."</td>";
-                        echo "<td>".$row["KCAL"]."</td>";
+                       echo "<td>".number_format($row["CHO"],2)."</td>";
+                        echo "<td>".number_format($row["PTN"],2)."</td>";
+                        echo "<td>".number_format($row["LIP"],2)."</td>";
+                        echo "<td>".number_format($row["KCAL"],2)."</td>";
                         echo "<td><a href='#' onclick='excluirAlimento(".$row["ID"].")'><i class='far fa-trash-alt' style='padding-left: 22px' id='delet'></i></td>";
                         echo "</tr>";
                          }
@@ -679,10 +679,10 @@
                         echo "<td>".$row["NUM_MC"]."</td>";
                         echo "<td>".$row["MEDIDA_CASEIRA"]."</td>";
                         echo "<td>".$row["GRAMA"]."</td>";
-                        echo "<td>".$row["CHO"]."</td>";
-                        echo "<td>".$row["PTN"]."</td>";
-                        echo "<td>".$row["LIP"]."</td>";
-                        echo "<td>".$row["KCAL"]."</td>";
+                        echo "<td>".number_format($row["CHO"],2)."</td>";
+                        echo "<td>".number_format($row["PTN"],2)."</td>";
+                        echo "<td>".number_format($row["LIP"],2)."</td>";
+                        echo "<td>".number_format($row["KCAL"],2)."</td>";
                         echo "<td><a href='#' onclick='excluirAlimento(".$row["ID"].")'><i class='far fa-trash-alt' style='padding-left: 22px' id='delet'></i></td>";
                         echo "</tr>";
                          }
@@ -818,10 +818,10 @@
                         echo "<td>".$row["NUM_MC"]."</td>";
                         echo "<td>".$row["MEDIDA_CASEIRA"]."</td>";
                         echo "<td>".$row["GRAMA"]."</td>";
-                        echo "<td>".$row["CHO"]."</td>";
-                        echo "<td>".$row["PTN"]."</td>";
-                        echo "<td>".$row["LIP"]."</td>";
-                        echo "<td>".$row["KCAL"]."</td>";
+                       echo "<td>".number_format($row["CHO"],2)."</td>";
+                        echo "<td>".number_format($row["PTN"],2)."</td>";
+                        echo "<td>".number_format($row["LIP"],2)."</td>";
+                        echo "<td>".number_format($row["KCAL"],2)."</td>";
                         echo "<td><a href='#' onclick='excluirAlimento(".$row["ID"].")'><i class='far fa-trash-alt' style='padding-left: 22px' id='delet'></i></td>";
                         echo "</tr>";
                          }
@@ -957,10 +957,10 @@
                         echo "<td>".$row["NUM_MC"]."</td>";
                         echo "<td>".$row["MEDIDA_CASEIRA"]."</td>";
                         echo "<td>".$row["GRAMA"]."</td>";
-                        echo "<td>".$row["CHO"]."</td>";
-                        echo "<td>".$row["PTN"]."</td>";
-                        echo "<td>".$row["LIP"]."</td>";
-                        echo "<td>".$row["KCAL"]."</td>";
+                        echo "<td>".number_format($row["CHO"],2)."</td>";
+                        echo "<td>".number_format($row["PTN"],2)."</td>";
+                        echo "<td>".number_format($row["LIP"],2)."</td>";
+                        echo "<td>".number_format($row["KCAL"],2)."</td>";
                         echo "<td><a href='#' onclick='excluirAlimento(".$row["ID"].")'><i class='far fa-trash-alt' style='padding-left: 22px' id='delet'></i></td>";
                         echo "</tr>";
                          }
@@ -1096,10 +1096,10 @@
                         echo "<td>".$row["NUM_MC"]."</td>";
                         echo "<td>".$row["MEDIDA_CASEIRA"]."</td>";
                         echo "<td>".$row["GRAMA"]."</td>";
-                        echo "<td>".$row["CHO"]."</td>";
-                        echo "<td>".$row["PTN"]."</td>";
-                        echo "<td>".$row["LIP"]."</td>";
-                        echo "<td>".$row["KCAL"]."</td>";
+                       echo "<td>".number_format($row["CHO"],2)."</td>";
+                        echo "<td>".number_format($row["PTN"],2)."</td>";
+                        echo "<td>".number_format($row["LIP"],2)."</td>";
+                        echo "<td>".number_format($row["KCAL"],2)."</td>";
                         echo "<td><a href='#' onclick='excluirAlimento(".$row["ID"].")'><i class='far fa-trash-alt' style='padding-left: 22px' id='delet'></i></td>";
                         echo "</tr>";
                          }
@@ -1235,10 +1235,10 @@
                         echo "<td>".$row["NUM_MC"]."</td>";
                         echo "<td>".$row["MEDIDA_CASEIRA"]."</td>";
                         echo "<td>".$row["GRAMA"]."</td>";
-                        echo "<td>".$row["CHO"]."</td>";
-                        echo "<td>".$row["PTN"]."</td>";
-                        echo "<td>".$row["LIP"]."</td>";
-                        echo "<td>".$row["KCAL"]."</td>";
+                        echo "<td>".number_format($row["CHO"],2)."</td>";
+                        echo "<td>".number_format($row["PTN"],2)."</td>";
+                        echo "<td>".number_format($row["LIP"],2)."</td>";
+                        echo "<td>".number_format($row["KCAL"],2)."</td>";
                         echo "<td><a href='#' onclick='excluirAlimento(".$row["ID"].")'><i class='far fa-trash-alt' style='padding-left: 22px' id='delet'></i></td>";
                         echo "</tr>";
                          }
@@ -1373,10 +1373,10 @@
                         echo "<td>".$row["NUM_MC"]."</td>";
                         echo "<td>".$row["MEDIDA_CASEIRA"]."</td>";
                         echo "<td>".$row["GRAMA"]."</td>";
-                        echo "<td>".$row["CHO"]."</td>";
-                        echo "<td>".$row["PTN"]."</td>";
-                        echo "<td>".$row["LIP"]."</td>";
-                        echo "<td>".$row["KCAL"]."</td>";
+                        echo "<td>".number_format($row["CHO"],2)."</td>";
+                        echo "<td>".number_format($row["PTN"],2)."</td>";
+                        echo "<td>".number_format($row["LIP"],2)."</td>";
+                        echo "<td>".number_format($row["KCAL"],2)."</td>";
                         echo "<td><a href='#' onclick='excluirAlimento(".$row["ID"].")'><i class='far fa-trash-alt' style='padding-left: 22px' id='delet'></i></td>";
                         echo "</tr>";
                          }

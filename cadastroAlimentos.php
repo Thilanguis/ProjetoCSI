@@ -18,11 +18,11 @@
      
     include_once 'funcoesProjeto.php';
         
-        
+       
         
      if(isset($_GET["idAlimento"]))
    {
-       
+        $quantidade = $_GET["quantidade"];
        
         $sqlTabelaAlimentos = "select  `ID`, `col 2`, `col 3`, `col 5`, `col 6`, `col 7`, `col 8`, `col 9` from tabelaalimentos where `ID`=".$_GET["idAlimento"];
     
@@ -38,11 +38,11 @@
         $horario         = $_GET["horario"];
         $col2            = $row["col 2"]; 
         $col3            = $row["col 3"];
-        $col5            = $row["col 5"]*$quantidade;
-        $col6            = $row["col 6"]*$quantidade;
-        $col7            = $row["col 7"]*$quantidade;
-        $col8            = $row["col 8"]*$quantidade;
-        $col9            = $row["col 9"]*$quantidade;
+        $col5            = str_replace(',', '.',$row["col 5"])*$quantidade;
+        $col6            = str_replace(',', '.',$row["col 6"])*$quantidade;
+        $col7            = str_replace(',', '.',$row["col 7"])*$quantidade;
+        $col8            = str_replace(',', '.',$row["col 8"])*$quantidade;
+        $col9            = str_replace(',', '.',$row["col 9"])*$quantidade;
 
         $sqlDadosDaRefeicao = "insert into alimentos (ID, NOME_ALIMENTO, MEDIDA_CASEIRA, GRAMA, CHO, PTN, LIP, KCAL, NUM_MC, HORA, NOME_REFEICAO) values (null, '".$col2."','".$col3."','".$col5."','".$col6."','".$col7."','".$col8."','".$col9."', '".$quantidade."','".$horario."','".$refeicao."')";
 

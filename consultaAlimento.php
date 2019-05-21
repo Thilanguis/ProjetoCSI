@@ -52,7 +52,6 @@
                         echo "<td>".$row["col 2"]."</td>";
                         echo "<td>".$row["col 3"]."</td>";
                         echo "<td>".$grama*$quantidade."</td>";
-                        echo "<td>".$cho*$quantidade."</td>";
                         echo "<td>".$ptn*$quantidade."</td>";
                         echo "<td>".$lip*$quantidade."</td>";
                         echo "<td>".$kcal*$quantidade."</td>";
