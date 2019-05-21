@@ -1,6 +1,7 @@
 body {
     margin: 0 auto;
     padding: 0 auto;
+    font-family: 'Fredericka the Great', cursive;
 }
 
 section {
@@ -29,13 +30,13 @@ h1 {
     margin: 0;
     padding: 0;
     position: absolute;
-    top: 28%;
+    top: 2%;
     transform: translateY(50%);
     width: 100%;
     text-align: center;
     color: #fff;
     font-size: 5em;
-    font-family: sans-serif;
+    /* font-family: sans-serif; */
     letter-spacing: 0.2em;
 
 }
@@ -90,4 +91,160 @@ h1 span:nth-child(7) {
 
 h1 span:nth-child(8) {
     animation-delay: 4s;
+}
+
+h1 span:nth-child(9) {
+    animation-delay: 4.25s;
+}
+
+h1 span:nth-child(10) {
+    animation-delay: 4.5s;
+}
+
+h1 span:nth-child(11) {
+    animation-delay: 4.75s;
+}
+
+h1 span:nth-child(12) {
+    animation-delay: 5s;
+}
+
+h1 span:nth-child(13) {
+    animation-delay: 5.25s;
+}
+
+h1 span:nth-child(14) {
+    animation-delay: 5.50s;
+}
+
+h1 span:nth-child(15) {
+    animation-delay: 5.75s;
+}
+
+h1 span:nth-child(16) {
+    animation-delay: 6s;
+}
+
+h1 span:nth-child(17) {
+    animation-delay: 6.25s;
+}
+
+h1 span:nth-child(18) {
+    animation-delay: 6.50s;
+}
+
+h1 span:nth-child(19) {
+    animation-delay: 6.75s;
+}
+
+#brocolis {
+    animation-delay: 7s;
+    animation-duration: 4s;
+}
+
+#tomate {
+    animation-delay: 7.25s;
+    animation-duration: 4s;
+}
+
+#pera {
+    animation-delay: 7.50s;
+    animation-duration: 4s;
+}
+
+#mamao {
+    animation-delay: 7.75s;
+    animation-duration: 4s;
+}
+
+#orvalho {
+    width: 495px;
+    height: 698px;
+    animation-delay: 8s;
+    animation-duration: 8s;
+}
+
+#orvalho1 {
+    position: absolute;
+    top: 10%;
+    right: 1%;
+}
+
+#brasao1 {
+    width: 400px;
+    height: 400px;
+    animation-delay: 8.5s;
+    animation-duration: 8s;
+}
+
+
+#brasao {
+    position: absolute;
+    top: 11%;
+    right: 75%;
+}
+
+div {
+    position: absolute;
+    transform: translate(-50%, -50%) skewy(-5deg);
+    left: 50%;
+    top: 70%;
+    /* border: 4px solid #fff; */
+    /*  border-radius: 10px; */
+    /* padding 20px 50px;
+    box-shadow: 0 0 10px #1eff4e, inset 0 0 10px #1eff4e;
+    animation: animate1 .1s linear infinite; */
+}
+
+@keyframes animate1 {
+    0% {
+        opacity: 1;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    40% {
+        opacity: .5;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 3em;
+    font-family: 'Lato', sans-serif;
+    color: #fff;
+    text-shadow: 0 0 10px #1eff4e, 0 0 20px #1eff4e, 0 0 80px #1eff4e, 0 0 120px #1eff4e;
+    animation-delay: 12s;
+    animation-duration: 10s;
+}
+
+h2 span {
+    animation: animate1 .5s linear infinite;
+}
+
+h2 span:nth-child(1) {
+    animation-delay: .25s;
+}
+
+h2 span:nth-child(2) {
+    animation-delay: .2s;
+}
+
+h2 span:nth-child(3) {
+    animation-delay: .35s;
+}
+
+h2 span:nth-child(4) {
+    animation-delay: .4s;
 }
