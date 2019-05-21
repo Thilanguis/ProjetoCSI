@@ -13,12 +13,13 @@ $(document).ready(function () {
 
 function excluirAlimento(ID) {
     if (confirm('Deseja realmente excluir este alimento?')) {
-        location.href = 'excluirAlimento.php?id_alimento=' + ID;
+        var id_cliente = document.getElementById("id_cliente").value;
+        location.href = 'excluirAlimento.php?id_alimento=' + ID + '&id_cliente=' + id_cliente;
     }
 }
 
 function iniciarDieta(id) {
-    if (confirm('Deseja iniciar dieta do paciente?')) {
+    if (confirm('Deseja iniciar a dieta do paciente com livro vermelho escolhido?')) {
         location.href = 'form-antropometria.php?id_cliente=' + id;
     }
 }
@@ -32,7 +33,8 @@ function avisoNaoPodeAcessar() {
 }
 
 function deslogar() {
-    if (confirm('Deseja deslogar de sua conta?')) {
+    var nomePaciente = document.getElementById("nutricionistaLogado").value;
+    if (confirm('Deseja deslogar do sistema Nutricionista ' + nomePaciente + ' ?')) {
         location.href = 'logout.php';
     }
 }

@@ -14,13 +14,16 @@
 
 <body>
 
+    <!-- input para pegar nome do nutricionista logado -->
+    <input id="nutricionistaLogado" type="hidden" value="<?php echo $_SESSION["login"];  ?>">
+
     <div id="fundoSistemaInterno" class="container">
 
         <nav class="navbar navbar-dark container" style="background-color:#3b884d;">
             <button id="teste" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span> <i class="fas fa-carrot animated rubberBand" style="font-size: 30px; color: #c78713"></i> &nbsp; <i class="fas fa-apple-alt animated rubberBand" style="font-size: 30px; color: #d83838"></i> &nbsp; <i class="fas fa-cheese animated rubberBand" style="font-size: 30px; color: #ccc624"></i> </span>
             </button>
-            <div> <i id="usuarioLogado" class="fas fa-user-check"></i> <b>Bem-vindo nutricionista:</b>
+            <div> <i id="usuarioLogado" class="fas fa-user-check"></i> <b>Bem-vindo Nutricionista:</b>
                 <?php echo "<i id='paciente'>"  .$_SESSION["login"] . "</i>" ; ?> <a style="text-decoration: none;" href="#" onclick="deslogar();">&nbsp;<img id="logout" src="img/icons8-exit-48.png" alt=""></a>
             </div>
         </nav>
@@ -71,10 +74,10 @@
                 </div>
                 <div class="col-md-6 ">
                     <div class="collapse multi-collapse" id="multiCollapseExample1">
-                            <div class="form-group input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
-                                <input type="text" id="txt_consulta" placeholder="Pesquise um Paciente" class="form-control" name="nome">
-                                <button id="btnBuscaPaciente" class="btn btn-info" type="submit"><i class="fas fa-search"></i></button>
+                        <div class="form-group input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+                            <input type="text" id="txt_consulta" placeholder="Pesquise um Paciente" class="form-control" name="nome">
+                            <button id="btnBuscaPaciente" class="btn btn-info" type="submit"><i class="fas fa-search"></i></button>
                         </div>
                     </div>
                 </div>

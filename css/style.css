@@ -108,8 +108,20 @@ section {
     padding: 5px;
 }
 
+#nutricionista {
+    color: rgba(67, 59, 59, 0.89);
+    display: inline-block;
+    padding: 5px;
+    font-style: italic;
+}
+
 #nomeNutricionista {
     text-align: center;
+}
+
+#h5Nutricionista {
+    margin-left: 500px;
+    margin-top: 20px;
 }
 
 #usuarioLogado {
@@ -427,7 +439,7 @@ h3 {
 }
 
 #gerarIMC {
-    margin-left: 9%;
+    margin-left: 8%;
     margin-top: 50px;
     float: left;
 }
@@ -435,6 +447,12 @@ h3 {
 #graficoDinamico {
     margin-left: 620px;
     padding-right: 100px !important;
+}
+
+#graficoDinamico1 {
+    display: inline-block;
+    float: right;
+    margin-top: 60px;
 }
 
 #gerarMedidas {
@@ -449,6 +467,12 @@ h3 {
 
 .alert {
     width: 300px;
+}
+
+#imcJavascript {
+    display: inline-block;
+    font-weight: bold;
+    padding-top: 4px;
 }
 
 #form-Bio {
@@ -571,6 +595,12 @@ h3 {
     text-align: center;
 }
 
+#tamanhoPercentual {
+    width: 37px;
+    height: 37px;
+    padding-right: 5px;
+}
+
 #tabelaAlimentos {
     width: 890px;
     display: inline-block;
@@ -614,7 +644,14 @@ h3 {
 .table-overflow1 {
     margin-top: 5%;
     max-height: 250px;
+    display: inline-block;
+    background-image: linear-gradient(to bottom, white, rgba(208, 235, 218, 0.63));
+}
+
+.table-overflow3 {
+    height: 250px;
     overflow-y: auto;
+    display: inline-block;
     background-image: linear-gradient(to bottom, white, rgba(208, 235, 218, 0.63));
 }
 
@@ -668,7 +705,7 @@ h3 {
     margin-left: 12px;
     margin-top: 100px;
     display: inline-block;
-    float: ;
+    float: left;
 }
 
 .fa-trash-alt {
@@ -790,10 +827,13 @@ h3 {
 #tabelaImpressao {
     width: auto;
     margin-right: 10px;
-    margin-top: 5%;
+    margin-top: 25%;
     margin-bottom: 1%;
+    margin-left: 600px;
     box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.75);
     float: right;
+    display: inline-block;
+    position: absolute;
 }
 
 #tabelaImpressao:hover {
@@ -872,6 +912,23 @@ h3 {
 
     #substituicaoImpressao {
         display: none;
+    }
+
+    #secaoImpressao {
+        margin-bottom: 100px;
+        width: 50%;
+        margin-top: none;
+        display: inline-block;
+    }
+
+    #h5Nutricionista {
+        margin-left: 330px;
+        margin-top: 20px;
+        display: inline-block;
+    }
+
+    #graficoDinamico1 {
+        margin-top: none;
     }
 }
 

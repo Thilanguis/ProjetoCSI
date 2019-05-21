@@ -13,6 +13,9 @@
 </head>
 
 <body>
+    
+    <!-- input para pegar nome do nutricionista logado -->
+    <input id="nutricionistaLogado" type="hidden" value="<?php echo $_SESSION["login"];  ?>">
 
     <div id="fundoSistemaInterno" class="container">
 
@@ -21,7 +24,7 @@
             <button id="teste" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span> <i class="fas fa-carrot animated rubberBand" style="font-size: 30px; color: #c78713"></i> &nbsp; <i class="fas fa-apple-alt animated rubberBand" style="font-size: 30px; color: #d83838"></i> &nbsp; <i class="fas fa-cheese animated rubberBand" style="font-size: 30px; color: #ccc624"></i> </span>
             </button>
-            <div> <i id="usuarioLogado" class="fas fa-user-check"></i> <b>Bem-vindo nutricionista:</b>
+            <div> <i id="usuarioLogado" class="fas fa-user-check"></i> <b>Bem-vindo Nutricionista:</b>
                 <?php echo "<i id='paciente'>"  .$_SESSION["login"] . "</i>" ; ?> <a style="text-decoration: none;" href="#" onclick="deslogar();">&nbsp;<img id="logout" src="img/icons8-exit-48.png" alt=""></a>
             </div>
         </nav>
@@ -35,7 +38,7 @@
             <a id="menuFechado" href="#" class="list-group-item list-group-item-action" title="Inicie uma consulta para acessar os formulários com cadeado">Av. Bioquímica<i class="fas fa-lock" id="cadeadoFechado"></i></a>
             <a id="menuFechado" href="#" class="list-group-item list-group-item-action" title="Inicie uma consulta para acessar os formulários com cadeado">Av. Clínica nutri.<i class="fas fa-lock" id="cadeadoFechado"></i></a>
             <a id="menuFechado" href="#" class="list-group-item list-group-item-action" title="Inicie uma consulta para acessar os formulários com cadeado">Vet FAO<i class="fas fa-lock" id="cadeadoFechado"></i></a>
-            <a href="#" class="list-group-item list-group-item-action">Lista de alimentos <i class="fas fa-check" style="font-size: 18px; color: #3b884d"></i> </a>
+            <a href="#" class="list-group-item list-group-item-action">Lista de alimentos <i class="fas fa-check" style="font-size: 17px; color: #3b884d"></i> </a>
             <a id="menuFechado" href="#" class="list-group-item list-group-item-action">Recordatório 24h</a>
             <a id="menuFechado" href="#" class="list-group-item list-group-item-action" title="Inicie uma consulta para acessar os formulários com cadeado">Dietoterapia<i class="fas fa-lock" id="cadeadoFechado"></i></a>
             <a id="menuAberto" href="listaSubstituicao.php" class="list-group-item list-group-item-action">Lista de subs.<i class="fas fa-lock-open" id="cadeadoAberto"></i></a>

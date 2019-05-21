@@ -14,6 +14,9 @@
 
 <body>
 
+    <!-- input para pegar nome do nutricionista logado -->
+    <input id="nutricionistaLogado" type="hidden" value="<?php echo $_SESSION["login"];  ?>">
+
     <!-- passando id do paciente -->
     <input type="hidden" id="id_cliente" name="id_cliente" value="<?php echo $_GET["id_cliente"] ?>">
 
@@ -54,7 +57,7 @@
             </div>
 
 
-            <div> <i id="usuarioLogado" class="fas fa-user-check"></i> <b>Bem-vindo nutricionista:</b>
+            <div> <i id="usuarioLogado" class="fas fa-user-check"></i> <b>Bem-vindo Nutricionista:</b>
                 <?php echo "<i id='paciente'>"  .$_SESSION["login"] . "</i>" ; ?> <a style="text-decoration: none;" href="#" onclick="deslogar();">&nbsp;<img id="logout" src="img/icons8-exit-48.png" alt=""></a>
             </div>
         </nav>
@@ -70,7 +73,7 @@
             <a href="#" class="list-group-item list-group-item-action" style="background-color: rgba(134, 214, 143, 0.72);">Vet FAO</a>
             <a id="menuFechado" href="#" class="list-group-item list-group-item-action" onclick="avisoNaoPodeAcessar()">Lista de alimentos<i class="fas fa-lock" id="cadeadoFechado"></i></a>
             <a href="#" class="list-group-item list-group-item-action" style="background-color: rgba(134, 214, 143, 0.72);">Recordatório 24h</a>
-            <a href="#" class="list-group-item list-group-item-action">Dietoterapia <i class="fas fa-check" style="font-size: 18px; color: #3b884d"></i> </a>
+            <a href="#" class="list-group-item list-group-item-action">Dietoterapia <i class="fas fa-check" style="font-size: 17px; color: #3b884d"></i> </a>
             <a id="menuFechado" href="#" class="list-group-item list-group-item-action" onclick="avisoNaoPodeAcessar()">Lista de subs.<i class="fas fa-lock" id="cadeadoFechado"></i></a>
             <a id="menuAberto" href="#" class="list-group-item list-group-item-action" onclick="avisoAvancar()">Impressão de dieta<i class="fas fa-lock-open" id="cadeadoAberto"></i></a>
         </div>
@@ -80,22 +83,150 @@
         <div id="secaoDietoterapia">
             <div>
                 <span id="TMB-Kcal" class="badge badge-pill badge-success" style="margin-right: 132px;">IMC:</span>
-                <input class="col-4" type="text" style="border-radius: 4px;" disabled="disabled">
+                <input class="col-4" type="text" style="border-radius: 4px;" disabled="disabled" value="<?php
+                
+                include_once 'conexao.php';
+                                
+                $sql = "select ALTURA, PESO from a_antropometrica";                                     
+                $result = mysqli_query($con, $sql);
+            
+                $row = mysqli_fetch_array($result);            
+
+                $altura = $row["ALTURA"];          
+                $peso = $row["PESO"];                                                    
+                $resultadoIMC = $peso / ($altura * $altura);
+            
+            if ($resultadoIMC < 16.00) {
+                echo "Magreza Grau 3";
+            } else if ($resultadoIMC >= 16.00 && $resultadoIMC < 17.00) {
+               echo "Magreza Grau 2";
+            } else if ($resultadoIMC >= 17.00 && $resultadoIMC < 18.50) {
+                echo "Magreza Grau 1";
+            } else if ($resultadoIMC >= 18.50 && $resultadoIMC < 25.00) {
+               echo "Eutrofia";
+            } else if ($resultadoIMC >= 25.00 && $resultadoIMC < 30.00) {
+               echo "Pre-Obesidade";
+            } else if ($resultadoIMC >= 30.00 && $resultadoIMC < 35.00) {
+                echo "Obesidade Grau 1";
+            } else if ($resultadoIMC >= 35.00 && $resultadoIMC < 40.00) {
+                echo "Obesidade Grau 2";
+            } else if ($resultadoIMC > 40.00) {
+                echo "Obesidade Grau 3";
+            }
+
+                ?> ">
             </div>
             <br>
             <div>
                 <span id="TMB-Kcal" class="badge badge-pill badge-success" style="margin-right: 28px;">Peso Atual (kg):</span>
-                <input class="col-4" type="text" style="border-radius: 4px;" disabled="disabled">
+                <input class="col-4" type="text" style="border-radius: 4px;" disabled="disabled" value="<?php  
+                                                                                                        
+              include_once 'conexao.php';
+            
+            $sql = "select PESO from a_antropometrica";
+                
+            $result = mysqli_query($con, $sql);
+                
+            $row = mysqli_fetch_array($result);
+              
+             echo $row[0];                                                                                           
+             ?>">
             </div>
             <br>
             <div>
                 <span id="TMB-Kcal" class="badge badge-pill badge-success" style="margin-right: 78px;">TMB/Kcal:</span>
-                <input class="col-4" type="text" style="border-radius: 4px;" disabled="disabled">
+                <input class="col-4" type="text" style="border-radius: 4px;" disabled="disabled" value="<?php            
+            include_once 'conexao.php';
+                
+            $sql = "select DT_NASCIMENTO, PESO, ALTURA, SEXO from cliente  inner join a_antropometrica where ID_CLIENTE = 15";
+                
+            $result = mysqli_query($con, $sql);
+                
+            $row = mysqli_fetch_array($result);
+                
+                $data = $row["DT_NASCIMENTO"];
+                
+                // separando yyyy, mm, ddd
+            list($ano, $mes, $dia) = explode('-', $data);
+
+            // data atual
+            $hoje = mktime(0, 0, 0, date('m'), date('d'), date('Y'));
+            // Descobre a unix timestamp da data de nascimento do fulano
+            $nascimento = mktime( 0, 0, 0, $mes, $dia, $ano);
+
+            // cálculo
+            $idade = floor((((($hoje - $nascimento) / 60) / 60) / 24) / 365.25);
+                
+            //declarando variáveis
+            $peso = $row[1];   
+            $altura = $row[2];   
+            $sexo = $row[3];
+                
+            //calculando TMB
+    if($sexo == "Masculino"){
+		if($idade >= 10 && $idade < 18){
+		echo number_format($resultadoTMB = (17.5 * $peso) + 651,2). " Kcal";
+		}
+		if($idade >= 18 && $idade < 30){
+		echo number_format($resultadoTMB = (15.3 * $peso) + 679,2). " Kcal";
+		}
+		if($idade >= 30 && $idade < 60){
+		echo number_format($resultadoTMB = (11.6 * $peso) + 879,2). " Kcal";
+		}
+		if($idade >= 60){
+		echo number_format($resultadoTMB = (13.5 * $peso) + 487,2). " Kcal";
+		}
+	}
+	if($sexo == "Feminino"){
+		if($idade >= 10 && $idade < 18){
+		echo number_format($resultadoTMB = (12.2 * $peso)+ 746,2). " Kcal";
+		}
+		if($idade >= 18 && $idade < 30){
+		echo number_format($resultadoTMB = (14.7 * $peso) + 496,2). " Kcal";
+		}
+		if($idade >= 30 && $idade < 60){
+		echo number_format($resultadoTMB = (8.5 * $peso) + 829,2). " Kcal";
+		}
+		if($idade >= 60){
+		echo number_format($resultadoTMB = (10.5 * $peso) + 596,2). " Kcal";
+		}
+	
+	}
+                
+            ?> 
+                ">
             </div>
             <br>
             <div>
                 <span id="TMB-Kcal" class="badge badge-pill badge-success" style="margin-right: 38px;">VET Calculado:</span>
-                <input class="col-4" type="text" style="border-radius: 4px;" disabled="disabled">
+                <input class="col-4" type="text" style="border-radius: 4px;" disabled value="<?php $resultadoTMB;
+                    
+                $sqlVET = "select * from vet_fao";
+                    
+                $resultVET = mysqli_query($con, $sqlVET);
+                    
+                $rowVET = mysqli_fetch_array($resultVET);
+                
+                //declarando variáveis
+                $sono = $rowVET[1];
+                $aVontade = $rowVET[2];
+                $estudo = $rowVET[3];
+                $exercicioFisico = $rowVET[4];
+                $atividadeFisica = $rowVET[5];
+                $trabalho = $rowVET[6];
+                $sonoHora = $rowVET[7];
+                $aVontadeHora = $rowVET[11];
+                $estudoHora = $rowVET[9];
+                $exercicioFisicoHora = $rowVET[10];
+                $atividadeFisicaHora = $rowVET[12];
+                $trabalhoHora = $rowVET[8];
+                
+                
+                //calculando o VEt final    
+                    
+                echo number_format($resultadoTMB * ((($sono * $sonoHora) + ($aVontade * $aVontadeHora) + ($estudo * $estudoHora) + ($exercicioFisico * $exercicioFisicoHora) + ($atividadeFisica * $atividadeFisicaHora) + ($trabalho * $trabalhoHora)) / 24),2)." Kcal";
+                    ?>
+                ">
             </div>
             <br>
             <div>
@@ -146,7 +277,7 @@
             <div class="form-group row">
                 <label for="inputEmail3" class="col-sm-2 col-form-label">Quant.</label>
                 <div class="col-sm-4">
-                    <input type="number" step="0.05" class="form-control" id="quantidade" name="quantidade" placeholder="">
+                    <input type="number" step="0.05" class="form-control" id="quantidade" name="quantidade" placeholder="" value="1">
                 </div>
             </div>
         </div>
@@ -182,8 +313,6 @@
 
         <hr>
 
-
-
         <!-- Título resultado da dieta -->
 
         <div style="display: inline-block; margin-left: 23%;">
@@ -198,7 +327,6 @@
             <img id="brasaoNutricao" src="img/simbolo%20de%20nutri%C3%A7%C3%A3o-800x800.png" alt="">
         </div>
         <hr>
-
 
         <!-- Tabela Desjejum -->
 

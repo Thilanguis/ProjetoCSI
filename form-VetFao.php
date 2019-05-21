@@ -15,6 +15,9 @@
 
 <body>
 
+    <!-- input para pegar nome do nutricionista logado -->
+    <input id="nutricionistaLogado" type="hidden" value="<?php echo $_SESSION["login"];  ?>">
+
     <div id="fundoSistemaInterno" class="container">
 
 
@@ -53,7 +56,7 @@
             </div>
 
 
-           <div> <i id="usuarioLogado" class="fas fa-user-check"></i> <b>Bem-vindo nutricionista:</b>
+            <div> <i id="usuarioLogado" class="fas fa-user-check"></i> <b>Bem-vindo Nutricionista:</b>
                 <?php echo "<i id='paciente'>"  .$_SESSION["login"] . "</i>" ; ?> <a style="text-decoration: none;" href="#" onclick="deslogar();">&nbsp;<img id="logout" src="img/icons8-exit-48.png" alt=""></a>
             </div>
         </nav>
@@ -66,7 +69,7 @@
             <a href="#" class="list-group-item list-group-item-action" style="background-color: rgba(134, 214, 143, 0.72);">Av. Antropométrica</a>
             <a href="#" class="list-group-item list-group-item-action" style="background-color: rgba(134, 214, 143, 0.72);">Av. Bioquímica</a>
             <a href="#" class="list-group-item list-group-item-action" style="background-color: rgba(134, 214, 143, 0.72);">Av. Clínica nutri.</a>
-            <a href="#" class="list-group-item list-group-item-action">Vet FAO <i class="fas fa-check" style="font-size: 18px; color: #3b884d"></i> </a>
+            <a href="#" class="list-group-item list-group-item-action">Vet FAO <i class="fas fa-check" style="font-size: 17px; color: #3b884d"></i> </a>
             <a id="menuFechado" href="#" class="list-group-item list-group-item-action" onclick="avisoNaoPodeAcessar()">Lista de alimentos<i class="fas fa-lock" id="cadeadoFechado"></i></a>
             <a id="menuAberto" href="#" class="list-group-item list-group-item-action" onclick="avisoAvancar()">Recordatório 24h</a>
             <a id="menuAberto" href="#" class="list-group-item list-group-item-action" onclick="avisoAvancar()">Dietoterapia<i class="fas fa-lock-open" id="cadeadoAberto"></i></a>
@@ -78,7 +81,8 @@
         <h6 id="menuNutricionista1"><i>Fonte: FAO,WHO,UNU,1985</i></h6>
 
         <div id="tmb">
-            <span id="TMB-Kcal" class="badge badge-pill badge-success">TMB/Kcal:</span> <input type="text" style="border-radius: 4px;" disabled value=" <?php
+            <span id="TMB-Kcal" class="badge badge-pill badge-success">TMB/Kcal:</span>
+            <input type="text" style="border-radius: 4px;" disabled value=" <?php
             
             include_once 'conexao.php';
                 
@@ -164,7 +168,7 @@
                 
                 //calculando o VEt final    
                     
-                echo   number_format($resultadoTMB * ((($sono * $sonoHora) + ($aVontade * $aVontadeHora) + ($estudo * $estudoHora) + ($exercicioFisico * $exercicioFisicoHora) + ($atividadeFisica * $atividadeFisicaHora) + ($trabalho * $trabalhoHora)) / 24),2);
+                echo number_format($resultadoTMB * ((($sono * $sonoHora) + ($aVontade * $aVontadeHora) + ($estudo * $estudoHora) + ($exercicioFisico * $exercicioFisicoHora) + ($atividadeFisica * $atividadeFisicaHora) + ($trabalho * $trabalhoHora)) / 24),2);
                     
                     ?>">
             </div>

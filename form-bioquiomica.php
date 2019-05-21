@@ -13,6 +13,9 @@
 </head>
 
 <body>
+    
+    <!-- input para pegar nome do nutricionista logado -->
+    <input id="nutricionistaLogado" type="hidden" value="<?php echo $_SESSION["login"];  ?>">
 
     <div id="fundoSistemaInterno" class="container">
 
@@ -50,7 +53,7 @@
 
                 </script>
             </div>
-            <div> <i id="usuarioLogado" class="fas fa-user-check"></i> <b>Bem-vindo nutricionista:</b>
+            <div> <i id="usuarioLogado" class="fas fa-user-check"></i> <b>Bem-vindo Nutricionista:</b>
                 <?php echo "<i id='paciente'>"  .$_SESSION["login"] . "</i>" ; ?> <a style="text-decoration: none;" href="#" onclick="deslogar();">&nbsp;<img id="logout" src="img/icons8-exit-48.png" alt=""></a>
             </div>
         </nav>
@@ -61,7 +64,7 @@
             </a>
             <a id="menuAlerta" href="#" class="list-group-item list-group-item-action" onclick="terminarDieta()">Encerrar dieta <img id="cancelarDieta" src="img/icons8-cancelar-48.png" alt=""></a>
             <a href="#" class="list-group-item list-group-item-action" style="background-color: rgba(134, 214, 143, 0.72);">Av. Antropométrica</a>
-            <a href="#" class="list-group-item list-group-item-action">Av. Bioquímica <i class="fas fa-check" style="font-size: 18px; color: #3b884d"></i> </a>
+            <a href="#" class="list-group-item list-group-item-action">Av. Bioquímica <i class="fas fa-check" style="font-size: 17px; color: #3b884d"></i> </a>
             <a id="menuAberto" href="#" class="list-group-item list-group-item-action" onclick="avisoAvancar()">>Av. Clínica nutri.<i class="fas fa-lock-open" id="cadeadoAberto"></i></a>
             <a id="menuAberto" href="#" class="list-group-item list-group-item-action" onclick="avisoAvancar()">>Vet FAO<i class="fas fa-lock-open" id="cadeadoAberto"></i></a>
             <a id="menuFechado" href="#" class="list-group-item list-group-item-action" onclick="avisoNaoPodeAcessar()">Lista de alimentos<i class="fas fa-lock" id="cadeadoFechado"></i></a>

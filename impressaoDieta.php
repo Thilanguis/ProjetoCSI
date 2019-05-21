@@ -9,11 +9,15 @@
     <?php include_once 'head.php';
     include_once 'verificaLogin.php';
     ?>
+    <script src="js/graficoGooglePercentual.js"></script>
 
 
 </head>
 
 <body>
+
+    <!-- input para pegar nome do nutricionista logado -->
+    <input id="nutricionistaLogado" type="hidden" value="<?php echo $_SESSION["login"];  ?>">
 
     <div id="fundoSistemaInterno" class="container">
 
@@ -52,7 +56,7 @@
             </div>
 
 
-            <div> <i id="usuarioLogado" class="fas fa-user-check"></i> <b>Bem-vindo nutricionista:</b>
+            <div> <i id="usuarioLogado" class="fas fa-user-check"></i> <b>Bem-vindo Nutricionista:</b>
                 <?php echo "<i id='paciente'>"  .$_SESSION["login"] . "</i>" ; ?> <a style="text-decoration: none;" href="#" onclick="deslogar();">&nbsp;<img id="logout" src="img/icons8-exit-48.png" alt=""></a>
             </div>
         </nav>
@@ -70,16 +74,21 @@
             <a href="#" class="list-group-item list-group-item-action" style="background-color: rgba(134, 214, 143, 0.72);">Recordatório 24h</a>
             <a href="#" class="list-group-item list-group-item-action" style="background-color: rgba(134, 214, 143, 0.72);">Dietotarapia</a>
             <a id="menuFechado" href="#" class="list-group-item list-group-item-action" onclick="avisoNaoPodeAcessar()">Lista de subs.<i class="fas fa-lock" id="cadeadoFechado"></i></a>
-            <a href="#" class="list-group-item list-group-item-action">Impressão de dieta<i class="fas fa-check" style="font-size: 18px; color: #3b884d"></i></a>
+            <a href="#" class="list-group-item list-group-item-action">Impressão de dieta<i class="fas fa-check" style="font-size: 17px; color: #3b884d"></i></a>
         </div>
 
         <h4 id="menuNutricionista">Impressão da dieta <img src="img/icons8-impress%C3%A3o-48.png" alt=""></h4>
         <h4 id="menuNutricionista2">Dieta do paciente&nbsp; <img id="sacolaDeCompras" src="img/icons8-ma%C3%A7%C3%A3-48.png" alt=""></h4>
+        <h5 id="h5Nutricionista">
+            <div><b>Nutricionista:</b><?php echo "<i id='nutricionista'>"  .$_SESSION["login"] . "</i>" ; ?> <a style="text-decoration: none;" href="#" onclick="deslogar();">&nbsp;</a>
+            </div>
+        </h5>
+
 
         <div id="secaoImpressao">
             <div>
-                <span id="TMB-Kcal" class="badge badge-pill badge-success" style="margin-right: 130px;">Nome:</span>
-                <input class="col-5" type="text" style="border-radius: 4px;" disabled="disabled" value=" <?php
+                <span id="TMB-Kcal" class="badge badge-pill badge-success" style="margin-right: 108px;">Paciente:</span>
+                <input class="col-5" type="text" style="border-style: none;" disabled="disabled" value=" <?php
                 include_once 'conexao.php';               
                
                $sql = "select nome from cliente where ID_CLIENTE=".$_GET["id_cliente"];
@@ -96,7 +105,7 @@
             <br>
             <div>
                 <span id="TMB-Kcal" class="badge badge-pill badge-success" style="margin-right: 28px;">Data da consulta:</span>
-                <input class="col-5" type="text" style="border-radius: 4px;" disabled="disabled" value=" <?php date_default_timezone_set('America/Sao_Paulo');           
+                <input class="col-5" type="text" style="border-style: none;" disabled="disabled" value=" <?php date_default_timezone_set('America/Sao_Paulo');           
               echo $data = date('d/m/Y');               
 
             ?> ">
@@ -104,7 +113,7 @@
             <br>
             <div>
                 <span id="TMB-Kcal" class="badge badge-pill badge-success" style="margin-right: 87px;">Altura (m):</span>
-                <input class="col-5" type="text" style="border-radius: 4px;" disabled="disabled" value=" <?php
+                <input class="col-5" type="text" style="border-style: none;" disabled="disabled" value=" <?php
                 
                 include_once 'conexao.php';
                                 
@@ -120,7 +129,7 @@
             <br>
             <div>
                 <span id="TMB-Kcal" class="badge badge-pill badge-success" style="margin-right: 40px;">Peso Atual (kg):</span>
-                <input class="col-5" type="text" style="border-radius: 4px;" disabled="disabled" value=" <?php
+                <input class="col-5" type="text" style="border-style: none;" disabled="disabled" value=" <?php
                 
                 include_once 'conexao.php';
                                 
@@ -136,7 +145,7 @@
             <br>
             <div>
                 <span id="TMB-Kcal" class="badge badge-pill badge-success" style="margin-right: 143px;">IMC:</span>
-                <input class="col-5" type="text" style="border-radius: 4px;" disabled="disabled" value=" <?php
+                <input class="col-5" type="text" style="border-style: none;" disabled="disabled" value=" <?php
                 
                 include_once 'conexao.php';
                                 
@@ -186,6 +195,13 @@
             </div>
         </div>
 
+        <div id="graficoDinamico1">
+
+            <!--Div that will hold the pie chart-->
+            <div id="chart_div1">
+                <!-- gráfico do google -->
+            </div>
+        </div>
 
         <div id="limpandoTelaParaDieta">
             <p></p>
@@ -844,6 +860,67 @@
             </div>
         </div>
 
+        <!-- input para pegar percentual gordura input -->
+        <input id="percentualGorduraInput" type="hidden" value="<?php 
+                   include_once 'conexao.php';
+                   
+                   $sql = "select DC_TRICIPITAL, DC_SUBESCAPULAR_AXILAR, DC_SUPRAILIACA, DC_ABDOMINAL, DC_QUADRICEPS from a_antropometrica";
+                   
+                   $result = mysqli_query($con, $sql);
+                   
+                   $row = mysqli_fetch_array($result);
+                   
+                   //declarando variáveis
+                   $tricipital = $row[0];
+                   $subescapular_axilar = $row [1];
+                   $suprailiaca = $row[2];
+                   $abdominal = $row[3];
+                   $quadriceps = $row[4];
+                   
+                   //calculando % de gordura e livre de gordura
+                   
+                   $resultado1 = ($tricipital + $subescapular_axilar + $suprailiaca + $abdominal) * 0.153 + 5.783;
+                   
+                   $resultado2 = ($tricipital + $subescapular_axilar + $suprailiaca + $abdominal + $quadriceps) * 0.8 * 0.153 + 5.783;
+                   
+                   if ($quadriceps != 0) {
+                        echo number_format($resultado2,2) ." % de gordura";
+                    }
+                   else {
+                        echo number_format($resultado1,2) ." % de gordura";
+                   }           
+        ?>">
+
+        <!-- input para pegar percentual livre gordura input -->
+        <input id="percentualLivreGorduraInput" type="hidden" value="<?php 
+                   include_once 'conexao.php';
+                   
+                   $sql = "select DC_TRICIPITAL, DC_SUBESCAPULAR_AXILAR, DC_SUPRAILIACA, DC_ABDOMINAL, DC_QUADRICEPS from a_antropometrica";
+                   
+                   $result = mysqli_query($con, $sql);
+                   
+                   $row = mysqli_fetch_array($result);
+                   
+                   //declarando variáveis
+                   $tricipital = $row[0];
+                   $subescapular_axilar = $row [1];
+                   $suprailiaca = $row[2];
+                   $abdominal = $row[3];
+                   $quadriceps = $row[4];
+                   
+                   //calculando % de gordura e livre de gordura
+                   
+                   $resultado1 = ($tricipital + $subescapular_axilar + $suprailiaca + $abdominal) * 0.153 + 5.783;
+                   
+                   $resultado2 = ($tricipital + $subescapular_axilar + $suprailiaca + $abdominal + $quadriceps) * 0.8 * 0.153 + 5.783;
+                   
+                   if ($quadriceps != 0) {
+                        echo number_format(100 - $resultado2,2) ." % de gordura";
+                    }
+                   else {
+                        echo number_format(100 - $resultado1,2) ." % de gordura";
+                   }           
+        ?>">
 
         <footer class="container" id="rodape">
             <?php include_once 'rodape.php'; ?>

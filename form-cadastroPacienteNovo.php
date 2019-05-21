@@ -18,7 +18,7 @@
 
             <div class="modal-body">
 
-                <form action="cadastroCliente.php" method="post">
+                <form action="cadastroNovoPaciente.php" method="post">
 
 
                     <div class="form-row">
