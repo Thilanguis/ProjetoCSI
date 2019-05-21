@@ -532,7 +532,16 @@ h3 {
 #vet {
     float: right;
     margin-bottom: 15px;
-    padding-right: 110px;
+    padding-right: 170px;
+}
+
+#resultadoVet{
+    float: right;
+    padding-left: 18px;
+    padding-top: 3px;
+    text-shadow: 0 0 0.2em #87F, 0 0 0.2em #87F, 0 0 0.8em #87F;
+    font-weight: bold;
+    font-size: 17px;
 }
 
 #resultadoConta {

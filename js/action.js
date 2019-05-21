@@ -85,7 +85,7 @@ function calculoVet() {
     
     var tmb = (document.getElementById('tmbPaciente').value).replace(",","");
     
-    document.getElementById('resultadoVet').innerHTML = (tmb * naf).toFixed(2);
+    document.getElementById('resultadoVet').innerHTML = (tmb * naf).toFixed(2) + " Kcal";
 }
 
 function calcularNafTotal() {

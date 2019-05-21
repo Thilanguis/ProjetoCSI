@@ -40,7 +40,7 @@
                 <span style="top: 50%;"><img style="width:70px; height: 70px;" id="mamao" class="oi animated fadeInRight" src="img/icons8-mam%C3%A3o-48.png" alt=""></span>
 
             </h1>
-            <span id="orvalho1"><img class="oi animated bounceInDown" src="img/folhas-2.png" id="orvalho" alt=""></span>
+            <span id="orvalho1"><img class="oi animated zoomInLeft" src="img/folhas-2.png" id="orvalho" alt=""></span>
             <span id="brasao"><img class="oi animated zoomInLeft" src="img/simbolo%20de%20nutri%C3%A7%C3%A3o-800x800.png" id="brasao1" alt=""></span>
             <div>
                 <h2 class="oi animated fadeIn"><span>S</span>
