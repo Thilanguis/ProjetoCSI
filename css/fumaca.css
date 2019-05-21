@@ -225,7 +225,7 @@ h2 {
     color: #fff;
     text-shadow: 0 0 10px #1eff4e, 0 0 20px #1eff4e, 0 0 80px #1eff4e, 0 0 120px #1eff4e;
     animation-delay: 14s;
-    animation-duration: 10s;
+    animation-duration: 2s;
 }
 
 h2 span {
@@ -246,4 +246,28 @@ h2 span:nth-child(3) {
 
 h2 span:nth-child(4) {
     animation-delay: .4s;
+}
+
+h2 span:nth-child(5) {
+    animation-delay: .45s;
+}
+
+h2 span:nth-child(6) {
+    animation-delay: .5s;
+}
+
+h2 span:nth-child(7) {
+    animation-delay: .55s;
+}
+
+h2 span:nth-child(8) {
+    animation-delay: .6s;
+}
+
+h2 span:nth-child(9) {
+    animation-delay: .65s;
+}
+
+h2 span:nth-child(10) {
+    animation-delay: .7s;
 }
