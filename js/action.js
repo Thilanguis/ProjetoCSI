@@ -19,7 +19,7 @@ function excluirAlimento(ID) {
 }
 
 function iniciarDieta(id) {
-    if (confirm('Deseja iniciar a dieta do paciente com livro vermelho escolhido?')) {
+    if (confirm('Deseja iniciar a dieta do paciente com livro vermelho selecionado?')) {
         location.href = 'form-antropometria.php?id_cliente=' + id;
     }
 }
@@ -81,17 +81,17 @@ function calculoVet() {
     var n11 = parseFloat(document.getElementById('NAF_avontade').value, 10);
     var n12 = parseFloat(document.getElementById('NAF_ativFisica').value, 10);
 
-     var naf = (((n1 * n7) + (n2 * n8) + (n3 * n9) + (n4 * n10) + (n5 * n11) + (n6 * n12)) / 24).toFixed(2);
-    
-    var tmb = (document.getElementById('tmbPaciente').value).replace(",","");
-    
+    var naf = (((n1 * n7) + (n2 * n8) + (n3 * n9) + (n4 * n10) + (n5 * n11) + (n6 * n12)) / 24).toFixed(2);
+
+    var tmb = (document.getElementById('tmbPaciente').value).replace(",", "");
+
     document.getElementById('resultadoVet').innerHTML = (tmb * naf).toFixed(2) + " Kcal";
 }
 
 function calcularNafTotal() {
     calcularHorasNAF();
     calcularNAF();
-    calculoVet(); 
+    calculoVet();
 }
 
 function calculoIMC() {

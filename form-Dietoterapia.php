@@ -391,10 +391,10 @@
                         echo "<td>".$row["NUM_MC"]."</td>";
                         echo "<td>".$row["MEDIDA_CASEIRA"]."</td>";
                         echo "<td>".$row["GRAMA"]."</td>";
-                        echo "<td>".number_format($row["CHO"],2)."</td>";
-                        echo "<td>".number_format($row["PTN"],2)."</td>";
-                        echo "<td>".number_format($row["LIP"],2)."</td>";
-                        echo "<td>".number_format($row["KCAL"],2)."</td>";
+                        echo "<td>".number_format($row["CHO"],2)." g</td>";
+                        echo "<td>".number_format($row["PTN"],2)." g</td>";
+                        echo "<td>".number_format($row["LIP"],2)." g</td>";
+                        echo "<td>".number_format((($row["CHO"]*4)+($row["PTN"]*4)+($row["LIP"]*9)),2)." Kcal</td>";
                         echo "<td><a href='#' onclick='excluirAlimento(".$row["ID"].")'><i class='far fa-trash-alt' style='padding-left: 22px' id='delet'></i></td>";
                          ?>
 
@@ -429,7 +429,7 @@
             
                             $row = mysqli_fetch_array($result);
             
-                            echo $row["CHO"]."  g";
+                            echo $row["CHO"]."  Kcal";
             
                                      ?>">
                 </div>
@@ -442,7 +442,7 @@
             
                             $row = mysqli_fetch_array($result);
             
-                            echo $row["PTN"]."  g";
+                            echo $row["PTN"]."  Kcal";
             
                                      ?>">
                 </div>
@@ -455,7 +455,7 @@
             
                             $row = mysqli_fetch_array($result);
             
-                            echo $row["LIP"]."  g";
+                            echo $row["LIP"]."  Kcal";
             
                                      ?>">
                 </div>
@@ -540,10 +540,10 @@
                         echo "<td>".$row["NUM_MC"]."</td>";
                         echo "<td>".$row["MEDIDA_CASEIRA"]."</td>";
                         echo "<td>".$row["GRAMA"]."</td>";
-                       echo "<td>".number_format($row["CHO"],2)."</td>";
-                        echo "<td>".number_format($row["PTN"],2)."</td>";
-                        echo "<td>".number_format($row["LIP"],2)."</td>";
-                        echo "<td>".number_format($row["KCAL"],2)."</td>";
+                        echo "<td>".number_format($row["CHO"],2)." g</td>";
+                        echo "<td>".number_format($row["PTN"],2)." g</td>";
+                        echo "<td>".number_format($row["LIP"],2)." g</td>";
+                        echo "<td>".number_format((($row["CHO"]*4)+($row["PTN"]*4)+($row["LIP"]*9)),2)." Kcal</td>";
                         echo "<td><a href='#' onclick='excluirAlimento(".$row["ID"].")'><i class='far fa-trash-alt' style='padding-left: 22px' id='delet'></i></td>";
                         echo "</tr>";
                          }
@@ -569,7 +569,7 @@
             
                             $row = mysqli_fetch_array($result);
             
-                            echo $row["CHO"]."  g";
+                            echo $row["CHO"]."  Kcal";
             
                                      ?>">
                 </div>
@@ -582,7 +582,7 @@
             
                             $row = mysqli_fetch_array($result);
             
-                            echo $row["PTN"]."  g";
+                            echo $row["PTN"]."  Kcal";
             
                                      ?>">
                 </div>
@@ -595,7 +595,7 @@
             
                             $row = mysqli_fetch_array($result);
             
-                            echo $row["LIP"]."  g";
+                            echo $row["LIP"]."  Kcal";
             
                                      ?>">
                 </div>
@@ -679,10 +679,10 @@
                         echo "<td>".$row["NUM_MC"]."</td>";
                         echo "<td>".$row["MEDIDA_CASEIRA"]."</td>";
                         echo "<td>".$row["GRAMA"]."</td>";
-                        echo "<td>".number_format($row["CHO"],2)."</td>";
-                        echo "<td>".number_format($row["PTN"],2)."</td>";
-                        echo "<td>".number_format($row["LIP"],2)."</td>";
-                        echo "<td>".number_format($row["KCAL"],2)."</td>";
+                        echo "<td>".number_format($row["CHO"],2)." g</td>";
+                        echo "<td>".number_format($row["PTN"],2)." g</td>";
+                        echo "<td>".number_format($row["LIP"],2)." g</td>";
+                        echo "<td>".number_format((($row["CHO"]*4)+($row["PTN"]*4)+($row["LIP"]*9)),2)." Kcal</td>";
                         echo "<td><a href='#' onclick='excluirAlimento(".$row["ID"].")'><i class='far fa-trash-alt' style='padding-left: 22px' id='delet'></i></td>";
                         echo "</tr>";
                          }
@@ -708,7 +708,7 @@
             
                             $row = mysqli_fetch_array($result);
             
-                            echo $row["CHO"]."  g";
+                            echo $row["CHO"]."  Kcal";
             
                                      ?>">
                 </div>
@@ -721,7 +721,7 @@
             
                             $row = mysqli_fetch_array($result);
             
-                            echo $row["PTN"]."  g";
+                            echo $row["PTN"]."  Kcal";
             
                                      ?>">
                 </div>
@@ -734,7 +734,7 @@
             
                             $row = mysqli_fetch_array($result);
             
-                            echo $row["LIP"]."  g";
+                            echo $row["LIP"]."  Kcal";
             
                                      ?>">
                 </div>
@@ -818,10 +818,10 @@
                         echo "<td>".$row["NUM_MC"]."</td>";
                         echo "<td>".$row["MEDIDA_CASEIRA"]."</td>";
                         echo "<td>".$row["GRAMA"]."</td>";
-                       echo "<td>".number_format($row["CHO"],2)."</td>";
-                        echo "<td>".number_format($row["PTN"],2)."</td>";
-                        echo "<td>".number_format($row["LIP"],2)."</td>";
-                        echo "<td>".number_format($row["KCAL"],2)."</td>";
+                        echo "<td>".number_format($row["CHO"],2)." g</td>";
+                        echo "<td>".number_format($row["PTN"],2)." g</td>";
+                        echo "<td>".number_format($row["LIP"],2)." g</td>";
+                        echo "<td>".number_format((($row["CHO"]*4)+($row["PTN"]*4)+($row["LIP"]*9)),2)." Kcal</td>";
                         echo "<td><a href='#' onclick='excluirAlimento(".$row["ID"].")'><i class='far fa-trash-alt' style='padding-left: 22px' id='delet'></i></td>";
                         echo "</tr>";
                          }
@@ -847,7 +847,7 @@
             
                             $row = mysqli_fetch_array($result);
             
-                            echo $row["CHO"]."  g";
+                            echo $row["CHO"]."  Kcal";
             
                                      ?>">
                 </div>
@@ -860,7 +860,7 @@
             
                             $row = mysqli_fetch_array($result);
             
-                            echo $row["PTN"]."  g";
+                            echo $row["PTN"]."  Kcal";
             
                                      ?>">
                 </div>
@@ -873,7 +873,7 @@
             
                             $row = mysqli_fetch_array($result);
             
-                            echo $row["LIP"]."  g";
+                            echo $row["LIP"]."  Kcal";
             
                                      ?>">
                 </div>
@@ -882,145 +882,6 @@
                     <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled value=" <?php 
                             
             $sql = "select sum(cast(CHO as decimal(15,2)))*4 CHO, sum(cast(PTN as decimal(15,2)))*4 PTN, sum(cast(LIP as decimal(15,2)))*9 LIP from alimentos where NOME_REFEICAO = 'Lanche'";
-       
-                            $result = mysqli_query($con, $sql);
-            
-                            $row = mysqli_fetch_array($result);
-            
-                            echo $row["CHO"]+$row["PTN"]+$row["LIP"]."  Kcal";
-            
-                                     ?>">
-                </div>
-            </div>
-        </div>
-        <hr>
-        <?php } ?>
-
-
-        <!-- Tabela 1ºLanche -->
-
-        <?php
-        
-        include_once 'conexao.php';
-        
-        $sql = "select * from alimentos where NOME_REFEICAO = '1ºLanche'";
-        
-        $result = mysqli_query($con, $sql);
-        
-        $totalRegistros = mysqli_num_rows($result);
-        
-        $row = mysqli_fetch_array($result);
-     
-        if($totalRegistros > 0)  { ?>
-
-        <div style="margin-top: 1%;" class="row">
-            <div style="margin-left: 2%; margin-top: 3px; display; inline-block;" class="col-2">
-                <div>
-                    <img id="brasaoNutricao2" src="img/nutricao-falculdade-universidade-plotter-recorte-logo-1F9AF53657-seeklogo.com.png">
-                </div>
-                <label>
-                    <h6>Refeição</h6>
-                </label>
-                <input type="text" class="form-control col-7" disabled value=" <?php
-      echo $row["NOME_REFEICAO"]; ?> ">
-                <label>
-                    <h6>horário</h6>
-                </label>
-                <input class="form-control col-7" type="text" disabled value=" <?php 
-      echo $row["HORA"]; ?> ">
-            </div>
-
-            <div class="col-9 table-overflow2">
-                <table class="table table-striped">
-                    <thead class="thead-dark">
-                        <tr>
-                            <th scope="col">Alimento</th>
-                            <th scope="col">Nº</th>
-                            <th scope="col">M.C.</th>
-                            <th scope="col">Grama</th>
-                            <th scope="col">CHO</th>
-                            <th scope="col">PTN</th>
-                            <th scope="col">LIP</th>
-                            <th scope="col">Kcal</th>
-                            <th scope="col">Excluir</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-
-                        <?php 
-            
-                            $result = mysqli_query($con, $sql);
-            
-                            while($row = mysqli_fetch_array($result)){
-                        echo "<tr>";   
-                        echo "<th scope='row'>".$row["NOME_ALIMENTO"]."</th>";
-                        echo "<td>".$row["NUM_MC"]."</td>";
-                        echo "<td>".$row["MEDIDA_CASEIRA"]."</td>";
-                        echo "<td>".$row["GRAMA"]."</td>";
-                        echo "<td>".number_format($row["CHO"],2)."</td>";
-                        echo "<td>".number_format($row["PTN"],2)."</td>";
-                        echo "<td>".number_format($row["LIP"],2)."</td>";
-                        echo "<td>".number_format($row["KCAL"],2)."</td>";
-                        echo "<td><a href='#' onclick='excluirAlimento(".$row["ID"].")'><i class='far fa-trash-alt' style='padding-left: 22px' id='delet'></i></td>";
-                        echo "</tr>";
-                         }
-                           ?>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-        <div id="form-VET1">
-            <div class="form-row">
-                <div style="margin-top: 20px;" class="col-2">
-                    <label for="inputPassword" class="col-sm-10">
-                        <h6>Total :</h6>
-                    </label>
-                </div>
-                <div class="form-group col-sm-2"><i style="margin-left: 35%;">cho</i>
-                    <input style="text-align: center;" type="text" class="form-control" id="bracoEsq" placeholder="" name="" disabled value=" <?php 
-                            
-                            $sql = "select sum(cast(CHO as decimal(15,2)))*4 CHO from alimentos where NOME_REFEICAO = '1ºLanche'";
-        
-                            $result = mysqli_query($con, $sql);
-            
-                            $row = mysqli_fetch_array($result);
-            
-                            echo $row["CHO"]."  g";
-            
-                                     ?>">
-                </div>
-                <div class=" form-group col-sm-2"><i style="margin-left: 34%;">ptn</i>
-                    <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled value=" <?php 
-                            
-                            $sql = "select sum(cast(PTN as decimal(15,2)))*4 PTN from alimentos where NOME_REFEICAO = '1ºLanche'";
-        
-                            $result = mysqli_query($con, $sql);
-            
-                            $row = mysqli_fetch_array($result);
-            
-                            echo $row["PTN"]."  g";
-            
-                                     ?>">
-                </div>
-                <div class="form-group col-sm-2"><i style="margin-left: 36%;">lip</i>
-                    <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled value=" <?php 
-                            
-                            $sql = "select sum(cast(LIP as decimal(15,2)))*9 LIP from alimentos where NOME_REFEICAO = '1ºLanche'";
-        
-                            $result = mysqli_query($con, $sql);
-            
-                            $row = mysqli_fetch_array($result);
-            
-                            echo $row["LIP"]."  g";
-            
-                                     ?>">
-                </div>
-
-                <div class="form-group col-sm-2"><i style="margin-left: 35%;"><i>VET</i></i>
-                    <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled value=" <?php 
-                            
-            $sql = "select sum(cast(CHO as decimal(15,2)))*4 CHO, sum(cast(PTN as decimal(15,2)))*4 PTN, sum(cast(LIP as decimal(15,2)))*9 LIP from alimentos where NOME_REFEICAO = '1ºLanche'";
        
                             $result = mysqli_query($con, $sql);
             
@@ -1096,10 +957,10 @@
                         echo "<td>".$row["NUM_MC"]."</td>";
                         echo "<td>".$row["MEDIDA_CASEIRA"]."</td>";
                         echo "<td>".$row["GRAMA"]."</td>";
-                       echo "<td>".number_format($row["CHO"],2)."</td>";
-                        echo "<td>".number_format($row["PTN"],2)."</td>";
-                        echo "<td>".number_format($row["LIP"],2)."</td>";
-                        echo "<td>".number_format($row["KCAL"],2)."</td>";
+                        echo "<td>".number_format($row["CHO"],2)." g</td>";
+                        echo "<td>".number_format($row["PTN"],2)." g</td>";
+                        echo "<td>".number_format($row["LIP"],2)." g</td>";
+                        echo "<td>".number_format((($row["CHO"]*4)+($row["PTN"]*4)+($row["LIP"]*9)),2)." Kcal</td>";
                         echo "<td><a href='#' onclick='excluirAlimento(".$row["ID"].")'><i class='far fa-trash-alt' style='padding-left: 22px' id='delet'></i></td>";
                         echo "</tr>";
                          }
@@ -1125,7 +986,7 @@
             
                             $row = mysqli_fetch_array($result);
             
-                            echo $row["CHO"]."  g";
+                            echo $row["CHO"]."  Kcal";
             
                                      ?>">
                 </div>
@@ -1138,7 +999,7 @@
             
                             $row = mysqli_fetch_array($result);
             
-                            echo $row["PTN"]."  g";
+                            echo $row["PTN"]."  Kcal";
             
                                      ?>">
                 </div>
@@ -1151,7 +1012,7 @@
             
                             $row = mysqli_fetch_array($result);
             
-                            echo $row["LIP"]."  g";
+                            echo $row["LIP"]."  Kcal";
             
                                      ?>">
                 </div>
@@ -1160,6 +1021,145 @@
                     <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled value=" <?php 
                             
             $sql = "select sum(cast(CHO as decimal(15,2)))*4 CHO, sum(cast(PTN as decimal(15,2)))*4 PTN, sum(cast(LIP as decimal(15,2)))*9 LIP from alimentos where NOME_REFEICAO = '2ºLanche'";
+       
+                            $result = mysqli_query($con, $sql);
+            
+                            $row = mysqli_fetch_array($result);
+            
+                            echo $row["CHO"]+$row["PTN"]+$row["LIP"]."  Kcal";
+            
+                                     ?>">
+                </div>
+            </div>
+        </div>
+        <hr>
+        <?php } ?>
+
+
+        <!-- Tabela 3ºLanche -->
+
+        <?php
+        
+        include_once 'conexao.php';
+        
+        $sql = "select * from alimentos where NOME_REFEICAO = '3ºLanche'";
+        
+        $result = mysqli_query($con, $sql);
+        
+        $totalRegistros = mysqli_num_rows($result);
+        
+        $row = mysqli_fetch_array($result);
+     
+        if($totalRegistros > 0)  { ?>
+
+        <div style="margin-top: 1%;" class="row">
+            <div style="margin-left: 2%; margin-top: 3px; display; inline-block;" class="col-2">
+                <div>
+                    <img id="brasaoNutricao2" src="img/nutricao-falculdade-universidade-plotter-recorte-logo-1F9AF53657-seeklogo.com.png">
+                </div>
+                <label>
+                    <h6>Refeição</h6>
+                </label>
+                <input type="text" class="form-control col-7" disabled value=" <?php
+      echo $row["NOME_REFEICAO"]; ?> ">
+                <label>
+                    <h6>horário</h6>
+                </label>
+                <input class="form-control col-7" type="text" disabled value=" <?php 
+      echo $row["HORA"]; ?> ">
+            </div>
+
+            <div class="col-9 table-overflow2">
+                <table class="table table-striped">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Alimento</th>
+                            <th scope="col">Nº</th>
+                            <th scope="col">M.C.</th>
+                            <th scope="col">Grama</th>
+                            <th scope="col">CHO</th>
+                            <th scope="col">PTN</th>
+                            <th scope="col">LIP</th>
+                            <th scope="col">Kcal</th>
+                            <th scope="col">Excluir</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <?php 
+            
+                            $result = mysqli_query($con, $sql);
+            
+                            while($row = mysqli_fetch_array($result)){
+                        echo "<tr>";   
+                        echo "<th scope='row'>".$row["NOME_ALIMENTO"]."</th>";
+                        echo "<td>".$row["NUM_MC"]."</td>";
+                        echo "<td>".$row["MEDIDA_CASEIRA"]."</td>";
+                        echo "<td>".$row["GRAMA"]."</td>";
+                        echo "<td>".number_format($row["CHO"],2)." g</td>";
+                        echo "<td>".number_format($row["PTN"],2)." g</td>";
+                        echo "<td>".number_format($row["LIP"],2)." g</td>";
+                        echo "<td>".number_format((($row["CHO"]*4)+($row["PTN"]*4)+($row["LIP"]*9)),2)." Kcal</td>";
+                        echo "<td><a href='#' onclick='excluirAlimento(".$row["ID"].")'><i class='far fa-trash-alt' style='padding-left: 22px' id='delet'></i></td>";
+                        echo "</tr>";
+                         }
+                           ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="form-VET1">
+            <div class="form-row">
+                <div style="margin-top: 20px;" class="col-2">
+                    <label for="inputPassword" class="col-sm-10">
+                        <h6>Total :</h6>
+                    </label>
+                </div>
+                <div class="form-group col-sm-2"><i style="margin-left: 35%;">cho</i>
+                    <input style="text-align: center;" type="text" class="form-control" id="bracoEsq" placeholder="" name="" disabled value=" <?php 
+                            
+                            $sql = "select sum(cast(CHO as decimal(15,2)))*4 CHO from alimentos where NOME_REFEICAO = '3ºLanche'";
+        
+                            $result = mysqli_query($con, $sql);
+            
+                            $row = mysqli_fetch_array($result);
+            
+                            echo $row["CHO"]."  Kcal";
+            
+                                     ?>">
+                </div>
+                <div class=" form-group col-sm-2"><i style="margin-left: 34%;">ptn</i>
+                    <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled value=" <?php 
+                            
+                            $sql = "select sum(cast(PTN as decimal(15,2)))*4 PTN from alimentos where NOME_REFEICAO = '3ºLanche'";
+        
+                            $result = mysqli_query($con, $sql);
+            
+                            $row = mysqli_fetch_array($result);
+            
+                            echo $row["PTN"]."  Kcal";
+            
+                                     ?>">
+                </div>
+                <div class="form-group col-sm-2"><i style="margin-left: 36%;">lip</i>
+                    <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled value=" <?php 
+                            
+                            $sql = "select sum(cast(LIP as decimal(15,2)))*9 LIP from alimentos where NOME_REFEICAO = '3ºLanche'";
+        
+                            $result = mysqli_query($con, $sql);
+            
+                            $row = mysqli_fetch_array($result);
+            
+                            echo $row["LIP"]."  Kcal";
+            
+                                     ?>">
+                </div>
+
+                <div class="form-group col-sm-2"><i style="margin-left: 35%;"><i>VET</i></i>
+                    <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled value=" <?php 
+                            
+            $sql = "select sum(cast(CHO as decimal(15,2)))*4 CHO, sum(cast(PTN as decimal(15,2)))*4 PTN, sum(cast(LIP as decimal(15,2)))*9 LIP from alimentos where NOME_REFEICAO = '3ºLanche'";
        
                             $result = mysqli_query($con, $sql);
             
@@ -1235,10 +1235,10 @@
                         echo "<td>".$row["NUM_MC"]."</td>";
                         echo "<td>".$row["MEDIDA_CASEIRA"]."</td>";
                         echo "<td>".$row["GRAMA"]."</td>";
-                        echo "<td>".number_format($row["CHO"],2)."</td>";
-                        echo "<td>".number_format($row["PTN"],2)."</td>";
-                        echo "<td>".number_format($row["LIP"],2)."</td>";
-                        echo "<td>".number_format($row["KCAL"],2)."</td>";
+                       echo "<td>".number_format($row["CHO"],2)." g</td>";
+                        echo "<td>".number_format($row["PTN"],2)." g</td>";
+                        echo "<td>".number_format($row["LIP"],2)." g</td>";
+                        echo "<td>".number_format((($row["CHO"]*4)+($row["PTN"]*4)+($row["LIP"]*9)),2)." Kcal</td>";
                         echo "<td><a href='#' onclick='excluirAlimento(".$row["ID"].")'><i class='far fa-trash-alt' style='padding-left: 22px' id='delet'></i></td>";
                         echo "</tr>";
                          }
@@ -1264,7 +1264,7 @@
             
                             $row = mysqli_fetch_array($result);
             
-                            echo $row["CHO"]."  g";
+                            echo $row["CHO"]."  Kcal";
             
                                      ?>">
                 </div>
@@ -1277,7 +1277,7 @@
             
                             $row = mysqli_fetch_array($result);
             
-                            echo $row["PTN"]."  g";
+                            echo $row["PTN"]."  Kcal";
             
                                      ?>">
                 </div>
@@ -1290,7 +1290,7 @@
             
                             $row = mysqli_fetch_array($result);
             
-                            echo $row["LIP"]."  g";
+                            echo $row["LIP"]."  Kcal";
             
                                      ?>">
                 </div>
@@ -1373,10 +1373,10 @@
                         echo "<td>".$row["NUM_MC"]."</td>";
                         echo "<td>".$row["MEDIDA_CASEIRA"]."</td>";
                         echo "<td>".$row["GRAMA"]."</td>";
-                        echo "<td>".number_format($row["CHO"],2)."</td>";
-                        echo "<td>".number_format($row["PTN"],2)."</td>";
-                        echo "<td>".number_format($row["LIP"],2)."</td>";
-                        echo "<td>".number_format($row["KCAL"],2)."</td>";
+                        echo "<td>".number_format($row["CHO"],2)." g</td>";
+                        echo "<td>".number_format($row["PTN"],2)." g</td>";
+                        echo "<td>".number_format($row["LIP"],2)." g</td>";
+                        echo "<td>".number_format((($row["CHO"]*4)+($row["PTN"]*4)+($row["LIP"]*9)),2)." Kcal</td>";
                         echo "<td><a href='#' onclick='excluirAlimento(".$row["ID"].")'><i class='far fa-trash-alt' style='padding-left: 22px' id='delet'></i></td>";
                         echo "</tr>";
                          }
@@ -1402,7 +1402,7 @@
             
                             $row = mysqli_fetch_array($result);
             
-                            echo $row["CHO"]."  g";
+                            echo $row["CHO"]."  Kcal";
             
                                      ?>">
                 </div>
@@ -1415,7 +1415,7 @@
             
                             $row = mysqli_fetch_array($result);
             
-                            echo $row["PTN"]."  g";
+                            echo $row["PTN"]."  Kcal";
             
                                      ?>">
                 </div>
@@ -1428,7 +1428,7 @@
             
                             $row = mysqli_fetch_array($result);
             
-                            echo $row["LIP"]."  g";
+                            echo $row["LIP"]."  Kcal";
             
                                      ?>">
                 </div>
