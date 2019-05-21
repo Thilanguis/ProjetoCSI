@@ -118,7 +118,7 @@
             </div>
             <br>
             <div>
-                <span id="TMB-Kcal" class="badge badge-pill badge-success" style="margin-right: 28px;">Peso Atual (kg):</span>
+                <span id="TMB-Kcal" class="badge badge-pill badge-success" style="margin-right: 70px;">Peso Atual:</span>
                 <input class="col-4" type="text" style="border-radius: 4px;" disabled="disabled" value="<?php  
                                                                                                         
               include_once 'conexao.php';
@@ -129,7 +129,7 @@
                 
             $row = mysqli_fetch_array($result);
               
-             echo $row[0];                                                                                           
+             echo $row[0]." Kg";                                                                                           
              ?>">
             </div>
             <br>
@@ -198,7 +198,7 @@
             </div>
             <br>
             <div>
-                <span id="TMB-Kcal" class="badge badge-pill badge-success" style="margin-right: 38px;">VET Calculado:</span>
+                <span id="TMB-Kcal" class="badge badge-pill badge-success" style="margin-right: 36px;">VET Calculado:</span>
                 <input class="col-4" type="text" style="border-radius: 4px;" disabled value="<?php $resultadoTMB;
                     
                 $sqlVET = "select * from vet_fao";
@@ -230,7 +230,7 @@
             </div>
             <br>
             <div>
-                <span id="TMB-Kcal" class="badge badge-pill badge-success">VET Dietoterápico:</span>
+                <span id="TMB-Kcal" class="badge badge-pill badge-success" style="margin-right: 10px;">VET Dietoterapia:</span>
                 <input class="col-4" type="text" style="border-radius: 4px;" disabled="disabled" value=" <?php 
                             
                             include_once 'conexao.php';
