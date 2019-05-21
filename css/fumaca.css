@@ -1,6 +1,6 @@
 body {
-    margin: 0 auto;
-    padding: 0 auto;
+    margin: 0;
+    padding: 0;
     font-family: 'Fredericka the Great', cursive;
 }
 
@@ -36,7 +36,6 @@ h1 {
     text-align: center;
     color: #fff;
     font-size: 5em;
-    /* font-family: sans-serif; */
     letter-spacing: 0.2em;
 
 }
@@ -86,7 +85,7 @@ h1 span:nth-child(6) {
 }
 
 h1 span:nth-child(7) {
-    animation-delay: 3.75s;
+    animation-delay: 3.85s;
 }
 
 h1 span:nth-child(8) {
@@ -225,7 +224,7 @@ h2 {
     font-family: 'Lato', sans-serif;
     color: #fff;
     text-shadow: 0 0 10px #1eff4e, 0 0 20px #1eff4e, 0 0 80px #1eff4e, 0 0 120px #1eff4e;
-    animation-delay: 12s;
+    animation-delay: 14s;
     animation-duration: 10s;
 }
 

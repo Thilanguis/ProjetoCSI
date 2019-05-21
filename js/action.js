@@ -67,9 +67,31 @@ function calcularNAF() {
     document.getElementById('resultadoNAF').innerHTML = (((n1 * n7) + (n2 * n8) + (n3 * n9) + (n4 * n10) + (n5 * n11) + (n6 * n12)) / 24).toFixed(2);
 }
 
+function calculoVet() {
+    var n1 = parseFloat(document.getElementById('sono').value, 10);
+    var n2 = parseFloat(document.getElementById('trabalho').value, 10);
+    var n3 = parseFloat(document.getElementById('estudo').value, 10);
+    var n4 = parseFloat(document.getElementById('exerFisico').value, 10);
+    var n5 = parseFloat(document.getElementById('avontade').value, 10);
+    var n6 = parseFloat(document.getElementById('ativFisica').value, 10);
+    var n7 = parseFloat(document.getElementById('NAF_sono').value, 10);
+    var n8 = parseFloat(document.getElementById('NAF_trabalho').value, 10);
+    var n9 = parseFloat(document.getElementById('NAF_estudo').value, 10);
+    var n10 = parseFloat(document.getElementById('NAF_exerFisico').value, 10);
+    var n11 = parseFloat(document.getElementById('NAF_avontade').value, 10);
+    var n12 = parseFloat(document.getElementById('NAF_ativFisica').value, 10);
+
+     var naf = (((n1 * n7) + (n2 * n8) + (n3 * n9) + (n4 * n10) + (n5 * n11) + (n6 * n12)) / 24).toFixed(2);
+    
+    var tmb = (document.getElementById('tmbPaciente').value).replace(",","");
+    
+    document.getElementById('resultadoVet').innerHTML = (tmb * naf).toFixed(2);
+}
+
 function calcularNafTotal() {
     calcularHorasNAF();
     calcularNAF();
+    calculoVet(); 
 }
 
 function calculoIMC() {

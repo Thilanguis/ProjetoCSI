@@ -82,7 +82,7 @@
 
         <div id="tmb">
             <span id="TMB-Kcal" class="badge badge-pill badge-success">TMB/Kcal:</span>
-            <input type="text" style="border-radius: 4px;" disabled value=" <?php
+            <input id="tmbPaciente" type="text" onchange="calcularNafTotal()" style="border-radius: 4px;" disabled value=" <?php
             
             include_once 'conexao.php';
                 
@@ -143,34 +143,10 @@
                 
             ?> ">
             <div id="vet">
-                <span id="TMB-Kcal" class="badge badge-pill badge-success">VET/Kcal:</span> <input type="text" style="border-radius: 4px;" disabled value="<?php $resultadoTMB;
+                <span id="TMB-Kcal" class="badge badge-pill badge-success">VET/Kcal:</span> 
+                <p id="resultadoVet">
                     
-                $sqlVET = "select * from vet_fao";
-                    
-                $resultVET = mysqli_query($con, $sqlVET);
-                    
-                $rowVET = mysqli_fetch_array($resultVET);
-                
-                //declarando variáveis
-                $sono = $rowVET[1];
-                $aVontade = $rowVET[2];
-                $estudo = $rowVET[3];
-                $exercicioFisico = $rowVET[4];
-                $atividadeFisica = $rowVET[5];
-                $trabalho = $rowVET[6];
-                $sonoHora = $rowVET[7];
-                $aVontadeHora = $rowVET[11];
-                $estudoHora = $rowVET[9];
-                $exercicioFisicoHora = $rowVET[10];
-                $atividadeFisicaHora = $rowVET[12];
-                $trabalhoHora = $rowVET[8];
-                
-                
-                //calculando o VEt final    
-                    
-                echo number_format($resultadoTMB * ((($sono * $sonoHora) + ($aVontade * $aVontadeHora) + ($estudo * $estudoHora) + ($exercicioFisico * $exercicioFisicoHora) + ($atividadeFisica * $atividadeFisicaHora) + ($trabalho * $trabalhoHora)) / 24),2);
-                    
-                    ?>">
+                </p>
             </div>
         </div>
 
