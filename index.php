@@ -35,15 +35,27 @@
                                     <label for="exampleDropdownFormEmail1"><i class="fab fa-nutritionix " style="font-size: 30px; color:#3b884d; "></i> &nbsp; Login</label>
                                     <input type="text" class="form-control field" id="exampleDropdownFormEmail1" placeholder="digite seu CRN" name="login" onfocus="verificaInput()">
                                 </div>
+
+                                <!-- aviso falta login -->
+                                <div id="avisoFaltaLogin" class="alert-danger animated zoomIn container" role="alert" style="visibility:hidden; display: inline-block; text-align: center; font-size: 13px; margin: 0 auto; padding: 0 auto; margin-bottom: 8px;">
+                                    Campo login vazio!
+                                </div>
+
                                 <div class="form-group">
                                     <label for="exampleDropdownFormPassword1">Senha</label>
                                     <input type="password" class="form-control field" id="exampleDropdownFormPassword1" placeholder="******" onfocus="verificadorSenha()" name="senha">
-                                </div> 
-                                
-                                <div id="avisoCapslock" class="alert alert-warning animated zoomIn container" role="alert" style="visibility:hidden; display: inline-block; text-align: center; font-size: 13px; margin: 0 auto; padding: 0 auto; margin-bottom: 8px;">
-                                  Caps lock ligado ou Shift pressionado!
                                 </div>
-                                
+
+                                <!-- aviso falta senha -->
+                                <div id="avisoFaltaSenha" class="alert-danger animated zoomIn container" role="alert" style="visibility:hidden; display: inline-block; text-align: center; font-size: 13px; margin: 0 auto; padding: 0 auto; margin-bottom: 8px;">
+                                    Campo senha vazio!
+                                </div>
+
+                                <!-- aviso de capslock ligado -->
+                                <div id="avisoCapslock" class="alert-warning animated zoomIn container" role="alert" style="visibility:hidden; display: inline-block; text-align: center; font-size: 13px; margin: 0 auto; padding: 0 auto; margin-bottom: 8px;">
+                                    Caps lock ligado ou Shift pressionado!
+                                </div>
+
                                 <div class="form-check">
                                 </div>
                                 <button id="btnentrar" type="submit" class="btn btn-primary">Entrar</button>
@@ -61,7 +73,7 @@
             </div>
         </div>
         <nav class="navbar navbar-dark container" style="background-color:#3b884d;">
-           
+
             <button id="teste" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span> <i class="fas fa-carrot animated rubberBand" style="font-size: 30px; color: #c78713"></i> &nbsp; <i class="fas fa-apple-alt animated rubberBand" style="font-size: 30px; color: #d83838"></i> &nbsp; <i class="fas fa-cheese animated rubberBand" style="font-size: 30px; color: #ccc624"></i> </span>
             </button>

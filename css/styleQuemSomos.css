@@ -1,20 +1,20 @@
 #container-apresentacao {
-    
-    transform: translate(-50%, -50%) skewy(   );
+
+    transform: translate(-50%, -50%) skewy();
     margin-bottom: 30px;
     color: #4c89e3;
 }
 
 #container-valores {
-    
-    transform: translate(-50%, -50%) skewy(   );
+
+    transform: translate(-50%, -50%) skewy();
     margin-bottom: 30px;
     color: #d83838;
 }
 
 #container-missao {
-    
-    transform: translate(-50%, -50%) skewy(   );
+
+    transform: translate(-50%, -50%) skewy();
     margin-bottom: 30px;
     color: #3b884d;
 }
@@ -25,7 +25,9 @@ h1 {
 }
 
 p {
-    font-family: 'Macondo Swash Caps', cursive;font-family: 'Exo', sans-serif; !important;
+    font-family: 'Macondo Swash Caps', cursive;
+    font-family: 'Exo', sans-serif;
+     !important;
     font-weight: bold;
     font-size: 18px;
 }

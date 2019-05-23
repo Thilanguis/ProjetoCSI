@@ -535,7 +535,7 @@ h3 {
     padding-right: 170px;
 }
 
-#resultadoVet{
+#resultadoVet {
     float: right;
     padding-left: 18px;
     padding-top: 3px;
@@ -943,7 +943,7 @@ h3 {
 
 .shadow {
     position: relative;
-    margin:  200px auto 0;
+    margin: 200px auto 0;
     width: 400px;
     height: 250px;
     background: linear-gradient(0deg, #000, #262626);
@@ -962,18 +962,16 @@ h3 {
     animation: animate 20s linear infinite;
 }
 
-@keyframes animate
-{
-    0%
-    {
+@keyframes animate {
+    0% {
         background-position: 0 0;
     }
-    50%
-    {
+
+    50% {
         background-position: 400% 0;
     }
-    100%
-    {
+
+    100% {
         background-position: 0 0;
     }
 }
@@ -981,10 +979,10 @@ h3 {
 /*Estilo para campos vazio*/
 
 .field {
-  border: 2px solid #ccc !important;
-  outline: none !important;
+    border: 2px solid #ccc !important;
+    outline: none !important;
 }
 
 .field.--has-error {
-  border-color: #f00 !important;
+    border-color: #f00 !important;
 }
