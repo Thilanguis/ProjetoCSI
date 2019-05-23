@@ -210,3 +210,34 @@ function processar() {
     calculoPercentualGorduraEmKg();
     calculoPercentualLivreGorduraEmKg();
 }
+
+//verifica capslock ligado
+function capLock () {
+document.getElementById('exampleDropdownFormPassword1').onkeyup = function (e) {
+
+  var key = e.charCode || e.keyCode;
+  
+  //enter, caps lock e backspace não interessam
+  if(key == 13 || key == 8 || key == 46 || key == 20){
+    return false;
+  }
+  
+  //pega o último caracter digitado
+	var tamanho = this.value.length
+	var ultimo_caracter = this.value.substring(tamanho - 1);
+  
+  //Verifica se é maiúsculo, e se não é shift
+  if(ultimo_caracter.toUpperCase() == ultimo_caracter 
+  && ultimo_caracter.toLowerCase() != ultimo_caracter
+  && !e.shiftKey)
+  {
+  	//document.getElementById('avisoCapslock').innerHTML = "Capslock Ativado";
+     document.getElementById('avisoCapslock').style.visibility = 'visible';
+  }
+    else
+        {
+            document.getElementById('avisoCapslock').style.visibility = 'hidden';
+        }
+};
+    }
+

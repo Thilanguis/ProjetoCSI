@@ -37,8 +37,13 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleDropdownFormPassword1">Senha</label>
-                                    <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="******" name="senha">
+                                    <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="******" onkeypress="capLock()" name="senha">
+                                </div> 
+                                
+                                <div id="avisoCapslock" class="alert alert-warning animated zoomIn container" role="alert" style="visibility:hidden; display: inline-block; text-align: center; font-size: 13px; margin: 0 auto; padding: 0 auto; margin-bottom: 8px;">
+                                  Caps lock ligado ou Shift pressionado!
                                 </div>
+                                
                                 <div class="form-check">
                                 </div>
                                 <button id="btnentrar" type="submit" class="btn btn-primary">Entrar</button>
