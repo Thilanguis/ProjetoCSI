@@ -977,3 +977,14 @@ h3 {
         background-position: 0 0;
     }
 }
+
+/*Estilo para campos vazio*/
+
+.field {
+  border: 2px solid #ccc !important;
+  outline: none !important;
+}
+
+.field.--has-error {
+  border-color: #f00 !important;
+}

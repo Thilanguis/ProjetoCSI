@@ -238,6 +238,46 @@ document.getElementById('exampleDropdownFormPassword1').onkeyup = function (e) {
         {
             document.getElementById('avisoCapslock').style.visibility = 'hidden';
         }
-};
+    };
+}
+
+function verificaInput() {
+const inputCpfElement = document.getElementById('exampleDropdownFormEmail1');
+
+inputCpfElement.addEventListener('keyup', function(ev) {
+  const input = ev.target;
+  const value = ev.target.value;
+
+  if (value.length == "") {
+    input.classList.add('--has-error');
+    
+  } else {
+    input.classList.remove('--has-error');
+  }
+ });
     }
+
+function verificaInput1() {
+const inputCpfElement = document.getElementById('exampleDropdownFormPassword1');
+
+inputCpfElement.addEventListener('keyup', function(ev) {
+  const input = ev.target;
+  const value = ev.target.value;
+
+  if (value.length == "") {
+    input.classList.add('--has-error');
+    
+  } else {
+    input.classList.remove('--has-error');
+  }
+ });
+    }
+
+function verificadorSenha() {
+    capLock();
+    verificaInput1();
+}
+
+
+
 

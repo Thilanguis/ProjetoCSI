@@ -32,12 +32,12 @@
                         <div id="menuDropDown">
                             <form action="session.php" method="post" class="px-4 py-3">
                                 <div class="form-group">
-                                    <label for="exampleDropdownFormEmail1"><i class="fab fa-nutritionix" style="font-size: 30px; color:#3b884d; "></i> &nbsp; Login</label>
-                                    <input type="text" class="form-control" id="exampleDropdownFormEmail1" placeholder="digite seu CRN" name="login" re>
+                                    <label for="exampleDropdownFormEmail1"><i class="fab fa-nutritionix " style="font-size: 30px; color:#3b884d; "></i> &nbsp; Login</label>
+                                    <input type="text" class="form-control field" id="exampleDropdownFormEmail1" placeholder="digite seu CRN" name="login" onfocus="verificaInput()">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleDropdownFormPassword1">Senha</label>
-                                    <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="******" onkeypress="capLock()" name="senha">
+                                    <input type="password" class="form-control field" id="exampleDropdownFormPassword1" placeholder="******" onfocus="verificadorSenha()" name="senha">
                                 </div> 
                                 
                                 <div id="avisoCapslock" class="alert alert-warning animated zoomIn container" role="alert" style="visibility:hidden; display: inline-block; text-align: center; font-size: 13px; margin: 0 auto; padding: 0 auto; margin-bottom: 8px;">
