@@ -10,7 +10,10 @@
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
     <!--font Exo-->
     <link href="https://fonts.googleapis.com/css?family=Exo&display=swap" rel="stylesheet">
-    <?php include_once 'head.php'; ?>
+    <?php include_once 'head.php';
+    include_once 'form-cadastroUsuarioNovo.php';
+    include_once 'esqueceuSuaSenha.php';?>
+
 
 </head>
 
