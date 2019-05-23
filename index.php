@@ -22,7 +22,7 @@
             <div class="collapse" id="navbarToggleExternalContent">
                 <div class="bg-secondary navbar-dark p-1">
                     <a class="btn btn-secondary navbar-brand" href="index.php">HOME</a>
-                    <a class="btn btn-secondary navbar-brand" href="#">QUEM SOMOS</a>
+                    <a class="btn btn-secondary navbar-brand" href="quem_somos.php">QUEM SOMOS</a>
 
                     <a class="btn btn-secondary dropdown-toggle navbar-brand" href="#" role="button" id="<dropdownMenuL></dropdownMenuL>ink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         LOGIN
