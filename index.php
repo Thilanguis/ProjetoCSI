@@ -8,6 +8,7 @@
     <title>Dietpro</title>
     <?php include_once 'head.php';
     include_once 'form-cadastroUsuarioNovo.php';
+    include_once 'esqueceuSuaSenha.php';
     ?>
 
 
@@ -37,7 +38,7 @@
                                 </div>
 
                                 <!-- aviso falta login -->
-                                <div id="avisoFaltaLogin" class="alert-danger animated zoomIn container" role="alert" style="visibility:hidden; display: inline-block; text-align: center; font-size: 13px; margin: 0 auto; padding: 0 auto; margin-bottom: 8px;">
+                                <div id="avisoFaltaLogin" class="alert-danger container" role="alert" style="visibility:hidden; display: inline-block; text-align: center; font-size: 13px; margin: 0 auto; padding: 0 auto; margin-bottom: 8px;">
                                     Campo login vazio!
                                 </div>
 
@@ -47,22 +48,25 @@
                                 </div>
 
                                 <!-- aviso falta senha -->
-                                <div id="avisoFaltaSenha" class="alert-danger animated zoomIn container" role="alert" style="visibility:hidden; display: inline-block; text-align: center; font-size: 13px; margin: 0 auto; padding: 0 auto; margin-bottom: 8px;">
+                                <div id="avisoFaltaSenha" class="alert-danger container" role="alert" style="visibility:hidden; display: inline-block; text-align: center; font-size: 13px; margin: 0 auto; padding: 0 auto; margin-bottom: 8px;">
                                     Campo senha vazio!
                                 </div>
 
                                 <!-- aviso de capslock ligado -->
-                                <div id="avisoCapslock" class="alert-warning animated zoomIn container" role="alert" style="visibility:hidden; display: inline-block; text-align: center; font-size: 13px; margin: 0 auto; padding: 0 auto; margin-bottom: 8px;">
+                                <div id="avisoCapslock" class="alert-warning container" role="alert" style="visibility:hidden; display: inline-block; text-align: center; font-size: 13px; margin: 0 auto; padding: 0 auto; margin-bottom: 8px;">
                                     Caps lock ligado ou Shift pressionado!
                                 </div>
 
                                 <div class="form-check">
                                 </div>
                                 <button id="btnentrar" type="submit" class="btn btn-primary">Entrar</button>
+
                             </form>
                             <div class="dropdown-divider"></div>
                             <h6 style="margin-left: 48px;">
                                 Novo por aqui? <a href="#" data-toggle="modal" data-target="#exampleModalScrollable" style="text-decoration: none;">Cadastre-se</a>
+                                <h6 style="margin-left: 48px;">Esqueceu sua senha?<a href="#" data-toggle="modal" data-target="#esqueceuSuaSenha" style="text-decoration: none;">&nbsp;click aqui</a>
+                                </h6>
                             </h6>
                         </div>
 

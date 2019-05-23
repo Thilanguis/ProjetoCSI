@@ -32,22 +32,40 @@
                         <div id="menuDropDown">
                             <form action="session.php" method="post" class="px-4 py-3">
                                 <div class="form-group">
-                                    <label for="exampleDropdownFormEmail1"><i class="fab fa-nutritionix" style="font-size: 30px; color:#3b884d; "></i> &nbsp; Endereço E-mail</label>
-                                    <input type="text" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@email.com" name="login" re>
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleDropdownFormPassword1">Senha</label>
-                                    <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="******" onkeypress="capLock()" name="senha">
+                                    <label for="exampleDropdownFormEmail1"><i class="fab fa-nutritionix " style="font-size: 30px; color:#3b884d; "></i> &nbsp; Login</label>
+                                    <input type="text" class="form-control field" id="exampleDropdownFormEmail1" placeholder="digite seu CRN" name="login" onfocus="verificaInput()">
                                 </div>
 
-                                <div id="avisoCapslock" class="alert alert-warning animated zoomIn container" role="alert" style="visibility:hidden; display: inline-block; text-align: center; font-size: 13px; margin: 0 auto; padding: 0 auto; margin-bottom: 8px;">
+                                <!-- aviso falta login -->
+                                <div id="avisoFaltaLogin" class="alert-danger container" role="alert" style="visibility:hidden; display: inline-block; text-align: center; font-size: 13px; margin: 0 auto; padding: 0 auto; margin-bottom: 8px;">
+                                    Campo login vazio!
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="exampleDropdownFormPassword1">Senha</label>
+                                    <input type="password" class="form-control field" id="exampleDropdownFormPassword1" placeholder="******" onfocus="verificadorSenha()" name="senha">
+                                </div>
+
+                                <!-- aviso falta senha -->
+                                <div id="avisoFaltaSenha" class="alert-danger container" role="alert" style="visibility:hidden; display: inline-block; text-align: center; font-size: 13px; margin: 0 auto; padding: 0 auto; margin-bottom: 8px;">
+                                    Campo senha vazio!
+                                </div>
+
+                                <!-- aviso de capslock ligado -->
+                                <div id="avisoCapslock" class="alert-warning container" role="alert" style="visibility:hidden; display: inline-block; text-align: center; font-size: 13px; margin: 0 auto; padding: 0 auto; margin-bottom: 8px;">
                                     Caps lock ligado ou Shift pressionado!
                                 </div>
+
+                                <div class="form-check">
+                                </div>
                                 <button id="btnentrar" type="submit" class="btn btn-primary">Entrar</button>
+
                             </form>
                             <div class="dropdown-divider"></div>
                             <h6 style="margin-left: 48px;">
                                 Novo por aqui? <a href="#" data-toggle="modal" data-target="#exampleModalScrollable" style="text-decoration: none;">Cadastre-se</a>
+                                <h6 style="margin-left: 48px;">Esqueceu sua senha?<a href="#" data-toggle="modal" data-target="#esqueceuSuaSenha" style="text-decoration: none;">&nbsp;click aqui</a>
+                                </h6>
                             </h6>
                         </div>
                     </div>
