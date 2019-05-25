@@ -234,13 +234,14 @@
                 <input class="col-4" type="text" style="border-radius: 4px;" disabled="disabled" value=" <?php 
                             
                             include_once 'conexao.php';
-                                                                                                        
-                            $sql = "select sum(cast(KCAL as decimal(15,2))) KCAL from alimentos";                                     
+                                                                                                    
+                            $sql = "select sum(cast(CHO as decimal(15,2)))*4 CHO, sum(cast(PTN as decimal(15,2)))*4 PTN, sum(cast(LIP as decimal(15,2)))*9 LIP from alimentos";
+                                                                                                                                             
                             $result = mysqli_query($con, $sql);
             
                             $row = mysqli_fetch_array($result);
             
-                            echo $row["KCAL"]. "  Kcal";
+                            echo $row["CHO"] + $row["PTN"] + $row["LIP"]."  Kcal";
             
                                      ?>">
             </div>
