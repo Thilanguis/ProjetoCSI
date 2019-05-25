@@ -178,7 +178,27 @@
 
                 ?> ">
             </div>
+               
+               <br>
+               
+               <div>
+                <span id="TMB-Kcal" class="badge badge-pill badge-success" style="margin-right: 92px;">Vet Dieta:</span>
+                <input class="col-5" type="text" style="border-style: none;" disabled="disabled" value="  <?php 
+                            
+                            include_once 'conexao.php';
+                                                                                                    
+                            $sql = "select sum(cast(CHO as decimal(15,2)))*4 CHO, sum(cast(PTN as decimal(15,2)))*4 PTN, sum(cast(LIP as decimal(15,2)))*9 LIP from alimentos";
+                                                                                                                                             
+                            $result = mysqli_query($con, $sql);
+            
+                            $row = mysqli_fetch_array($result);
+            
+                            echo $row["CHO"] + $row["PTN"] + $row["LIP"]."  Kcal";
+            
+                                     ?>">
+            </div>
         </div>
+        
 
         <!-- card de impressao para imprimir -->
 
