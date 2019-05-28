@@ -86,7 +86,7 @@
             
             include_once 'conexao.php';
                 
-            $sql = "select DT_NASCIMENTO, PESO, ALTURA, SEXO from cliente  inner join a_antropometrica where ID_CLIENTE = 15";
+            $sql = "select DT_NASCIMENTO, PESO, ALTURA, SEXO from cliente  inner join a_antropometrica where ID_CLIENTE =".$_GET["id_cliente"];
                 
             $result = mysqli_query($con, $sql);
                 
