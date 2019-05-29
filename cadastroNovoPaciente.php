@@ -17,7 +17,7 @@
         
          include_once 'funcoesProjeto.php';
         
-    $nome            = trataNome($_POST["nome"]);
+    $nome            = tratanome($_POST["nome"]);
     $telefone        = trataTelefone($_POST["telefone"]);
     $cep             = $_POST["cep"];
     $endereco        = $_POST["rua"];
@@ -32,6 +32,8 @@
     $email           = $_POST["email"];
     $confirmarEmail  = $_POST["confirmarEmail"];
     $cpf             = formatarCPF($_POST["cpf"]);
+        
+        echo $nome;
     
     include_once 'conexao.php';
         
