@@ -31,13 +31,13 @@
     $confirmarSenha  = $_POST["confirmarSenha"];
     $email           = $_POST["email"];
     $confirmarEmail  = $_POST["confirmarEmail"];
-    $cpf             = $_POST["cpf"];
+    $cpf             = formatarCPF($_POST["cpf"]);
     
     include_once 'conexao.php';
         
      $ok = $nome != "" && $telefone != "" && $cep && $endereco != "" && $bairro != "" && $cidade != "" && $estado != "" && $estadoCivil != "" && $dataNascimento != "" && $sexo != "" && $senha != "" && $email != "" && $cpf != ""; 
     
-    $sql = "insert into cliente values(null, '".$nome."','".$telefone."','".$cep."','".$endereco."','".$bairro."','".$cidade."','".$estado."','".$estadoCivil."','".$dataNascimento."','".$sexo."','".$senha."','".$cpf."','".$email."')";
+    $sql = "insert into cliente values(null, '".$nome."','".$telefone."','".$cep."','".$endereco."','".$bairro."','".$cidade."','".$estado."','".$estadoCivil."','".$dataNascimento."','".$sexo."','".$senha."','".$cpf."','".$email."', now())";
     
         
     $verificarS = $senha == $confirmarSenha;

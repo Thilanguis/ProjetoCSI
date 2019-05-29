@@ -30,3 +30,16 @@ function trataTelefone($telefone)
     return $telefone; 
 }
 ?>
+
+<?php
+function formatarCPF($cpf)
+{
+  if (strlen(preg_replace("/\D/", '', $cpf)) === 11) {
+    $response = preg_replace("/(\d{3})(\d{3})(\d{3})(\d{2})/", "\$1.\$2.\$3-\$4", $cpf);
+  } else {
+    $response = preg_replace("/(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/", "\$1.\$2.\$3/\$4-\$5", $cpf);
+  }
+
+  return $response;
+}
+?>

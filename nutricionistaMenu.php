@@ -97,7 +97,7 @@
                 
                 include_once 'excluirCliente.php';
                 
-                $sql = "select nome,telefone,endereco,cidade,estado_civil,dt_nascimento,sexo,id_cliente from cliente where nome like '".$nome."%'";
+                $sql = "select nome,telefone,endereco,cidade,estado_civil,dt_nascimento,sexo,id_cliente, registro from cliente where nome like '".$nome."%'";
                 
                 $result = mysqli_query($con, $sql);
                 
@@ -113,7 +113,7 @@
                     <th style="color: #E8850C">Telefone&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
                     <th style="color: #E8850C">Endereço</th>
                     <th style="color: #E8850C">Cidade</th>
-                    <th style="color: #E8850C">Data de nascimento</th>
+                    <th style="color: #E8850C">Data de cadastramento</th>
                     <th style="color: #E8850C">Editar Paciente</th>
                     <th style="color: #E8850C">Excluir Paciente</th>
                 </tr>
@@ -129,7 +129,7 @@
                         echo "<td>".$row["telefone"]."</td>";
                         echo "<td>".$row["endereco"]."</td>";
                         echo "<td>".$row["cidade"]."</td>";
-                        echo "<td>".date('d-m-Y', strtotime($row["dt_nascimento"]))."</td>"; 
+                        echo "<td>".date('d-m-Y H:i:s', strtotime($row["registro"]))."</td>"; 
                         echo "<td><a href='form-editarPacienteNovo.php?id_paciente=".$row["id_cliente"]."'><img src='img/icons8-editar-vários-128.png' alt='' style='padding-left: 15px; padding-top: 12px; width; 45px; height: 45px;'></td>";
                         echo "<td><a href='#' onclick='excluir(".$row["id_cliente"].")'><img src='img/icons8-lixo-30.png' style='padding-left: 17px; padding-top: 12px;' alt=''></td>";
                         echo "</tr>";

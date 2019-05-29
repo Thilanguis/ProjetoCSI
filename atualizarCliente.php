@@ -31,7 +31,7 @@
     $confirmarSenha  = $_POST["confirmarSenha"];
     $email           = $_POST["email"];
     $confirmarEmail  = $_POST["confirmarEmail"];
-    $cpf             = $_POST["cpf"];
+    $cpf             = formatarCPF($_POST["cpf"]);
     
     include_once 'conexao.php';
         
