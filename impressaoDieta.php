@@ -117,7 +117,7 @@
                 
                 include_once 'conexao.php';
                                 
-                $sql = "select ALTURA from a_antropometrica";                                     
+                $sql = "select ALTURA from a_antropometrica where ID_CLIENTE=".$_GET["id_cliente"];                                     
                 $result = mysqli_query($con, $sql);
             
                 $row = mysqli_fetch_array($result);
@@ -133,7 +133,7 @@
                 
                 include_once 'conexao.php';
                                 
-                $sql = "select PESO from a_antropometrica";                                     
+                $sql = "select PESO from a_antropometrica where ID_CLIENTE=".$_GET["id_cliente"];                                     
                 $result = mysqli_query($con, $sql);
             
                 $row = mysqli_fetch_array($result);
@@ -149,7 +149,7 @@
                 
                 include_once 'conexao.php';
                                 
-                $sql = "select ALTURA, PESO from a_antropometrica";                                     
+                $sql = "select ALTURA, PESO from a_antropometrica where ID_CLIENTE=".$_GET["id_cliente"];                                     
                 $result = mysqli_query($con, $sql);
             
                 $row = mysqli_fetch_array($result);            

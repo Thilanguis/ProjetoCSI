@@ -87,7 +87,7 @@
                 
                 include_once 'conexao.php';
                                 
-                $sql = "select ALTURA, PESO from a_antropometrica";                                     
+                $sql = "select ALTURA, PESO from cliente inner join a_antropometrica ON cliente.ID_CLIENTE = a_antropometrica.ID_CLIENTE where cliente.ID_CLIENTE = ".$_GET["id_cliente"];                                    
                 $result = mysqli_query($con, $sql);
             
                 $row = mysqli_fetch_array($result);            
@@ -123,7 +123,7 @@
                                                                                                         
               include_once 'conexao.php';
             
-            $sql = "select PESO from a_antropometrica";
+            $sql = "select PESO from cliente inner join a_antropometrica ON cliente.ID_CLIENTE = a_antropometrica.ID_CLIENTE where cliente.ID_CLIENTE = ".$_GET["id_cliente"];
                 
             $result = mysqli_query($con, $sql);
                 
@@ -138,7 +138,7 @@
                 <input class="col-4" type="text" style="border-radius: 4px;" disabled="disabled" value="<?php            
             include_once 'conexao.php';
                 
-            $sql = "select DT_NASCIMENTO, PESO, ALTURA, SEXO from cliente  inner join a_antropometrica where ID_CLIENTE = 15";
+            $sql = "select DT_NASCIMENTO, PESO, ALTURA, SEXO from cliente  inner join a_antropometrica  ON cliente.ID_CLIENTE = a_antropometrica.ID_CLIENTE where cliente.ID_CLIENTE = ".$_GET["id_cliente"];
                 
             $result = mysqli_query($con, $sql);
                 
@@ -201,7 +201,7 @@
                 <span id="TMB-Kcal" class="badge badge-pill badge-success" style="margin-right: 36px;">VET Calculado:</span>
                 <input class="col-4" type="text" style="border-radius: 4px;" disabled value="<?php $resultadoTMB;
                     
-                $sqlVET = "select * from vet_fao";
+                $sqlVET = "select * from vet_fao where ID_CLIENTE = ".$_GET["id_cliente"]; 
                     
                 $resultVET = mysqli_query($con, $sqlVET);
                     

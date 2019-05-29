@@ -38,7 +38,7 @@
         
     $verifNAF = $NAF_sono != "" || $NAF_trabalho != "" || $NAF_estudo != "" || $NAF_exerFisico != "" || $NAF_avontade != "" || $NAF_ativFisica != ""; 
     
-    $sql = "insert into vet_fao (ID_VET_FAO, SONO, TRABALHO, ESTUDO, EXER_FISICO, A_VONTADE, ATIV_FISICA, Hora_Sono, Hora_trabalho, Hora_Estudo, Hora_Exer_Fisico, Hora_A_vontade, Hora_Ativ_fisica) values (null, '".$sono."','".$trabalho."','".$estudo."','".$exerFisico."','".$avontade."','".$ativFisica."','".$NAF_sono."','".$NAF_trabalho."','".$NAF_estudo."','".$NAF_exerFisico."','".$NAF_avontade."','".$NAF_ativFisica."')";
+    $sql = "insert into vet_fao (ID_VET_FAO, SONO, TRABALHO, ESTUDO, EXER_FISICO, A_VONTADE, ATIV_FISICA, Hora_Sono, Hora_trabalho, Hora_Estudo, Hora_Exer_Fisico, Hora_A_vontade, Hora_Ativ_fisica, ID_CLIENTE) values (null, '".$sono."','".$trabalho."','".$estudo."','".$exerFisico."','".$avontade."','".$ativFisica."','".$NAF_sono."','".$NAF_trabalho."','".$NAF_estudo."','".$NAF_exerFisico."','".$NAF_avontade."','".$NAF_ativFisica."', '".$id."')";
         
 if($verifTotal)
 {

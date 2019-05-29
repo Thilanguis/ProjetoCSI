@@ -21,7 +21,7 @@
         
      $ok = $bioquimica != ""; 
     
-    $sql = "insert into a_bioquimica values(null, '".$bioquimica."')";
+    $sql = "insert into a_bioquimica values(null, '".$bioquimica."',  '".$id."')";
         
 
         if($ok)

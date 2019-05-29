@@ -27,7 +27,7 @@
         
      $ok = $HpatologiaPregressa != "" || $Hfamiliar != "" || $Halimentar != "" || $sinalClinico != "" || $medicamentos != "" || $Hsocial != "" || $recomendacoesOrientacoes != ""; 
     
-    $sql = "insert into a_clinica_nutricional values(null, '".$HpatologiaPregressa."','".$Hfamiliar."','".$Halimentar."','".$Hsocial."','".$medicamentos."','".$sinalClinico."','".$recomendacoesOrientacoes."')";
+    $sql = "insert into a_clinica_nutricional values(null, '".$HpatologiaPregressa."','".$Hfamiliar."','".$Halimentar."','".$Hsocial."','".$medicamentos."','".$sinalClinico."','".$recomendacoesOrientacoes."', '".$id."')";
     
    
         if($ok)
