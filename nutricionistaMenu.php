@@ -76,7 +76,7 @@
                     <div class="collapse multi-collapse" id="multiCollapseExample1">
                         <div class="form-group input-group">
                             <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
-                            <input type="text" id="txt_consulta" placeholder="Pesquise um Paciente" class="form-control" name="nome">
+                            <input type="text" id="txt_consulta" placeholder="Pesquise um paciente pelo nome ou CPF" class="form-control" name="nome">
                             <button id="btnBuscaPaciente" class="btn btn-info" type="submit"><i class="fas fa-search"></i></button>
                         </div>
                     </div>
@@ -97,7 +97,7 @@
                 
                 include_once 'excluirCliente.php';
                 
-                $sql = "select nome,telefone,endereco,cidade,estado_civil,dt_nascimento,sexo,id_cliente, registro from cliente where nome like '".$nome."%'";
+                $sql = "select nome,telefone,endereco,cidade,estado_civil,dt_nascimento,sexo,id_cliente, registro from cliente where nome like '".$nome."%' or cpf like '".$nome."%' ";
                 
                 $result = mysqli_query($con, $sql);
                 

@@ -125,7 +125,7 @@
                         <span>s</span>
                     </h2>
                 </div>
-                <p>Trazer o melhor serviço com iniciativa e criatividade gerando sastifacao ao nosso cliente, respeitando todos os valores e diretrizes da empresa. Investimos em uma boa relação solida e agradável entre software e usuário, respeitando todos os direitos de privacidade.</p>
+                <p>-Respeito inalienável ao cliente <br> -Respeito ao ser humano e a qualidade de vida <br> -Ética e respeito nas relações interpessoais.</p>
                 <hr>
                 <div id="container-missao">
                     <h2 id="missao">
@@ -137,7 +137,7 @@
                         <span>o</span>
                     </h2>
                 </div>
-                <p>Nossa missão é a dedicação na conclusão as metas impostas com uma dinâmica de grupo, porque acreditamos que uma boa relação entre nossa equipe trará o melhor serviço ao contratante.</p>
+                <p>Ser uma empresa prestadora de tecnologia em nutrição capaz de suprir, e dotar o nutricionista de condições inteligentes para o seu dia a dia profissional.</p>
 
             </div>
 
