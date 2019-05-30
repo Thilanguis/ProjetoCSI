@@ -17,17 +17,17 @@
 
 <body>
 
-    <div id="consultarDadosPaciente">
+    <div id="consultarDadosPaciente" title="Consulta da avaliação">
         <div class="accordion">
             <div class="card">
                 <div class="card-header">
-                    <h5 class="mb-0" id="textoImprimir">Consultar Avaliações</h5>
+                    <h5 class="mb-0" id="textoImprimir"><img src="img/icons8-estante-de-livros-48.png" alt=""></h5>
                 </div>
                 <div style="text-align: center;">
-                    <button id="botaoConsulta" class="btn btn-success btn-sm" data-toggle="modal" data-target="#antropometria">Av. Antropométrica</button> <br>
-                    <button id="botaoConsulta" class="btn btn-success btn-sm" data-toggle="modal" data-target="#bioquimica">Av. Bioquímica</button><br>
+                    <button id="botaoConsulta" class="btn btn-light btn-sm" data-toggle="modal" data-target="#antropometria"><img src="img/icons8-balan%C3%A7a-industrial-48.png" alt=""></button> <br>
+                    <button id="botaoConsulta" class="btn btn-light btn-sm" data-toggle="modal" data-target="#bioquimica"><img style="width: 48px; height: 48px;" src="img/icons8-microsc%C3%B3pio-96.png" alt=""></button><br>
 
-                    <button id="botaoConsulta" class="btn btn-success btn-sm" data-toggle="modal" data-target="#clinicaNutricional">Av. Clínica nutri.</button>
+                    <button id="botaoConsulta" class="btn btn-light btn-sm" data-toggle="modal" data-target="#clinicaNutricional"><i class="fas fa-book-medical" style="font-size: 40px; color: #d83838; text-shadow: none;"></i></button>
                 </div>
             </div>
         </div>
