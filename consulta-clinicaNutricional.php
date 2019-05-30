@@ -13,6 +13,19 @@
             </div>
 
             <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+            
+            <h5 style="text-align: center;  margin-top: 5px;">Paciente: <?php
+                
+                include_once 'conexao.php';
+                
+                $sql = "select nome from cliente where id_cliente=".$_GET["id_cliente"];
+                
+                $result = mysqli_query($con, $sql);
+                
+                $row = mysqli_fetch_array($result);
+                
+                ?><i><?php echo $row[0]; ?></i><?php 
+                ?></h5>
 
             <div id="form-Clinico1">
 
