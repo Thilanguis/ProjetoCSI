@@ -44,7 +44,7 @@
         $col8            = str_replace(',', '.',$row["col 8"])*$quantidade;
         $col9            = str_replace(',', '.',$row["col 9"])*$quantidade;
 
-        $sqlDadosDaRefeicao = "insert into alimentos (ID, NOME_ALIMENTO, MEDIDA_CASEIRA, GRAMA, CHO, PTN, LIP, KCAL, NUM_MC, HORA, NOME_REFEICAO) values (null, '".$col2."','".$col3."','".$col5."','".$col6."','".$col7."','".$col8."','".$col9."', '".$quantidade."','".$horario."','".$refeicao."')";
+        $sqlDadosDaRefeicao = "insert into alimentos (ID, NOME_ALIMENTO, MEDIDA_CASEIRA, GRAMA, CHO, PTN, LIP, KCAL, NUM_MC, HORA, NOME_REFEICAO, ID_CLIENTE) values (null, '".$col2."','".$col3."','".$col5."','".$col6."','".$col7."','".$col8."','".$col9."', '".$quantidade."','".$horario."','".$refeicao."','".$id."')";
 
             if(mysqli_query($con,$sqlDadosDaRefeicao))  
     { header('Location:form-Dietoterapia.php?id_cliente='.$id);
