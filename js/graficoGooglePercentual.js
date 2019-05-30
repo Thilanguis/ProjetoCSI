@@ -22,7 +22,7 @@
 
      // Set chart options
      var options = {
-         'title': 'Percental de gordura',
+         'title': 'Percentual de gordura',
          'margin': 0,
          'padding': 0,
          'width': 450,

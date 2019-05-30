@@ -8,11 +8,30 @@
     <title>Dietpro</title>
     <?php include_once 'head.php';
     include_once 'verificaLogin.php';
+    include_once 'consulta-antropometria.php';
+    include_once 'consulta-bioquimica.php';
+    include_once 'consulta-clinicaNutricional.php';
     ?>
 
 </head>
 
 <body>
+
+    <div id="consultarDadosPaciente">
+        <div class="accordion">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0" id="textoImprimir">Consultar Avaliações</h5>
+                </div>
+                <div style="text-align: center;">
+                    <button id="botaoConsulta" class="btn btn-success btn-sm" data-toggle="modal" data-target="#antropometria">Av. Antropométrica</button> <br>
+                    <button id="botaoConsulta" class="btn btn-success btn-sm" data-toggle="modal" data-target="#bioquimica">Av. Bioquímica</button><br>
+
+                    <button id="botaoConsulta" class="btn btn-success btn-sm" data-toggle="modal" data-target="#clinicaNutricional">Av. Clínica nutri.</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- input para pegar nome do nutricionista logado -->
     <input id="nutricionistaLogado" type="hidden" value="<?php echo $_SESSION["login"];  ?>">

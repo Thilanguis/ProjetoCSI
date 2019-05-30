@@ -178,10 +178,10 @@
 
                 ?> ">
             </div>
-               
-               <br>
-               
-               <div>
+
+            <br>
+
+            <div>
                 <span id="TMB-Kcal" class="badge badge-pill badge-success" style="margin-right: 92px;">Vet Dieta:</span>
                 <input class="col-5" type="text" style="border-style: none;" disabled="disabled" value="  <?php 
                             
@@ -198,7 +198,7 @@
                                      ?>">
             </div>
         </div>
-        
+
 
         <!-- card de impressao para imprimir -->
 
@@ -862,7 +862,7 @@
                             
                     include_once 'conexao.php';
 
-                    $sql = "select OBSERVACOES_ADICIONAIS from  a_clinica_nutricional";
+                    $sql = "select OBSERVACOES_ADICIONAIS from a_clinica_nutricional where id_cliente =".$_GET["id_cliente"];
 
                     $result = mysqli_query($con, $sql);
 
@@ -884,7 +884,7 @@
         <input id="percentualGorduraInput" type="hidden" value="<?php 
                    include_once 'conexao.php';
                    
-                   $sql = "select DC_TRICIPITAL, DC_SUBESCAPULAR_AXILAR, DC_SUPRAILIACA, DC_ABDOMINAL, DC_QUADRICEPS from a_antropometrica";
+                   $sql = "select DC_TRICIPITAL, DC_SUBESCAPULAR_AXILAR, DC_SUPRAILIACA, DC_ABDOMINAL, DC_QUADRICEPS from a_antropometrica where id_cliente =".$_GET["id_cliente"];
                    
                    $result = mysqli_query($con, $sql);
                    
@@ -915,7 +915,7 @@
         <input id="percentualLivreGorduraInput" type="hidden" value="<?php 
                    include_once 'conexao.php';
                    
-                   $sql = "select DC_TRICIPITAL, DC_SUBESCAPULAR_AXILAR, DC_SUPRAILIACA, DC_ABDOMINAL, DC_QUADRICEPS from a_antropometrica";
+                   $sql = "select DC_TRICIPITAL, DC_SUBESCAPULAR_AXILAR, DC_SUPRAILIACA, DC_ABDOMINAL, DC_QUADRICEPS from a_antropometrica where id_cliente =".$_GET["id_cliente"];
                    
                    $result = mysqli_query($con, $sql);
                    
