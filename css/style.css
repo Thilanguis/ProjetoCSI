@@ -461,6 +461,10 @@ h3 {
     display: inline-block;
 }
 
+#gerarMedidas1 {
+    margin-left: 200px;
+}
+
 .alturaAntro {
     height: 100px;
 }
