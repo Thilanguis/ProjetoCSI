@@ -32,8 +32,6 @@
     $email           = $_POST["email"];
     $confirmarEmail  = $_POST["confirmarEmail"];
     $cpf             = formatarCPF($_POST["cpf"]);
-        
-        echo $nome;
     
     include_once 'conexao.php';
         
