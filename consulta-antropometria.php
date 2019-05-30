@@ -1,5 +1,5 @@
 <?php include_once 'verificaLogin.php'; ?>
-<script src="js/graficoGooglePercentual.js"></script>
+<script src="js/consultaGraficoGooglePercentual.js"></script>
 
 <div class="modal fade bd-example-modal-lg" id="antropometria" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
@@ -28,17 +28,17 @@
                 ?><i><?php echo $row[0]; ?></i><?php 
                 ?></h5>
 
-            <div id="" style="margin: 60px 140px; box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.75);">
+            <div id="container" style="margin: 60px 20px; box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.75);">
 
                 <!--Div that will hold the pie chart-->
-                <div id="chart_div1">
+                <div id="chart_div2">
                     <!-- gráfico do google -->
                 </div>
             </div>
 
             <div id="gerarMedidas1">
                 <div class="form-row alturaAntro">
-                    <h5 class="col-md-5" style="margin-left: 130px;"><i>Circunferências</i></h5>
+                    <h4 class="col-md-5" style="margin-left: 124px;"><i>Circunferências</i></h4>
                 </div>
 
 
