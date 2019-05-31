@@ -137,29 +137,29 @@ h1 span:nth-child(19) {
 }
 
 #brocolis {
-    animation-delay: 7s;
+    animation-delay: 8s;
     animation-duration: 4s;
 }
 
 #tomate {
-    animation-delay: 7.25s;
+    animation-delay: 8.25s;
     animation-duration: 4s;
 }
 
 #pera {
-    animation-delay: 7.50s;
+    animation-delay: 8.50s;
     animation-duration: 4s;
 }
 
 #mamao {
-    animation-delay: 7.75s;
+    animation-delay: 8.75s;
     animation-duration: 4s;
 }
 
 #orvalho {
     width: 495px;
     height: 698px;
-    animation-delay: 8s;
+    animation-delay: 8.72s;
     animation-duration: 8s;
 }
 
@@ -170,9 +170,9 @@ h1 span:nth-child(19) {
 }
 
 #brasao1 {
-    width: 400px;
-    height: 400px;
-    animation-delay: 8.5s;
+    width: 340px;
+    height: 340px;
+    animation-delay: 8.73s;
     animation-duration: 8s;
 }
 
@@ -224,7 +224,7 @@ h2 {
     font-family: 'Lato', sans-serif;
     color: #fff;
     text-shadow: 0 0 10px #1eff4e, 0 0 20px #1eff4e, 0 0 80px #1eff4e, 0 0 120px #1eff4e;
-    animation-delay: 14s;
+    animation-delay: 7.8s;
     animation-duration: 2s;
 }
 
