@@ -39,7 +39,7 @@
             <a id="menuFechado" href="#" class="list-group-item list-group-item-action" title="Inicie uma consulta para acessar os formulários com cadeado">Av. Clínica nutri.<i class="fas fa-lock" id="cadeadoFechado"></i></a>
             <a id="menuFechado" href="#" class="list-group-item list-group-item-action" title="Inicie uma consulta para acessar os formulários com cadeado">Vet FAO<i class="fas fa-lock" id="cadeadoFechado"></i></a>
             <a href="#" class="list-group-item list-group-item-action">Lista de alimentos <i class="fas fa-check" style="font-size: 17px; color: #3b884d"></i> </a>
-            <a id="menuFechado" href="#" class="list-group-item list-group-item-action">Recordatório 24h</a>
+            <a id="menuAberto" href="receituario.php" class="list-group-item list-group-item-action">Receituário <i class="fas fa-lock-open" id="cadeadoAberto"></i></a>
             <a id="menuFechado" href="#" class="list-group-item list-group-item-action" title="Inicie uma consulta para acessar os formulários com cadeado">Dietoterapia<i class="fas fa-lock" id="cadeadoFechado"></i></a>
             <a id="menuAberto" href="listaSubstituicao.php" class="list-group-item list-group-item-action">Lista de subs.<i class="fas fa-lock-open" id="cadeadoAberto"></i></a>
             <a id="menuFechado" href="#" class="list-group-item list-group-item-action" title="Inicie uma consulta para acessar os formulários com cadeado">Impressão de dieta<i class="fas fa-lock" id="cadeadoFechado"></i></a>

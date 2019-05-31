@@ -68,7 +68,7 @@
             <a id="menuAberto" href="#" class="list-group-item list-group-item-action" onclick="avisoAvancar()">>Av. Clínica nutri.<i class="fas fa-lock-open" id="cadeadoAberto"></i></a>
             <a id="menuAberto" href="#" class="list-group-item list-group-item-action" onclick="avisoAvancar()">>Vet FAO<i class="fas fa-lock-open" id="cadeadoAberto"></i></a>
             <a id="menuFechado" href="#" class="list-group-item list-group-item-action" onclick="avisoNaoPodeAcessar()">Lista de alimentos<i class="fas fa-lock" id="cadeadoFechado"></i></a>
-            <a id="menuAberto" href="#" class="list-group-item list-group-item-action" onclick="avisoAvancar()">Recordatório 24h</a>
+            <a id="menuFechado" href="#" class="list-group-item list-group-item-action" onclick="avisoNaoPodeAcessar()">Receituário <i class="fas fa-lock" id="cadeadoFechado"></i></a>
             <a id="menuAberto" href="#" class="list-group-item list-group-item-action" onclick="avisoAvancar()">Dietoterapia<i class="fas fa-lock-open" id="cadeadoAberto"></i></a>
             <a id="menuFechado" href="#" class="list-group-item list-group-item-action" onclick="avisoNaoPodeAcessar()">Lista de subs.<i class="fas fa-lock" id="cadeadoFechado"></i></a>
             <a id="menuAberto" href="#" class="list-group-item list-group-item-action" onclick="avisoAvancar()">Impressão de dieta<i class="fas fa-lock-open" id="cadeadoAberto"></i></a>

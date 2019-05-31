@@ -10,12 +10,13 @@
     $sql = "select nome, crn, senha from nutricionista where crn = '".$login."' and senha = '".$senha."';";
     $query = mysqli_query($con, $sql) or die(mysqli_error($con));
     $row = mysqli_num_rows($query);
-    $nome = mysqli_fetch_array($query)["nome"];
+    $row1 = mysqli_fetch_array($query);
 
 if ($row > 0)
 {
-    $_SESSION["login"] = $nome;
-    $_SESSION["senha"] = $senha;
+    $_SESSION["login"] = $row1["nome"];
+    $_SESSION["senha"] = $row1["senha"];
+    $_SESSION["crn"] = $row1["crn"] ;
     header("Location:nutricionistaMenu.php");
  }
 else
