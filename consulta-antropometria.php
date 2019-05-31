@@ -28,7 +28,7 @@
                 ?><i><?php echo $row[0]; ?></i><?php 
                 ?></h5>
 
-            <div id="container" style="margin: 60px 20px; box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.75);">
+            <div id id="container" style="margin: 60px 20px; box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.75);">
 
                 <!--Div that will hold the pie chart-->
                 <div id="chart_div2">
@@ -180,7 +180,7 @@
 
 
 <!-- input escondido do percentual de gordura -->
-<input id="percentualGorduraInput" type="hidden" value="<?php 
+<input id="percentualGorduraInput" type="hidden" value="<?php
                    include_once 'conexao.php';
                    
                    $sql = "select DC_TRICIPITAL, DC_SUBESCAPULAR_AXILAR, DC_SUPRAILIACA, DC_ABDOMINAL, DC_QUADRICEPS from a_antropometrica where id_cliente =".$_GET["id_cliente"];

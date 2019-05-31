@@ -250,7 +250,7 @@
         
         include_once 'conexao.php';
         
-        $sql = "select * from alimentos where NOME_REFEICAO = 'Desjejum'";
+        $sql = "select * from alimentos where NOME_REFEICAO = 'Desjejum' and ID_CLIENTE=".$_GET["id_cliente"];
         
         $result = mysqli_query($con, $sql);
         
@@ -323,7 +323,7 @@
         
         include_once 'conexao.php';
         
-        $sql = "select * from alimentos where NOME_REFEICAO = 'Colação'";
+        $sql = "select * from alimentos where NOME_REFEICAO = 'Colação' and ID_CLIENTE=".$_GET["id_cliente"];
         
         $result = mysqli_query($con, $sql);
         
@@ -398,7 +398,7 @@
         
         include_once 'conexao.php';
         
-        $sql = "select * from alimentos where NOME_REFEICAO = 'Almoço'";
+        $sql = "select * from alimentos where NOME_REFEICAO = 'Almoço' and ID_CLIENTE=".$_GET["id_cliente"];
         
         $result = mysqli_query($con, $sql);
         
@@ -473,7 +473,7 @@
         
         include_once 'conexao.php';
         
-        $sql = "select * from alimentos where NOME_REFEICAO = 'Lanche'";
+        $sql = "select * from alimentos where NOME_REFEICAO = 'Lanche' and ID_CLIENTE=".$_GET["id_cliente"];
         
         $result = mysqli_query($con, $sql);
         
@@ -548,7 +548,7 @@
         
         include_once 'conexao.php';
         
-        $sql = "select * from alimentos where NOME_REFEICAO = '1ºLanche'";
+        $sql = "select * from alimentos where NOME_REFEICAO = '1ºLanche' and ID_CLIENTE=".$_GET["id_cliente"];
         
         $result = mysqli_query($con, $sql);
         
@@ -623,7 +623,7 @@
         
         include_once 'conexao.php';
         
-        $sql = "select * from alimentos where NOME_REFEICAO = '2ºLanche'";
+        $sql = "select * from alimentos where NOME_REFEICAO = '2ºLanche' and ID_CLIENTE=".$_GET["id_cliente"];
         
         $result = mysqli_query($con, $sql);
         
@@ -695,7 +695,7 @@
         
         include_once 'conexao.php';
         
-        $sql = "select * from alimentos where NOME_REFEICAO = 'Jantar'";
+        $sql = "select * from alimentos where NOME_REFEICAO = 'Jantar' and ID_CLIENTE=".$_GET["id_cliente"];
         
         $result = mysqli_query($con, $sql);
         
@@ -769,7 +769,7 @@
         
         include_once 'conexao.php';
         
-        $sql = "select * from alimentos where NOME_REFEICAO = 'Ceia'";
+        $sql = "select * from alimentos where NOME_REFEICAO = 'Ceia' and ID_CLIENTE=".$_GET["id_cliente"];
         
         $result = mysqli_query($con, $sql);
         

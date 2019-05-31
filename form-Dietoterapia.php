@@ -290,7 +290,7 @@
                     </select>
                 </div>
                 <div id="botaoIndoParaImpressao">
-                    <?php echo "<a href='impressaoDieta.php?id_cliente=".$_GET["id_cliente"]."'><img class='impressoraImagem animated pulse' src='img/icons8-m%C3%A1quina-de-escrever-com-tablet-48.png' alt=''></a>" ?>
+                    <?php echo "<a title='Imprimir dieta' href='impressaoDieta.php?id_cliente=".$_GET["id_cliente"]."'><img class='impressoraImagem animated pulse' src='img/icons8-m%C3%A1quina-de-escrever-com-tablet-48.png' alt=''></a>" ?>
                 </div>
             </div>
 
@@ -306,7 +306,7 @@
         <div style="width: 800px; margin-left: 250px; margin-top: 20px;">
 
             <div class="form-group row">
-                <label for="inputEmail3" class="col-sm-2 col-form-label">Alimento</label>
+                <label style="margin-top: 9px;" for="inputEmail3" class="col-sm-2 col-form-label">Alimento</label>
                 <div class="col-sm-8">
                     <div class="form-group input-group">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>

@@ -143,9 +143,9 @@
                 
             ?> ">
             <div id="vet">
-                <span id="TMB-Kcal" class="badge badge-pill badge-success">VET/Kcal:</span> 
+                <span id="TMB-Kcal" class="badge badge-pill badge-success">VET/Kcal:</span>
                 <p id="resultadoVet">
-                    
+
                 </p>
             </div>
         </div>
@@ -256,48 +256,55 @@
                 <thead>
                     <tr>
                         <th></th>
-                        <th scope="col">
+                        <th style="text-align: center;" scope="col">
                             Nível de atividade física
                         </th>
-                        <th></th>
                     </tr>
                     <tr>
-                        <th scope="col"><img src="img/icons8-barbell-48.png" alt=""></th>
-                        <th scope="col">Masculino</th>
-                        <th scope="col">Feminino</th>
+                        <th scope="col-4"><img src="img/icons8-barbell-48.png" alt=""></th>
+                        <th style="text-align: center;" scope="col-4">Masculino</th>
+                        <th style="" scope="col-4">Feminino</th>
+                        <th></th>
                     </tr>
+
                 </thead>
 
                 <tbody>
                     <tr>
                         <th>Sono</th>
-                        <td style="padding-left:30px;">1,00</td>
-                        <td style="padding-left:30px;">1,00</td>
+                        <td style="text-align: center;">1,00</td>
+                        <td style="text-align: center;">1,00</td>
+                        <td></td>
                     </tr>
                     <tr>
                         <th>C. ao leito</th>
-                        <td style="padding-left:30px;">1,27</td>
-                        <td style="padding-left:30px;">1,27</td>
+                        <td style="text-align: center;">1,27</td>
+                        <td style="text-align: center;">1,27</td>
+                        <td></td>
                     </tr>
                     <tr>
                         <th>Leve</th>
-                        <td style="padding-left:30px;">1,55</td>
-                        <td style="padding-left:30px;">1,56</td>
+                        <td style="text-align: center;">1,55</td>
+                        <td style="text-align: center;">1,56</td>
+                        <td></td>
                     </tr>
                     <tr>
                         <th>Moderado</th>
-                        <td style="padding-left:30px;">1,78</td>
-                        <td style="padding-left:30px;">1,64</td>
+                        <td style="text-align: center;;">1,78</td>
+                        <td style="text-align: center;;">1,64</td>
+                        <td></td>
                     </tr>
                     <tr>
                         <th>Intenso</th>
-                        <td style="padding-left:30px;">2.1</td>
-                        <td style="padding-left:30px;">1,82</td>
+                        <td style="text-align: center;;">2.1</td>
+                        <td style="text-align: center;;">1,82</td>
+                        <td></td>
                     </tr>
                     <tr>
                         <th>Idoso</th>
-                        <td style="padding-left:30px;">1,51</td>
-                        <td style="padding-left:30px;">1,52</td>
+                        <td style="text-align: center;;">1,51</td>
+                        <td style="text-align: center;;">1,52</td>
+                        <td></td>
                     </tr>
                 </tbody>
             </table>
