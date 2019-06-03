@@ -32,7 +32,7 @@
             <a href="#" class="list-group-item list-group-item-action active">
                 Menu
             </a>
-            <a href="#" class="list-group-item list-group-item-action">Dados do paciente <i class="fas fa-check" style="font-size: 18px; color: #3b884d"></i> </a>
+            <a href="#" class="list-group-item list-group-item-action">Dados do paciente <i class="fas fa-check" style="font-size: 16px; color: #3b884d"></i> </a>
             <a id="menuFechado" href="#" class="list-group-item list-group-item-action" title="Inicie uma consulta para acessar os formulários com cadeado">Av. Antropométrica<i class="fas fa-lock" id="cadeadoFechado"></i></a>
             <a id="menuFechado" href="#" class="list-group-item list-group-item-action" title="Inicie uma consulta para acessar os formulários com cadeado">Av. Bioquímica<i class="fas fa-lock" id="cadeadoFechado"></i></a>
             <a id="menuFechado" href="#" class="list-group-item list-group-item-action" title="Inicie uma consulta para acessar os formulários com cadeado">Av. Clínica nutri.<i class="fas fa-lock" id="cadeadoFechado"></i></a>
