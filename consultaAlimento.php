@@ -25,7 +25,7 @@
 <div class="table-overflow1">
     <table class="table table-striped animated flipInX" style="margin-bottom: 0px !important;">
         <tr>
-            <th style="color: #E8850C; padding-left: 75px;">Alimento</th>
+            <th style="color: #E8850C; padding-left: 55px;">Alimento</th>
             <th style="color: #E8850C; padding-left: 120px;">M.C.</th>
             <th style="color: #E8850C; padding-left: 60px;">Grama</th>
             <th style="color: #E8850C">CHO</th>
@@ -52,9 +52,9 @@
                         echo "<td>".$row["col 2"]."</td>";
                         echo "<td>".$row["col 3"]."</td>";
                         echo "<td>".$grama*$quantidade."</td>";
-                        echo "<td>".$cho*$quantidade."</td>";
-                        echo "<td>".$ptn*$quantidade."</td>";
-                        echo "<td>".$lip*$quantidade."</td>";
+                        echo "<td>".number_format($cho*$quantidade,2)."</td>";
+                        echo "<td>".number_format($ptn*$quantidade,2)."</td>";
+                        echo "<td>".number_format($lip*$quantidade,2)."</td>";
                         echo "<td>".number_format((($cho*$quantidade*4) + ($ptn*$quantidade*4) + ($lip*$quantidade*9)),2)."</td>";
                         ?> <?php
                         echo "<td><a href='cadastroAlimentos.php?idAlimento=".$row["ID"]."&quantidade=".$_GET["quantidade"]."&refeicao=".$_GET["refeicao"]."&horario=".$_GET["horario"]."&id_cliente=".$_GET["id_cliente"]."'><img id='alimentoadicionado' src='img/icons8-mais-48.png' alt=''></a></td>";

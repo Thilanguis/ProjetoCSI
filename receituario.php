@@ -76,7 +76,7 @@
         </div>
         <h2 id="nutricionistaLogado" type=""> <?php echo $_SESSION["login"];  ?></h2>
         <h4 style="text-align: center; margin-right: 165px;">Nutricionista</h4>
-        <h6 id="crnReceituario" style="text-align: center; margin-right: 32px;"><?php echo"CRN ". $_SESSION["crn"];  ?></h6>
+        <h6 id="crnReceituario" style="text-align: center; margin-right: 32px;"><?php echo "CRN ". $_SESSION["crn"];  ?></h6>
 
         <div class="form-group" style="float: right; width: 900px;">
             <textarea class="form-control col-11" id="exampleFormControlTextarea1" rows="20"></textarea>
