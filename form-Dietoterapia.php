@@ -17,22 +17,6 @@
 
 <body>
 
-    <div id="consultarDadosPaciente" title="Consulta da avaliação">
-        <div class="accordion">
-            <div class="card">
-                <div class="card-header">
-                    <h5 class="mb-0" id="textoImprimir"><img src="img/icons8-estante-de-livros-48.png" alt=""></h5>
-                </div>
-                <div style="text-align: center;">
-                    <button title="Av. Antropométrica" id="botaoConsulta" class="btn btn-light btn-sm" data-toggle="modal" data-target="#antropometria"><img src="img/icons8-balan%C3%A7a-industrial-48.png" alt=""></button> <br>
-                    <button title="Av. Bioquímica" id="botaoConsulta" class="btn btn-light btn-sm" data-toggle="modal" data-target="#bioquimica"><img style="width: 48px; height: 48px;" src="img/icons8-microsc%C3%B3pio-96.png" alt=""></button><br>
-
-                    <button title="Av. Clínica Nutricional" id="botaoConsulta" class="btn btn-light btn-sm" data-toggle="modal" data-target="#clinicaNutricional"><i class="fas fa-book-medical" style="font-size: 40px; color: #d83838; text-shadow: none;"></i></button>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- input para pegar nome do nutricionista logado -->
     <input id="nutricionistaLogado" type="hidden" value="<?php echo $_SESSION["login"];  ?>">
 
@@ -97,7 +81,25 @@
             <a id="menuAberto" href="#" class="list-group-item list-group-item-action" onclick="avisoAvancar()">Impressão de dieta<i class="fas fa-lock-open" id="cadeadoAberto"></i></a>
         </div>
 
-        <h4 id="menuNutricionista">Conduta Dietoterápica &nbsp; <img id="prancheta" src="img/icons8-lista-64.png" alt=""> </h4>
+        <h4 id="menuNutricionista">Conduta Dietoterápica &nbsp; <img id="prancheta" src="img/icons8-lista-64.png" alt=""> <!-- Example single danger button --></h4>
+        
+        <div id="consultarDadosPaciente" class="btn-group">
+  <button type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <h5 class="mb-0" id="textoImprimir"><img title="Consulta Avaliação" src="img/icons8-estante-de-livros-48.png" alt=""></h5>
+  </button>
+  
+  <div class="dropdown-menu">
+   
+    <?php echo "<a class='dropdown-item' href='#'><button title='Av. Antropométrica' id='botaoConsulta' class='btn btn-link' data-toggle='modal' data-target='#antropometria'><img id='caixaConsulta' src='img/icons8-balan%C3%A7a-industrial-48.png' alt=''></button></a>" ?>
+    <div class="dropdown-divider"></div>
+    
+    <a class="dropdown-item" href="#"><button title="Av. Bioquímica" id="botaoConsulta" class="btn btn-link" data-toggle="modal" data-target="#bioquimica"><img id='caixaConsulta' style="width: 48px; height: 48px;" src="img/icons8-microsc%C3%B3pio-96.png" alt=""></button></a>
+    <div class="dropdown-divider"></div>
+    
+    <a class="dropdown-item" href="#"><button title="Av. Clínica Nutricional" id="botaoConsulta" class="btn btn-link" data-toggle="modal" data-target="#clinicaNutricional"><i id='caixaConsulta1'class="fas fa-book-medical" style="font-size: 40px; color: #d83838; text-shadow: none;"></i></button></a>
+    </div>
+
+</div> 
 
         <div id="secaoDietoterapia">
             <div>
@@ -148,7 +150,7 @@
                 
             $row = mysqli_fetch_array($result);
               
-             echo $row[0]." Kg";                                                                                           
+             echo number_format($row[0],2)." Kg";                                                                                           
              ?>">
             </div>
             <br>
@@ -260,7 +262,7 @@
             
                             $row = mysqli_fetch_array($result);
             
-                            echo $row["CHO"] + $row["PTN"] + $row["LIP"]."  Kcal";
+                            echo number_format($row["CHO"] + $row["PTN"] + $row["LIP"],2)."  Kcal";
             
                                      ?>">
             </div>

@@ -259,6 +259,8 @@
                         <th style="text-align: center;" scope="col">
                             Nível de atividade física
                         </th>
+                        <th></th>
+                        <th></th>
                     </tr>
                     <tr>
                         <th scope="col-4"><img src="img/icons8-barbell-48.png" alt=""></th>

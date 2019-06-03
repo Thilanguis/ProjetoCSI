@@ -32,9 +32,9 @@
             <th style="color: #E8850C">PTN</th>
             <th style="color: #E8850C">LIP</th>
             <th style="color: #E8850C">Kcal</th>
-            <th style="color: #E8850C">Incluir</th>
+            <th style="color: #E8850C">&nbsp;&nbsp;&nbsp;&nbsp;Incluir&nbsp;&nbsp;&nbsp;</th>
         </tr>
-    </table>
+    </table> 
 </div>
 <div class="table-overflow3">
     <table class="table table-striped container animated zoomIn" style="width: 750px;">
@@ -52,9 +52,10 @@
                         echo "<td>".$row["col 2"]."</td>";
                         echo "<td>".$row["col 3"]."</td>";
                         echo "<td>".$grama*$quantidade."</td>";
+                        echo "<td>".$cho*$quantidade."</td>";
                         echo "<td>".$ptn*$quantidade."</td>";
                         echo "<td>".$lip*$quantidade."</td>";
-                        echo "<td>".$kcal*$quantidade."</td>";
+                        echo "<td>".number_format((($cho*$quantidade*4) + ($ptn*$quantidade*4) + ($lip*$quantidade*9)),2)."</td>";
                         ?> <?php
                         echo "<td><a href='cadastroAlimentos.php?idAlimento=".$row["ID"]."&quantidade=".$_GET["quantidade"]."&refeicao=".$_GET["refeicao"]."&horario=".$_GET["horario"]."&id_cliente=".$_GET["id_cliente"]."'><img id='alimentoadicionado' src='img/icons8-mais-48.png' alt=''></a></td>";
                         echo "</tr>";
