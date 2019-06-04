@@ -702,7 +702,7 @@ h3 {
 }
 
 #consultarDadosPaciente {
-    display: inline-block;  
+    display: inline-block;
     position: absolute;
     margin-left: 818px;
 }
@@ -886,7 +886,8 @@ h3 {
 }
 
 #nutricionistaLogado {
-    margin-left: 200px;
+    text-align: center;
+    width: 646px;
     display: inline-block;
     margin-top: 40px;
 }
