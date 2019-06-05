@@ -304,11 +304,15 @@ h3 {
 #consultandoDietaPacienteJaFeita {
     text-decoration: none;
     color: #00eb1b;
+    display: inline-block;
+    margin-bottom: 0px;
+    font-style: normal;
 }
 
 #consultandoDietaPacienteJaFeita:hover {
     text-decoration: none;
     color: #d83838;
+    margin-bottom: 0px;
 }
 
 .fa-heartbeat {

@@ -112,7 +112,6 @@
                     <th style="color: #E8850C">Nome</th>
                     <th style="color: #E8850C">Telefone&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
                     <th style="color: #E8850C">Endereço</th>
-                    <th style="color: #E8850C">Cidade</th>
                     <th style="color: #E8850C">Data de cadastramento</th>
                     <th style="color: #E8850C">Editar Paciente</th>
                     <th style="color: #E8850C">Excluir Paciente</th>
@@ -133,12 +132,11 @@
                 
                 $totalRegistros1 = mysqli_num_rows($result1);
                         
-                        if ($totalRegistros1 > 0) {echo "<td><a id='consultandoDietaPacienteJaFeita' href='#' onclick='consultarDieta(".$row["id_cliente"].")'><p>".$row["nome"]."</p></td>";}
+                        if ($totalRegistros1 > 0) {echo "<td id='consultandoDietaPacienteJaFeita'><a id='consultandoDietaPacienteJaFeita' href='#' onclick='consultarDieta(".$row["id_cliente"].")'><i id='consultandoDietaPacienteJaFeita'>".$row["nome"]."</i></td>";}
                         else{
                         echo "<td>".$row["nome"]."</td>";}
                         echo "<td>".$row["telefone"]."</td>";
                         echo "<td>".$row["endereco"]."</td>";
-                        echo "<td>".$row["cidade"]."</td>";
                         echo "<td>".date('d-m-Y H:i:s', strtotime($row["registro"]))."</td>"; 
                         echo "<td><a href='form-editarPacienteNovo.php?id_paciente=".$row["id_cliente"]."'><img src='img/icons8-editar-vários-128.png' alt='' style='padding-left: 15px; padding-top: 12px; width; 45px; height: 45px;'></td>";
                         echo "<td><a href='#' onclick='excluir(".$row["id_cliente"].")'><img src='img/icons8-lixo-30.png' style='padding-left: 17px; padding-top: 12px;' alt=''></td>";
