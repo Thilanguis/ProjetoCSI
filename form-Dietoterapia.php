@@ -81,25 +81,26 @@
             <a id="menuAberto" href="#" class="list-group-item list-group-item-action" onclick="avisoAvancar()">Impressão de dieta<i class="fas fa-lock-open" id="cadeadoAberto"></i></a>
         </div>
 
-        <h4 id="menuNutricionista">Conduta Dietoterápica &nbsp; <img id="prancheta" src="img/icons8-lista-64.png" alt=""> <!-- Example single danger button --></h4>
-        
-        <div id="consultarDadosPaciente" class="btn-group">
-  <button type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    <h5 class="mb-0" id="textoImprimir"><img title="Consulta Avaliação" src="img/icons8-estante-de-livros-48.png" alt=""></h5>
-  </button>
-  
-  <div class="dropdown-menu">
-   
-    <?php echo "<a class='dropdown-item' href='#'><button title='Av. Antropométrica' id='botaoConsulta' class='btn btn-link' data-toggle='modal' data-target='#antropometria'><img id='caixaConsulta' src='img/icons8-balan%C3%A7a-industrial-48.png' alt=''></button></a>" ?>
-    <div class="dropdown-divider"></div>
-    
-    <a class="dropdown-item" href="#"><button title="Av. Bioquímica" id="botaoConsulta" class="btn btn-link" data-toggle="modal" data-target="#bioquimica"><img id='caixaConsulta' style="width: 48px; height: 48px;" src="img/icons8-microsc%C3%B3pio-96.png" alt=""></button></a>
-    <div class="dropdown-divider"></div>
-    
-    <a class="dropdown-item" href="#"><button title="Av. Clínica Nutricional" id="botaoConsulta" class="btn btn-link" data-toggle="modal" data-target="#clinicaNutricional"><i id='caixaConsulta1'class="fas fa-book-medical" style="font-size: 40px; color: #d83838; text-shadow: none;"></i></button></a>
-    </div>
+        <h4 id="menuNutricionista">Conduta Dietoterápica &nbsp; <img id="prancheta" src="img/icons8-lista-64.png" alt=""> <!-- Example single danger button -->
+        </h4>
 
-</div> 
+        <div id="consultarDadosPaciente" class="btn-group">
+            <button type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <h5 class="mb-0" id="textoImprimir"><img title="Consulta Avaliação" src="img/icons8-estante-de-livros-48.png" alt=""></h5>
+            </button>
+
+            <div class="dropdown-menu">
+
+                <?php echo "<a class='dropdown-item' href='#'><button title='Av. Antropométrica' id='botaoConsulta' class='btn btn-link' data-toggle='modal' data-target='#antropometria'><img id='caixaConsulta' src='img/icons8-balan%C3%A7a-industrial-48.png' alt=''></button></a>" ?>
+                <div class="dropdown-divider"></div>
+
+                <a class="dropdown-item" href="#"><button title="Av. Bioquímica" id="botaoConsulta" class="btn btn-link" data-toggle="modal" data-target="#bioquimica"><img id='caixaConsulta' style="width: 48px; height: 48px;" src="img/icons8-microsc%C3%B3pio-96.png" alt=""></button></a>
+                <div class="dropdown-divider"></div>
+
+                <a class="dropdown-item" href="#"><button title="Av. Clínica Nutricional" id="botaoConsulta" class="btn btn-link" data-toggle="modal" data-target="#clinicaNutricional"><i id='caixaConsulta1' class="fas fa-book-medical" style="font-size: 40px; color: #d83838; text-shadow: none;"></i></button></a>
+            </div>
+
+        </div>
 
         <div id="secaoDietoterapia">
             <div>
@@ -256,7 +257,7 @@
                             
                             include_once 'conexao.php';
                                                                                                     
-                            $sql = "select sum(cast(CHO as decimal(15,2)))*4 CHO, sum(cast(PTN as decimal(15,2)))*4 PTN, sum(cast(LIP as decimal(15,2)))*9 LIP from alimentos";
+                            $sql = "select sum(cast(CHO as decimal(15,2)))*4 CHO, sum(cast(PTN as decimal(15,2)))*4 PTN, sum(cast(LIP as decimal(15,2)))*9 LIP from alimentos where ID_CLIENTE = ".$_GET["id_cliente"];
                                                                                                                                              
                             $result = mysqli_query($con, $sql);
             
