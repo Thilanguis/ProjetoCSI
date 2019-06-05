@@ -24,6 +24,12 @@ function iniciarDieta(id) {
     }
 }
 
+function consultarDieta(id) {
+    if (confirm('Deseja consultar a dieta do paciente com nome selecionado em vermelho?')) {
+        location.href = 'form-Dietoterapia.php?id_cliente=' + id;
+    }
+}
+
 function avisoAvancar() {
     alert("Salve os dados para avançar na consulta!");
 }

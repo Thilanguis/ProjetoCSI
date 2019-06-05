@@ -301,6 +301,16 @@ h3 {
     margin-top: 20px;
 }
 
+#consultandoDietaPacienteJaFeita {
+    text-decoration: none;
+    color: #00eb1b;
+}
+
+#consultandoDietaPacienteJaFeita:hover {
+    text-decoration: none;
+    color: #d83838;
+}
+
 .fa-heartbeat {
     animation-duration: 15s;
     animation-iteration-count: infinite;

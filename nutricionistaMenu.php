@@ -97,7 +97,7 @@
                 
                 include_once 'excluirCliente.php';
                 
-                $sql = "select nome,telefone,endereco,cidade,estado_civil,dt_nascimento,sexo,id_cliente, registro from cliente where nome like '".$nome."%' or cpf like '".$nome."%' ";
+                $sql = "select nome,telefone,endereco,cidade,estado_civil,dt_nascimento,sexo,id_cliente, registro from cliente where nome like '".$nome."%' or cpf like '".$nome."%' order by registro asc ";
                 
                 $result = mysqli_query($con, $sql);
                 
@@ -125,7 +125,17 @@
                     { 
                         echo "<tr>";
                         echo "<td><a href='#' onclick='iniciarDieta(".$row["id_cliente"].")'> <i class='fas fa-book-open' title='Iniciar consulta' style='color: #E8850C'></i></td>";
-                        echo "<td>".$row["nome"]."</td>";
+                        
+                
+                $sql1 = "select ID_CLIENTE from alimentos where id_cliente =".$row["id_cliente"];
+                    
+                $result1 = mysqli_query($con, $sql1);
+                
+                $totalRegistros1 = mysqli_num_rows($result1);
+                        
+                        if ($totalRegistros1 > 0) {echo "<td><a id='consultandoDietaPacienteJaFeita' href='#' onclick='consultarDieta(".$row["id_cliente"].")'><p>".$row["nome"]."</p></td>";}
+                        else{
+                        echo "<td>".$row["nome"]."</td>";}
                         echo "<td>".$row["telefone"]."</td>";
                         echo "<td>".$row["endereco"]."</td>";
                         echo "<td>".$row["cidade"]."</td>";
