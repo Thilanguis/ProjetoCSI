@@ -446,7 +446,7 @@
                 <div class="form-group col-sm-2"><i style="margin-left: 35%;">cho</i>
                     <input style="text-align: center;" type="text" class="form-control" id="bracoEsq" placeholder="" name="" disabled value=" <?php 
                             
-                            $sql = "select sum(cast(CHO as decimal(15,2)))*4 CHO from alimentos where NOME_REFEICAO = 'Desjejum'";
+                            $sql = "select sum(cast(CHO as decimal(15,2)))*4 CHO from alimentos where NOME_REFEICAO = 'Desjejum' and ID_CLIENTE=".$_GET["id_cliente"];
         
                             $result = mysqli_query($con, $sql);
             
@@ -459,7 +459,7 @@
                 <div class=" form-group col-sm-2"><i style="margin-left: 34%;">ptn</i>
                     <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled value=" <?php 
                             
-                            $sql = "select sum(cast(PTN as decimal(15,2)))*4 PTN from alimentos where NOME_REFEICAO = 'Desjejum'";
+                            $sql = "select sum(cast(PTN as decimal(15,2)))*4 PTN from alimentos where NOME_REFEICAO = 'Desjejum' and ID_CLIENTE=".$_GET["id_cliente"];
         
                             $result = mysqli_query($con, $sql);
             
@@ -472,7 +472,7 @@
                 <div class="form-group col-sm-2"><i style="margin-left: 36%;">lip</i>
                     <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled value=" <?php 
                             
-                            $sql = "select sum(cast(LIP as decimal(15,2)))*9 LIP from alimentos where NOME_REFEICAO = 'Desjejum'";
+                            $sql = "select sum(cast(LIP as decimal(15,2)))*9 LIP from alimentos where NOME_REFEICAO = 'Desjejum' and ID_CLIENTE=".$_GET["id_cliente"];
         
                             $result = mysqli_query($con, $sql);
             
@@ -486,13 +486,13 @@
                 <div class="form-group col-sm-2"><i style="margin-left: 35%;"><i>VET</i></i>
                     <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled value=" <?php 
                             
-            $sql = "select sum(cast(CHO as decimal(15,2)))*4 CHO, sum(cast(PTN as decimal(15,2)))*4 PTN, sum(cast(LIP as decimal(15,2)))*9 LIP from alimentos where NOME_REFEICAO = 'Desjejum'";
+            $sql = "select sum(cast(CHO as decimal(15,2)))*4 CHO, sum(cast(PTN as decimal(15,2)))*4 PTN, sum(cast(LIP as decimal(15,2)))*9 LIP from alimentos where NOME_REFEICAO = 'Desjejum' and ID_CLIENTE=".$_GET["id_cliente"];
        
                             $result = mysqli_query($con, $sql);
             
                             $row = mysqli_fetch_array($result);
             
-                            echo $vetDesjejum =  $row["CHO"]+$row["PTN"]+$row["LIP"]."  Kcal";
+                            echo $vetDesjejum =  number_format($row["CHO"]+$row["PTN"]+$row["LIP"],2)."  Kcal";
             
                                      ?>">
                 </div>
@@ -586,7 +586,7 @@
                 <div class="form-group col-sm-2"><i style="margin-left: 35%;">cho</i>
                     <input style="text-align: center;" type="text" class="form-control" id="bracoEsq" placeholder="" name="" disabled value=" <?php 
                             
-                            $sql = "select sum(cast(CHO as decimal(15,2)))*4 CHO from alimentos where NOME_REFEICAO = 'Colação'";
+                            $sql = "select sum(cast(CHO as decimal(15,2)))*4 CHO from alimentos where NOME_REFEICAO = 'Colação' and ID_CLIENTE=".$_GET["id_cliente"];
         
                             $result = mysqli_query($con, $sql);
             
@@ -599,7 +599,7 @@
                 <div class=" form-group col-sm-2"><i style="margin-left: 34%;">ptn</i>
                     <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled value=" <?php 
                             
-                            $sql = "select sum(cast(PTN as decimal(15,2)))*4 PTN from alimentos where NOME_REFEICAO = 'Colação'";
+                            $sql = "select sum(cast(PTN as decimal(15,2)))*4 PTN from alimentos where NOME_REFEICAO = 'Colação' and ID_CLIENTE=".$_GET["id_cliente"];
         
                             $result = mysqli_query($con, $sql);
             
@@ -612,7 +612,7 @@
                 <div class="form-group col-sm-2"><i style="margin-left: 36%;">lip</i>
                     <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled value=" <?php 
                             
-                            $sql = "select sum(cast(LIP as decimal(15,2)))*9 LIP from alimentos where NOME_REFEICAO = 'Colação'";
+                            $sql = "select sum(cast(LIP as decimal(15,2)))*9 LIP from alimentos where NOME_REFEICAO = 'Colação' and ID_CLIENTE=".$_GET["id_cliente"];
         
                             $result = mysqli_query($con, $sql);
             
@@ -626,13 +626,13 @@
                 <div class="form-group col-sm-2"><i style="margin-left: 35%;"><i>VET</i></i>
                     <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled value=" <?php 
                             
-            $sql = "select sum(cast(CHO as decimal(15,2)))*4 CHO, sum(cast(PTN as decimal(15,2)))*4 PTN, sum(cast(LIP as decimal(15,2)))*9 LIP from alimentos where NOME_REFEICAO = 'Colação'";
+            $sql = "select sum(cast(CHO as decimal(15,2)))*4 CHO, sum(cast(PTN as decimal(15,2)))*4 PTN, sum(cast(LIP as decimal(15,2)))*9 LIP from alimentos where NOME_REFEICAO = 'Colação' and ID_CLIENTE=".$_GET["id_cliente"];
        
                             $result = mysqli_query($con, $sql);
             
                             $row = mysqli_fetch_array($result);
             
-                            echo $vetColacao = $row["CHO"]+$row["PTN"]+$row["LIP"]."  Kcal";
+                            echo $vetColacao = number_format($row["CHO"]+$row["PTN"]+$row["LIP"],2)."  Kcal";
             
                                      ?>">
                 </div>
@@ -725,7 +725,7 @@
                 <div class="form-group col-sm-2"><i style="margin-left: 35%;">cho</i>
                     <input style="text-align: center;" type="text" class="form-control" id="bracoEsq" placeholder="" name="" disabled value=" <?php 
                             
-                            $sql = "select sum(cast(CHO as decimal(15,2)))*4 CHO from alimentos where NOME_REFEICAO = 'Almoço'";
+                            $sql = "select sum(cast(CHO as decimal(15,2)))*4 CHO from alimentos where NOME_REFEICAO = 'Almoço' and ID_CLIENTE=".$_GET["id_cliente"];
         
                             $result = mysqli_query($con, $sql);
             
@@ -738,7 +738,7 @@
                 <div class=" form-group col-sm-2"><i style="margin-left: 34%;">ptn</i>
                     <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled value=" <?php 
                             
-                            $sql = "select sum(cast(PTN as decimal(15,2)))*4 PTN from alimentos where NOME_REFEICAO = 'Almoço'";
+                            $sql = "select sum(cast(PTN as decimal(15,2)))*4 PTN from alimentos where NOME_REFEICAO = 'Almoço' and ID_CLIENTE=".$_GET["id_cliente"];
         
                             $result = mysqli_query($con, $sql);
             
@@ -751,7 +751,7 @@
                 <div class="form-group col-sm-2"><i style="margin-left: 36%;">lip</i>
                     <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled value=" <?php 
                             
-                            $sql = "select sum(cast(LIP as decimal(15,2)))*9 LIP from alimentos where NOME_REFEICAO = 'Almoço'";
+                            $sql = "select sum(cast(LIP as decimal(15,2)))*9 LIP from alimentos where NOME_REFEICAO = 'Almoço' and ID_CLIENTE=".$_GET["id_cliente"];
         
                             $result = mysqli_query($con, $sql);
             
@@ -765,13 +765,13 @@
                 <div class="form-group col-sm-2"><i style="margin-left: 35%;"><i>VETl</i></i>
                     <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled value=" <?php 
                             
-            $sql = "select sum(cast(CHO as decimal(15,2)))*4 CHO, sum(cast(PTN as decimal(15,2)))*4 PTN, sum(cast(LIP as decimal(15,2)))*9 LIP from alimentos where NOME_REFEICAO = 'Almoço'";
+            $sql = "select sum(cast(CHO as decimal(15,2)))*4 CHO, sum(cast(PTN as decimal(15,2)))*4 PTN, sum(cast(LIP as decimal(15,2)))*9 LIP from alimentos where NOME_REFEICAO = 'Almoço' and ID_CLIENTE=".$_GET["id_cliente"];
        
                             $result = mysqli_query($con, $sql);
             
                             $row = mysqli_fetch_array($result);
             
-                            echo $row["CHO"]+$row["PTN"]+$row["LIP"]."  Kcal";
+                            echo number_format($row["CHO"]+$row["PTN"]+$row["LIP"],2)."  Kcal";
             
                                      ?>">
                 </div>
@@ -864,7 +864,7 @@
                 <div class="form-group col-sm-2"><i style="margin-left: 35%;">cho</i>
                     <input style="text-align: center;" type="text" class="form-control" id="bracoEsq" placeholder="" name="" disabled value=" <?php 
                             
-                            $sql = "select sum(cast(CHO as decimal(15,2)))*4 CHO from alimentos where NOME_REFEICAO = 'Lanche'";
+                            $sql = "select sum(cast(CHO as decimal(15,2)))*4 CHO from alimentos where NOME_REFEICAO = 'Lanche' and ID_CLIENTE=".$_GET["id_cliente"];
         
                             $result = mysqli_query($con, $sql);
             
@@ -877,7 +877,7 @@
                 <div class=" form-group col-sm-2"><i style="margin-left: 34%;">ptn</i>
                     <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled value=" <?php 
                             
-                            $sql = "select sum(cast(PTN as decimal(15,2)))*4 PTN from alimentos where NOME_REFEICAO = 'Lanche'";
+                            $sql = "select sum(cast(PTN as decimal(15,2)))*4 PTN from alimentos where NOME_REFEICAO = 'Lanche' and ID_CLIENTE=".$_GET["id_cliente"];
         
                             $result = mysqli_query($con, $sql);
             
@@ -890,7 +890,7 @@
                 <div class="form-group col-sm-2"><i style="margin-left: 36%;">lip</i>
                     <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled value=" <?php 
                             
-                            $sql = "select sum(cast(LIP as decimal(15,2)))*9 LIP from alimentos where NOME_REFEICAO = 'Lanche'";
+                            $sql = "select sum(cast(LIP as decimal(15,2)))*9 LIP from alimentos where NOME_REFEICAO = 'Lanche' and ID_CLIENTE=".$_GET["id_cliente"];
         
                             $result = mysqli_query($con, $sql);
             
@@ -904,13 +904,13 @@
                 <div class="form-group col-sm-2"><i style="margin-left: 35%;"><i>VET</i></i>
                     <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled value=" <?php 
                             
-            $sql = "select sum(cast(CHO as decimal(15,2)))*4 CHO, sum(cast(PTN as decimal(15,2)))*4 PTN, sum(cast(LIP as decimal(15,2)))*9 LIP from alimentos where NOME_REFEICAO = 'Lanche'";
+            $sql = "select sum(cast(CHO as decimal(15,2)))*4 CHO, sum(cast(PTN as decimal(15,2)))*4 PTN, sum(cast(LIP as decimal(15,2)))*9 LIP from alimentos where NOME_REFEICAO = 'Lanche' and ID_CLIENTE=".$_GET["id_cliente"];
        
                             $result = mysqli_query($con, $sql);
             
                             $row = mysqli_fetch_array($result);
             
-                            echo $row["CHO"]+$row["PTN"]+$row["LIP"]."  Kcal";
+                            echo number_format($row["CHO"]+$row["PTN"]+$row["LIP"],2)."  Kcal";
             
                                      ?>">
                 </div>
@@ -1003,7 +1003,7 @@
                 <div class="form-group col-sm-2"><i style="margin-left: 35%;">cho</i>
                     <input style="text-align: center;" type="text" class="form-control" id="bracoEsq" placeholder="" name="" disabled value=" <?php 
                             
-                            $sql = "select sum(cast(CHO as decimal(15,2)))*4 CHO from alimentos where NOME_REFEICAO = '2ºLanche'";
+                            $sql = "select sum(cast(CHO as decimal(15,2)))*4 CHO from alimentos where NOME_REFEICAO = '2ºLanche' and ID_CLIENTE=".$_GET["id_cliente"];
         
                             $result = mysqli_query($con, $sql);
             
@@ -1016,7 +1016,7 @@
                 <div class=" form-group col-sm-2"><i style="margin-left: 34%;">ptn</i>
                     <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled value=" <?php 
                             
-                            $sql = "select sum(cast(PTN as decimal(15,2)))*4 PTN from alimentos where NOME_REFEICAO = '2ºLanche'";
+                            $sql = "select sum(cast(PTN as decimal(15,2)))*4 PTN from alimentos where NOME_REFEICAO = '2ºLanche' and ID_CLIENTE=".$_GET["id_cliente"];
         
                             $result = mysqli_query($con, $sql);
             
@@ -1029,7 +1029,7 @@
                 <div class="form-group col-sm-2"><i style="margin-left: 36%;">lip</i>
                     <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled value=" <?php 
                             
-                            $sql = "select sum(cast(LIP as decimal(15,2)))*9 LIP from alimentos where NOME_REFEICAO = '2ºLanche'";
+                            $sql = "select sum(cast(LIP as decimal(15,2)))*9 LIP from alimentos where NOME_REFEICAO = '2ºLanche' and ID_CLIENTE=".$_GET["id_cliente"];
         
                             $result = mysqli_query($con, $sql);
             
@@ -1043,13 +1043,13 @@
                 <div class="form-group col-sm-2"><i style="margin-left: 35%;"><i>VET</i></i>
                     <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled value=" <?php 
                             
-            $sql = "select sum(cast(CHO as decimal(15,2)))*4 CHO, sum(cast(PTN as decimal(15,2)))*4 PTN, sum(cast(LIP as decimal(15,2)))*9 LIP from alimentos where NOME_REFEICAO = '2ºLanche'";
+            $sql = "select sum(cast(CHO as decimal(15,2)))*4 CHO, sum(cast(PTN as decimal(15,2)))*4 PTN, sum(cast(LIP as decimal(15,2)))*9 LIP from alimentos where NOME_REFEICAO = '2ºLanche' and ID_CLIENTE=".$_GET["id_cliente"];
        
                             $result = mysqli_query($con, $sql);
             
                             $row = mysqli_fetch_array($result);
             
-                            echo $row["CHO"]+$row["PTN"]+$row["LIP"]."  Kcal";
+                            echo number_format($row["CHO"]+$row["PTN"]+$row["LIP"],2)."  Kcal";
             
                                      ?>">
                 </div>
@@ -1142,7 +1142,7 @@
                 <div class="form-group col-sm-2"><i style="margin-left: 35%;">cho</i>
                     <input style="text-align: center;" type="text" class="form-control" id="bracoEsq" placeholder="" name="" disabled value=" <?php 
                             
-                            $sql = "select sum(cast(CHO as decimal(15,2)))*4 CHO from alimentos where NOME_REFEICAO = '3ºLanche'";
+                            $sql = "select sum(cast(CHO as decimal(15,2)))*4 CHO from alimentos where NOME_REFEICAO = '3ºLanche' and ID_CLIENTE=".$_GET["id_cliente"];
         
                             $result = mysqli_query($con, $sql);
             
@@ -1155,7 +1155,7 @@
                 <div class=" form-group col-sm-2"><i style="margin-left: 34%;">ptn</i>
                     <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled value=" <?php 
                             
-                            $sql = "select sum(cast(PTN as decimal(15,2)))*4 PTN from alimentos where NOME_REFEICAO = '3ºLanche'";
+                            $sql = "select sum(cast(PTN as decimal(15,2)))*4 PTN from alimentos where NOME_REFEICAO = '3ºLanche' and ID_CLIENTE=".$_GET["id_cliente"];
         
                             $result = mysqli_query($con, $sql);
             
@@ -1168,7 +1168,7 @@
                 <div class="form-group col-sm-2"><i style="margin-left: 36%;">lip</i>
                     <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled value=" <?php 
                             
-                            $sql = "select sum(cast(LIP as decimal(15,2)))*9 LIP from alimentos where NOME_REFEICAO = '3ºLanche'";
+                            $sql = "select sum(cast(LIP as decimal(15,2)))*9 LIP from alimentos where NOME_REFEICAO = '3ºLanche' and ID_CLIENTE=".$_GET["id_cliente"];
         
                             $result = mysqli_query($con, $sql);
             
@@ -1182,13 +1182,13 @@
                 <div class="form-group col-sm-2"><i style="margin-left: 35%;"><i>VET</i></i>
                     <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled value=" <?php 
                             
-            $sql = "select sum(cast(CHO as decimal(15,2)))*4 CHO, sum(cast(PTN as decimal(15,2)))*4 PTN, sum(cast(LIP as decimal(15,2)))*9 LIP from alimentos where NOME_REFEICAO = '3ºLanche'";
+            $sql = "select sum(cast(CHO as decimal(15,2)))*4 CHO, sum(cast(PTN as decimal(15,2)))*4 PTN, sum(cast(LIP as decimal(15,2)))*9 LIP from alimentos where NOME_REFEICAO = '3ºLanche' and ID_CLIENTE=".$_GET["id_cliente"];
        
                             $result = mysqli_query($con, $sql);
             
                             $row = mysqli_fetch_array($result);
             
-                            echo $row["CHO"]+$row["PTN"]+$row["LIP"]."  Kcal";
+                            echo number_format($row["CHO"]+$row["PTN"]+$row["LIP"],2)."  Kcal";
             
                                      ?>">
                 </div>
@@ -1281,7 +1281,7 @@
                 <div class="form-group col-sm-2"><i style="margin-left: 35%;">cho</i>
                     <input style="text-align: center;" type="text" class="form-control" id="bracoEsq" placeholder="" name="" disabled value=" <?php 
                             
-                            $sql = "select sum(cast(CHO as decimal(15,2)))*4 CHO from alimentos where NOME_REFEICAO = 'Jantar'";
+                            $sql = "select sum(cast(CHO as decimal(15,2)))*4 CHO from alimentos where NOME_REFEICAO = 'Jantar' and ID_CLIENTE=".$_GET["id_cliente"];
         
                             $result = mysqli_query($con, $sql);
             
@@ -1294,7 +1294,7 @@
                 <div class=" form-group col-sm-2"><i style="margin-left: 34%;">ptn</i>
                     <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled value=" <?php 
                             
-                            $sql = "select sum(cast(PTN as decimal(15,2)))*4 PTN from alimentos where NOME_REFEICAO = 'Jantar'";
+                            $sql = "select sum(cast(PTN as decimal(15,2)))*4 PTN from alimentos where NOME_REFEICAO = 'Jantar' and ID_CLIENTE=".$_GET["id_cliente"];
         
                             $result = mysqli_query($con, $sql);
             
@@ -1307,7 +1307,7 @@
                 <div class="form-group col-sm-2"><i style="margin-left: 36%;">lip</i>
                     <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled value=" <?php 
                             
-                            $sql = "select sum(cast(LIP as decimal(15,2)))*9 LIP from alimentos where NOME_REFEICAO = 'Jantar'";
+                            $sql = "select sum(cast(LIP as decimal(15,2)))*9 LIP from alimentos where NOME_REFEICAO = 'Jantar' and ID_CLIENTE=".$_GET["id_cliente"];
         
                             $result = mysqli_query($con, $sql);
             
@@ -1321,13 +1321,13 @@
                 <div class="form-group col-sm-2"><i style="margin-left: 35%;"><i>VET</i></i>
                     <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled value=" <?php 
                             
-            $sql = "select sum(cast(CHO as decimal(15,2)))*4 CHO, sum(cast(PTN as decimal(15,2)))*4 PTN, sum(cast(LIP as decimal(15,2)))*9 LIP from alimentos where NOME_REFEICAO = 'Jantar'";
+            $sql = "select sum(cast(CHO as decimal(15,2)))*4 CHO, sum(cast(PTN as decimal(15,2)))*4 PTN, sum(cast(LIP as decimal(15,2)))*9 LIP from alimentos where NOME_REFEICAO = 'Jantar' and ID_CLIENTE=".$_GET["id_cliente"];
        
                             $result = mysqli_query($con, $sql);
             
                             $row = mysqli_fetch_array($result);
             
-                            echo $row["CHO"]+$row["PTN"]+$row["LIP"]."  Kcal";
+                            echo number_format($row["CHO"]+$row["PTN"]+$row["LIP"],2)."  Kcal";
             
                                      ?>">
                 </div>
@@ -1419,7 +1419,7 @@
                 <div class="form-group col-sm-2"><i style="margin-left: 35%;">cho</i>
                     <input style="text-align: center;" type="text" class="form-control" id="bracoEsq" placeholder="" name="" disabled value=" <?php 
                             
-                            $sql = "select sum(cast(CHO as decimal(15,2)))*4 CHO from alimentos where NOME_REFEICAO = 'Ceia'";
+                            $sql = "select sum(cast(CHO as decimal(15,2)))*4 CHO from alimentos where NOME_REFEICAO = 'Ceia' and ID_CLIENTE=".$_GET["id_cliente"];
         
                             $result = mysqli_query($con, $sql);
             
@@ -1432,7 +1432,7 @@
                 <div class=" form-group col-sm-2"><i style="margin-left: 34%;">ptn</i>
                     <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled value=" <?php 
                             
-                            $sql = "select sum(cast(PTN as decimal(15,2)))*4 PTN from alimentos where NOME_REFEICAO = 'Ceia'";
+                            $sql = "select sum(cast(PTN as decimal(15,2)))*4 PTN from alimentos where NOME_REFEICAO = 'Ceia' and ID_CLIENTE=".$_GET["id_cliente"];
         
                             $result = mysqli_query($con, $sql);
             
@@ -1445,7 +1445,7 @@
                 <div class="form-group col-sm-2"><i style="margin-left: 36%;">lip</i>
                     <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled value=" <?php 
                             
-                            $sql = "select sum(cast(LIP as decimal(15,2)))*9 LIP from alimentos where NOME_REFEICAO = 'Ceia'";
+                            $sql = "select sum(cast(LIP as decimal(15,2)))*9 LIP from alimentos where NOME_REFEICAO = 'Ceia' and ID_CLIENTE=".$_GET["id_cliente"];
         
                             $result = mysqli_query($con, $sql);
             
@@ -1459,13 +1459,13 @@
                 <div class="form-group col-sm-2"><i style="margin-left: 35%;"><i>VET / Kcal</i></i>
                     <input style="text-align: center;" type="text" class="form-control" id="bracoDir" placeholder="" name="" disabled value=" <?php 
                             
-            $sql = "select sum(cast(CHO as decimal(15,2)))*4 CHO, sum(cast(PTN as decimal(15,2)))*4 PTN, sum(cast(LIP as decimal(15,2)))*9 LIP from alimentos where NOME_REFEICAO = 'Ceia'";
+            $sql = "select sum(cast(CHO as decimal(15,2)))*4 CHO, sum(cast(PTN as decimal(15,2)))*4 PTN, sum(cast(LIP as decimal(15,2)))*9 LIP from alimentos where NOME_REFEICAO = 'Ceia' and ID_CLIENTE=".$_GET["id_cliente"];
        
                             $result = mysqli_query($con, $sql);
             
                             $row = mysqli_fetch_array($result);
             
-                            echo $row["CHO"]+$row["PTN"]+$row["LIP"]."  Kcal";
+                            echo number_format($row["CHO"]+$row["PTN"]+$row["LIP"],2)."  Kcal";
             
                                      ?>">
                 </div>
