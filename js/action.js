@@ -45,6 +45,30 @@ function deslogar() {
     }
 }
 
+function atualizarBioquimica(id_bioquimica) {
+    var paciente = document.getElementById("paciente").value;
+    if (confirm('Deseja atualizar os dados Bioquímicos do paciente ' + paciente + ' ? ')) {
+        var id_cliente = document.getElementById("id_cliente").value;
+        var bioquimica = document.getElementById("exampleFormControlTextarea1").value;
+        location.href = 'atualizarBioquimica.php?id_bioquimica=' + id_bioquimica + '&id_cliente=' + id_cliente + '&LISTA_HEMOGRAMA_COMPLETO=' + bioquimica;
+    }
+}
+
+function atualizarCNutricional(ID_A_CLINICANUTRICIONAL) {
+    var paciente = document.getElementById("paciente").value;
+    if (confirm('Deseja atualizar os dados Clinicos Nutricionais do paciente ' + paciente + ' ? ')) {
+        var id_cliente = document.getElementById("id_cliente").value;
+        var bioquirecomendacoesOrientacoes = document.getElementById("recomendacoesOrientacoes").value;
+        var Hsocial = document.getElementById("Hsocial").value;
+        var medicamentos = document.getElementById("medicamentos").value;
+        var sinalClinico = document.getElementById("sinalClinico").value;
+        var Halimentar = document.getElementById("Halimentar").value;
+        var Hfamiliar = document.getElementById("Hfamiliar").value;
+        var HpatologiaPregressa = document.getElementById("HpatologiaPregressa").value;
+        location.href = 'atualizarClinicaNutricional.php?ID_A_CLINICANUTRICIONAL=' + ID_A_CLINICANUTRICIONAL + '&id_cliente=' + id_cliente + '&recomendacoesOrientacoes=' + bioquirecomendacoesOrientacoes + '&Hsocial=' + Hsocial + '&medicamentos=' + medicamentos + '&sinalClinico=' + sinalClinico + '&Halimentar=' + Halimentar + '&Hfamiliar=' + Hfamiliar + '&HpatologiaPregressa=' + HpatologiaPregressa;
+    }
+}
+
 function calcularHorasNAF() {
     var n1 = parseFloat(document.getElementById('sono').value, 10);
     var n2 = parseFloat(document.getElementById('trabalho').value, 10);

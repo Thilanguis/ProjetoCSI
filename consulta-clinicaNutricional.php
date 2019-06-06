@@ -13,7 +13,7 @@
             </div>
 
             <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-            
+
             <h5 style="text-align: center;  margin-top: 5px;">Paciente: <?php
                 
                 include_once 'conexao.php';
@@ -31,13 +31,14 @@
 
                 <!-- passando id do paciente -->
                 <input type="hidden" name="id_cliente" value="<?php echo $_GET["id_cliente"] ?>">
+                <input type="hidden" id="paciente" name="paciente" value="<?php echo $row[0]; ?>">
 
                 <div class="form-group row">
                     <label for="inputPassword" class="col-sm-3 col-form-label">
                         <h6><i>H. Patológica pregressa :</i></h6>
                     </label>
                     <div class="col-sm-5">
-                        <input type="text" class="form-control" id="inputPassword" placeholder="" name="HpatologiaPregressa" value="<?php include_once 'conexao.php';
+                        <input type="text" class="form-control" id="HpatologiaPregressa" placeholder="" name="HpatologiaPregressa" value="<?php include_once 'conexao.php';
                        
                         $sql = "select H_PATOLOGICO_PRE from a_clinica_nutricional where ID_CLIENTE = ".$_GET["id_cliente"];
                        
@@ -56,7 +57,7 @@
                         <h6><i>Histórico familiar :</i></h6>
                     </label>
                     <div class="col-sm-5">
-                        <input type="text" class="form-control" id="inputPassword" placeholder="" name="Hfamiliar" value="<?php include_once 'conexao.php';
+                        <input type="text" class="form-control" id="Hfamiliar" placeholder="" name="Hfamiliar" value="<?php include_once 'conexao.php';
                        
                         $sql = "select h_familiar from a_clinica_nutricional where ID_CLIENTE = ".$_GET["id_cliente"];
                        
@@ -75,7 +76,7 @@
                         <h6><i>Histórico alimentar :</i></h6>
                     </label>
                     <div class="col-sm-5">
-                        <input type="text" class="form-control" id="inputPassword" placeholder="" name="Halimentar" ; value="<?php include_once 'conexao.php';
+                        <input type="text" class="form-control" id="Halimentar" placeholder="" name="Halimentar" ; value="<?php include_once 'conexao.php';
                        
                         $sql = "select h_alimentar from a_clinica_nutricional where ID_CLIENTE = ".$_GET["id_cliente"];
                        
@@ -94,7 +95,7 @@
                         <h6><i>Sinal clínico :</i></h6>
                     </label>
                     <div class="col-sm-5">
-                        <input type="text" class="form-control" id="inputPassword" placeholder="" name="sinalClinico" value="<?php include_once 'conexao.php';
+                        <input type="text" class="form-control" id="sinalClinico" placeholder="" name="sinalClinico" value="<?php include_once 'conexao.php';
                        
                         $sql = "select sinalclinico from a_clinica_nutricional where ID_CLIENTE = ".$_GET["id_cliente"];
                        
@@ -113,7 +114,7 @@
                         <h6><i>Medicamentos :</i></h6>
                     </label>
                     <div class="col-sm-5">
-                        <input type="text" class="form-control" id="inputPassword" placeholder="" name="medicamentos" value="<?php include_once 'conexao.php';
+                        <input type="text" class="form-control" id="medicamentos" placeholder="" name="medicamentos" value="<?php include_once 'conexao.php';
                        
                         $sql = "select h_medicamentoso from a_clinica_nutricional where ID_CLIENTE = ".$_GET["id_cliente"];
                        
@@ -132,7 +133,7 @@
                         <h6><i>Histórico social :</i></h6>
                     </label>
                     <div class="col-sm-5">
-                        <input type="text" class="form-control" id="inputPassword" placeholder="" name="Hsocial" value="<?php include_once 'conexao.php';
+                        <input type="text" class="form-control" id="Hsocial" placeholder="" name="Hsocial" value="<?php include_once 'conexao.php';
                        
                         $sql = "select h_social from a_clinica_nutricional where ID_CLIENTE = ".$_GET["id_cliente"];
                        
@@ -153,16 +154,15 @@
                             <h6><i>Recomendações <br> e orientações :</i></h6>
                         </div>
                         <div id="form-Bio2" class="form-group col-md-5">
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="10" placeholder="" name="recomendacoesOrientacoes"><?php include_once 'conexao.php';
+                            <textarea class="form-control" id="recomendacoesOrientacoes" rows="10" placeholder="" name="recomendacoesOrientacoes"><?php include_once 'conexao.php';
                        
-                        $sql = "select OBSERVACOES_ADICIONAIS from a_clinica_nutricional where ID_CLIENTE = ".$_GET["id_cliente"];
+                        $sql = "select ID_A_CLINICANUTRICIONAL, OBSERVACOES_ADICIONAIS from a_clinica_nutricional where ID_CLIENTE = ".$_GET["id_cliente"];
                        
                        $result = mysqli_query($con, $sql);
                        
                        $row = mysqli_fetch_array($result);
                        
-                       echo $row[0];
-                        ?>
+                       echo $row[1];?>
                         </textarea>
                         </div>
                     </div>
@@ -174,6 +174,7 @@
 
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                <?php echo "<button class='btn btn-primary' type='submit' onclick='atualizarCNutricional(".$row["ID_A_CLINICANUTRICIONAL"].")'>Atualizar</button>" ?>
             </div>
 
 

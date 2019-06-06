@@ -13,7 +13,7 @@
             </div>
 
             <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-            
+
             <h5 style="text-align: center; margin-top: 5px">Paciente: <?php
                 
                 include_once 'conexao.php';
@@ -32,6 +32,7 @@
 
                 <!-- passando id do paciente -->
                 <input type="hidden" name="id_cliente" value="<?php echo $_GET["id_cliente"] ?>">
+                <input type="hidden" id="paciente" name="paciente" value="<?php echo $row[0]; ?>">
 
                 <div class="form-row">
                     <div id="form-Bio1" class="form-group col-md-3">
@@ -40,13 +41,13 @@
                     <div id="form-Bio2" class="form-group col-md-8">
                         <textarea class="form-control" id="exampleFormControlTextarea1" rows="14" placeholder="" name="bioquimica"><?php include_once 'conexao.php';
                        
-                        $sql = "select LISTA_HEMOGRAMA_COMPLETO from a_bioquimica where ID_CLIENTE = ".$_GET["id_cliente"];
+                        $sql = "select id_bioquimica, LISTA_HEMOGRAMA_COMPLETO from a_bioquimica where ID_CLIENTE = ".$_GET["id_cliente"];
                        
                        $result = mysqli_query($con, $sql);
                        
                        $row = mysqli_fetch_array($result);
                        
-                       echo $row[0];
+                       echo $row[1];
                         ?>
                         </textarea>
                     </div>
@@ -60,6 +61,7 @@
 
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                <?php echo "<button class='btn btn-primary' type='submit' onclick='atualizarBioquimica(".$row["id_bioquimica"].")'>Atualizar</button>" ?>
             </div>
 
 

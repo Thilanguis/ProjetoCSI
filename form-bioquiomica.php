@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    
+
     <!-- input para pegar nome do nutricionista logado -->
     <input id="nutricionistaLogado" type="hidden" value="<?php echo $_SESSION["login"];  ?>">
 
@@ -65,8 +65,8 @@
             <a id="menuAlerta" href="#" class="list-group-item list-group-item-action" onclick="terminarDieta()">Encerrar dieta <img id="cancelarDieta" src="img/icons8-cancelar-48.png" alt=""></a>
             <a href="#" class="list-group-item list-group-item-action" style="background-color: rgba(134, 214, 143, 0.72);">Av. Antropométrica</a>
             <a href="#" class="list-group-item list-group-item-action">Av. Bioquímica <i class="fas fa-check" style="font-size: 16px; color: #3b884d"></i> </a>
-            <a id="menuAberto" href="#" class="list-group-item list-group-item-action" onclick="avisoAvancar()">>Av. Clínica nutri.<i class="fas fa-lock-open" id="cadeadoAberto"></i></a>
-            <a id="menuAberto" href="#" class="list-group-item list-group-item-action" onclick="avisoAvancar()">>Vet FAO<i class="fas fa-lock-open" id="cadeadoAberto"></i></a>
+            <a id="menuAberto" href="#" class="list-group-item list-group-item-action" onclick="avisoAvancar()">Av. Clínica nutri.<i class="fas fa-lock-open" id="cadeadoAberto"></i></a>
+            <a id="menuAberto" href="#" class="list-group-item list-group-item-action" onclick="avisoAvancar()">Vet FAO<i class="fas fa-lock-open" id="cadeadoAberto"></i></a>
             <a id="menuFechado" href="#" class="list-group-item list-group-item-action" onclick="avisoNaoPodeAcessar()">Lista de alimentos<i class="fas fa-lock" id="cadeadoFechado"></i></a>
             <a id="menuFechado" href="#" class="list-group-item list-group-item-action" onclick="avisoNaoPodeAcessar()">Receituário <i class="fas fa-lock" id="cadeadoFechado"></i></a>
             <a id="menuAberto" href="#" class="list-group-item list-group-item-action" onclick="avisoAvancar()">Dietoterapia<i class="fas fa-lock-open" id="cadeadoAberto"></i></a>
