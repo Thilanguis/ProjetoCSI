@@ -28,6 +28,10 @@
                 ?><i><?php echo $row[0]; ?></i><?php 
                 ?></h5>
 
+            <!-- passando id do paciente -->
+            <input type="hidden" name="id_cliente" value="<?php echo $_GET["id_cliente"] ?>">
+            <input type="hidden" id="paciente" name="paciente" value="<?php echo $row[0]; ?>">
+
             <div id id="container" style="margin: 60px 20px; box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.75);">
 
                 <!--Div that will hold the pie chart-->
@@ -56,7 +60,7 @@
                     <div class="form-group col-md-2">
                         <input type="text" step="0.01" class="form-control" id="bracoDir" placeholder="" name="bracoDir" value="<?php include_once 'conexao.php';
                                                      
-                        $sql = "select CIR_BRACO_ESQ from a_antropometrica where id_cliente=".$_GET["id_cliente"];                                                                                                      
+                        $sql = "select CIR_BRACO_DIR from a_antropometrica where id_cliente=".$_GET["id_cliente"];                                                                                                      
                         $result = mysqli_query($con, $sql);                                                                                                                             $row = mysqli_fetch_array($result);                                                                                                                             echo $row[0] . " cm";             
                         ?> ">
                     </div>
@@ -67,7 +71,7 @@
                     <div class="form-group col-md-2">
                         <input type="text" step="0.01" class="form-control" id="cintura" placeholder="" name="cintura" value="<?php include_once 'conexao.php';
                                                      
-                        $sql = "select CIR_BRACO_DIR from a_antropometrica where id_cliente=".$_GET["id_cliente"];                                                                                                      
+                        $sql = "select CIR_CINTURA from a_antropometrica where id_cliente=".$_GET["id_cliente"];                                                                                                      
                         $result = mysqli_query($con, $sql);                                                                                                                             $row = mysqli_fetch_array($result);                                                                                                                             echo $row[0] . " cm";             
                         ?> ">
                     </div>
@@ -92,7 +96,7 @@
                     </div>
                     <label style="margin-left: 53px;" for="abdominal">Abdominal :</label>
                     <div class="form-group col-md-2">
-                        <input type="text" step="0.01" class="form-control" id="abdominal" placeholder="" name="abdominalCir" value="<?php include_once 'conexao.php';
+                        <input type="text" step="0.01" class="form-control" id="abdominal" placeholder="" name="abdominal" value="<?php include_once 'conexao.php';
                                                      
                         $sql = "select CIR_ABDOMINAL from a_antropometrica where id_cliente=".$_GET["id_cliente"];                                                                                                      
                         $result = mysqli_query($con, $sql);                                                                                                                             $row = mysqli_fetch_array($result);                                                                                                                             echo $row[0] . " cm";             
@@ -158,26 +162,111 @@
                         ?> ">
                         </div>
                     </div>
+                </div>
 
+
+                <div id="gerarIMC">
+
+                    <div class="form-row">
+
+                        <div class="col-8">
+                            <h5 style="text-align: center;"><i>IMC</i></h5>
+
+                            <label style="margin-left: 110px;" for="altura">Altura (m) :</label>
+                            <input style="text-align: center;" type="text" class="form-control" id="altura" placeholder="" name="altura" onchange="calculoIMC()" value="<?php include_once 'conexao.php';
+                                                     
+                        $sql = "select altura from a_antropometrica where id_cliente=".$_GET["id_cliente"];                                                                                                      
+                        $result = mysqli_query($con, $sql);                                                                                                                             $row = mysqli_fetch_array($result);                                                                                                                             echo $row[0] . " Metros";             
+                        ?> ">
+                        </div>
+
+                        <div class=" col-8">
+                            <label style="margin-left: 94px;" for="pesoAtual">Peso Atual (kg)</label>
+                            <input style="text-align: center;" type="text" class="form-control" id="pesoAtual" placeholder="" name="pesoAtual" onchange="calculoIMC()" value="<?php include_once 'conexao.php';
+                                                     
+                        $sql = "select peso from a_antropometrica where id_cliente=".$_GET["id_cliente"];                                                                                                      
+                        $result = mysqli_query($con, $sql);                                                                                                                             $row = mysqli_fetch_array($result);                                                                                                                             echo $row[0]. " Kilograma";             
+                        ?> ">
+                            <br>
+                            <div class="form-row">
+                                <p class="col-1" id="imcJavascript">IMC:</p>
+                                <!-- resultado IMC do javascript -->
+                                <div class="col" id="resultadoIMC">
+                                    Classificação do IMC
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br><br><br>
+
+            <div id="gerarMedidas1">
+                <div class="form-row alturaAntro">
+                    <h4 class="col-md-5" style="margin-left: 117px;"><i>Dobras Cutâneas</i></h4>
+                </div>
+
+
+
+                <div class="form-row">
+                    <label style="margin-left: 17px;" for="bracoEsq">Tricipital :</label>
+                    <div class="form-group col-md-2">
+                        <input type="text" step="0.01" class="form-control" id="tricipital" placeholder="" name="tricipital" value="<?php include_once 'conexao.php';
+                                                     
+                        $sql = "select dc_tricipital from a_antropometrica where id_cliente=".$_GET["id_cliente"];                                                                                                      
+                        $result = mysqli_query($con, $sql);                                                                                                                             $row = mysqli_fetch_array($result);                                                                                                                             echo $row[0] . " cm";             
+                        ?> ">
+                    </div>
+                    <label style="margin-left: 24px;" for="bracoDir">Subescapular :</label>
+                    <div class="form-group col-md-2">
+                        <input type="text" step="0.01" class="form-control" id="subescapular" placeholder="" name="subescapular" value="<?php include_once 'conexao.php';
+                                                     
+                        $sql = "select DC_SUBESCAPULAR_AXILAR from a_antropometrica where id_cliente=".$_GET["id_cliente"];                                                                                                      
+                        $result = mysqli_query($con, $sql);                                                                                                                             $row = mysqli_fetch_array($result);                                                                                                                             echo $row[0] . " cm";             
+                        ?> ">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <label style="margin-left: 0px;" for="cintura">Suprailíaca :</label>
+                    <div class="form-group col-md-2">
+                        <input type="text" step="0.01" class="form-control" id="suprailiaca" placeholder="" name="suprailiaca" value="<?php include_once 'conexao.php';
+                                                     
+                        $sql = "select DC_SUPRAILIACA from a_antropometrica where id_cliente=".$_GET["id_cliente"];                                                                                                      
+                        $result = mysqli_query($con, $sql);                                                                                                                             $row = mysqli_fetch_array($result);                                                                                                                             echo $row[0] . " cm";             
+                        ?> ">
+                    </div>
+                    <label style="margin-left: 39px;" for="quadril">Abdominal :</label>
+                    <div class="form-group col-md-2">
+                        <input type="text" step="0.01" class="form-control" id="abdominal" placeholder="" name="abdominal" value="<?php include_once 'conexao.php';
+                                                     
+                        $sql = "select DC_ABDOMINAL from a_antropometrica where id_cliente=".$_GET["id_cliente"];                                                                                                      
+                        $result = mysqli_query($con, $sql);                                                                                                                             $row = mysqli_fetch_array($result);                                                                                                                             echo $row[0] . " cm";             
+                        ?> ">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <label style="margin-left: 85px;" for="torax">Quadríceps :</label>
+                    <div class="form-group col-md-2">
+                        <input type="text" step="0.01" class="form-control" id="quadriceps" placeholder="" name="quadriceps" value="<?php include_once 'conexao.php';
+                                                     
+                        $sql = "select DC_QUADRICEPS, id_antropometria from a_antropometrica where id_cliente=".$_GET["id_cliente"];                                                                                                      
+                        $result = mysqli_query($con, $sql);                                                                                                                             $row = mysqli_fetch_array($result);                                                                                                                             echo $row[0] . " cm";             
+                        ?> ">
+                    </div>
                 </div>
             </div>
 
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                <?php echo "<button class='btn btn-primary' type='submit' onclick='atualizarAntropometria(".$row["id_antropometria"].")'>Atualizar</button>" ?>
             </div>
 
-
-
         </div>
-
     </div>
 </div>
-
-
-
-
-
-
 
 <!-- input escondido do percentual de gordura -->
 <input id="percentualGorduraInput" type="hidden" value="<?php

@@ -45,6 +45,34 @@ function deslogar() {
     }
 }
 
+function atualizarAntropometria(id_antropometria) {
+    var paciente = document.getElementById("paciente").value;
+    if (confirm('Deseja atualizar os dados Antropométricos do paciente ' + paciente + ' ? ')) {
+        var id_cliente = document.getElementById("id_cliente").value;
+        var antropometria = document.getElementById("id_cliente").value;
+        var altura = document.getElementById("altura").value;
+        var pesoAtual = document.getElementById("pesoAtual").value;
+        var bracoEsq = document.getElementById("bracoEsq").value;
+        var bracoDir = document.getElementById("bracoDir").value;
+        var cintura = document.getElementById("cintura").value;
+        var quadril = document.getElementById("quadril").value;
+        var torax = document.getElementById("torax").value;
+        var abdominal = document.getElementById("abdominal").value;
+        var coxaEsq = document.getElementById("coxaEsq").value;
+        var coxaDir = document.getElementById("coxaDir").value;
+        var panturrilhaEsq = document.getElementById("panturrilhaEsq").value;
+        var panturrilhaDir = document.getElementById("panturrilhaDir").value;
+        var antebracoEsq = document.getElementById("antebracoEsq").value;
+        var antebracoDir = document.getElementById("antebracoDir").value;
+        var tricipital = document.getElementById("tricipital").value;
+        var subescapular = document.getElementById("subescapular").value;
+        var suprailiaca = document.getElementById("suprailiaca").value;
+        var abdominal = document.getElementById("abdominal").value;
+        var quadriceps = document.getElementById("quadriceps").value;
+        location.href = 'atualizarAntropometria.php?id_antropometria=' + id_antropometria + '&id_cliente=' + id_cliente + '&altura=' + altura + '&pesoAtual=' + pesoAtual + '&bracoEsq=' + bracoEsq + '&bracoDir=' + bracoDir + '&cintura=' + cintura + '&quadril=' + quadril + '&torax=' + torax + '&abdominal=' + abdominal + '&coxaEsq=' + coxaEsq + '&coxaDir=' + coxaDir + '&panturrilhaEsq=' + panturrilhaEsq + '&panturrilhaDir=' + panturrilhaDir + '&antebracoEsq=' + antebracoEsq + '&antebracoDir=' + antebracoDir + '&tricipital=' + tricipital + '&subescapular=' + subescapular + '&suprailiaca=' + suprailiaca + '&abdominal=' + abdominal + '&quadriceps=' + quadriceps;
+    }
+}
+
 function atualizarBioquimica(id_bioquimica) {
     var paciente = document.getElementById("paciente").value;
     if (confirm('Deseja atualizar os dados Bioquímicos do paciente ' + paciente + ' ? ')) {
