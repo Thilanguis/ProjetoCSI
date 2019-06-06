@@ -239,7 +239,7 @@
                     </div>
                     <label style="margin-left: 39px;" for="quadril">Abdominal :</label>
                     <div class="form-group col-md-2">
-                        <input type="text" step="0.01" class="form-control" id="abdominal" placeholder="" name="abdominal" value="<?php include_once 'conexao.php';
+                        <input type="text" step="0.01" class="form-control" id="dcAbdominal" placeholder="" name="dcAbdominal" value="<?php include_once 'conexao.php';
                                                      
                         $sql = "select DC_ABDOMINAL from a_antropometrica where id_cliente=".$_GET["id_cliente"];                                                                                                      
                         $result = mysqli_query($con, $sql);                                                                                                                             $row = mysqli_fetch_array($result);                                                                                                                             echo $row[0] . " cm";             

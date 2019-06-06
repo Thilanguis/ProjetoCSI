@@ -36,13 +36,13 @@
     $tricipital                  = str_replace(',', '.',$_GET["tricipital"]);
     $subescapular                = str_replace(',', '.',$_GET["subescapular"]);
     $suprailiaca                 = str_replace(',', '.',$_GET["suprailiaca"]);
-    $abdominal                   = str_replace(',', '.',$_GET["abdominal"]);
+    $dcAbdominal                   = str_replace(',', '.',$_GET["dcAbdominal"]);
     $quadriceps                  = str_replace(',', '.',$_GET["quadriceps"]);
     
     include_once 'conexao.php';
 
     
-    $sql = "update a_antropometrica set altura='".$altura."', peso='".$pesoAtual."', CIR_BRACO_ESQ='".$bracoEsq."', CIR_BRACO_DIR='".$bracoDir."', CIR_CINTURA='".$cintura."', CIR_QUADRIL='".$quadril."', CIR_TORAX='".$torax."', CIR_ABDOMINAL='".$abdominal."', CIR_COXA_ESQ='".$coxaEsq."', CIR_COXA_DIR='".$coxaDir."', CIR_PANTURRILHA_ESQ='".$panturrilhaEsq."', CIR_PANTURRILHA_DIR='".$panturrilhaDir."', CIR_ANTEBRACO_ESQ='".$antebracoEsq."', CIR_ANTEBRACO_DIR='".$antebracoDir."', dc_tricipital='".$tricipital."', DC_SUBESCAPULAR_AXILAR='".$subescapular."', DC_SUPRAILIACA='".$suprailiaca."', DC_ABDOMINAL='".$abdominal."', DC_QUADRICEPS='".$quadriceps."' where id_antropometria='".$id_antropometria."'";
+    $sql = "update a_antropometrica set altura='".$altura."', peso='".$pesoAtual."', CIR_BRACO_ESQ='".$bracoEsq."', CIR_BRACO_DIR='".$bracoDir."', CIR_CINTURA='".$cintura."', CIR_QUADRIL='".$quadril."', CIR_TORAX='".$torax."', CIR_ABDOMINAL='".$abdominal."', CIR_COXA_ESQ='".$coxaEsq."', CIR_COXA_DIR='".$coxaDir."', CIR_PANTURRILHA_ESQ='".$panturrilhaEsq."', CIR_PANTURRILHA_DIR='".$panturrilhaDir."', CIR_ANTEBRACO_ESQ='".$antebracoEsq."', CIR_ANTEBRACO_DIR='".$antebracoDir."', dc_tricipital='".$tricipital."', DC_SUBESCAPULAR_AXILAR='".$subescapular."', DC_SUPRAILIACA='".$suprailiaca."', DC_ABDOMINAL='".$dcAbdominal."', DC_QUADRICEPS='".$quadriceps."' where id_antropometria='".$id_antropometria."'";
   
 
 

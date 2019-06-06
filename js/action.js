@@ -67,9 +67,9 @@ function atualizarAntropometria(id_antropometria) {
         var tricipital = document.getElementById("tricipital").value;
         var subescapular = document.getElementById("subescapular").value;
         var suprailiaca = document.getElementById("suprailiaca").value;
-        var abdominal = document.getElementById("abdominal").value;
+        var dcAbdominal = document.getElementById("dcAbdominal").value;
         var quadriceps = document.getElementById("quadriceps").value;
-        location.href = 'atualizarAntropometria.php?id_antropometria=' + id_antropometria + '&id_cliente=' + id_cliente + '&altura=' + altura + '&pesoAtual=' + pesoAtual + '&bracoEsq=' + bracoEsq + '&bracoDir=' + bracoDir + '&cintura=' + cintura + '&quadril=' + quadril + '&torax=' + torax + '&abdominal=' + abdominal + '&coxaEsq=' + coxaEsq + '&coxaDir=' + coxaDir + '&panturrilhaEsq=' + panturrilhaEsq + '&panturrilhaDir=' + panturrilhaDir + '&antebracoEsq=' + antebracoEsq + '&antebracoDir=' + antebracoDir + '&tricipital=' + tricipital + '&subescapular=' + subescapular + '&suprailiaca=' + suprailiaca + '&abdominal=' + abdominal + '&quadriceps=' + quadriceps;
+        location.href = 'atualizarAntropometria.php?id_antropometria=' + id_antropometria + '&id_cliente=' + id_cliente + '&altura=' + altura + '&pesoAtual=' + pesoAtual + '&bracoEsq=' + bracoEsq + '&bracoDir=' + bracoDir + '&cintura=' + cintura + '&quadril=' + quadril + '&torax=' + torax + '&abdominal=' + abdominal + '&coxaEsq=' + coxaEsq + '&coxaDir=' + coxaDir + '&panturrilhaEsq=' + panturrilhaEsq + '&panturrilhaDir=' + panturrilhaDir + '&antebracoEsq=' + antebracoEsq + '&antebracoDir=' + antebracoDir + '&tricipital=' + tricipital + '&subescapular=' + subescapular + '&suprailiaca=' + suprailiaca + '&dcAbdominal=' + dcAbdominal + '&quadriceps=' + quadriceps;
     }
 }
 
