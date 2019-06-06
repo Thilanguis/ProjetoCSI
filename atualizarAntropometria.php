@@ -18,26 +18,26 @@
          include_once 'funcoesProjeto.php';
         
     $id                          = $_GET["id_cliente"];    
-    $id_antropometria            = $_GET["id_antropometria"];  
-    $altura                      = $_GET["altura"];
-    $pesoAtual                   = $_GET["pesoAtual"];
-    $bracoEsq                    = $_GET["bracoEsq"];
-    $bracoDir                    = $_GET["bracoDir"];
-    $cintura                     = $_GET["cintura"];
-    $quadril                     = $_GET["quadril"];
-    $torax                       = $_GET["torax"];
-    $abdominal                   = $_GET["abdominal"];
-    $coxaEsq                     = $_GET["coxaEsq"];
-    $coxaDir                     = $_GET["coxaDir"];
-    $panturrilhaEsq              = $_GET["panturrilhaEsq"];
-    $panturrilhaDir              = $_GET["panturrilhaDir"];
-    $antebracoEsq                = $_GET["antebracoEsq"];
-    $antebracoDir                = $_GET["antebracoDir"];
-    $tricipital                  = $_GET["tricipital"];
-    $subescapular                = $_GET["subescapular"];
-    $suprailiaca                 = $_GET["suprailiaca"];
-    $abdominal                   = $_GET["abdominal"];
-    $quadriceps                  = $_GET["quadriceps"];
+    $id_antropometria            = str_replace(',', '.',$_GET["id_antropometria"]);  
+    $altura                      = str_replace(',', '.',$_GET["altura"]);
+    $pesoAtual                   = str_replace(',', '.',$_GET["pesoAtual"]);
+    $bracoEsq                    = str_replace(',', '.',$_GET["bracoEsq"]);
+    $bracoDir                    = str_replace(',', '.',$_GET["bracoDir"]);
+    $cintura                     = str_replace(',', '.',$_GET["cintura"]);
+    $quadril                     = str_replace(',', '.',$_GET["quadril"]);
+    $torax                       = str_replace(',', '.',$_GET["torax"]);
+    $abdominal                   = str_replace(',', '.',$_GET["abdominal"]);
+    $coxaEsq                     = str_replace(',', '.',$_GET["coxaEsq"]);
+    $coxaDir                     = str_replace(',', '.',$_GET["coxaDir"]);
+    $panturrilhaEsq              = str_replace(',', '.',$_GET["panturrilhaEsq"]);
+    $panturrilhaDir              = str_replace(',', '.',$_GET["panturrilhaDir"]);
+    $antebracoEsq                = str_replace(',', '.',$_GET["antebracoEsq"]);
+    $antebracoDir                = str_replace(',', '.',$_GET["antebracoDir"]);
+    $tricipital                  = str_replace(',', '.',$_GET["tricipital"]);
+    $subescapular                = str_replace(',', '.',$_GET["subescapular"]);
+    $suprailiaca                 = str_replace(',', '.',$_GET["suprailiaca"]);
+    $abdominal                   = str_replace(',', '.',$_GET["abdominal"]);
+    $quadriceps                  = str_replace(',', '.',$_GET["quadriceps"]);
     
     include_once 'conexao.php';
 

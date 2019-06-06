@@ -176,7 +176,7 @@
                             <input style="text-align: center;" type="text" class="form-control" id="altura" placeholder="" name="altura" onchange="calculoIMC()" value="<?php include_once 'conexao.php';
                                                      
                         $sql = "select altura from a_antropometrica where id_cliente=".$_GET["id_cliente"];                                                                                                      
-                        $result = mysqli_query($con, $sql);                                                                                                                             $row = mysqli_fetch_array($result);                                                                                                                             echo $row[0] . " Metros";             
+                        $result = mysqli_query($con, $sql);                                                                                                                             $row = mysqli_fetch_array($result);                                                                                                                             echo number_format($row[0],2) . " Metros";             
                         ?> ">
                         </div>
 
@@ -185,7 +185,7 @@
                             <input style="text-align: center;" type="text" class="form-control" id="pesoAtual" placeholder="" name="pesoAtual" onchange="calculoIMC()" value="<?php include_once 'conexao.php';
                                                      
                         $sql = "select peso from a_antropometrica where id_cliente=".$_GET["id_cliente"];                                                                                                      
-                        $result = mysqli_query($con, $sql);                                                                                                                             $row = mysqli_fetch_array($result);                                                                                                                             echo $row[0]. " Kilograma";             
+                        $result = mysqli_query($con, $sql);                                                                                                                             $row = mysqli_fetch_array($result);                                                                                                                             echo number_format($row[0],2). " Kilograma";             
                         ?> ">
                             <br>
                             <div class="form-row">
