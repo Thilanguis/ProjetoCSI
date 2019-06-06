@@ -123,7 +123,18 @@
                     while($row = mysqli_fetch_array($result))
                     { 
                         echo "<tr>";
-                        echo "<td><a href='#' onclick='iniciarDieta(".$row["id_cliente"].")'> <i class='fas fa-book-open' title='Iniciar consulta' style='color: #E8850C'></i></td>";
+                        
+                        $sql2 = "select ID_CLIENTE from alimentos where id_cliente =".$row["id_cliente"];
+                    
+                $result2 = mysqli_query($con, $sql2);
+                
+                $totalRegistros2 = mysqli_num_rows($result2);
+                        if ($totalRegistros2 > 0 ){
+                            echo "<td><i class='fas fa-book-open' title='Paciente já tem consulta' style='color: #E8850C'></i></td>";
+                        }
+                        else {
+                        echo "<td><a href='#' onclick='iniciarDieta(".$row["id_cliente"].")'> <i class='fas fa-book' title='Iniciar consulta' style='color: #E8850C'></i></td>";
+                        }
                         
                 
                 $sql1 = "select ID_CLIENTE from alimentos where id_cliente =".$row["id_cliente"];
