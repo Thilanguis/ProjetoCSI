@@ -102,7 +102,7 @@
                             <input style="text-align: center;" type="email" class="form-control" id="confirmarEmail" name="confirmarEmail">
                         </div>
                         <div class="form-group col-md-4">
-                            <label style="margin-left: 90px;" for="cpf">Cpf</label> &nbsp; <i class="far fa-id-card" style="font-size: 25px; color: #d11818"></i>
+                            <label style="margin-left: 90px;" for="cpf">CPF</label> &nbsp; <i class="far fa-id-card" style="font-size: 25px; color: #d11818"></i>
                             <input style="text-align: center;" type="cpf" class="form-control" id="email1" name="cpf" maxlength="11" pattern="([0-9]{11})" title="Digitar o CPF completo sem usar caracteres especiais">
                         </div>
 

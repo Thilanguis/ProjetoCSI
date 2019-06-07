@@ -23,7 +23,7 @@ else
 {
     ?>
 <div class="alert alert-danger animated zoomIn container" role="alert" style="width: 300px; margin-top: 100px;">
-    Crn ou senha digitados errado!
+    CRN ou senha digitados errado!
 </div>
 
 <div id="btnConfirmacao">

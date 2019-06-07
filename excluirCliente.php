@@ -22,16 +22,16 @@
                 $sql = "delete from cliente where id_cliente=".$_GET["id_cliente"];
                 
                 if(mysqli_query($con, $sql))
-                {
+                { header('refresh:2,nutricionistaMenu.php?nome=');
                     ?>
 
         <div class="alert alert-success animated zoomIn container" role="alert" style="width: 300px; margin-top: 100px;">
             Contato excluido com sucesso!
         </div>
 
-        <div id="btnConfirmacao">
+       <!--  <div id="btnConfirmacao">
             <a href="nutricionistaMenu.php"><button id="btnVoltar1" type="button" class="btn btn-warning animated zoomIn" style="margin-left:48%;">OK</button> </a>
-        </div>
+        </div> -->
         <?php
         }
                 else
