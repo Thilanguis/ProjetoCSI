@@ -104,8 +104,8 @@
 
         <div id="secaoDietoterapia">
             <div>
-                <span id="TMB-Kcal" class="badge badge-pill badge-success" style="margin-right: 132px;">IMC:</span>
-                <input class="col-4" type="text" style="border-radius: 4px;" disabled="disabled" value="<?php
+                <span id="TMB-Kcal" class="badge badge-pill badge-success" style="margin-right: 128px;">IMC:</span>
+                <input class="col-5" type="text" style="border-radius: 4px;" disabled="disabled" value="<?php
                 
                 include_once 'conexao.php';
                                 
@@ -140,8 +140,8 @@
             </div>
             <br>
             <div>
-                <span id="TMB-Kcal" class="badge badge-pill badge-success" style="margin-right: 70px;">Peso Atual:</span>
-                <input class="col-4" type="text" style="border-radius: 4px;" disabled="disabled" value="<?php  
+                <span id="TMB-Kcal" class="badge badge-pill badge-success" style="margin-right: 66px;">Peso Atual:</span>
+                <input class="col-5" type="text" style="border-radius: 4px;" disabled="disabled" value="<?php  
                                                                                                         
               include_once 'conexao.php';
             
@@ -156,8 +156,8 @@
             </div>
             <br>
             <div>
-                <span id="TMB-Kcal" class="badge badge-pill badge-success" style="margin-right: 78px;">TMB/Kcal:</span>
-                <input class="col-4" type="text" style="border-radius: 4px;" disabled="disabled" value="<?php            
+                <span id="TMB-Kcal" class="badge badge-pill badge-success" style="margin-right: 74px;">TMB/Kcal:</span>
+                <input class="col-5" type="text" style="border-radius: 4px;" disabled="disabled" value="<?php            
             include_once 'conexao.php';
                 
             $sql = "select DT_NASCIMENTO, PESO, ALTURA, SEXO from cliente  inner join a_antropometrica  ON cliente.ID_CLIENTE = a_antropometrica.ID_CLIENTE where cliente.ID_CLIENTE = ".$_GET["id_cliente"];
@@ -220,8 +220,8 @@
             </div>
             <br>
             <div>
-                <span id="TMB-Kcal" class="badge badge-pill badge-success" style="margin-right: 36px;">VET Calculado:</span>
-                <input class="col-4" type="text" style="border-radius: 4px;" disabled value="<?php $resultadoTMB;
+                <span id="TMB-Kcal" class="badge badge-pill badge-success" style="margin-right: 32px;">VET Calculado:</span>
+                <input class="col-5" type="text" style="border-radius: 4px;" disabled value="<?php $resultadoTMB;
                     
                 $sqlVET = "select * from vet_fao where ID_CLIENTE = ".$_GET["id_cliente"]; 
                     
@@ -252,8 +252,8 @@
             </div>
             <br>
             <div>
-                <span id="TMB-Kcal" class="badge badge-pill badge-success" style="margin-right: 10px;">VET Dietoterapia:</span>
-                <input class="col-4" type="text" style="border-radius: 4px;" disabled="disabled" value=" <?php 
+                <span id="TMB-Kcal" class="badge badge-pill badge-success" style="margin-right: 6px;">VET Dietoterapia:</span>
+                <input class="col-5" type="text" style="border-radius: 4px;" disabled="disabled" value=" <?php 
                             
                             include_once 'conexao.php';
                                                                                                     
