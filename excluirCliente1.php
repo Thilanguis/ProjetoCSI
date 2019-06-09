@@ -19,10 +19,11 @@
             {
                 include_once 'conexao.php';
                 
-                $sql = "delete from consultas where id_cliente=".$_GET["id_cliente"];
+                $sql = "delete from cliente where id_cliente=".$_GET["id_cliente"];
                 
                 if(mysqli_query($con, $sql))
-                { header('refresh:2,excluirCliente1.php?id_cliente='.$_GET["id_cliente"]);
+                { header('Location:nutricionistaMenu.php');
+                 
                     ?>
 
         <div class="alert alert-success animated zoomIn container" role="alert" style="width: 300px; margin-top: 100px; text-align: center;">
