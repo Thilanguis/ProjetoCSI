@@ -302,10 +302,10 @@
                         echo "<td>".$row["NUM_MC"]."</td>";
                         echo "<td>".$row["MEDIDA_CASEIRA"]."</td>";
                         echo "<td>".$row["GRAMA"]."</td>";
-                        echo "<td>".$row["CHO"]."</td>";
-                        echo "<td>".$row["PTN"]."</td>";
-                        echo "<td>".$row["LIP"]."</td>";
-                        echo "<td>".$row["KCAL"]."</td>";
+                        echo "<td>".number_format($row["CHO"],2)."</td>";
+                        echo "<td>".number_format($row["PTN"],2)."</td>";
+                        echo "<td>".number_format($row["LIP"],2)."</td>";
+                        echo "<td>".number_format($row["KCAL"],2)."</td>";
                         echo "</tr>";
                          }
                            ?>
@@ -376,10 +376,10 @@
                         echo "<td>".$row["NUM_MC"]."</td>";
                         echo "<td>".$row["MEDIDA_CASEIRA"]."</td>";
                         echo "<td>".$row["GRAMA"]."</td>";
-                        echo "<td>".$row["CHO"]."</td>";
-                        echo "<td>".$row["PTN"]."</td>";
-                        echo "<td>".$row["LIP"]."</td>";
-                        echo "<td>".$row["KCAL"]."</td>";
+                        echo "<td>".number_format($row["CHO"],2)."</td>";
+                        echo "<td>".number_format($row["PTN"],2)."</td>";
+                        echo "<td>".number_format($row["LIP"],2)."</td>";
+                        echo "<td>".number_format($row["KCAL"],2)."</td>";
                         echo "</tr>";
                          }
                            ?>
@@ -451,10 +451,10 @@
                         echo "<td>".$row["NUM_MC"]."</td>";
                         echo "<td>".$row["MEDIDA_CASEIRA"]."</td>";
                         echo "<td>".$row["GRAMA"]."</td>";
-                        echo "<td>".$row["CHO"]."</td>";
-                        echo "<td>".$row["PTN"]."</td>";
-                        echo "<td>".$row["LIP"]."</td>";
-                        echo "<td>".$row["KCAL"]."</td>";
+                        echo "<td>".number_format($row["CHO"],2)."</td>";
+                        echo "<td>".number_format($row["PTN"],2)."</td>";
+                        echo "<td>".number_format($row["LIP"],2)."</td>";
+                        echo "<td>".number_format($row["KCAL"],2)."</td>";
                         echo "</tr>";
                          }
                            ?>
@@ -526,85 +526,10 @@
                         echo "<td>".$row["NUM_MC"]."</td>";
                         echo "<td>".$row["MEDIDA_CASEIRA"]."</td>";
                         echo "<td>".$row["GRAMA"]."</td>";
-                        echo "<td>".$row["CHO"]."</td>";
-                        echo "<td>".$row["PTN"]."</td>";
-                        echo "<td>".$row["LIP"]."</td>";
-                        echo "<td>".$row["KCAL"]."</td>";
-                        echo "</tr>";
-                         }
-                           ?>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-        <hr>
-        <?php } ?>
-
-
-        <!-- Tabela 1ºLanche -->
-
-        <?php
-        
-        include_once 'conexao.php';
-        
-        $sql = "select * from alimentos where NOME_REFEICAO = '1ºLanche' and ID_CLIENTE=".$_GET["id_cliente"];
-        
-        $result = mysqli_query($con, $sql);
-        
-        $totalRegistros = mysqli_num_rows($result);
-        
-        $row = mysqli_fetch_array($result);
-     
-        if($totalRegistros > 0)  { ?>
-
-        <div style="margin-top: 1%;" class="row">
-            <div style="margin-left: 2%; margin-top: 3px; display; inline-block;" class="col-2">
-                <div>
-                    <img id="brasaoNutricao2" src="img/nutricao-falculdade-universidade-plotter-recorte-logo-1F9AF53657-seeklogo.com.png">
-                </div>
-                <label>
-                    <h6>Refeição</h6>
-                </label>
-                <input type="text" class="form-control col-8" disabled value=" <?php
-      echo $row["NOME_REFEICAO"]; ?> ">
-                <label>
-                    <h6>horário</h6>
-                </label>
-                <input class="form-control col-8" type="text" disabled value=" <?php 
-      echo $row["HORA"]; ?> ">
-            </div>
-
-            <div class="col-9 table-overflow2">
-                <table class="table table-striped">
-                    <thead class="thead-dark">
-                        <tr>
-                            <th scope="col">Alimento</th>
-                            <th scope="col">Nº</th>
-                            <th scope="col">M.C.</th>
-                            <th scope="col">Grama</th>
-                            <th scope="col">CHO</th>
-                            <th scope="col">PTN</th>
-                            <th scope="col">LIP</th>
-                            <th scope="col">Kcal</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-
-                        <?php 
-            
-                            $result = mysqli_query($con, $sql);
-            
-                            while($row = mysqli_fetch_array($result)){
-                        echo "<tr>";   
-                        echo "<th scope='row'>".$row["NOME_ALIMENTO"]."</th>";
-                        echo "<td>".$row["NUM_MC"]."</td>";
-                        echo "<td>".$row["MEDIDA_CASEIRA"]."</td>";
-                        echo "<td>".$row["GRAMA"]."</td>";
-                        echo "<td>".$row["CHO"]."</td>";
-                        echo "<td>".$row["PTN"]."</td>";
-                        echo "<td>".$row["LIP"]."</td>";
-                        echo "<td>".$row["KCAL"]."</td>";
+                        echo "<td>".number_format($row["CHO"],2)."</td>";
+                        echo "<td>".number_format($row["PTN"],2)."</td>";
+                        echo "<td>".number_format($row["LIP"],2)."</td>";
+                        echo "<td>".number_format($row["KCAL"],2)."</td>";
                         echo "</tr>";
                          }
                            ?>
@@ -667,16 +592,94 @@
                     <tbody>
 
                         <?php 
+            
+                            $result = mysqli_query($con, $sql);
+            
                             while($row = mysqli_fetch_array($result)){
                         echo "<tr>";   
                         echo "<th scope='row'>".$row["NOME_ALIMENTO"]."</th>";
                         echo "<td>".$row["NUM_MC"]."</td>";
                         echo "<td>".$row["MEDIDA_CASEIRA"]."</td>";
                         echo "<td>".$row["GRAMA"]."</td>";
-                        echo "<td>".$row["CHO"]."</td>";
-                        echo "<td>".$row["PTN"]."</td>";
-                        echo "<td>".$row["LIP"]."</td>";
-                        echo "<td>".$row["KCAL"]."</td>";
+                        echo "<td>".number_format($row["CHO"],2)."</td>";
+                        echo "<td>".number_format($row["PTN"],2)."</td>";
+                        echo "<td>".number_format($row["LIP"],2)."</td>";
+                        echo "<td>".number_format($row["KCAL"],2)."</td>";
+                        echo "</tr>";
+                         }
+                           ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <hr>
+        <?php } ?>
+
+
+        <!-- Tabela 3ºLanche -->
+
+        <?php
+        
+        include_once 'conexao.php';
+        
+        $sql = "select * from alimentos where NOME_REFEICAO = '3ºLanche' and ID_CLIENTE=".$_GET["id_cliente"];
+        
+        $result = mysqli_query($con, $sql);
+        
+        $totalRegistros = mysqli_num_rows($result);
+        
+        $row = mysqli_fetch_array($result);
+     
+        if($totalRegistros > 0)  { ?>
+
+        <div style="margin-top: 1%;" class="row">
+            <div style="margin-left: 2%; margin-top: 3px; display; inline-block;" class="col-2">
+                <div>
+                    <img id="brasaoNutricao2" src="img/nutricao-falculdade-universidade-plotter-recorte-logo-1F9AF53657-seeklogo.com.png">
+                </div>
+                <label>
+                    <h6>Refeição</h6>
+                </label>
+                <input type="text" class="form-control col-8" disabled value=" <?php
+      echo $row["NOME_REFEICAO"]; ?> ">
+                <label>
+                    <h6>horário</h6>
+                </label>
+                <input class="form-control col-8" type="text" disabled value=" <?php 
+      echo $row["HORA"]; ?> ">
+            </div>
+
+            <div class="col-9 table-overflow2">
+                <table class="table table-striped">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Alimento</th>
+                            <th scope="col">Nº</th>
+                            <th scope="col">M.C.</th>
+                            <th scope="col">Grama</th>
+                            <th scope="col">CHO</th>
+                            <th scope="col">PTN</th>
+                            <th scope="col">LIP</th>
+                            <th scope="col">Kcal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <?php 
+            
+                            $result = mysqli_query($con, $sql);
+            
+                            while($row = mysqli_fetch_array($result)){
+                        echo "<tr>";   
+                        echo "<th scope='row'>".$row["NOME_ALIMENTO"]."</th>";
+                        echo "<td>".$row["NUM_MC"]."</td>";
+                        echo "<td>".$row["MEDIDA_CASEIRA"]."</td>";
+                        echo "<td>".$row["GRAMA"]."</td>";
+                        echo "<td>".number_format($row["CHO"],2)."</td>";
+                        echo "<td>".number_format($row["PTN"],2)."</td>";
+                        echo "<td>".number_format($row["LIP"],2)."</td>";
+                        echo "<td>".number_format($row["KCAL"],2)."</td>";
                         echo "</tr>";
                          }
                            ?>
@@ -748,10 +751,10 @@
                         echo "<td>".$row["NUM_MC"]."</td>";
                         echo "<td>".$row["MEDIDA_CASEIRA"]."</td>";
                         echo "<td>".$row["GRAMA"]."</td>";
-                        echo "<td>".$row["CHO"]."</td>";
-                        echo "<td>".$row["PTN"]."</td>";
-                        echo "<td>".$row["LIP"]."</td>";
-                        echo "<td>".$row["KCAL"]."</td>";
+                        echo "<td>".number_format($row["CHO"],2)."</td>";
+                        echo "<td>".number_format($row["PTN"],2)."</td>";
+                        echo "<td>".number_format($row["LIP"],2)."</td>";
+                        echo "<td>".number_format($row["KCAL"],2)."</td>";
                         echo "</tr>";
                          }
                            ?>
@@ -822,10 +825,10 @@
                         echo "<td>".$row["NUM_MC"]."</td>";
                         echo "<td>".$row["MEDIDA_CASEIRA"]."</td>";
                         echo "<td>".$row["GRAMA"]."</td>";
-                        echo "<td>".$row["CHO"]."</td>";
-                        echo "<td>".$row["PTN"]."</td>";
-                        echo "<td>".$row["LIP"]."</td>";
-                        echo "<td>".$row["KCAL"]."</td>";
+                        echo "<td>".number_format($row["CHO"],2)."</td>";
+                        echo "<td>".number_format($row["PTN"],2)."</td>";
+                        echo "<td>".number_format($row["LIP"],2)."</td>";
+                        echo "<td>".number_format($row["KCAL"],2)."</td>";
                         echo "</tr>";
                          }
                            ?>
