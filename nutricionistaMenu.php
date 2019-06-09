@@ -167,6 +167,178 @@
             }
         ?>
 
+
+
+
+
+
+        <br><br><br><br><br><br>
+
+        <!-- Agenda de marcação de consulta! -->
+
+        <style>
+            /* Teste de Estilos - colocar em arquivo separado */
+            body {
+                background-color: #dfe6e9;
+            }
+
+            #container {
+                background-color: #fff;
+
+                -webkit-box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.1);
+                -moz-box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.1);
+                box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.1);
+                background-image: linear-gradient(to bottom, white, rgba(208, 235, 218, 0.63));
+
+            }
+
+            .statusDia {
+                margin-bottom: 0px !important;
+                color: #ccc624;
+            }
+
+            .bg-info {
+                border-radius: 10%;
+                font-weight: bold;
+                color: #fff;
+            }
+
+            table button {
+                background-color: #fff;
+            }
+
+        </style>
+
+
+
+        <?php date_default_timezone_set('America/Sao_Paulo') ?><div class="float-right mr-5" id="demo"></div>
+
+        <div class="float-right mr-5"><?php echo date('d/m/Y')?>
+            <script>
+                var myVar = setInterval(myTimer, 1000);
+
+                function myTimer() {
+                    var d = new Date(),
+                        displayDate;
+                    if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
+                        displayDate = d.toLocaleTimeString('pt-BR');
+                    } else {
+                        displayDate = d.toLocaleTimeString('pt-BR', {
+                            timeZone: 'America/Belem'
+                        });
+                    }
+                    document.getElementById("demo").innerHTML = displayDate;
+                }
+
+            </script>
+        </div>
+        <?php include 'banco.php'   ?>
+        <?php include 'conexao.php' ?>
+        <?php include 'helpers.php' ?>
+
+        <br>
+        <div class="container1" id="container">
+            <div class="row justify-content-center">
+                <div class="col">
+                    <h2 class="text-center">&nbsp;Agenda do Nutricionista<button style="text-decoration: none;" type="button" class="btn btn-sm btn-link" data-toggle="collapse" data-target="#agendamento" aria-expanded="false" aria-controls="agendar consulta">&nbsp;<img src="img/icons8-mais-calend%C3%A1rio-48.png" alt=""></button></h2>
+                </div>
+            </div>
+
+            <!-- ------------  FAZER CADASTRO OU NOVO AGENDAMENTO ------------ -->
+            <div class="row">
+                <div class="col-sm-12 text-right">
+
+
+
+                </div>
+            </div>
+
+            <div class="row collapse align-center" id="agendamento">
+                <div class="col">
+                    <?php if(count($_POST) == 0):  ?>
+                    <!-- Formulario collapsed  -->
+                    <form action="agendaBuscarCliente.php" method="POST">
+                        <div class="form-row  align-items-center col-md-8">
+
+                            <div class="col-md-4 form-group">
+                                <label for="inCliente">Cliente: <input type="text" class="form-control form-control-sm" name="inCliente" id="inCliente"></label>
+                            </div>
+
+                            <div class="col-md-4 form-group">
+                                <label for="inCPF">CPF: <input type="text" class="form-control form-control-sm" name="inCPF" id="inCPF"></label>
+                            </div>
+
+                            <button type="submit" class="btn btn-sm btn-info"> Buscar </button>
+                        </div>
+                    </form>
+                    <?php else:?>
+                    <?php include 'agendarCliente.php'; ?>
+                    <?php endif; ?>
+
+
+                </div>
+            </div>
+            <!--   MODAL - Formulário de Cadastro de Clientes -->
+            <div class="modal fade" id="formCadastroCliente" tabindex="-1" role="dialog" aria-labelledby="CadastroCliente" aria-hidden="true">
+                <?php include 'formCadastroCliente.php' ?>
+            </div>
+
+            <hr>
+            <!-- ------------------------ CALENDÁRIO DE CONSULTAS ------------------------ -->
+            <div class="row">
+                <div class="col text-left">
+                    <p class="statusDia">Consultas do dia: <span><?php echo dataFormat(verificaData(),'data'); ?></span></p>
+                </div>
+            </div>
+
+            <div class="row">
+                <?php $data = verificaData()?>
+                <!-- ------------------------ Agenda de Clientes para a Data ------------------------ -->
+                <div class="col">
+                    <table class="table table-sm table-hover text-center">
+                        <thead class="text-left">
+                            <tr>
+                                <th> Horário </th>
+                                <th>Cliente</th>
+                                <th> Telefone </th>
+                            </tr>
+                        </thead>
+                        <?php $agendados = buscarAgendados($con, $data); ?>
+                        <?php foreach($agendados as $cliente): ?>
+                        <tbody class="text-left">
+                            <tr>
+                                <?php $cliente['ID_CLIENTE'] ?>
+                                <td><?php echo $cliente['hora'] ?></td>
+                                <td><i style="color: #d83838" class="fas fa-user-circle"></i> <?php echo $cliente['NOME'] ?></td>
+                                <td><?php echo $cliente['TELEFONE'] ?></td>
+                            </tr>
+                        </tbody>
+                        <?php endforeach; ?>
+                    </table>
+                </div>
+
+                <!-- ------------ Escolher Data ------------ -->
+                <div class="col-4">
+                    <form action="">
+                        <div class="form-inline">
+                            <input type="date" class="form-control mr-md-1 text-center" name="inDataAgenda" id="inDataAgenda" value="<?php echo $data ?>">
+                            <button type="submit" class="btn btn-info"><i class="fas fa-search"></i></button>
+                        </div>
+                    </form>
+
+                    <div class="row">
+                        <div class="col py-1 text-center">
+                            <p class="diaCalendario rounded">
+                                <?php echo dataFormat(verificaData(), 'dia');?>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div> <br>
+
+        <!-- botão cadastrar novo paciente -->
         <div>
             <button type="button" class="btn btn-link" id="novaConsulta" data-toggle="modal" data-target="#exampleModalScrollable">
                 <img src="img/icons8-adicionar-usu%C3%A1rio-grupo-homem-mulher-64.png" title="Cadastrar novo paciente" alt="Olá">
