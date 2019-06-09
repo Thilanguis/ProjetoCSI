@@ -29,32 +29,32 @@
     
     $sql = "insert into a_clinica_nutricional values(null, '".$HpatologiaPregressa."','".$Hfamiliar."','".$Halimentar."','".$Hsocial."','".$medicamentos."','".$sinalClinico."','".$recomendacoesOrientacoes."', '".$id."')";
     
-   
+        header('refresh:2,form-clinicaNutricional.php?id_cliente='.$id);
         if($ok)
-{
+{           header('refresh:2,form-clinicaNutricional.php?id_cliente='.$id);
             if(mysqli_query($con,$sql))  
-    {
+    {           header('refresh:2,form-VetFao.php?id_cliente='.$id);
          ?>
-        <div class="alert alert-success animated zoomIn container" role="alert" style="width: 300px; margin-top: 100px;">
+        <div class="alert alert-success animated zoomIn container" role="alert" style="width: 300px; margin-top: 100px; text-align: center;">
             Dados gravados com sucesso!
         </div>
 
-        <div id="btnConfirmacao">
-            <?php echo "<a href='form-VetFao.php?id_cliente=".$id."'><button id='btnVoltar1' type='button' class='btn btn-warning animated zoomIn' style='margin-left:48%;'>OK</button></a>" ?>
-        </div>
+        <!-- <div id="btnConfirmacao"> -->
+        <?php //echo "<a href='form-VetFao.php?id_cliente=".$id."'><button id='btnVoltar1' type='button' class='btn btn-warning animated zoomIn' style='margin-left:48%;'>OK</button></a>" ?>
+        <!-- </div> -->
         <?php
         }
         else
         {
                 
          ?>
-        <div class="alert alert-warning animated zoomIn container" role="alert" style="width: 300px; margin-top: 100px;">
+        <div class="alert alert-warning animated zoomIn container" role="alert" style="width: 300px; margin-top: 100px; text-align: center;">
             Erro ao cadastrar contato!
         </div>
 
-        <div id="btnConfirmacao">
-            <?php echo "<a href='form-clinicaNutricional.php?id_cliente=".$id."'><button id='btnVoltar1' type='button' class='btn btn-warning animated zoomIn' style='margin-left:48%;'>OK</button></a>" ?>
-        </div>
+        <!-- <div id="btnConfirmacao"> -->
+        <?php //echo "<a href='form-clinicaNutricional.php?id_cliente=".$id."'><button id='btnVoltar1' type='button' class='btn btn-warning animated zoomIn' style='margin-left:48%;'>OK</button></a>" ?>
+        <!-- </div> -->
         <?php
         }
         }
@@ -62,13 +62,13 @@
         else
         {
     ?>
-        <div class="alert alert-danger animated zoomIn container" role="alert" style="width: 300px; margin-top: 100px;">
+        <div class="alert alert-danger animated zoomIn container" role="alert" style="width: 300px; margin-top: 100px; text-align: center;">
             Nenhum campo preenchido!
         </div>
 
-        <div id="btnConfirmacao">
-            <?php echo "<a href='form-clinicaNutricional.php?id_cliente=".$id."'><button id='btnVoltar1' type='button' class='btn btn-warning animated zoomIn' style='margin-left:48%;'>OK</button></a>" ?>
-        </div>
+        <!-- <div id="btnConfirmacao"> -->
+        <?php //echo "<a href='form-clinicaNutricional.php?id_cliente=".$id."'><button id='btnVoltar1' type='button' class='btn btn-warning animated zoomIn' style='margin-left:48%;'>OK</button></a>" ?>
+        <!-- </div> -->
         <?php
         }
         

@@ -27,30 +27,30 @@
     $sql = "update a_bioquimica set LISTA_HEMOGRAMA_COMPLETO='".$LISTA_HEMOGRAMA_COMPLETO."' where id_bioquimica='".$bioquimica."'";
   
 
-
+            header('refresh:2,form-Dietoterapia.php?id_cliente='.$id);
             if(mysqli_query($con,$sql))  
-    {
+    {           header('refresh:2,form-Dietoterapia.php?id_cliente='.$id);
          ?>
-        <div class="alert alert-success animated zoomIn container" role="alert" style="width: 300px; margin-top: 100px;">
+        <div class="alert alert-success animated zoomIn container" role="alert" style="width: 300px; margin-top: 100px; text-align: center;">
             Bioquimica atualizada com sucesso!
         </div>
 
-        <div id="btnConfirmacao">
-            <?php echo "<a href='form-Dietoterapia.php?id_cliente=".$id."'><button id='btnVoltar1' type='button' class='btn btn-warning animated zoomIn' style='margin-left:48%;'>OK</button></a>" ?>
-        </div>
+        <!-- <div id="btnConfirmacao"> -->
+        <?php //echo "<a href='form-Dietoterapia.php?id_cliente=".$id."'><button id='btnVoltar1' type='button' class='btn btn-warning animated zoomIn' style='margin-left:48%;'>OK</button></a>" ?>
+        <!-- </div> -->
         <?php
         }
         else
         {
             
          ?>
-        <div class="alert alert-warning animated zoomIn container" role="alert" style="width: 300px; margin-top: 100px;">
+        <div class="alert alert-warning animated zoomIn container" role="alert" style="width: 300px; margin-top: 100px; text-align: center;">
             Erro ao atualizar Bioquimica!
         </div>
 
-        <div id="btnConfirmacao">
-            <?php echo "<a href='form-Dietoterapia.php?id_cliente=".$id."'><button id='btnVoltar1' type='button' class='btn btn-warning animated zoomIn' style='margin-left:48%;'>OK</button></a>" ; echo mysqli_error($con);?>
-        </div>
+        <!-- <div id="btnConfirmacao"> -->
+        <?php //echo "<a href='form-Dietoterapia.php?id_cliente=".$id."'><button id='btnVoltar1' type='button' class='btn btn-warning animated zoomIn' style='margin-left:48%;'>OK</button></a>" ; echo mysqli_error($con);?>
+        <!-- </div> -->
         <?php
         }
         

@@ -122,7 +122,7 @@
             
                 $row = mysqli_fetch_array($result);
                                               
-                echo $row["ALTURA"] . " m";          
+                echo number_format($row["ALTURA"],2) . " m";          
 
                 ?> ">
             </div>
@@ -138,7 +138,7 @@
             
                 $row = mysqli_fetch_array($result);
                                               
-                echo $row["PESO"] . " Kg";          
+                echo number_format($row["PESO"],2) . " Kg";          
 
                 ?> ">
             </div>
@@ -193,7 +193,7 @@
             
                             $row = mysqli_fetch_array($result);
             
-                            echo $row["CHO"] + $row["PTN"] + $row["LIP"]."  Kcal";
+                            echo number_format($row["CHO"] + $row["PTN"] + $row["LIP"],2) . "  Kcal";
             
                                      ?>">
             </div>

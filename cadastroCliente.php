@@ -43,31 +43,31 @@
     $verificarS = $senha == $confirmarSenha;
         
     $verificarE = $email == $confirmarEmail;    
-
-   
+        
+header('refresh:2,index.php');  
 if($verificarE)
-{        
+{   header('refresh:2,index.php');     
     if($verificarS)      
-{
+{   header('refresh:2,index.php');
         if($ok)
-{
+{   header('refresh:2,index.php');
             if(mysqli_query($con,$sql))  
-    {
+    {   header('refresh:2,index.php');
          ?>
-        <div class="alert alert-success animated zoomIn container" role="alert" style="width: 300px; margin-top: 100px;">
+        <div class="alert alert-success animated zoomIn container" role="alert" style="width: 300px; margin-top: 100px; text-align: center;">
             Registro feito com sucesso!
         </div>
 
-        <div id="btnConfirmacao">
+        <!-- <div id="btnConfirmacao">
             <a href="index.php"><button id="btnVoltar1" type="button" class="btn btn-warning animated zoomIn" style="margin-left:48%;">OK</button> </a>
-        </div>
+        </div> -->
         <?php
         }
         else
         {
             
          ?>
-        <div class="alert alert-warning animated zoomIn container" role="alert" style="width: 300px; margin-top: 100px;">
+        <div class="alert alert-warning animated zoomIn container" role="alert" style="width: 300px; margin-top: 100px; text-align: center;">
             Erro ao cadastrar contato!
         </div>
 
@@ -81,13 +81,13 @@ if($verificarE)
         else
         {
     ?>
-        <div class="alert alert-danger animated zoomIn container" role="alert" style="width: 300px; margin-top: 100px;">
+        <div class="alert alert-danger animated zoomIn container" role="alert" style="width: 300px; margin-top: 100px; text-align: center;">
             Favor preencher todos os campos!
         </div>
 
-        <div id="btnConfirmacao">
+        <!-- <div id="btnConfirmacao">
             <a href="index.php"><button id="btnVoltar1" type="button" class="btn btn-warning animated zoomIn" style="margin-left:48%;">OK</button></a>
-        </div>
+        </div> -->
         <?php
         }
         }
@@ -95,13 +95,13 @@ if($verificarE)
             
         {
         ?>
-        <div class="alert alert-danger animated zoomIn container" role="alert" style="width: 300px; margin-top: 100px;">
+        <div class="alert alert-danger animated zoomIn container" role="alert" style="width: 300px; margin-top: 100px; text-align: center;">
             Senhas não conferem!
         </div>
 
-        <div id="btnConfirmacao">
+        <!-- <div id="btnConfirmacao">
             <a href="index.php"><button id="btnVoltar1" type="button" class="btn btn-warning animated zoomIn" style="margin-left:48%;">OK</button></a>
-        </div>
+        </div> -->
         <?php
         }
     }
@@ -110,13 +110,13 @@ else
             
         {
         ?>
-        <div class="alert alert-danger animated zoomIn container" role="alert" style="width: 300px; margin-top: 100px;">
+        <div class="alert alert-danger animated zoomIn container" role="alert" style="width: 300px; margin-top: 100px; text-align: center;">
             Emails não conferem!
         </div>
 
-        <div id="btnConfirmacao">
+        <!-- <div id="btnConfirmacao">
             <a href="index.php"><button id="btnVoltar1" type="button" class="btn btn-warning animated zoomIn" style="margin-left:48%;">OK</button></a>
-        </div>
+        </div> -->
         <?php
         }
             

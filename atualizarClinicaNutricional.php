@@ -33,30 +33,30 @@
     $sql = "update a_clinica_nutricional set OBSERVACOES_ADICIONAIS='".$bioquirecomendacoesOrientacoes."', H_SOCIAL='".$Hsocial."', H_MEDICAMENTOSO='".$medicamentos."', SINALCLINICO='".$sinalClinico."', H_ALIMENTAR='".$Halimentar."', H_FAMILIAR='".$Hfamiliar."', H_PATOLOGICO_PRE='".$HpatologiaPregressa."' where ID_A_CLINICANUTRICIONAL='".$ID_A_CLINICANUTRICIONAL."'";
   
 
-
+            header('refresh:2,form-Dietoterapia.php?id_cliente='.$id);
             if(mysqli_query($con,$sql))  
-    {
+    {           header('refresh:2,form-Dietoterapia.php?id_cliente='.$id);
          ?>
-        <div class="alert alert-success animated zoomIn container" role="alert" style="width: 300px; margin-top: 100px;">
-            Clinica Nutricional atualizada com sucesso!
+        <div class="alert alert-success animated zoomIn container" role="alert" style="width: 300px; margin-top: 100px; text-align: center;">
+            Clínica nutri. atualizada com sucesso!
         </div>
 
-        <div id="btnConfirmacao">
-            <?php echo "<a href='form-Dietoterapia.php?id_cliente=".$id."'><button id='btnVoltar1' type='button' class='btn btn-warning animated zoomIn' style='margin-left:48%;'>OK</button></a>" ?>
-        </div>
+        <!-- <div id="btnConfirmacao"> -->
+        <?php //echo "<a href='form-Dietoterapia.php?id_cliente=".$id."'><button id='btnVoltar1' type='button' class='btn btn-warning animated zoomIn' style='margin-left:48%;'>OK</button></a>" ?>
+        <!-- </div> -->
         <?php
         }
         else
         {
             
          ?>
-        <div class="alert alert-warning animated zoomIn container" role="alert" style="width: 300px; margin-top: 100px;">
-            Erro ao atualizar Clinica Nutricional!
+        <div class="alert alert-warning animated zoomIn container" role="alert" style="width: 300px; margin-top: 100px; text-align: center;">
+            Erro ao atualizar Clínica nutri.!
         </div>
 
-        <div id="btnConfirmacao">
-            <?php echo "<a href='form-Dietoterapia.php?id_cliente=".$id."'><button id='btnVoltar1' type='button' class='btn btn-warning animated zoomIn' style='margin-left:48%;'>OK</button></a>" ; echo mysqli_error($con);?>
-        </div>
+        <!-- <div id="btnConfirmacao"> -->
+        <?php //echo "<a href='form-Dietoterapia.php?id_cliente=".$id."'><button id='btnVoltar1' type='button' class='btn btn-warning animated zoomIn' style='margin-left:48%;'>OK</button></a>" ; echo mysqli_error($con);?>
+        <!-- </div> -->
         <?php
         }
         

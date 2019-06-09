@@ -20,15 +20,15 @@ if ($row > 0)
     header("Location:nutricionistaMenu.php");
  }
 else
-{
+{ header('refresh:2,index.php');
     ?>
-<div class="alert alert-danger animated zoomIn container" role="alert" style="width: 300px; margin-top: 100px;">
+<div class="alert alert-danger animated zoomIn container" role="alert" style="width: 300px; margin-top: 100px; text-align: center;">
     CRN ou senha digitados errado!
 </div>
 
-<div id="btnConfirmacao">
+<!-- <div id="btnConfirmacao">
     <a href="index.php"><button id="btnVoltar1" type="button" class="btn btn-warning animated zoomIn" style="margin-left:48%;">OK</button></a>
-</div>
+</div> -->
 
 <?php
 }

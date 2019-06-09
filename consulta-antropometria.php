@@ -188,13 +188,6 @@
                         $result = mysqli_query($con, $sql);                                                                                                                             $row = mysqli_fetch_array($result);                                                                                                                             echo number_format($row[0],2). " Kilograma";             
                         ?> ">
                             <br>
-                            <div class="form-row">
-                                <p class="col-1" id="imcJavascript">IMC:</p>
-                                <!-- resultado IMC do javascript -->
-                                <div class="col" id="resultadoIMC">
-                                    Classificação do IMC
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>

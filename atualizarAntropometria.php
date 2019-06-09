@@ -45,30 +45,30 @@
     $sql = "update a_antropometrica set altura='".$altura."', peso='".$pesoAtual."', CIR_BRACO_ESQ='".$bracoEsq."', CIR_BRACO_DIR='".$bracoDir."', CIR_CINTURA='".$cintura."', CIR_QUADRIL='".$quadril."', CIR_TORAX='".$torax."', CIR_ABDOMINAL='".$abdominal."', CIR_COXA_ESQ='".$coxaEsq."', CIR_COXA_DIR='".$coxaDir."', CIR_PANTURRILHA_ESQ='".$panturrilhaEsq."', CIR_PANTURRILHA_DIR='".$panturrilhaDir."', CIR_ANTEBRACO_ESQ='".$antebracoEsq."', CIR_ANTEBRACO_DIR='".$antebracoDir."', dc_tricipital='".$tricipital."', DC_SUBESCAPULAR_AXILAR='".$subescapular."', DC_SUPRAILIACA='".$suprailiaca."', DC_ABDOMINAL='".$dcAbdominal."', DC_QUADRICEPS='".$quadriceps."' where id_antropometria='".$id_antropometria."'";
   
 
-
+            header('refresh:2,form-Dietoterapia.php?id_cliente='.$id);
             if(mysqli_query($con,$sql))  
-    {
+    {           header('refresh:2,form-Dietoterapia.php?id_cliente='.$id);
          ?>
-        <div class="alert alert-success animated zoomIn container" role="alert" style="width: 300px; margin-top: 100px;">
+        <div class="alert alert-success animated zoomIn container" role="alert" style="width: 300px; margin-top: 100px; text-align: center;">
             Antropometria atualizada com sucesso!
         </div>
 
-        <div id="btnConfirmacao">
-            <?php echo "<a href='form-Dietoterapia.php?id_cliente=".$id."'><button id='btnVoltar1' type='button' class='btn btn-warning animated zoomIn' style='margin-left:48%;'>OK</button></a>" ?>
-        </div>
+        <!-- <div id="btnConfirmacao"> -->
+        <?php //echo "<a href='form-Dietoterapia.php?id_cliente=".$id."'><button id='btnVoltar1' type='button' class='btn btn-warning animated zoomIn' style='margin-left:48%;'>OK</button></a>" ?>
+        <!-- </div> -->
         <?php
         }
         else
         {
             
          ?>
-        <div class="alert alert-warning animated zoomIn container" role="alert" style="width: 300px; margin-top: 100px;">
+        <div class="alert alert-warning animated zoomIn container" role="alert" style="width: 300px; margin-top: 100px; text-align: center;">
             Erro ao atualizar Antropometria!
         </div>
 
-        <div id="btnConfirmacao">
-            <?php echo "<a href='form-Dietoterapia.php?id_cliente=".$id."'><button id='btnVoltar1' type='button' class='btn btn-warning animated zoomIn' style='margin-left:48%;'>OK</button></a>" ; echo mysqli_error($con);?>
-        </div>
+        <!-- <div id="btnConfirmacao"> -->
+        <?php //echo "<a href='form-Dietoterapia.php?id_cliente=".$id."'><button id='btnVoltar1' type='button' class='btn btn-warning animated zoomIn' style='margin-left:48%;'>OK</button></a>" ; echo mysqli_error($con);?>
+        <!-- </div> -->
         <?php
         }
         
