@@ -30,19 +30,18 @@
                     include 'conexao.php';
                     include 'banco.php';
                                 
-                    if(agendarCliente($con, $idNutricionista, $idCliente, $dataAgendada, $horaAgendada)){
+                    if(agendarCliente($con, $idNutricionista, $idCliente, $dataAgendada, $horaAgendada)){  header('Refresh: 2, nutricionistaMenu.php');
                         ?>
         <div class="alert alert-success animated zoomIn container" role="alert" style="width: 300px; margin-top: 100px; text-align: center;">
             Agendamento realizado!
         </div>
         <?php
-                        header("Refresh: 1, nutricionistaMenu.php");
-                    }else{
+                       
+                    }else{ header('Refresh: 2, nutricionistaMenu.php');
                         echo "<div class='alert alert-danger' role='alert'> Agendamento não realizado! Tente novamente. </div>";
-                        header("Refresh: 1, nutricionistaMenu.php");
                     }
                     
-                }else{
+                }else{  header('Refresh: 2, agendaBuscarCliente.php?idCliente='.$idCliente);
                     echo "<div class='alert alert-danger' role='alert'> Preencha todos os campos! </div>";
                 }
             ?>
@@ -59,11 +58,13 @@
                     <div class="card-body text-info">
                         <input type="hidden" name="idCliente" value="<?php echo $cliente['ID_CLIENTE'] ?>">
                         <h5 class="card-title"><?php echo $cliente['NOME'].'<br><span>'.calcularIdade($con, $cliente['ID_CLIENTE']).'</span>'?></h5>
-                        <p class="card-text form-group"><input type="date" class="form-control  text-center" name="dataAgendada" id="dataAgendada">
-                            <input type="time" class="form-control my-1  text-center" name="horaAgendada" id="horaAgendada">
+                        <p class="card-text form-group"><input type="date" class="form-control  text-center" name="dataAgendada" id="dataAgendada" required>
+                            <input type="time" class="form-control my-1  text-center" name="horaAgendada" id="horaAgendada" required>
                         </p>
                     </div>
+                
                     <div class="card-footer text-right">
+                       <a class="btn btn-secondary btn-sm v" href="nutricionistaMenu.php">Cancelar</a>
                         <button type="submit" class="btn btn-info btn-sm" v>Agendar</button>
                     </div>
                 </div>

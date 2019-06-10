@@ -4,6 +4,12 @@ function excluir(id) {
     }
 }
 
+function excluirConsulta(id) {
+    if (confirm('Deseja realmente excluir esta consulta?')) {
+        location.href = 'excluirConsulta.php?id_cliente=' + id;
+    }
+}
+
 $(document).ready(function () {
     $('.addTel1').hide();
     $('#whatsapp').click(function () {

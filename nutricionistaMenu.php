@@ -172,7 +172,7 @@
 
 
 
-        <br><br><br><br><br><br>
+        <br><br>
 
         <!-- Agenda de marcação de consulta! -->
 
@@ -194,7 +194,7 @@
 
             .statusDia {
                 margin-bottom: 0px !important;
-                color: #ccc624;
+                color: #4c89e3;
             }
 
             .bg-info {
@@ -208,12 +208,13 @@
             }
 
         </style>
-
-
-
+        
+<hr>
+<br>       
+       
         <?php date_default_timezone_set('America/Sao_Paulo') ?><div class="float-right mr-5" id="demo"></div>
 
-        <div class="float-right mr-5"><?php echo date('d/m/Y')?>
+        <div class="float-right mr-5"><?php echo "Data de hoje: " . date('d/m/Y')?>
             <script>
                 var myVar = setInterval(myTimer, 1000);
 
@@ -227,7 +228,7 @@
                             timeZone: 'America/Belem'
                         });
                     }
-                    document.getElementById("demo").innerHTML = displayDate;
+                    document.getElementById("demo").innerHTML = "Hora: " + displayDate;
                 }
 
             </script>
@@ -236,11 +237,11 @@
         <?php include 'conexao.php' ?>
         <?php include 'helpers.php' ?>
 
-        <br>
+        <br><br>
         <div class="container1" id="container">
             <div class="row justify-content-center">
                 <div class="col">
-                    <h2 class="text-center">&nbsp;Agenda do Nutricionista<button style="text-decoration: none;" type="button" class="btn btn-sm btn-link" data-toggle="collapse" data-target="#agendamento" aria-expanded="false" aria-controls="agendar consulta">&nbsp;<img src="img/icons8-mais-calend%C3%A1rio-48.png" alt=""></button></h2>
+                    <h2 id="menuNutricionista5" class="text-center">&nbsp;Agenda do Nutricionista<button style="text-decoration: none;" type="button" class="btn btn-sm btn-link" data-toggle="collapse" data-target="#agendamento" aria-expanded="false" aria-controls="agendar consulta">&nbsp;<img src="img/icons8-mais-calend%C3%A1rio-48.png" alt=""></button></h2>
                 </div>
             </div>
 
@@ -260,11 +261,11 @@
                     <form action="agendaBuscarCliente.php" method="POST">
                         <div class="form-row  align-items-center col-md-8">
 
-                            <div class="col-md-4 form-group">
+                            <div class="col-md-4 form-group" style="text-align: center;">
                                 <label for="inCliente">Cliente: <input type="text" class="form-control form-control-sm" name="inCliente" id="inCliente"></label>
                             </div>
 
-                            <div class="col-md-4 form-group">
+                            <div class="col-md-4 form-group" style="text-align: center;">
                                 <label for="inCPF">CPF: <input type="text" class="form-control form-control-sm" name="inCPF" id="inCPF"></label>
                             </div>
 
@@ -287,7 +288,7 @@
             <!-- ------------------------ CALENDÁRIO DE CONSULTAS ------------------------ -->
             <div class="row">
                 <div class="col text-left">
-                    <p class="statusDia">Consultas do dia: <span><?php echo dataFormat(verificaData(),'data'); ?></span></p>
+                    <p style="margin-left: 25px;" class="statusDia">Consultas do dia: <span><?php echo dataFormat(verificaData(),'data'); ?></span></p>
                 </div>
             </div>
 
@@ -301,6 +302,7 @@
                                 <th> Horário </th>
                                 <th>Cliente</th>
                                 <th> Telefone </th>
+                                <th> Excluir </th>
                             </tr>
                         </thead>
                         <?php $agendados = buscarAgendados($con, $data); ?>
@@ -310,7 +312,9 @@
                                 <?php $cliente['ID_CLIENTE'] ?>
                                 <td><?php echo $cliente['hora'] ?></td>
                                 <td><i style="color: #d83838" class="fas fa-user-circle"></i> <?php echo $cliente['NOME'] ?></td>
-                                <td><?php echo $cliente['TELEFONE'] ?></td>
+                                <td><?php echo $cliente['TELEFONE'] ?>
+                                </td>
+                                 <?php echo "<td><a href='#' onclick='excluirConsulta(".$cliente["ID_CLIENTE"].")'><img src='img/icons8-lixo-30.png' style='padding-left: 13px; padding-top: 2px; width: 40px; height: 28px;' alt=''></td>"; ?>
                             </tr>
                         </tbody>
                         <?php endforeach; ?>
