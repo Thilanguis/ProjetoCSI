@@ -103,6 +103,26 @@ function atualizarCNutricional(ID_A_CLINICANUTRICIONAL) {
     }
 }
 
+function atualizarVetFao(id_vet_fao) {
+    var paciente = document.getElementById("paciente").value;
+    if (confirm('Deseja atualizar os dados NAF do(a) paciente ' + paciente + ' ? ')) {
+        var id_cliente = document.getElementById("id_cliente").value;
+        var sono = document.getElementById("sono").value;
+        var NAF_sono = document.getElementById("NAF_sono").value;
+        var trabalho = document.getElementById("trabalho").value;
+        var NAF_trabalho = document.getElementById("NAF_trabalho").value;
+        var estudo = document.getElementById("estudo").value;
+        var NAF_estudo = document.getElementById("NAF_estudo").value;
+        var exerFisico = document.getElementById("exerFisico").value;
+        var NAF_exerFisico = document.getElementById("NAF_exerFisico").value;
+        var avontade = document.getElementById("avontade").value;
+        var NAF_avontade = document.getElementById("NAF_avontade").value;
+        var ativFisica = document.getElementById("ativFisica").value;
+        var NAF_ativFisica = document.getElementById("NAF_ativFisica").value;
+        location.href = 'atualizarVetFao.php?id_vet_fao=' + id_vet_fao + '&id_cliente=' + id_cliente + '&id_vet_fao=' + id_vet_fao + '&sono=' + sono + '&NAF_sono=' + NAF_sono + '&trabalho=' + trabalho + '&NAF_trabalho=' + NAF_trabalho + '&estudo=' + estudo + '&NAF_estudo=' + NAF_estudo + '&exerFisico=' + exerFisico + '&NAF_exerFisico=' + NAF_exerFisico + '&avontade=' + avontade + '&NAF_avontade=' + NAF_avontade + '&ativFisica=' + ativFisica + '&NAF_ativFisica=' + NAF_ativFisica;
+    }
+}
+
 function calcularHorasNAF() {
     var n1 = parseFloat(document.getElementById('sono').value, 10);
     var n2 = parseFloat(document.getElementById('trabalho').value, 10);

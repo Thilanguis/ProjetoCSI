@@ -11,6 +11,7 @@
     include_once 'consulta-antropometria.php';
     include_once 'consulta-bioquimica.php';
     include_once 'consulta-clinicaNutricional.php';
+    include_once 'consulta-vetFao.php';
     ?>
 
 </head>
@@ -98,6 +99,10 @@
                 <div class="dropdown-divider"></div>
 
                 <a class="dropdown-item" href="#"><button title="Av. Clínica Nutricional" id="botaoConsulta" class="btn btn-link" data-toggle="modal" data-target="#clinicaNutricional"><i id='caixaConsulta1' class="fas fa-book-medical" style="font-size: 40px; color: #d83838; text-shadow: none;"></i></button></a>
+                <div class="dropdown-divider"></div>
+                
+                <a class="dropdown-item" href="#"><button title="Av. Vet-Fao" id="botaoConsulta" class="btn btn-link" data-toggle="modal" data-target="#vetfao"><img id="caixaConsulta" src="img/icons8-calculadora-48.png" alt=""></button></a>
+                
             </div>
 
         </div>
