@@ -53,7 +53,7 @@ function deslogar() {
 
 function atualizarAntropometria(id_antropometria) {
     var paciente = document.getElementById("paciente").value;
-    if (confirm('Deseja atualizar os dados Antropométricos do paciente ' + paciente + ' ? ')) {
+    if (confirm('Deseja atualizar os dados Antropométricos do(a) paciente ' + paciente + ' ? ')) {
         var id_cliente = document.getElementById("id_cliente").value;
         var antropometria = document.getElementById("id_cliente").value;
         var altura = document.getElementById("altura").value;
@@ -81,7 +81,7 @@ function atualizarAntropometria(id_antropometria) {
 
 function atualizarBioquimica(id_bioquimica) {
     var paciente = document.getElementById("paciente").value;
-    if (confirm('Deseja atualizar os dados Bioquímicos do paciente ' + paciente + ' ? ')) {
+    if (confirm('Deseja atualizar os dados Bioquímicos do(a) paciente ' + paciente + ' ? ')) {
         var id_cliente = document.getElementById("id_cliente").value;
         var bioquimica = document.getElementById("exampleFormControlTextarea1").value;
         location.href = 'atualizarBioquimica.php?id_bioquimica=' + id_bioquimica + '&id_cliente=' + id_cliente + '&LISTA_HEMOGRAMA_COMPLETO=' + bioquimica;
@@ -90,7 +90,7 @@ function atualizarBioquimica(id_bioquimica) {
 
 function atualizarCNutricional(ID_A_CLINICANUTRICIONAL) {
     var paciente = document.getElementById("paciente").value;
-    if (confirm('Deseja atualizar os dados Clinicos Nutricionais do paciente ' + paciente + ' ? ')) {
+    if (confirm('Deseja atualizar os dados Clinicos Nutricionais do(a) paciente ' + paciente + ' ? ')) {
         var id_cliente = document.getElementById("id_cliente").value;
         var bioquirecomendacoesOrientacoes = document.getElementById("recomendacoesOrientacoes").value;
         var Hsocial = document.getElementById("Hsocial").value;

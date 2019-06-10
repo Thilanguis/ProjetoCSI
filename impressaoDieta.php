@@ -76,7 +76,20 @@
             <a id="menuFechado" href="#" class="list-group-item list-group-item-action" onclick="avisoNaoPodeAcessar()">Lista de subs.<i class="fas fa-lock" id="cadeadoFechado"></i></a>
             <a href="#" class="list-group-item list-group-item-action">Impressão de dieta<i class="fas fa-check" style="font-size: 16px; color: #3b884d"></i></a>
         </div>
+<!-- card de impressao para imprimir -->
 
+        <div id="tabelaImpressao">
+            <div class="accordion">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0" id="textoImprimir">Imprimir</h5>
+                    </div>
+                    <div id="divDoBotao">
+                        <img class="impressoraImagem animated pulse" onclick="print()" src="img/icons8-m%C3%A1quina-de-escrever-com-tablet-48.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
         <h4 id="menuNutricionista">Impressão da dieta <img src="img/icons8-impress%C3%A3o-48.png" alt=""></h4>
         <h4 id="menuNutricionista2">Dieta do paciente&nbsp; <img id="sacolaDeCompras" src="img/icons8-ma%C3%A7%C3%A3-48.png" alt=""></h4>
         <h5 id="h5Nutricionista">
@@ -198,22 +211,7 @@
                                      ?>">
             </div>
         </div>
-
-
-        <!-- card de impressao para imprimir -->
-
-        <div id="tabelaImpressao">
-            <div class="accordion">
-                <div class="card">
-                    <div class="card-header">
-                        <h5 class="mb-0" id="textoImprimir">Imprimir</h5>
-                    </div>
-                    <div id="divDoBotao">
-                        <img class="impressoraImagem animated pulse" onclick="print()" src="img/icons8-m%C3%A1quina-de-escrever-com-tablet-48.png" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
+        
 
         <div id="graficoDinamico1">
 
