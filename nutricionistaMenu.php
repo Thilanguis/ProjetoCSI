@@ -121,8 +121,8 @@
 
                 <?php
                     
-                echo "<p style='margin: 0px; padding: 0px;'><b>Legenda:&nbsp;</b> <i class='fas fa-book' style='color: #E8850C'></i> Paciente sem consulta";
-                echo "<p style='margin: 0px; padding: 0px;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class='fas fa-book-open' style='color: #E8850C'></i> Paciente com consulta</b>";
+                echo "<p style='margin: 0px; padding: 0px;'><b>Legenda:&nbsp;</b> <i class='fas fa-book' style='color: #E8850C'></i> Paciente sem Dieta";
+                echo "<p style='margin: 0px; padding: 0px;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class='fas fa-book-open' style='color: #E8850C'></i> Paciente com Dieta</b>";
                     
                     while($row = mysqli_fetch_array($result))
                     { 
@@ -208,10 +208,10 @@
             }
 
         </style>
-        
-<hr>
-<br>       
-       
+
+        <hr>
+        <br>
+
         <?php date_default_timezone_set('America/Sao_Paulo') ?><div class="float-right mr-5" id="demo"></div>
 
         <div class="float-right mr-5"><?php echo "Data de hoje: " . date('d/m/Y')?>
@@ -314,7 +314,7 @@
                                 <td><i style="color: #d83838" class="fas fa-user-circle"></i> <?php echo $cliente['NOME'] ?></td>
                                 <td><?php echo $cliente['TELEFONE'] ?>
                                 </td>
-                                 <?php echo "<td><a href='#' onclick='excluirConsulta(".$cliente["ID_CLIENTE"].")'><img src='img/icons8-lixo-30.png' style='padding-left: 13px; padding-top: 2px; width: 40px; height: 28px;' alt=''></td>"; ?>
+                                <?php echo "<td><a href='#' onclick='excluirConsulta(".$cliente["ID_CLIENTE"].")'><img src='img/icons8-lixo-30.png' style='padding-left: 13px; padding-top: 2px; width: 40px; height: 28px;' alt=''></td>"; ?>
                             </tr>
                         </tbody>
                         <?php endforeach; ?>
