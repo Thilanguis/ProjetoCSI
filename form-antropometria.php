@@ -243,7 +243,6 @@
                         <input type="number" step="0.01" class="form-control" id="antebracoDir" placeholder="" name="antebracoDir">
                     </div>
                 </div>
-
                 <button style="margin-left: 340px; margin-bottom: 20px; margin-top: 30px;" id="btnentrar" type="submit" class="btn btn-primary">Salvar Antropometria</button>
             </div>
         </form>

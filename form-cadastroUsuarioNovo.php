@@ -103,7 +103,27 @@
                         </div>
                         <div class="form-group col-md-4">
                             <label style="margin-left: 90px;" for="cpf">CPF</label> &nbsp; <i class="far fa-id-card" style="font-size: 25px; color: #d11818"></i>
-                            <input style="text-align: center;" type="cpf" class="form-control" id="email1" name="cpf" maxlength="11" pattern="([0-9]{11})" title="Digitar o CPF completo sem usar caracteres especiais">
+                            <input style="text-align: center;" type="cpf" class="form-control" id="cpf" name="cpf" maxlength="11" pattern="([0-9]{11})" title="Digitar o CPF completo sem usar caracteres especiais"><span style="margin: 80px;" id="resposta"></span>
+                        </div>
+                        <script>
+                        function CPF(){"user_strict";function r(r){for(var t=null,n=0;9>n;++n)t+=r.toString().charAt(n)*(10-n);var i=t%11;return i=2>i?0:11-i}function t(r){for(var t=null,n=0;10>n;++n)t+=r.toString().charAt(n)*(11-n);var i=t%11;return i=2>i?0:11-i}var n="CPF Inválido",i="CPF Válido";this.gera=function(){for(var n="",i=0;9>i;++i)n+=Math.floor(9*Math.random())+"";var o=r(n),a=n+"-"+o+t(n+""+o);return a},this.valida=function(o){for(var a=o.replace(/\D/g,""),u=a.substring(0,9),f=a.substring(9,11),v=0;10>v;v++)if(""+u+f==""+v+v+v+v+v+v+v+v+v+v+v)return n;var c=r(u),e=t(u+""+c);return f.toString()===c.toString()+e.toString()?i:n}}
+
+
+
+   var CPF = new CPF();
+   for(var i =0;i<40;i++) {
+      var temp_cpf = CPF.gera();
+     
+   }
+
+$("#cpf").keypress(function(){
+    $("#resposta").html(CPF.valida($(this).val()));
+});
+
+$("#cpf").blur(function(){
+     $("#resposta").html(CPF.valida($(this).val()));
+});
+                            </script>
                         </div>
 
                     </div>
