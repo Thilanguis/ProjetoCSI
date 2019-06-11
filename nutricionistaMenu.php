@@ -120,6 +120,10 @@
 
 
                 <?php
+                
+                echo "<p><b>Legenda:&nbsp;</b> <i class='fas fa-book' style='color: #E8850C'></i> Paciente sem consulta";
+                echo "<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class='fas fa-book-open' style='color: #E8850C'></i> Paciente com consulta</b>";
+                    
                     while($row = mysqli_fetch_array($result))
                     { 
                         echo "<tr>";
@@ -166,10 +170,6 @@
                 }
             }
         ?>
-
-
-
-
 
 
         <br><br>
