@@ -9,8 +9,8 @@
                 <input type="hidden" name="id_cliente" value="<?php echo $_GET["id_cliente"] ?>">
                 <input type="hidden" id="paciente" name="paciente" value="<?php echo $row[0]; ?>">
 
-                <h4 style="margin-left: 180px;" id="menuNutricionista">Valor Energético total &nbsp;<img id="calculadora" src="img/icons8-calculadora-48.png" alt=""></h4></div>
-        <h6 style="margin-left:;" id="menuNutricionista1"><i>Fonte: FAO,WHO,UNU,1985</i></h6>
+                <h4 style="margin-left: 190px;" id="menuNutricionista">Valor Energético total &nbsp;<img id="calculadora" src="img/icons8-calculadora-48.png" alt=""></h4></div>
+        <h6 style="margin-left: 60px;" id="menuNutricionista1"><i>Fonte: FAO,WHO,UNU,1985</i></h6>
             
             
             

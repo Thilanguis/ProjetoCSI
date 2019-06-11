@@ -272,6 +272,27 @@
             
                                      ?>">
             </div>
+            
+            <div>
+                <span id="TMB-Kcal" class="badge badge-pill badge-success" style="margin-right: 8px; margin-top: 22px;">Macronutrientes:</span>
+                <input id="macronutriente" name="macronutriente" class="col-6" type="text" style=" font-size: 14px;border-radius: 4px;" disabled="disabled" value=" <?php include_once 'conexao.php';                                           $sql = "select sum(cast(CHO as decimal(15,2)))*4 CHO, sum(cast(PTN as decimal(15,2)))*4 PTN, sum(cast(LIP as decimal(15,2)))*9 LIP from alimentos where ID_CLIENTE = ".$_GET["id_cliente"];                         $kcalTotal = $row["CHO"] + $row["PTN"] + $row["LIP"];
+                                                                                                                                             
+                            $result = mysqli_query($con, $sql);
+            
+                            $row = mysqli_fetch_array($result);
+                            if($kcalTotal == 0){
+                                echo "cho 0% ptn 0% lip 0%";
+                            } 
+                            else {
+
+            
+                            $kcalTotal = $row["CHO"] + $row["PTN"] + $row["LIP"];
+            
+                            echo "cho ".number_format((($row["CHO"]/4) * 400) / $kcalTotal,0) . "% ";
+                            echo "ptn ".number_format((($row["PTN"]/4) * 400) / $kcalTotal,0) . "% ";
+                            echo "lip ".number_format((($row["LIP"]/9) * 900) / $kcalTotal,0) . "% ";
+                                     }?>">
+            </div>
         </div>
 
         <div id="inclusaoAlimentos">
